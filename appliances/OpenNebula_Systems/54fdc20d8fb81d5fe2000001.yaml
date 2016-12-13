@@ -1,0 +1,30 @@
+---
+name: OpenNebula 4.12 VirtualBox Sandbox
+version: '1.0'
+publisher: OpenNebula Systems
+description: |-
+  Virtual Machine image with a pre-configured OpenNebula front-end running CentOS 6.3. The sandbox is also configured to run images itself, so you can test launching real Virtual Machines.
+
+  More information here: http://opennebula.org/cloud:sandboxvirtualbox
+short_description: >-
+  Virtual Machine image with a pre-configured OpenNebula front-end running
+  CentOS 6.3. The sandbox is also configured to run images itself, so you
+  can test launching real Virtual Machines.
+tags:
+- testdrive
+- sandbox
+format: vdi
+creation_time: 1425916429
+os_id: CentOS
+os_release: '6.3'
+os_arch: x86_64
+hypervisor: all
+opennebula_version: all
+logo: view_dashboard.png
+images:
+- location: >-
+    http://opennebula-marketplace.s3.amazonaws.com/opennebula-4.12-sandbox.vdi.gz
+  type: OS
+  size: 963866125
+  checksum:
+    md5: 62e298a334553e76be73eef5791f7ad8

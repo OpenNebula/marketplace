@@ -1,0 +1,49 @@
+---
+name: CentOS 7.2 - KVM
+version: 5.0.2
+publisher: OpenNebula Systems
+description: |-
+  A CentOS 7 image ready for your OpenNebula deployment in KVM hosts.
+
+  This image is based off a CentOS 7.2 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.org/5.0/operation/vm_setup/kvm.html).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: CentOS 7.2 image for KVM hosts under OpenNebula
+tags:
+- centos
+- '4.8'
+- '4.10'
+- '4.12'
+- '4.14'
+- '5.0'
+format: qcow2
+creation_time: 1407696786
+os_id: CentOS
+os_release: '7.2'
+os_arch: x86_64
+hypervisor: all
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/centos.png
+logo: centos-5.5.png
+images:
+- location: >-
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/centos7-5.0.2.qcow2c
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 8589934592
+  checksum:
+    md5: 32ac8c927bd218cc1f0e6ab10f3a3d5c

@@ -1,0 +1,46 @@
+---
+name: VyOS 1.1.5 Helium 64 bits
+version: 1.1.5-1
+publisher: ArtemIT
+description: "UPDATES: \n\nINIT: Id “TO” respawing too fast: disabled for
+  5 minutes message removed thanks to \nhttp://z0b.kapsi.fi/vyatta_vbox.php
+  information.\n\nOpenNebula's contextualization script for Ubuntu has been
+  modified, so interface settings are inserted into VyOS configuration file.
+  Also if SSH key contextualization is selected a ssh pub key is added to
+  the vyos user.\n\n\nINFO & LOGIN\n\nThe recommended minimum system requirements
+  are 512MB RAM and 2GB storage.\n\nThe image provides an OS image that
+  you can use as a HDD that you can add as storage to a template and deploy
+  a VyOS router.\n\nThe interface IP address is assigned to the VM from
+  the contextualization ISO or using the MAC_PREFFIX:IP rule (using the
+  last four octets of the MAC address) and a Class C mask is used for network
+  mask. \n\nYou must log in with vyos user and the password vyos. \n\nYou
+  can safely ignore the: Failed to access perfctt msr message.\n\nWARNING:
+  \n\nThe settings are not persistent unless you enter the conf level and
+  use the save command. Once you save the configuration, please use the
+  following command to stop the execution of the contextualization script,
+  so it doesn't break your router's configuration on boot:\nsudo cat /dev/null
+  > /opt/vyatta/etc/config/scripts/vyatta-postconfig-bootup.script\n\nThis
+  software image is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES
+  OR CONDITIONS OF ANY KIND, either express or implied. \n\nPlease visit
+  my blog: http://n40lab.wordpress.com for more information and support."
+short_description: "This image has been created using VyOS 1.1.5 ISO for
+  64 bits so you can deploy a virtual router and firewall. \r\n\r\nVyOS
+  is a community fork of Vyatta, a Linux-based network operating system
+  that provides software-based network routing, firewall, and VPN functionality.\r\n\r\nThis
+  image provides a VyOS virtual router/firewall only for KVM. When booting
+  select the first option (KVM)."
+tags: []
+format: raw
+creation_time: 1430328100
+os_id: ''
+os_release: ''
+os_arch: x86_64
+hypervisor: KVM
+opennebula_version: all
+logo: default.png
+images:
+- location: http://artemit.com.es/one/vyos-1.1.5-amd64.gz
+  type: OS
+  size: 263000000
+  checksum:
+    md5: aba8765298ffcf8784f8a6d2b267eb79

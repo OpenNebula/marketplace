@@ -1,0 +1,35 @@
+---
+name: debian-7.1-amd64-kvm
+version: '1.3'
+publisher: Demo-TIC
+description: |-
+  Wheezy 7.1 x86_64 KVM image tested and used successfully with OpenNebula 4.2.
+
+  No users.
+  Password for root account is root.
+  Debian with one-context and ssh-server packages installed.
+  apt depot set to http://http.debian.net to use nearest VM public depot.
+  5 GB disk once uncompressed (compressed import from marketplace of 296MB).
+
+  This image has been created following Debian's wiki guidelines on https://wiki.debian.org/OpenNebula/PreparingDebianVmImage
+
+  Reviews, comments and suggestions are more than welcome.
+short_description: Debian Wheezy 7.1 x86_64 KVM image for OpenNebula 4.2.
+tags:
+- linux
+- debian
+- kvm
+- one 4.2
+format: raw
+os_id: Debian
+os_release: '7.1'
+os_arch: x86_64
+hypervisor: KVM
+opennebula_version: all
+logo: default.png
+images:
+- location: http://opennebula.demo-tic.org/debian-7.1-amd64-one.img.bz2
+  type: OS
+  size: 5368709120
+  checksum:
+    md5: 708d274bc2ad410aa405785ddefd0a82

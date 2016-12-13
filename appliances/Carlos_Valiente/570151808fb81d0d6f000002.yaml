@@ -1,0 +1,58 @@
+---
+name: CoreOS alpha
+version: 1000.0.0
+publisher: Carlos Valiente
+description: |-
+  Password for user `core` is disabled. You will need an SSH key in order to
+  log in.
+
+  This image works best with two network interfaces defined:
+
+  * The first network interface will be used as CoreOS' private IPv4
+    address.
+  * If there is a second network interface defined, it will be used as
+    CoreOS' public IPv4 network.
+
+  The VM template bundled with this image includes a `USER_DATA` field, with
+  which you may pass extra
+  [cloud-config](https://coreos.com/os/docs/latest/cloud-config.html)
+  user data to configure your CoreOS instance.
+
+  The source code for this image is available at:
+
+    <https://github.com/carletes/coreos-opennebula-image>
+
+  Contributions are most welcome!
+short_description: CoreOS alpha image for KVM hosts under OpenNebula.
+tags: []
+format: qcow2
+creation_time: 1459704192
+os_id: CoreOS
+os_release: 1000.0.0 (alpha channel)
+os_arch: x86_64
+hypervisor: KVM
+opennebula_version: '4.14'
+opennebula_template:
+  user_inputs:
+    user_data: M|text|User data for `cloud-config`
+  graphics:
+    type: vnc
+    listen: 0.0.0.0
+  context:
+    set_hostname: "$NAME"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    network: 'YES'
+    user_data: "$USER_DATA"
+  memory: '512'
+  os:
+    arch: x86_64
+  cpu: '1'
+logo: default.png
+images:
+- location: >-
+    https://github.com/carletes/coreos-opennebula-image/releases/download/v0.1.0/coreos-alpha-1000.0.0.bz2
+  type: OS
+  driver: qcow2
+  size: 256965320
+  checksum:
+    md5: d5a3648092f19f3bd0e4ef9628389520

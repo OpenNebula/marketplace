@@ -1,0 +1,41 @@
+---
+name: Ubuntu 14.04 - VMware
+version: '1.0'
+publisher: OpenNebula Systems
+description: |-
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/4.8/user/virtual_machine_setup/context_overview.html) preinstalled.
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Ubuntu 14.04 image for VMware hosts under OpenNebula
+tags:
+- ubuntu
+- '4.8'
+- '4.10'
+format: vmdk
+creation_time: 1407698818
+os_id: Ubuntu
+os_release: '14.04'
+os_arch: x86_64
+hypervisor: VMWARE
+opennebula_version: 4.8, 4.10
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/ubuntu.png
+logo: ubuntu.png
+images:
+- location: http://opennebula-marketplace.s3.amazonaws.com/Ubuntu-14.04.tar.gz
+  type: OS
+  size: 10737418240
+  checksum:
+    md5: c7743d10c991331e06374941f78e1487

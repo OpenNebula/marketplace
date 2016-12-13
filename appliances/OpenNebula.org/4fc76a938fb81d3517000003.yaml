@@ -1,0 +1,44 @@
+---
+name: ttylinux - kvm
+version: '1.0'
+publisher: OpenNebula.org
+description: |-
+  This is a very small image that works with OpenNebula. It's already contextualized. The purpose of this image is to test OpenNebula deployments, without wasting network bandwith thanks to the tiny footprint of this image
+  (40MB).
+
+  The login information for this image is:
+
+  * **login**: root
+  * **password**: password
+
+  **NOTE:** The contextualization of this image is really simple. You can not set the network mask or the gateway. It's always a C class and gateway is x.y.z.1.
+short_description: "This is a very small image that works with OpenNebula.
+  It's already contextualized. The purpose of this image is to test OpenNebula
+  deployments, without wasting network bandwith thanks to the tiny footprint
+  of this image\r\n(40MB)."
+tags:
+- linux
+- ttylinux
+- '4.8'
+- '4.10'
+format: raw
+os_id: ttylinux
+os_arch: x86_64
+hypervisor: KVM
+opennebula_version: 4.8, 4.10
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '0.1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '128'
+  logo: images/logos/linux.png
+logo: Ttylinux-8.0.png
+images:
+- location: http://opennebula-marketplace.s3.amazonaws.com/ttylinux.img
+  size: 41943040
+  checksum:
+    md5: 04c7d00e88fa66d9aaa34d9cf8ad6aaa

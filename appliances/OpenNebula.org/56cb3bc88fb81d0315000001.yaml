@@ -1,0 +1,30 @@
+---
+name: Ubuntu for Docker Machine
+version: 0.6.0
+publisher: OpenNebula.org
+description: >-
+  Use this image to deploy Docker Machine VMs with OpenNebula. Tested with
+  Docker Machine 0.6.0
+short_description: >-
+  Ubuntu 14.04 LTS with preinstalled packages in order to work with Docker
+  Machine
+tags:
+- docker
+- ubuntu
+format: raw
+creation_time: 1456159688
+os_id: ''
+os_release: ''
+os_arch: x86_64
+hypervisor: all
+opennebula_version: '4.14'
+logo: default.png
+images:
+- location: >-
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/docker_machine_ubuntu-14.04.qcow2c
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 10737418240
+  checksum:
+    md5: 3493d7cbaa20143b2ee3ffc3ece73077

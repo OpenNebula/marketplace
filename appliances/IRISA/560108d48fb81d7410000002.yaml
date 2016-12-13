@@ -1,0 +1,80 @@
+---
+name: Debian Wheezy Galaxy NGS
+version: '1.0'
+publisher: IRISA
+description: |-
+  With xGrid, this Debian image can deploy a SGE (Sun Grid Engine) or an Hadoop cluster via a web interface to add/remove nodes via a web interface.
+
+  Access to galaxy: http://vm-ip/galaxy
+
+  Galaxy identifier:
+  login         : genocloud-admin@genouest.org
+  password : admin
+  version     : 14_06
+
+  Image must be tagged with: EC2_AMI:YES to be able to use it via Xgrid/EC2.
+
+  Note: Remember to update the template in order to add a network after importing it.
+
+  About xgrid:
+
+  https://github.com/genouest/xgrid
+  http://genocloud.genouest.org/wordpress/?p=607
+
+  Xgrid setup in CONTEXT:
+
+  SGE cluster:
+  SGE=master
+  XGRIDEC2=ipofec2process
+
+  Cookbook :
+  CHEFSERVER = chefurl
+  CHEFVALIDATIONKEY = chefvalidation_key
+
+  NFS mount:
+  DATABANKS = ip/directory
+  SHAREDFS = ip/directory
+short_description: Galaxy server with NGS tools configured with a SGE cluster
+tags:
+- debian
+- galaxy
+- xgrid
+- ngs
+format: raw
+creation_time: 1442908372
+os_id: Debian
+os_release: Wheezy
+os_arch: x86_64
+hypervisor: KVM
+opennebula_version: '4.8'
+opennebula_template:
+  context:
+    hostname: VM-$VMID
+    network: 'YES'
+    sge: master
+    xgridec2: ''
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    username: "$UID"
+    xgrid_pwd: "$XGRID_PWD"
+  cpu: '2'
+  description: Debian wheezy xgrid
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  logo: images/logos/debian.png
+  memory: '2048'
+  os:
+    arch: x86_64
+    boot: hd
+  user_inputs:
+    xgrid_pwd: M|password|Create your Xgrid password
+logo: default.png
+images:
+- location: >-
+    http://genocloud.genouest.org/appliances/opennebula/debian/debian-wheezy-amd64-2015-09-18-galaxy_NGS-06_14.raw.gz
+  type: OS
+  dev_prefix: vd
+  driver: raw
+  size: 1520696227
+  checksum:
+    md5: bd44c797f6fa27051e707a267ae37df5

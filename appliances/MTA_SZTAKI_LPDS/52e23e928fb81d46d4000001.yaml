@@ -1,0 +1,35 @@
+---
+name: DCI Bridge Direct Cloud Slave Appliance
+version: 3.6.2.1
+publisher: MTA SZTAKI LPDS
+description: |-
+  Slave DCI Bridge image to use the solution of gUSE/WS-PGRADE for Direct Cloud Access. The Slave DCI Bridge image can be deployed on cloud infrastructures to enable gUSE/WS-PGRADE users to directly submit their workflows on the cloud infrastructures through local Master DCI Bridge. This direct cloud access solution is applicable for all cloud infrastructures that include EC2-based frontend service.
+
+  root password for the image is: temp123
+
+  Further details: http://sourceforge.net/projects/guse/files/3.6.2/Documentation/gUSE_Admin_Manual.pdf/download
+
+  http://sourceforge.net/projects/guse/files/3.6.2/Documentation/DCI_Bridge_Manual_v3.6.2.pdf/download
+short_description: >-
+  "Slave DCI Bridge image to use the solution of gUSE/WS-PGRADE for Direct
+  Cloud Access.
+tags:
+- debian
+- guse
+- dci-bridge
+- worker
+format: raw
+os_id: Debian
+os_release: '7.0'
+os_arch: x86_64
+hypervisor: KVM
+opennebula_version: all
+logo: default.png
+images:
+- location: >-
+    https://s3.lpds.sztaki.hu/mp-images/dcibridge-localcloud/DCIBridge-local-cloud-fix.img
+  type: OS
+  size: 2256535552
+  checksum:
+    md5: becfdd2790acde35e179fe54019acac0
+    sha1: 6f830942d0efae9db503f9e7e7685fd5ef555fcf

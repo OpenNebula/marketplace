@@ -1,0 +1,51 @@
+---
+name: ttylinux - VMware
+version: '1.1'
+publisher: OpenNebula Systems
+description: "This is a very small image that works with OpenNebula. It's
+  already contextualized. The purpose of this image is to test OpenNebula
+  deployments, without wasting network bandwith thanks to the tiny footprint
+  of this image\n(100MB).\n\nThe login information for this image is:\n\n*
+  **login**: root\n* **password**: password\n\n\nThe image is prepared to
+  mount a contextualization CD from `hdb` device an execute `init.sh`.\n\nExample
+  of contextualization file that includes info about the public network
+  interface and the public ssh key of a user:\n\n    CONTEXT = [\n      hostname
+  \ = \"$NAME\",\n      ip_public = \"$NIC[IP, NETWORK=\\\"Public\\\"]\",\n
+  \     username  = virtualuser,\n      files     = \"/vms_configuration/id_rsa.pub
+  /vms_configuration/init.sh\"\n    ]\n\nThe `init.sh` script that goes
+  with this configuration. It configures the IP of the public network and
+  creates the user. Also adds the public ssh key so it can be accessed externally:\n\n
+  \   #!/bin/bash\n \n    if [ -f /mnt/context.sh ]; then\n      . /mnt/context.sh\n
+  \   fi\n \n    hostname $HOSTNAME\n    ifconfig eth0 $IP_PUBLIC\n \n    useradd
+  -m $USERNAME\n \n    mkdir -p ~$USERNAME/.ssh\n    cat /mnt/id_rsa.pub
+  >> ~$USERNAME/.ssh/authorized_keys\n \n    chown -R $USERNAME /home/$USERNAME"
+short_description: >-
+  ttylinux is a small linux distribution that is perfect to test your installation.
+tags:
+- linux
+- ttylinux
+- '4.8'
+- '4.10'
+format: vmdk
+os_id: ttylinux
+os_release: ''
+os_arch: i686
+hypervisor: VMWARE
+opennebula_version: 4.8, 4.10
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '0.1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '128'
+  logo: images/logos/linux.png
+logo: Ttylinux-8.0.png
+images:
+- location: http://opennebula-marketplace.s3.amazonaws.com/ttylinux.vmdk.tar.bz2
+  type: OS
+  size: 107374080
+  checksum:
+    md5: c689070d1dcf84e54e28c6b22e91405e

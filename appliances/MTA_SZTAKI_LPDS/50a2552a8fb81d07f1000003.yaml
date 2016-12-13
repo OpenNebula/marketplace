@@ -1,0 +1,26 @@
+---
+name: Testing gUSE installations (on SL5)
+version: '1.0'
+publisher: MTA SZTAKI LPDS
+description: |-
+  Prepared (Scientific Linux 5) OS image for testing gUSE (http://guse.hu/,http://sourceforge.net/projects/guse/) installation procedure.
+  The root password is 'lpds'
+short_description: >-
+  SL 5 prepared for testing gUSE installation. (http://guse.hu/   http://sourceforge.net/projects/guse)
+tags:
+- Scientific Linux
+- mysql
+format: raw
+os_id: Scientific Linux
+os_release: '5.5'
+os_arch: x86_64
+hypervisor: KVM
+opennebula_version: all
+logo: default.png
+images:
+- location: http://www.guse.hu/storage/diskimages/guse-sl5-mp.img
+  type: OS
+  size: 17179869184
+  checksum:
+    md5: 370ebbc66e324e8eaf514d99caf5e434
+    sha1: f84b25d101d540f36226006a988dea70690c9950

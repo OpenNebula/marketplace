@@ -1,0 +1,30 @@
+---
+name: OpenNebula 4.10 ESX Sandbox
+version: all
+publisher: OpenNebula Systems
+description: >-
+  The sandbox is a virtual machine image with a pre-configured OpenNebula
+  front-end running CentOS 6.5. The sandbox is also configured to run images
+  itself, so you can test launching real Virtual Machines. More info: http://opennebula.org/tryout/sandboxvmware/
+short_description: >-
+  The sandbox is a virtual machine image with a pre-configured OpenNebula
+  front-end running CentOS 6.5. The sandbox is also configured to run images
+  itself, so you can test launching real Virtual Machines.
+tags:
+- testdrive
+- sandbox
+format: vmdk
+creation_time: 1415017257
+os_id: CentOS
+os_release: '6.5'
+os_arch: x86_64
+hypervisor: VMWARE
+opennebula_version: all
+logo: view_dashboard.png
+images:
+- location: >-
+    http://appliances.c12g.com/OpenNebula-4.10-Sandbox/opennebula-4.10-sandbox-vmdk.tar.gz
+  type: OS
+  size: 1204246828
+  checksum:
+    md5: 212d6a170edc9bbdfeffee9719b7fd60

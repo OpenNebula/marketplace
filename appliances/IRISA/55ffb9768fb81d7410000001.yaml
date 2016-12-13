@@ -1,0 +1,55 @@
+---
+name: Debian Wheezy XGrid
+version: '1.0'
+publisher: IRISA
+description: "With xGrid, this Debian image can deploy a SGE (Sun Grid Engine)
+  or an Hadoop cluster via a web interface to add/remove nodes via a web
+  interface.\n\nImage must be tagged with: EC2_AMI:YES to be able to use
+  it via Xgrid/EC2.\n\n**Note**: Remember to update the template in order
+  to add a network after importing it. \n\nAbout xgrid:\n\n  https://github.com/genouest/xgrid\n
+  \ http://genocloud.genouest.org/wordpress/?p=607\n\nXgrid setup in CONTEXT:\n\nHadoop
+  cluster :\nHADOOP=master\nXGRID_EC2=ip_of_ec2_process\n\nSGE cluster:\nSGE=master\nXGRID_EC2=ip_of_ec2_process\n\nCookbook
+  :\nCHEFSERVER = chef_url\nCHEFVALIDATIONKEY = chef_validation_key\n\nNFS
+  mount:\nDATABANKS = ip/directory\nSHAREDFS = ip/directory"
+short_description: Debian SGE/Hadoop cluster deployment
+tags:
+- sge
+- hadoop
+- xgrid
+- debian
+format: raw
+creation_time: 1442822518
+os_id: Debian
+os_release: '7'
+os_arch: x86_64
+hypervisor: KVM
+opennebula_version: '4.8'
+opennebula_template:
+  context:
+    hostname: VM-$VMID
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    username: "$UID"
+    xgrid_pwd: "$XGRID_PWD"
+  cpu: '2'
+  description: Debian wheezy xgrid
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  logo: images/logos/debian.png
+  memory: '2048'
+  os:
+    arch: x86_64
+    boot: hd
+  user_inputs:
+    xgrid_pwd: M|password|Create your Xgrid password
+logo: default.png
+images:
+- location: >-
+    http://genocloud.genouest.org/appliances/opennebula/debian/debian-wheezy-xgrid-amd64-150918-wheezy.raw.gz
+  type: OS
+  dev_prefix: vd
+  driver: raw
+  size: 590417908
+  checksum:
+    md5: 1e90bb4361b541106cccce5b0425b9f8

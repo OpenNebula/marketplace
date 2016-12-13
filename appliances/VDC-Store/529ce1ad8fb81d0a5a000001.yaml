@@ -1,0 +1,24 @@
+---
+name: Ubuntu Server 13.10 v2 - vdc
+version: '2.0'
+publisher: VDC-Store
+description: >-
+  Standard Ubuntu server installation on a 10G filesystem with contextualisation.
+short_description: Standard / Minimal Ubuntu 13.10 installation in 10G
+tags:
+- ubuntu
+- vdc
+format: raw
+os_id: Ubuntu
+os_release: '13.10'
+os_arch: x86_64
+hypervisor: KVM
+opennebula_version: all
+logo: default.png
+images:
+- location: http://linux.co.uk/vms/Ubuntu1310-v2.bz2
+  type: OS
+  size: 538640945
+  checksum:
+    md5: 8e2be456f8e96ce8be7bcb7c077157e7
+    sha1: 0200af01e754c672d0d6070e47acc829ae74583d

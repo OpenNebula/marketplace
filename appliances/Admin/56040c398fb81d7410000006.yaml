@@ -1,0 +1,47 @@
+---
+name: Debian 8.4 - KVM
+version: 5.0.1-2
+publisher: Admin
+description: |-
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.0/operation/vm_setup/kvm.html) preinstalled.
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Debian 8.4 image for KVM hosts under OpenNebula
+tags:
+- debian
+- '4.8'
+- '4.10'
+- '4.12'
+- '4.14'
+- '5.0'
+format: qcow2
+creation_time: 1443105849
+os_id: Debian
+os_release: '8.4'
+os_arch: x86_64
+hypervisor: KVM
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/debian.png
+logo: debian.png
+images:
+- location: >-
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/debian8-5.0.1-fix.qcow2c
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 2147483648
+  checksum:
+    md5: a661b9101d0e7427a9495967292f7285

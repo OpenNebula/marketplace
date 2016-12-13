@@ -1,0 +1,35 @@
+---
+name: Carina Environment Manager
+version: '1.0'
+publisher: Research In Motion
+description: >-
+  The Carina Environment Manager is a component to handle the deployment
+  of interconnected multi-VM application services on top of the OpenNebula
+  IaaS platform. It supports the automated creation and run-time scaling
+  of multi-VM application environments according to policies. It leverages
+  the OpenNebula contextualization framework to setup clusters of VMs in
+  a master-slave configuration or a set of workers with an IP load-balancer
+  in front. Policies can be defined to control how VMs are added or removed
+  based on manual, time of day, or application load-based triggers.
+short_description: >-
+  System to automatically deploy, scale and manage the availability of multi-VM
+  application clusters according to policies such as time of day, load-based,
+  service priority, failure events, or custom metrics.
+tags:
+- auto-scale
+- availability
+- cluster deployment
+format: qcow2
+os_id: Ubuntu
+os_release: '12.04'
+os_arch: X86_64
+hypervisor: KVM
+opennebula_version: all
+logo: default.png
+images:
+- location: https://dl.dropbox.com/u/33391393/carina_1.qcow2.gz
+  type: OS
+  size: 1238892544
+  checksum:
+    md5: 47c606e55ff4d8ef88702f8fa7eb37a7
+    sha1: b23c2f1222a3d636f58fb9fa28b4c7f33ff5bdb9

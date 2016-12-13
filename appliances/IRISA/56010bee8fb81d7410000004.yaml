@@ -1,0 +1,59 @@
+---
+name: Debian Wheezy Bio Imaging
+version: '1.0'
+publisher: IRISA
+description: |-
+  Desktop can be accessed with x2go client:
+      - x2go server available on the image
+     -  Access via X2go client software (linux, windows, mac)
+      http://wiki.x2go.org/doku.php
+
+  Note: Remember to update the template in order to add a network after importing it.
+
+  NFS mount:
+  DATABANKS = ip/directory
+  SHAREDFS = ip/directory
+short_description: Contains bio imaging tools with a MATE deskop
+tags:
+- debian
+- mate
+- desktop
+- x2go
+- bioinformatics
+- imaging
+format: raw
+creation_time: 1442909166
+os_id: Debian
+os_release: Wheezy
+os_arch: x86_64
+hypervisor: KVM
+opennebula_version: '4.8'
+opennebula_template:
+  context:
+    hostname: VM-$VMID
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    username: "$UID"
+    xgrid_pwd: "$XGRID_PWD"
+  cpu: '2'
+  description: Debian wheezy xgrid
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  logo: images/logos/debian.png
+  memory: '2048'
+  os:
+    arch: x86_64
+    boot: hd
+  user_inputs:
+    xgrid_pwd: M|password|Create your Xgrid password
+logo: default.png
+images:
+- location: >-
+    http://genocloud.genouest.org/appliances/opennebula/debian/debian-wheezy-amd64-2015-09-18-imaging.raw.gz
+  type: OS
+  dev_prefix: vd
+  driver: raw
+  size: 2173965824
+  checksum:
+    md5: 69a47f5e4934a00e442ca0e47ba95714

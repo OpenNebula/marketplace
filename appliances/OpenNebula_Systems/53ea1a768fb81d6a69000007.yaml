@@ -1,0 +1,45 @@
+---
+name: CentOS 6.5 - Xen
+version: '1.0'
+publisher: OpenNebula Systems
+description: |-
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/4.8/user/virtual_machine_setup/context_overview.html) preinstalled.
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: CentOS 6.5 image for Xen hosts under OpenNebula
+tags:
+- centos
+- '4.8'
+- '4.10'
+- xen
+format: raw
+creation_time: 1407851126
+os_id: CentOS
+os_release: '6.5'
+os_arch: x86_64
+hypervisor: XEN
+opennebula_version: 4.8, 4.10
+opennebula_template:
+  context:
+    dev_prefix: xvd
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    bootloader: pygrub
+    arch: x86_64
+  logo: images/logos/centos.png
+logo: centos-5.5.png
+images:
+- location: http://opennebula-marketplace.s3.amazonaws.com/CentOS-6.5.raw.gz
+  type: OS
+  dev_prefix: xvd
+  size: 10737418240
+  checksum:
+    md5: 8b8726f63c710c049866d160a9a4852d

@@ -1,0 +1,33 @@
+---
+name: OpenNebula Virtual Router
+version: '1.0'
+publisher: OpenNebula.org
+description: |-
+  When instantiated in a network, this appliance provides the following services for
+  other Virtual Machines running in the same network:
+
+  * Router (masquerade)
+  * Port forwarding
+  * DHCP server
+  * DNS server
+  * Radvd server
+
+  More information on how to use this appliance in the OpenNebula documentation: http://docs.opennebula.org/4.8/administration/networking/router.html
+short_description: A virtual router for an OpenNebula Network
+tags:
+- router
+format: raw
+creation_time: 1406208038
+os_id: AlpineLinux 2.5
+os_release: ''
+os_arch: x86_64
+hypervisor: all
+opennebula_version: '4.6'
+logo: router.png
+images:
+- location: >-
+    http://opennebula-marketplace.s3.amazonaws.com/OpenNebula-4.8-VR.img.gz
+  type: OS
+  size: 209715201
+  checksum:
+    md5: d32a9b7e3a4c24e93fb393a5fb6cd734

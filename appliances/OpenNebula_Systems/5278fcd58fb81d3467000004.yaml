@@ -1,0 +1,29 @@
+---
+name: Hadoop 1.2 Master
+version: '1.0'
+publisher: OpenNebula Systems
+description: |-
+  Ubuntu 12.04 based image with preinstalled Hadoop 1.2. See the OpenNebula Hadoop guide for more details.
+
+  Login details:
+
+   * User: root
+   * Password: passwd
+short_description: >-
+  Ubuntu 12.04 based image with preinstalled Hadoop 1.2 to be used as Master
+tags:
+- hadoop
+- ubuntu
+format: qcow2
+os_id: Ubuntu
+os_release: '12.04'
+os_arch: x86_64
+hypervisor: KVM
+opennebula_version: all
+logo: hadoop-logo.jpg
+images:
+- location: https://s3.amazonaws.com/opennebula-hadoop/HadoopMaster.qcow2.bz2
+  type: OS
+  size: 1348430832
+  checksum:
+    md5: f37a61f2b704ac48123987b8d16c6be3

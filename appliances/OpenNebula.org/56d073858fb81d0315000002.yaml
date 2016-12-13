@@ -1,0 +1,29 @@
+---
+name: boot2docker
+version: 1.12.1
+publisher: OpenNebula.org
+description: >-
+  It is recommended to use this appliance in conjunction with the OpenNebula
+  [docker-machine](https://github.com/OpenNebula/docker-machine-opennebula)
+  plugin.
+short_description: >-
+  Boot2Docker built by https://github.com/OpenNebula/boot2docker-one so
+  it supports OpenNebula contextualization.
+tags:
+- docker
+format: raw
+creation_time: 1456501637
+os_id: boot2docker
+os_release: 1.12.1
+os_arch: x86_64
+hypervisor: all
+opennebula_version: all
+logo: default.png
+images:
+- location: >-
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/boot2docker-1.12.1.iso
+  type: OS
+  dev_prefix: vd
+  size: 40894464
+  checksum:
+    md5: 368b9a74e8e95b6670c71b32dd344ff1

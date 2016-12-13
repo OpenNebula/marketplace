@@ -1,0 +1,40 @@
+---
+name: Vyatta Core 6.5R1 KVM HDD
+version: '1.0'
+publisher: ArtemIT
+description: |-
+  This image was created a long time ago using Vyatta Core's Virtualization ISO so you could deploy this virtual router and firewall. Vyatta was acquired by Brocade on 2012 however many users still use this image that's why I republished under ArtemIT.
+
+  OpenNebula's contextualization script for Ubuntu has been modified, so interface settings are inserted into Vyatta Core's configuration file instead of /etc/network/interfaces.
+  Interface address is assigned to the VM from the MAC address using the MAC_PREFFIX:IP rule (using the last four octets of the MAC address) and a Class C mask is used for network mask. No udev rule has been modified as Vyatta Core's Virtualization ISO already deals with this subject. According to and old Vyatta's document with hardware recommendations, with 1 GB RAM and 2 GB HDD you could configure a router/firewall with 2-6 interfaces, two routing protocols and 10000 rules.
+
+  IMPORTANT: You must log in with vyatta user and the password onerouter. The router name is set to one-vc65r1. No template has been provided.
+
+  WARNING: The settings are not persistent unless you use the save command. If you use the save command, please comment the two lines following "OpenNebula vm contextualization script execution" in the /opt/vyatta/etc/config/scripts/vyatta-postconfig-bootup.script (use sudo to change that file) so the contextualization script doesn't break your router's configuration on boot.
+
+  This software image is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. Vyatta is a registered trademark of Vyatta, Inc.
+
+  Please visit my blog: http://n40lab.wordpress.com for more information and support
+short_description: >-
+  WARNING: The Vyatta Open Source builds were discontinued after Vyatta
+  was acquired by Brocade and this image is two years old. Use it at your
+  own risk, Please check VyOS if you're looking for a Vyatta fork. This
+  image was created a long time ago using Vyatta Core's Virtualization ISO
+  so you could deploy this virtual router and firewall.
+tags:
+- router
+- vyatta
+format: raw
+creation_time: 1423690429
+os_id: ''
+os_release: ''
+os_arch: i686
+hypervisor: KVM
+opennebula_version: all
+logo: default.png
+images:
+- location: http://artemit.com.es/one/vyatta_core_65r1_kvm_32bits_macto
+  type: OS
+  size: 2200000000
+  checksum:
+    md5: 903b7438a50a67d374ef8868dfbaac76
