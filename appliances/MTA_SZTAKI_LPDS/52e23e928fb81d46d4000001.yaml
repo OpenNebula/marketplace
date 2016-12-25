@@ -10,24 +10,23 @@ description: |-
   Further details: http://sourceforge.net/projects/guse/files/3.6.2/Documentation/gUSE_Admin_Manual.pdf/download
 
   http://sourceforge.net/projects/guse/files/3.6.2/Documentation/DCI_Bridge_Manual_v3.6.2.pdf/download
-short_description: >-
-  "Slave DCI Bridge image to use the solution of gUSE/WS-PGRADE for Direct
-  Cloud Access.
+short_description: "\"Slave DCI Bridge image to use the solution of gUSE/WS-PGRADE
+  for Direct Cloud Access."
 tags:
 - debian
 - guse
 - dci-bridge
 - worker
 format: raw
-os_id: Debian
-os_release: '7.0'
-os_arch: x86_64
+os-id: Debian
+os-release: '7.0'
+os-arch: x86_64
 hypervisor: KVM
 opennebula_version: all
 logo: default.png
 images:
-- location: >-
-    https://s3.lpds.sztaki.hu/mp-images/dcibridge-localcloud/DCIBridge-local-cloud-fix.img
+- name: DCI Bridge Direct Cloud Slave Appliance_file0
+  url: https://s3.lpds.sztaki.hu/mp-images/dcibridge-localcloud/DCIBridge-local-cloud-fix.img
   type: OS
   size: 2256535552
   checksum:

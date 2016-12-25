@@ -32,14 +32,15 @@ short_description: "This image has been created using VyOS 1.1.5 ISO for
 tags: []
 format: raw
 creation_time: 1430328100
-os_id: ''
-os_release: ''
-os_arch: x86_64
+os-id: ''
+os-release: ''
+os-arch: x86_64
 hypervisor: KVM
 opennebula_version: all
 logo: default.png
 images:
-- location: http://artemit.com.es/one/vyos-1.1.5-amd64.gz
+- name: vyos-1.1.5-amd64
+  url: http://artemit.com.es/one/vyos-1.1.5-amd64.gz
   type: OS
   size: 263000000
   checksum:

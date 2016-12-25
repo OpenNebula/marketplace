@@ -20,9 +20,9 @@ tags:
 - '5.0'
 format: qcow2
 creation_time: 1407696786
-os_id: CentOS
-os_release: '7.2'
-os_arch: x86_64
+os-id: CentOS
+os-release: '7.2'
+os-arch: x86_64
 hypervisor: all
 opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0
 opennebula_template:
@@ -39,8 +39,8 @@ opennebula_template:
   logo: images/logos/centos.png
 logo: centos-5.5.png
 images:
-- location: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/centos7-5.0.2.qcow2c
+- name: CentOS-7.2
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/centos7-5.0.2.qcow2c
   type: OS
   dev_prefix: vd
   driver: qcow2

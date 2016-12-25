@@ -29,14 +29,15 @@ tags:
 - vyatta
 format: raw
 creation_time: 1412111434
-os_id: ''
-os_release: ''
-os_arch: x86_64
+os-id: ''
+os-release: ''
+os-arch: x86_64
 hypervisor: KVM
 opennebula_version: all
 logo: default.png
 images:
-- location: http://artemit.com.es/one/098e7f2b3e712ce9c2c4269e8ff858db
+- name: VyOS 1.0.5 (64 bits)
+  url: http://artemit.com.es/one/098e7f2b3e712ce9c2c4269e8ff858db
   type: OS
   size: 2148000000
   checksum:

@@ -2,22 +2,22 @@
 name: Peppermint 4 Desktop - vdc
 version: '1.0'
 publisher: VDC-Store
-description: >-
-  For use with VDC-Store, only upload this image to VDC-Store storage area.
-  Trying to load to another area such as system will fail.
+description: For use with VDC-Store, only upload this image to VDC-Store
+  storage area. Trying to load to another area such as system will fail.
 short_description: Basic installation of Peppermint V4 + updates + contextualisation.
 tags:
 - peppermint
 - vdc
 format: raw
-os_id: Peppermint
-os_release: '4'
-os_arch: x86_64
+os-id: Peppermint
+os-release: '4'
+os-arch: x86_64
 hypervisor: KVM
 opennebula_version: all
 logo: default.png
 images:
-- location: http://linux.co.uk/vms/Peppermint4.bz2
+- name: Peppermint 4 Desktop - vdc_file0
+  url: http://linux.co.uk/vms/Peppermint4.bz2
   type: OS
   size: 1233892348
   checksum:

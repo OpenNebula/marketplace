@@ -8,24 +8,24 @@ description: |-
   Further details:
   [1] http://guse.hu/
   [2] http://www.cloudbroker.com/
-short_description: >-
-  The gUSE CloudBroker Wrapper image provides a virtual machine image that
-  can be deployed on cloud infrastructures to enable WS-PGRADE/gUSE [1]
-  portal users to run their own applications on the cloud infrastructures
-  from the portal without the need to deploy the applications in advance.
-  This connection makes use of the generic cloud access solution offered
-  by the CloudBroker Platform [2].
+short_description: The gUSE CloudBroker Wrapper image provides a virtual
+  machine image that can be deployed on cloud infrastructures to enable
+  WS-PGRADE/gUSE [1] portal users to run their own applications on the cloud
+  infrastructures from the portal without the need to deploy the applications
+  in advance. This connection makes use of the generic cloud access solution
+  offered by the CloudBroker Platform [2].
 tags:
 - cloud broker cloudbroker guse portal
 format: raw
-os_id: Debian
-os_release: 6.0.7
-os_arch: x86_64
+os-id: Debian
+os-release: 6.0.7
+os-arch: x86_64
 hypervisor: KVM
 opennebula_version: all
 logo: default.png
 images:
-- location: https://s3.lpds.sztaki.hu/mp-images/cloudbroker/guse_cloudbroker.img
+- name: gUSE CloudBroker Wrapper_file0
+  url: https://s3.lpds.sztaki.hu/mp-images/cloudbroker/guse_cloudbroker.img
   type: OS
   size: 17179869184
   checksum:

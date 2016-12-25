@@ -18,15 +18,14 @@ tags:
 - router
 format: raw
 creation_time: 1406208038
-os_id: AlpineLinux 2.5
-os_release: ''
-os_arch: x86_64
+os-id: AlpineLinux 2.5
+os-release: ''
+os-arch: x86_64
 hypervisor: all
 opennebula_version: '4.6'
 logo: router.png
 images:
-- location: >-
-    http://opennebula-marketplace.s3.amazonaws.com/OpenNebula-4.8-VR.img.gz
+- url: http://opennebula-marketplace.s3.amazonaws.com/OpenNebula-4.8-VR.img.gz
   type: OS
   size: 209715201
   checksum:

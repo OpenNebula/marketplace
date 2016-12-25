@@ -8,20 +8,20 @@ description: "WS-PGRADE/gUSE is a cloud and grid gateway framework. To assist
   deploying it you can try the workflow creation and execution services
   of WS-PGRADE/gUSE. \n\nTechnical Information:\n- The root password is
   'lpds'\n- Minimum required memory: 2GB\n- Dual core processor is recommended"
-short_description: >-
-  WS-PGRADE/gUSE v3.5.2 image to deploy a WS-PGRADE/gUSE portal ready to
-  run in clouds.
+short_description: WS-PGRADE/gUSE v3.5.2 image to deploy a WS-PGRADE/gUSE
+  portal ready to run in clouds.
 tags:
 - guse portal grid workflow debian
 format: raw
-os_id: Debian
-os_release: 6.0.6
-os_arch: x86_64
+os-id: Debian
+os-release: 6.0.6
+os-arch: x86_64
 hypervisor: KVM
 opennebula_version: all
 logo: default.png
 images:
-- location: http://www.guse.hu/storage/diskimages/guse-3.5.2-raw-kvm-v2.img
+- name: gUse v3.5.2_file0
+  url: http://www.guse.hu/storage/diskimages/guse-3.5.2-raw-kvm-v2.img
   type: OS
   size: 17179869184
   checksum:

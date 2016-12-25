@@ -15,9 +15,9 @@ tags:
 - arch linux
 format: qcow2
 creation_time: 1426762698
-os_id: Arch Linux
-os_release: '2015-03-01'
-os_arch: x86_64
+os-id: Arch Linux
+os-release: '2015-03-01'
+os-arch: x86_64
 hypervisor: KVM
 opennebula_version: 4.10, 4.12
 opennebula_template:
@@ -34,7 +34,8 @@ opennebula_template:
   logo: images/logos/arch.png
 logo: default.png
 images:
-- location: http://www.ungleich.ch/archlinux-2015-03-19.qcow2.bz2
+- name: Arch Linux
+  url: http://www.ungleich.ch/archlinux-2015-03-19.qcow2.bz2
   type: OS
   dev_prefix: vd
   driver: qcow2

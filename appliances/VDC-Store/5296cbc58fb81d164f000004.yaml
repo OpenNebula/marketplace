@@ -2,22 +2,22 @@
 name: Blank Template - vdc
 version: '1.0'
 publisher: VDC-Store
-description: >-
-  This is an empty instance, size 10G, use this if you want to install your
-  own virtual machine from scratch (i.e. from a CD image)
+description: This is an empty instance, size 10G, use this if you want to
+  install your own virtual machine from scratch (i.e. from a CD image)
 short_description: This is an empty instance, size 10G for use with VDC-Store
   Only!
 tags:
 - vdc
 format: raw
-os_id: None
-os_release: None
-os_arch: None
+os-id: None
+os-release: None
+os-arch: None
 hypervisor: KVM
 opennebula_version: all
 logo: default.png
 images:
-- location: http://linux.co.uk/vms/Empty10G.bz2
+- name: Blank Template - vdc_file0
+  url: http://linux.co.uk/vms/Empty10G.bz2
   type: OS
   size: 194
   checksum:

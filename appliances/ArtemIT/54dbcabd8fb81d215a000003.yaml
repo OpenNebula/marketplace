@@ -15,25 +15,25 @@ description: |-
   This software image is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. Vyatta is a registered trademark of Vyatta, Inc.
 
   Please visit my blog: http://n40lab.wordpress.com for more information and support
-short_description: >-
-  WARNING: The Vyatta Open Source builds were discontinued after Vyatta
-  was acquired by Brocade and this image is two years old. Use it at your
-  own risk, Please check VyOS if you're looking for a Vyatta fork. This
-  image was created a long time ago using Vyatta Core's Virtualization ISO
-  so you could deploy this virtual router and firewall.
+short_description: 'WARNING: The Vyatta Open Source builds were discontinued
+  after Vyatta was acquired by Brocade and this image is two years old.
+  Use it at your own risk, Please check VyOS if you''re looking for a Vyatta
+  fork. This image was created a long time ago using Vyatta Core''s Virtualization
+  ISO so you could deploy this virtual router and firewall.'
 tags:
 - router
 - vyatta
 format: raw
 creation_time: 1423690429
-os_id: ''
-os_release: ''
-os_arch: i686
+os-id: ''
+os-release: ''
+os-arch: i686
 hypervisor: KVM
 opennebula_version: all
 logo: default.png
 images:
-- location: http://artemit.com.es/one/vyatta_core_65r1_kvm_32bits_macto
+- name: vyatta_core_65r1_kvm_32bits
+  url: http://artemit.com.es/one/vyatta_core_65r1_kvm_32bits_macto
   type: OS
   size: 2200000000
   checksum:

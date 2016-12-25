@@ -22,21 +22,21 @@ description: "This image has been created using Vyatta Core's Virtualization
   on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
   express or implied. Vyatta is a registered trademark of Vyatta, Inc.\n\nPlease
   visit my blog: http://n40lab.wordpress.com for more information and support"
-short_description: >-
-  This image provides a Vyatta Core 6.5R1 open source virtual router/firewall
-  for KVM.
+short_description: This image provides a Vyatta Core 6.5R1 open source virtual
+  router/firewall for KVM.
 tags:
 - vyatta
 - router
 format: raw
-os_id: Vyatta Core
-os_release: 6.5R1
-os_arch: i386
+os-id: Vyatta Core
+os-release: 6.5R1
+os-arch: i386
 hypervisor: KVM
 opennebula_version: all
 logo: default.png
 images:
-- location: http://sw.macto.es/open/vyatta_core_65r1_kvm_32bits_macto.gz
+- name: Vyatta Core 6.5R1 - kvm_file0
+  url: http://sw.macto.es/open/vyatta_core_65r1_kvm_32bits_macto.gz
   type: OS
   size: 2200000000
   checksum:
