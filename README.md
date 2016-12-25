@@ -47,9 +47,9 @@ format: qcow2
 
 # Time in epoch format and UTC. You can get it executing "date +%s"
 creation_time: 1443105849
-os_id: Debian
-os_release: '8.4'
-os_arch: x86_64
+os-id: Debian
+os-release: '8.4'
+os-arch: x86_64
 hypervisor: KVM
 
 # This is a string and only visible in the web interface
@@ -76,7 +76,8 @@ logo: debian.png
 
 # Array with all images related to this app
 images:
-- location: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/debian8-5.0.1-fix.qcow2c
+- name: Debian-8.4
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/debian8-5.0.1-fix.qcow2c
   type: OS
   dev_prefix: vd
   driver: qcow2
