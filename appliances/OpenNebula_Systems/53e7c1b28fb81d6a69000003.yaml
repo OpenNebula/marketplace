@@ -1,9 +1,9 @@
 ---
 name: Ubuntu 14.04 - KVM
-version: 5.0.2
+version: 5.0.3
 publisher: OpenNebula Systems
 description: |-
-  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.0/operation/vm_setup/kvm.html) preinstalled.
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.2/operation/vm_setup/kvm.html) preinstalled.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -16,17 +16,18 @@ tags:
 - '4.12'
 - '4.14'
 - '5.0'
+- '5.2'
 format: qcow2
 creation_time: 1407697330
 os-id: Ubuntu
 os-release: '14.04'
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2
 opennebula_template:
   context:
     network: 'YES'
-    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    ssh_public_key: $USER[SSH_PUBLIC_KEY]
   cpu: '1'
   graphics:
     listen: 0.0.0.0
@@ -38,10 +39,11 @@ opennebula_template:
 logo: ubuntu.png
 images:
 - name: Ubuntu-14.04
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1404-5.0.2.qcow2c
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1404-5.0.3.qcow2c
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 3e022f788a74ae50ab4aaf7c7ee8202a
+    md5: b8bf3f0e9a54e31fac792004fd8b969f
+    sha256: 6e0d7badff634420c247e0626ad697192dd5ffa76412115548bd0b0d34204101
