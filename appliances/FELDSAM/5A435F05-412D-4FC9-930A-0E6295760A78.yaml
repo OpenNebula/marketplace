@@ -18,9 +18,9 @@ description: |-
     	* *Limitation of 9 LoadBallancers on one vrouter instance each with max 9 real servers. This can be enhanced in context scripts in future.*
     5. Iptables and Keepalived IPv6 support - for this time just in dual stack IPv4+IPv6
     
-    **There are prepared context vars in template, so you need define right values**  
+    **There are prepared context vars in template, so you just need define right values**  
     [Docs here](https://forum.opennebula.org/t/contribution-vrouter-enhacements-and-load-ballancing/3679)
-short_description: "Vrouter with load ballancing support base don Alpine linux 3.5"
+short_description: "Vrouter with load ballancing support based on Alpine linux 3.5"
 tags: 
   - vrouter
   - loadballancer
