@@ -1,6 +1,5 @@
 --- 
-id: 5A435F05-412D-4FC9-930A-0E6295760A78
-name: "Vrouter Load Ballancer Alpine 3.5 - KVM"
+name: "Vrouter Load Balancer Alpine - KVM"
 version: "1.0.1"
 publisher: "FELDSAM s.r.o."
 description: |-
@@ -19,11 +18,11 @@ description: |-
     5. Iptables and Keepalived IPv6 support - for this time just in dual stack IPv4+IPv6
     
     **There are prepared context vars in template, so you just need define right values**  
-    [Docs here](https://forum.opennebula.org/t/contribution-vrouter-enhacements-and-load-ballancing/3679)
-short_description: "Vrouter with load ballancing support based on Alpine linux 3.5"
+    [Docs here](https://forum.opennebula.org/t/contribution-vrouter-enhacements-and-load-balancing/3679)
+short_description: "Vrouter with load balancing support based on Alpine linux 3.5"
 tags: 
   - vrouter
-  - loadballancer
+  - loadbalancer
   - alpine
   - "5.0"
   - "5.2"
@@ -72,8 +71,8 @@ opennebula_template:
 logo: router.png
 images: 
   - 
-    name: vrouter-loadballancer-alpine
-    url: "https://www.feldhost.cz/opennebula/vrouter-loadballancer-alpine.qcow2"
+    name: vrouter-loadbalancer-alpine
+    url: "https://www.feldhost.cz/opennebula/vrouter-loadbalancer-alpine.qcow2"
     type: OS
     dev_prefix: vd
     driver: qcow2
@@ -81,3 +80,4 @@ images:
     checksum: 
       md5: 32f1f9344db2123e057cbfcc5f4e4ce8
       sha1: 2593e4ef2aeaf35d61ce2c8064bd9c62c85dce59
+      sha256: c9211ba92b30b7e9e1fb96f40a6e3f1e29bb94430eaa04c2b010ee08e194248a
