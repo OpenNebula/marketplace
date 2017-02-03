@@ -1,0 +1,83 @@
+--- 
+name: "Vrouter Load Balancer Alpine - KVM"
+version: "1.0.1"
+publisher: "FELDSAM s.r.o."
+description: |-
+    ## Features
+    1. NAT iptables masquerading enabled by new context var `ETHx_VROUTER_GATEWAY = "YES"`
+    2. Keepalived email notifications:
+    	* `VROUTER_KEEPALIVED_NOTIFY_EMAIL` - required to enable this feature
+    	* `VROUTER_KEEPALIVED_FROM_EMAIL` - optional, if not defined emails are send from `NOTIFY_EMAIL` address
+    3. Keepalived can define sync interface using var `ETHx_VROUTER_KEEPALIVED_INF` - usefull if you need save some public IPv4 addresses or just want all vrrp traffix on private interface. *For saving addresses need integration in OpenNebula*
+    4. Keepalived Load Ballancing support
+    	* both NAT and DR (Direct Routing)
+    	* Single and Multi Port support using firewall marks
+    	* FTP Passive support using multiport, fwmarks and ip\_vs\_ftp module
+    	* Context vars in following format `VROUTER_LB0_DEV`, `VROUTER_LB0_SERVER0_IP`, `VROUTER_LB0_SERVER0_CHECK0_TYPE`
+    	* *Limitation of 9 LoadBallancers on one vrouter instance each with max 9 real servers. This can be enhanced in context scripts in future.*
+    5. Iptables and Keepalived IPv6 support - for this time just in dual stack IPv4+IPv6
+    
+    **There are prepared context vars in template, so you just need define right values**  
+    [Docs here](https://forum.opennebula.org/t/contribution-vrouter-enhacements-and-load-balancing/3679)
+short_description: "Vrouter with load balancing support based on Alpine linux 3.5"
+tags: 
+  - vrouter
+  - loadbalancer
+  - alpine
+  - "5.0"
+  - "5.2"
+format: qcow2
+creation_time: 1485773382
+os-arch: x86_64
+os-id: Alpine
+os-release: "3.5.0"
+hypervisor: KVM
+opennebula_version: "5.0, 5.2"
+opennebula_template: 
+  cpu: "1.0"
+  memory: "128"
+  vcpu: "1"
+  context: 
+    network: "yes"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    eth0_vrouter_gateway:  "yes"
+    vrouter_keepalived_notify_email: ""
+    vrouter_keepalived_from_email: ""
+    eth0_vrouter_keepalived_inf: ""
+    vrouter_lb0_algo: ""
+    vrouter_lb0_delay_loop: ""
+    vrouter_lb0_dev: ""
+    vrouter_lb0_kind: ""
+    vrouter_lb0_port: ""
+    vrouter_lb0_protocol: ""
+    vrouter_lb0_server0_ip: ""
+    vrouter_lb0_server0_port: ""
+    vrouter_lb0_server0_weight: ""
+    vrouter_lb0_server0_check0_type: ""
+    vrouter_lb0_server0_check0_port: ""
+    vrouter_lb0_server0_check0_timeout: ""
+    vrouter_lb0_server1_ip: ""
+    vrouter_lb0_server1_port: ""
+    vrouter_lb0_server1_weight: ""
+    vrouter_lb0_server1_check0_type: ""
+    vrouter_lb0_server1_check0_port: ""
+    vrouter_lb0_server1_check0_timeout: ""
+  graphics: 
+    listen: "0.0.0.0"
+    type: vnc
+  nic_default: 
+    model: virtio
+  vrouter: "yes"
+logo: router.png
+images: 
+  - 
+    name: vrouter-loadbalancer-alpine
+    url: "https://www.feldhost.cz/opennebula/vrouter-loadbalancer-alpine.qcow2"
+    type: OS
+    dev_prefix: vd
+    driver: qcow2
+    size: 8589934592
+    checksum: 
+      md5: 32f1f9344db2123e057cbfcc5f4e4ce8
+      sha1: 2593e4ef2aeaf35d61ce2c8064bd9c62c85dce59
+      sha256: c9211ba92b30b7e9e1fb96f40a6e3f1e29bb94430eaa04c2b010ee08e194248a
