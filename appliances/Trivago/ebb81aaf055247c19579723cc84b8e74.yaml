@@ -1,4 +1,3 @@
-# Unique identifier of this image. Use "uuidgen" command to generate a new one
 id: ebb81aaf055247c19579723cc84b8e74
 name: FreeBSD 10.3
 version: 1.0
@@ -7,8 +6,6 @@ description: |-
   Des:FreeBSD 10.3 with contextulization
 short_description: FreeBSD 10.3 with contextulization 
 
-# Assorted list of tags, you can add version of OpenNebula where it was
-# tested and things like OS or application
 tags:
 - freebsd
 - '4.8'
@@ -20,7 +17,6 @@ tags:
 # Other formats could be raw or vmdk
 format: qcow2
 
-# Time in epoch format and UTC. You can get it executing "date +%s"
 creation_time: 1486408847
 os-id: FreeBSD
 os-release: '10.3'
