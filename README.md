@@ -1,22 +1,27 @@
 # Marketplace Appliances
 
-Each marketplace appliance consists of a `yaml` file that contains the metadata and a image file stored in a web server.
+Each Marketplace Appliance consists of a YAML file that contains the metadata
+and an image file stored in a web server.
 
-The steps to submit a new appliance or make changes to one of the available images is as follows:
+The steps to submit a new appliance or make changes to one of the available
+images is as follows:
 
 * Clone this repository
 * Make changes and upload them to your repo
 * Create a pull request
 
-**Note**: When creating new yaml appliances put them in a directory with the name of the publisher and try not to use spaces in its dir name ("My Company" -> "My_Company").
+**Note**: When creating new YAML appliances put them in a directory with
+the name of the publisher and try not to use spaces in its dir name
+("My Company" -> "My\_Company").
 
-Here is an example of an appliance that you can use as basis for a new one:
+For **filename choose new random UUID** with `.yaml` suffix. You can use
+`uuidgen` or `uuid` commands to generate a new one.
+
+Here is an example of an appliance that you can use as a basis for a new one.
 
 
 ```yaml
 ---
-# Unique identifier of this image. Use "uuidgen" command to generate a new one
-id: 2ae79ed7-24c7-4c35-a5de-f480a30183f2
 name: Name of the appliance
 version: Version of this specific appliance
 publisher: Your name or company
