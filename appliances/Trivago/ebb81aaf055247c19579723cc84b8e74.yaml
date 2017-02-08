@@ -1,4 +1,3 @@
-id: ebb81aaf055247c19579723cc84b8e74
 name: FreeBSD 10.3
 version: 1.0
 publisher: Trivago GmbH
@@ -38,14 +37,14 @@ opennebula_template:
   os:
     arch: x86_64
   user_inputs:
-    ssh_user_key: "M|text|SSH KEY: Additional ssh key to add",
+    ssh_user_key: "M|text|SSH KEY: Additional ssh key to add"
 
 images:
 - name: FreeBSD-10.3
-  url: https://one-trivago.s3-website-us-west-1.amazonaws.com/freebsd-trv.qcow2
+  url: http://one-trivago.s3-website-us-west-1.amazonaws.com/freebsd-trv.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: 365b676bf858246e1b68f48f54159ba0
+    md5: 8a49f2dac4ae37e25b366716d3a9c4cf
