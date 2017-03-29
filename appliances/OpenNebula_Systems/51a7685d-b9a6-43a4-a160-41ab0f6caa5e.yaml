@@ -1,5 +1,5 @@
 ---
-name: CentOS 6.8 - KVM
+name: CentOS 6 - KVM
 version: 5.0.3
 publisher: OpenNebula Systems
 description: |-
@@ -10,15 +10,9 @@ description: |-
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: CentOS 6.8
+short_description: CentOS 6.8 image for KVM hosts
 tags:
 - centos
-- '4.8'
-- '4.10'
-- '4.12'
-- '4.14'
-- '5.0'
-- '5.2'
 format: qcow2
 creation_time: 1407674298
 os-id: CentOS
@@ -40,7 +34,7 @@ opennebula_template:
   logo: images/logos/centos.png
 logo: centos-5.5.png
 images:
-- name: CentOS-6.8
+- name: centos6-5.0.3
   url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/centos6-5.0.3.qcow2c
   type: OS
   driver: qcow2

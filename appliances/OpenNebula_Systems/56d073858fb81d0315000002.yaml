@@ -1,0 +1,43 @@
+---
+name: boot2docker
+version: 1.12.1-1
+publisher: OpenNebula Systems
+description: |-
+  Boot2Docker built by https://github.com/OpenNebula/boot2docker-one
+  so it supports OpenNebula contextualization. It is recommended to
+  use this appliance in conjunction with the OpenNebula
+  [docker-machine](https://github.com/OpenNebula/docker-machine-opennebula) plugin.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Boot2Docker with OpenNebula contextualization.
+tags:
+- docker
+format: raw
+creation_time: 1456501637
+os-id: boot2docker
+os-release: 1.12.1
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: all
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+logo: boot2docker.png
+images:
+- name: boot2docker
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/boot2docker-1.12.1.iso
+  type: OS
+  driver: raw
+  dev_prefix: vd
+  size: 40894464
+  checksum:
+    md5: 368b9a74e8e95b6670c71b32dd344ff1
+    sha256: c259f3b871aea73b6d9f1e605763147cd0dc7916a54af25978baebfd231549c5

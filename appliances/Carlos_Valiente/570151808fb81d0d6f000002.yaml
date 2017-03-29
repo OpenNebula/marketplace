@@ -24,7 +24,8 @@ description: |-
 
   Contributions are most welcome!
 short_description: CoreOS alpha image for KVM hosts under OpenNebula.
-tags: []
+tags:
+- coreos
 format: qcow2
 creation_time: 1459704192
 os-id: CoreOS
@@ -39,10 +40,10 @@ opennebula_template:
     type: vnc
     listen: 0.0.0.0
   context:
-    set_hostname: "$NAME"
-    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    set_hostname: $NAME
+    ssh_public_key: $USER[SSH_PUBLIC_KEY]
     network: 'YES'
-    user_data: "$USER_DATA"
+    user_data: $USER_DATA
   memory: '512'
   os:
     arch: x86_64
@@ -53,6 +54,7 @@ images:
   url: https://github.com/carletes/coreos-opennebula-image/releases/download/v0.1.0/coreos-alpha-1000.0.0.bz2
   type: OS
   driver: qcow2
-  size: 256965320
+  size: 10737418240
   checksum:
     md5: d5a3648092f19f3bd0e4ef9628389520
+    sha256: 3e550098ba9bcdd397a1a72e0482a2b1dc60a92ab266b6c0c24912f270ae9650

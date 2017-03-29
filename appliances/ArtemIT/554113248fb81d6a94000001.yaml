@@ -29,7 +29,9 @@ short_description: "This image has been created using VyOS 1.1.5 ISO for
   that provides software-based network routing, firewall, and VPN functionality.\r\n\r\nThis
   image provides a VyOS virtual router/firewall only for KVM. When booting
   select the first option (KVM)."
-tags: []
+tags:
+- router
+- vyos
 format: raw
 creation_time: 1430328100
 os-id: ''
@@ -37,11 +39,13 @@ os-release: ''
 os-arch: x86_64
 hypervisor: KVM
 opennebula_version: all
-logo: default.png
+logo: router.png
 images:
 - name: vyos-1.1.5-amd64
   url: http://artemit.com.es/one/vyos-1.1.5-amd64.gz
   type: OS
-  size: 263000000
+  driver: raw
+  size: 2097152000
   checksum:
     md5: aba8765298ffcf8784f8a6d2b267eb79
+    sha256: 655757d9cf810d332fe7ff3a2dfa33b2db238dbf1c52122295ea828a27bba46b

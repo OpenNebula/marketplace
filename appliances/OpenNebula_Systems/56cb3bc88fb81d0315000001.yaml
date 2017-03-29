@@ -1,0 +1,44 @@
+---
+name: Ubuntu for Docker Machine
+version: 0.6.0-2
+publisher: OpenNebula Systems
+description: |-
+  Ubuntu 14.04 LTS with preinstalled packages in order to work
+  with Docker Machine Tested with Docker Machine 0.6.0
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Ubuntu 14.04 LTS with preinstalled packages in order
+  to work with Docker Machine
+tags:
+- docker
+- ubuntu
+format: qcow2
+creation_time: 1456159688
+os-id: ''
+os-release: ''
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 4.14, 5.0, 5.2
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/ubuntu.png
+logo: default.png
+images:
+- name: Docker-Machine-Ubuntu-14.04
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/docker_machine_ubuntu-14.04.qcow2c
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 10737418240
+  checksum:
+    md5: 3493d7cbaa20143b2ee3ffc3ece73077
+    sha256: 911bd8cb3fec2a269c70edccc6b17dea468c38e91ec0d56b0c8b206a98d8ca9b
