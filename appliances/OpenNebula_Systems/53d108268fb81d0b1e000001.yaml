@@ -1,34 +1,16 @@
 ---
 name: OpenNebula Virtual Router
-version: '1.0'
-publisher: OpenNebula Systems
-description: |-
-  When instantiated in a network, this appliance provides the following services for
-  other Virtual Machines running in the same network:
-
-  * Router (masquerade)
-  * Port forwarding
-  * DHCP server
-  * DNS server
-  * Radvd server
-
-  More information on how to use this appliance in the OpenNebula documentation: http://docs.opennebula.org/4.8/administration/networking/router.html
-short_description: A virtual router for an OpenNebula Network
-tags:
-- router
-format: raw
+version: DELETED
+publisher: DON'T USE, appliance has been deleted
+description: DON'T USE, appliance has been deleted
+short_description: DON'T USE, appliance has been deleted
+tags: []
+format: DELETED
 creation_time: 1406208038
-os-id: AlpineLinux 2.5
-os-release: ''
-os-arch: x86_64
-hypervisor: all
-opennebula_version: 4.6, 4.8, 4.10
+os-id: DELETED
+os-release: DELETED
+os-arch: DELETED
+hypervisor: DELETED
+opennebula_version:
 logo: router.png
-images:
-- url: http://opennebula-marketplace.s3.amazonaws.com/OpenNebula-4.8-VR.img.gz
-  type: OS
-  driver: raw
-  size: 209715712
-  checksum:
-    md5: d32a9b7e3a4c24e93fb393a5fb6cd734
-    sha256: 05f5ed533a272147ae4197c3c4c8939b89aee409952040881c29f2587d468735
+images: []
