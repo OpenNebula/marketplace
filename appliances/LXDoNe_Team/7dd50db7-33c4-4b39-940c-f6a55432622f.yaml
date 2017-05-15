@@ -4,6 +4,7 @@ version: '1'
 publisher: LXDoNe Team
 description: Contextualized image ready to be used with [LXDoNe](https://github.com/OpenNebula/addon-lxdone/blob/master/README.md)
   driver. You can learn more about this driver [here](https://opennebula.org/lxdone-lightweight-virtualization-for-opennebula/).
+short_description: Ubuntu 16.04 image for the LXDoNe addon. Please read the detailed information.
 tags:
 - Ubuntu
 - LXD
