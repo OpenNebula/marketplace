@@ -1,0 +1,38 @@
+---
+name: Ubuntu 16.04 - LXD
+version: '1'
+publisher: LXDoNe Team
+description: Contextualized image ready to be used with [LXDoNe](https://github.com/OpenNebula/addon-lxdone/blob/master/README.md)
+  driver. You can learn more about this driver [here](https://opennebula.org/lxdone-lightweight-virtualization-for-opennebula/).
+tags:
+- Ubuntu
+- LXD
+- LXDoNe
+format: raw
+creation_time: 1493068114
+os-id: Ubuntu
+os-release: '16.04'
+os-arch: x86_64
+hypervisor: LXD
+opennebula_version: '5.2'
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '512'
+  logo: images/logos/ubuntu.png
+logo: ubuntu.png
+images:
+- name: Ubuntu-16.04-LXD
+  url: https://downloads.zooloo.org/lxdone-marketplace.img.gz
+  type: OS
+  dev_prefix: vd
+  driver: raw
+  size: 524288000
+  checksum:
+    md5: 51521f098db94f6d87fc72e136543254
+    sha256: 474e6d472283bb98c6af1e4fea586ab9ba7596fcb576863915aef12131921f9f
