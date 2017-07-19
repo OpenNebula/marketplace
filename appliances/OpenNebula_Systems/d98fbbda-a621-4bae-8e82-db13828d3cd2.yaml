@@ -1,22 +1,20 @@
 ---
-name: CentOS 6 - KVM
+name: openSUSE 42  - KVM
 version: 5.4.0
 publisher: OpenNebula Systems
 description: |-
-  A CentOS 6 image ready for your OpenNebula deployment in KVM hosts.
-
-  This image is based off a CentOS 6 minimal install with the [contextualization package](http://docs.opennebula.org/5.4/operation/vm_setup/kvm.html).
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.4/operation/vm_setup/kvm.html) preinstalled.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: CentOS 6 image for KVM hosts
+short_description: openSUSE 42 image for KVM hosts
 tags:
-- centos
+- opensuse
 format: qcow2
-creation_time: 1407674298
-os-id: CentOS
-os-release: '6.9'
+creation_time: 1500454066
+os-id: openSUSE
+os-release: '42.3'
 os-arch: x86_64
 hypervisor: KVM
 opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4
@@ -31,14 +29,15 @@ opennebula_template:
   memory: '768'
   os:
     arch: x86_64
-  logo: images/logos/centos.png
-logo: centos-5.5.png
+  logo: images/logos/linux.png
+logo: opensuse.png
 images:
-- name: centos6-5.4.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/centos6-5.4.0.qcow2c
+- name: opensuse42-5.4.0
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/opensuse42-5.4.0.qcow2c
   type: OS
+  dev_prefix: vd
   driver: qcow2
-  size: 8589934592
+  size: 10737418240
   checksum:
-    md5: a1759e8dafe8ba558addeef9744fd461
-    sha256: fe8a2e2978b49fde76da32e26300cbe68b3603265bd2029108707e8595dbe5bc
+    md5: d609ba8e423785a6ea13eb719d9c7fd9
+    sha256: c6a55a4ed55fb19298f5488fae8b20c609405a3478f92ede0dfa251d7477d09b

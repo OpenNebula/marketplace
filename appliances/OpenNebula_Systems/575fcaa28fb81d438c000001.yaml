@@ -1,9 +1,9 @@
 ---
 name: Ubuntu 16.04 - KVM
-version: 5.0.3
+version: 5.4.0
 publisher: OpenNebula Systems
 description: |-
-  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.2/operation/vm_setup/kvm.html) preinstalled.
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.4/operation/vm_setup/kvm.html) preinstalled.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -17,7 +17,7 @@ os-id: Ubuntu
 os-release: '16.04'
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4
 opennebula_template:
   context:
     network: 'YES'
@@ -32,12 +32,12 @@ opennebula_template:
   logo: images/logos/ubuntu.png
 logo: ubuntu.png
 images:
-- name: Ubuntu-16.04
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1604-5.0.3.qcow2c
+- name: ubuntu1604-5.4.0
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1604-5.4.0.qcow2c
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 9cee51fa20f076370b73b1334f6a88af
-    sha256: f993c42c34d4b3737f0553ff9049fb301f360267f21cd1b6dbbe06fb00312dc3
+    md5: c75e0559f0827f1991cbb02e665d77d5
+    sha256: 87622be932ca42b68eded45a405b150433f697b294bb70f0e1da627e7ce6abf9
