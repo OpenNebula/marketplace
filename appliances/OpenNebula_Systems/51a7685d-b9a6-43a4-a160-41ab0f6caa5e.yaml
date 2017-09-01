@@ -37,6 +37,7 @@ images:
 - name: centos6-5.4.0
   url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/centos6-5.4.0.qcow2c
   type: OS
+  dev_prefix: vd
   driver: qcow2
   size: 8589934592
   checksum:
