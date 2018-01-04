@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 16.04 - KVM
-version: 5.4.0
+version: 5.4.2
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.4/operation/vm_setup/kvm.html) preinstalled.
@@ -32,12 +32,12 @@ opennebula_template:
   logo: images/logos/ubuntu.png
 logo: ubuntu.png
 images:
-- name: ubuntu1604-5.4.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1604-5.4.0.qcow2c
+- name: ubuntu1604-5.4.2
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1604-5.4.2.qcow2c
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: c75e0559f0827f1991cbb02e665d77d5
-    sha256: 87622be932ca42b68eded45a405b150433f697b294bb70f0e1da627e7ce6abf9
+    md5: 58838d0844dee3b5eb91fc8a95df3823
+    sha256: 3856a884571bc4105645ab3c368a67bc77b70cce5a18798b39827966cde57ae8

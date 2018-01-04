@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 17.04 - KVM
-version: 5.4.0
+version: 5.4.2
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.4/operation/vm_setup/kvm.html) preinstalled.
@@ -32,12 +32,12 @@ opennebula_template:
   logo: images/logos/ubuntu.png
 logo: ubuntu.png
 images:
-- name: ubuntu1704-5.4.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1704-5.4.0.qcow2c
+- name: ubuntu1704-5.4.2
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1704-5.4.2.qcow2c
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: bb4324a3c0138d3dce6cd499719b9c86
-    sha256: 3080225ec16d3123710e56c15cc87f3a69b7870af6c3685107d85f73c8efacd5
+    md5: d59dcbcb3e439f93bc6ab56e0b7b5111
+    sha256: 2a91f79953822d6a10d5eeef134e8fd9de283d698f07022ba84ecf62dd93d107

@@ -1,6 +1,6 @@
 ---
 name: CentOS 6 - KVM
-version: 5.4.0
+version: 5.4.2
 publisher: OpenNebula Systems
 description: |-
   A CentOS 6 image ready for your OpenNebula deployment in KVM hosts.
@@ -34,12 +34,12 @@ opennebula_template:
   logo: images/logos/centos.png
 logo: centos-5.5.png
 images:
-- name: centos6-5.4.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/centos6-5.4.0.qcow2c
+- name: centos6-5.4.2
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/centos6-5.4.2.qcow2c
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 8589934592
   checksum:
-    md5: a1759e8dafe8ba558addeef9744fd461
-    sha256: fe8a2e2978b49fde76da32e26300cbe68b3603265bd2029108707e8595dbe5bc
+    md5: 55b5ea5475454e4b020062dec06f54ed
+    sha256: fd9b4658ade9065683e04398a66a65f3ef92afaa0d9989b31912e96c9d92a28d
