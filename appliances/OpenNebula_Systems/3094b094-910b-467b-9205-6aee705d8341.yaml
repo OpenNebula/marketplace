@@ -1,0 +1,37 @@
+---
+name: CentOS 7 - EC2
+version: 5.4.2
+publisher: OpenNebula Systems
+description: |-
+  CentOS 7 image ready for the OpenNebula Cloud Bursting on the Amazon EC2.
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+short_description: CentOS 7 image for Amazon EC2
+tags:
+- centos
+format: ami
+creation_time: 1515065188
+os-id: CentOS
+os-release: '7.4'
+os-arch: x86_64
+hypervisor: EC2
+opennebula_version: 5.0, 5.2, 5.4
+opennebula_template:
+  context:
+    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+  cpu: '0.1'
+  memory: '256'
+  inputs_order: EC2_INSTANCETYPE,EC2_SECURITYGROUPIDS,EC2_SUBNETID
+  public_cloud:
+    ami: ami-a7c095dd
+    instancetype: $EC2_INSTANCETYPE
+    securitygroupids: $EC2_SECURITYGROUPIDS
+    subnetid: $EC2_SUBNETID
+    type: ec2
+  sched_requirements: (PUBLIC_CLOUD=YES) & (REGION_NAME=\"us-east-1\")
+  user_inputs:
+    ec2_instancetype: M|text|EC2 Instance Type
+    ec2_securitygroupids: M|text|EC2 Security Group IDs
+    ec2_subnetid: M|text|EC2 Subnet ID
+  logo: images/logos/centos.png
+logo: centos-5.5.png
