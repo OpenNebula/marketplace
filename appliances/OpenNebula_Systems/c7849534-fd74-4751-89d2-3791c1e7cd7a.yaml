@@ -6,6 +6,14 @@ description: |-
   Debian 9 image ready for the OpenNebula Cloud Bursting on the Amazon EC2.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  EC2 image details:
+
+  * **Region**: us-east-1
+  * **AMI**: ami-52c19428
+  * **Virtualization Type**: HVM
+  * **Root Device Type**: EBS
+  * **Volume Type**: GP2
 short_description: Debian 9 image for Amazon EC2
 tags:
 - debian
