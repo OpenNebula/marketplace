@@ -1,0 +1,68 @@
+---
+name: Devuan Ascii
+version: 2.0.0
+publisher: ungleich glarus ag
+description: |-
+  Devuan Ascii 2.0.0 QEMU image ready to use with OpenNebula.
+  
+  There is no password for the root account. To access the VM, add an SSH public key to your user or the template and ssh to the root account.
+
+  Official onecontext package (v5.4.2) used for contextualization.
+  
+  This image can be recreated using the Makefile from <https://github.com/AnotherKamila/devuan-for-opennebula>.
+
+short_description: Devuan Ascii 2.0.0 image for KVM hosts
+
+# Assorted list of tags, you can add version of OpenNebula where it was
+# tested and things like OS or application
+tags:
+- devuan
+- ascii
+- ascii/ceres
+- server
+
+# Other formats could be raw or vmdk
+format: qcow2
+
+# Time in epoch format and UTC. You can get it executing "date +%s"
+creation_time: 1521119970
+os-id: Devuan
+os-release: 'ascii/ceres'
+os-arch: x86_64
+hypervisor: KVM
+
+# This is a string and only visible in the web interface
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0
+
+# The template for the appliance without disks and in yaml format
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/devuan.png
+
+# Logo to display in the web interface. You can check the available logos in
+# "logos" dir in this repository. You can also submit a new logos using pull
+# requests
+logo: devuan.png
+
+# Array with all images related to this app
+images:
+- name: Devuan-Ascii
+  url: https://mirror.datacenterlight.ch/mirror/opennebula/devuan_ascii_2.0.0-beta_amd64_qemu_opennebula.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  # Size in bytes of the image, not the file. You can use `qemu-img info` command
+  # to retrieve the virtual size.
+  size: 3145728000
+  checksum:
+    # You can also specify "sha1" hash
+    sha1: 9298e3e11dcfb465634cb313eccfe48d95b7dc3c
