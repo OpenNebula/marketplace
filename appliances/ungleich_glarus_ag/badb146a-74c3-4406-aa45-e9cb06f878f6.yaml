@@ -32,7 +32,7 @@ os-arch: x86_64
 hypervisor: KVM
 
 # This is a string and only visible in the web interface
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4
 
 # The template for the appliance without disks and in yaml format
 opennebula_template:
