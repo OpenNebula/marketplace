@@ -12,9 +12,8 @@ short_description: Ubuntu 16.04 with Docker image for vCenter hosts
 tags:
 - ubuntu
 - docker
-- vCenter
 format: vmdk
-creation_time: 1465895586
+creation_time: 1523362012
 os-id: Ubuntu
 os-release: '16.04'
 os-arch: x86_64
@@ -34,7 +33,7 @@ opennebula_template:
   logo: images/logos/ubuntu.png
 logo: ubuntu.png
 images:
-- name: ubuntu1604_docker-5.4.2
+- name: ubuntu1604_docker-5.5.80-vcenter
   url: https://opennebula-marketplace.s3.amazonaws.com/ubuntu1604_docker-5.5.80-0.20180405.vmdk.gz
   type: OS
   dev_prefix: sd
