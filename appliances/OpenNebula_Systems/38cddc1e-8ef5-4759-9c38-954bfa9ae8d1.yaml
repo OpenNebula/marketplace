@@ -1,5 +1,5 @@
 ---
-name: Ubuntu 16.04 - Docker - KVM
+name: Ubuntu 16.04 with Docker - KVM
 version: 5.5.80-0.20180405
 publisher: OpenNebula Systems
 description: |-

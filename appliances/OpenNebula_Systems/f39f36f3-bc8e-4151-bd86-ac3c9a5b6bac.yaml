@@ -1,5 +1,5 @@
 ---
-name: Ubuntu 16.04 - Docker - vCenter
+name: Ubuntu 16.04 with Docker - vCenter
 version: 5.5.80-0.20180405
 publisher: OpenNebula Systems
 description: |-
@@ -18,7 +18,7 @@ creation_time: 1465895586
 os-id: Ubuntu
 os-release: '16.04'
 os-arch: x86_64
-hypervisor: ESX
+hypervisor: VMWARE
 opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4
 opennebula_template:
   context:
@@ -37,8 +37,8 @@ images:
 - name: ubuntu1604_docker-5.4.2
   url: https://opennebula-marketplace.s3.amazonaws.com/ubuntu1604_docker-5.5.80-0.20180405.vmdk.gz
   type: OS
-  dev_prefix: vd
-  driver: qcow2
+  dev_prefix: sd
+  driver: vcenter
   size: 2361393152
   checksum:
     md5: 5151388896c2b92847c3e05cde7587d2
