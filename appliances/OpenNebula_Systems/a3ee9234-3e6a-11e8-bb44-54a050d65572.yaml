@@ -3,7 +3,7 @@ name: Amazon Linux 2 - KVM
 version: 5.4.2
 publisher: OpenNebula Systems
 description: |-
-  [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/) image ready for the OpenNebula deployment on KVM hosts with [contextualization package](http://docs.opennebula.org/5.4/operation/vm_setup/kvm.html) installed. Your use of this software is governed by the terms of the AWS Customer Agreement (https://aws.amazon.com/agreement/) or other agreement with AWS governing your use of AWS services.
+  [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/) image ready for the OpenNebula deployment on KVM hosts with [contextualization package](http://docs.opennebula.org/5.4/operation/vm_setup/kvm.html) installed. The use of this software is governed by the terms of the AWS Customer Agreement (https://aws.amazon.com/agreement/) or other agreement with AWS governing the use of AWS services.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
