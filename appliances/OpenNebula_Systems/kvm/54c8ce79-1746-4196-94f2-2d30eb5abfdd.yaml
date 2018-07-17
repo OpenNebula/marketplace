@@ -1,0 +1,45 @@
+---
+name: Fedora 28 - KVM
+version: 5.6.0
+publisher: OpenNebula Systems
+description: |-
+  Fedora 28 image ready for your OpenNebula deployment in KVM hosts.
+
+  This image is based off a Fedora 28 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Fedora 28 image for KVM hosts
+tags:
+- fedora
+format: qcow2
+creation_time: 1515059845
+os-id: Fedora
+os-release: '28'
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/fedora.png
+logo: fedora.png
+images:
+- name: fedora28-5.6.0
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/fedora28-5.6.0.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 4294967296
+  checksum:
+    md5: 38078829450ef03805571b1e5211ae4b
+    sha256: ee526a414fd838e7b3261fa2acaaeae9bb6c1bd4c7460eeff0b298ce882c7d78

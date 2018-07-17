@@ -1,23 +1,24 @@
 ---
-name: Ubuntu 17.04 - KVM
-version: 5.4.2
+name: Ubuntu 16.04 with Docker - KVM
+version: 5.6.0
 publisher: OpenNebula Systems
 description: |-
-  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.4/operation/vm_setup/kvm.html) preinstalled.
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) and Docker-CE preinstalled.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Ubuntu 17.04 image for KVM hosts
+short_description: Ubuntu 16.04 with Docker image for KVM hosts
 tags:
 - ubuntu
+- docker
 format: qcow2
-creation_time: 1465895586
+creation_time: 1523362012
 os-id: Ubuntu
-os-release: '17.04'
+os-release: '16.04'
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6
 opennebula_template:
   context:
     network: 'YES'
@@ -32,12 +33,12 @@ opennebula_template:
   logo: images/logos/ubuntu.png
 logo: ubuntu.png
 images:
-- name: ubuntu1704-5.4.2
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1704-5.4.2.qcow2c
+- name: ubuntu1604_docker-5.6.0-kvm
+  url: https://opennebula-marketplace.s3.amazonaws.com/ubuntu1604_docker-5.6.0.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: d59dcbcb3e439f93bc6ab56e0b7b5111
-    sha256: 2a91f79953822d6a10d5eeef134e8fd9de283d698f07022ba84ecf62dd93d107
+    md5: cfa5ee671accbea5c97e64ee821e2c20
+    sha256: 978c0ae7b34a48ce4875a8f781a060098f1cd62ed8cdffd2d50310939afc5950

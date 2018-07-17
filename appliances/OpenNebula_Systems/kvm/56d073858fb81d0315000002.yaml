@@ -35,8 +35,8 @@ images:
 - name: boot2docker
   url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/boot2docker-1.12.1.iso
   type: OS
-  driver: raw
   dev_prefix: vd
+  driver: raw
   size: 40894464
   checksum:
     md5: 368b9a74e8e95b6670c71b32dd344ff1

@@ -1,11 +1,11 @@
 ---
 name: Fedora 27 - KVM
-version: 5.4.2
+version: 5.6.0
 publisher: OpenNebula Systems
 description: |-
   Fedora 27 image ready for your OpenNebula deployment in KVM hosts.
 
-  This image is based off a Fedora 27 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.org/5.4/operation/vm_setup/kvm.html).
+  This image is based off a Fedora 27 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -19,7 +19,7 @@ os-id: Fedora
 os-release: '27'
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6
 opennebula_template:
   context:
     network: 'YES'
@@ -34,12 +34,12 @@ opennebula_template:
   logo: images/logos/fedora.png
 logo: fedora.png
 images:
-- name: fedora27-5.4.2
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/fedora27-5.4.2.qcow2c
+- name: fedora27-5.6.0
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/fedora27-5.6.0.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: d60e892ff5fa5e26e08c6c415731eb89
-    sha256: 46d71dcece1a81accbd4e08cbd0ba7f099a791ccae74cd461ac2ade5f23e4402
+    md5: 64cd1a3598d3e05f557423a83a88b252
+    sha256: ebd7418a54b67ee1ebbc334bf9e16e72218cb4d4ed7d22acb34699819ca1b457

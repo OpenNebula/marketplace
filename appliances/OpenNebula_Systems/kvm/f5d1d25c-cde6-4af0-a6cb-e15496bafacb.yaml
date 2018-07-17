@@ -1,11 +1,11 @@
 ---
 name: Alpine Linux 3.6 - KVM
-version: 5.4.2
+version: 5.6.0
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.6 image ready for your OpenNebula deployment in KVM hosts.
 
-  This image is based of the Alpine Linux 3.6 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.org/5.4/operation/vm_setup/kvm.html).
+  This image is based of the Alpine Linux 3.6 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -19,7 +19,7 @@ os-id: Alpine Linux
 os-release: '3.6'
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6
 opennebula_template:
   context:
     network: 'YES'
@@ -34,12 +34,12 @@ opennebula_template:
   logo: images/logos/linux.png
 logo: alpine.png
 images:
-- name: alpine36-5.4.2
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine36-5.4.2.qcow2c
+- name: alpine36-5.6.0
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine36-5.6.0.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: a4fe30f8cc207ffab7efbfa4d7a91ca7
-    sha256: 9a8d3590e985923eb244dce994f99dd04f538392bef7ef27bcb58e0deef4b662
+    md5: 1b153f12ba4d4fad85c9e296f2326c61
+    sha256: 295a4546bf8b89d2af4767ae80f3f84a981d5e5af750ec78ae9ef140b252a053
