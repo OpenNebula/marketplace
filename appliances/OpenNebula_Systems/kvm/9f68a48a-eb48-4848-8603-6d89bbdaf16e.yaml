@@ -1,6 +1,6 @@
 ---
 name: Alpine Linux 3.7 - KVM
-version: 5.6.0
+version: 5.6.0-0
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.7 image ready for your OpenNebula deployment in KVM hosts.
@@ -34,12 +34,12 @@ opennebula_template:
   logo: images/logos/linux.png
 logo: alpine.png
 images:
-- name: alpine37-5.6.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine37-5.6.0.qcow2
+- name: alpine37
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine37-5.6.0-0.20181019.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 536870912
   checksum:
-    md5: 4cbdb4ad7cd00b4507c792d72e9bb970
-    sha256: aca39d072138370e9e1c26f34f3f49caadbd0b12c7dc56cfd22fd0b70a81b873
+    md5: 77ec05942a36b74ad3d806b07fa7187f
+    sha256: bc531fc3deda5b5acd5a0745faab5ea26efffaa481adb80e24ec30b88cadabf5

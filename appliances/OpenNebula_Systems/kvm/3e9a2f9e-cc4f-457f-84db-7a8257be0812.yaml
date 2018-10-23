@@ -1,6 +1,6 @@
 ---
-name: openSUSE 15  - KVM
-version: 5.6.0
+name: openSUSE 15 - KVM
+version: 5.6.0-0
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) preinstalled.
@@ -32,12 +32,12 @@ opennebula_template:
   logo: images/logos/linux.png
 logo: opensuse.png
 images:
-- name: opensuse15-5.6.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/opensuse15-5.6.0.qcow2
+- name: opensuse15
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/opensuse15-5.6.0-0.20181019.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 9f18c8be020fd792247f96b96e4d32c0
-    sha256: 7fc18a032f3744a41a1003626389cf3bdfdb3aa174f8890477ebc484be0567e0
+    md5: d15889b578be79b305d72954f1866db9
+    sha256: d266c2ed5272a0c5882a9c964936154b099134b19b934fa49eb27d0b707d01f5

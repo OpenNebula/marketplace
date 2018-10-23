@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 18.04 - KVM
-version: 5.6.0
+version: 5.6.0-0
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) preinstalled.
@@ -32,12 +32,12 @@ opennebula_template:
   logo: images/logos/ubuntu.png
 logo: ubuntu.png
 images:
-- name: ubuntu1804-5.6.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1804-5.6.0.qcow2
+- name: ubuntu1804
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1804-5.6.0-0.20181019.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 744fd5c3b337fd6757175853ff2a6f0b
-    sha256: a2a1f039a8792bce0d6b2182aab830d7693e400c391a7597e09758ae0f1a5d76
+    md5: ea8a070e92f537c13d3de189ebb337a2
+    sha256: 3701b786215536a525fd771296727ae8860d4c11a797007e7a3c5a5c42cabbbc

@@ -1,6 +1,6 @@
 ---
 name: Devuan 1 - KVM
-version: 5.6.0
+version: 5.6.0-0
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) preinstalled.
@@ -32,12 +32,12 @@ opennebula_template:
   logo: images/logos/linux.png
 logo: devuan.png
 images:
-- name: devuan1-5.6.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/devuan1-5.6.0.qcow2
+- name: devuan1
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/devuan1-5.6.0-0.20181019.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21473787904
   checksum:
-    md5: 7084f385c3712181b4ffdab1479da6d4
-    sha256: cd8323f4d34f4fe6ac32d7c293743e9c7a23bb634adc36dac65c031cca3b6849
+    md5: b82518b9cd26202fe7c571edc742ebed
+    sha256: 65482f205aafe7c07f30da1cb4efa2a245cdecfe230d875bf42790f41910acb4

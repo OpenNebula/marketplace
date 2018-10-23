@@ -1,6 +1,6 @@
 ---
 name: Fedora 28 - KVM
-version: 5.6.0
+version: 5.6.0-0
 publisher: OpenNebula Systems
 description: |-
   Fedora 28 image ready for your OpenNebula deployment in KVM hosts.
@@ -34,12 +34,12 @@ opennebula_template:
   logo: images/logos/fedora.png
 logo: fedora.png
 images:
-- name: fedora28-5.6.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/fedora28-5.6.0.qcow2
+- name: fedora28
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/fedora28-5.6.0-0.20181019.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 38078829450ef03805571b1e5211ae4b
-    sha256: ee526a414fd838e7b3261fa2acaaeae9bb6c1bd4c7460eeff0b298ce882c7d78
+    md5: 6575a3f7d2cce92f40d4b080dc3d30a9
+    sha256: 05d0910833024f8c3422d8b28ba0ad423d40ed151ecd3d6f3dccf8478f47c2a1

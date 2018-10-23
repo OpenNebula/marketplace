@@ -1,6 +1,6 @@
 ---
 name: CentOS 7 - KVM
-version: 5.6.0
+version: 5.6.0-0
 publisher: OpenNebula Systems
 description: |-
   A CentOS 7 image ready for your OpenNebula deployment in KVM hosts.
@@ -34,12 +34,12 @@ opennebula_template:
   logo: images/logos/centos.png
 logo: centos-5.5.png
 images:
-- name: centos7-5.6.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/centos7-5.6.0.qcow2
+- name: centos7
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/centos7-5.6.0-0.20181019.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 8589934592
   checksum:
-    md5: e1e5f0e48c3dfb3cca27337343a98527
-    sha256: c18fb7c64594b2e4e95484118e95be43ff00ae52de61b5b61c35ef579fb1af30
+    md5: ebcb4c2af21459015eb62323fc2dc6d8
+    sha256: c47e4ac49bd09b0b5b458340320bc6e2afe6d94c78a61cb765d7029417600a98

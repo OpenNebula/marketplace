@@ -1,6 +1,6 @@
 ---
-name: openSUSE 42  - KVM
-version: 5.6.0
+name: openSUSE 42 - KVM
+version: 5.6.0-0
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) preinstalled.
@@ -32,12 +32,12 @@ opennebula_template:
   logo: images/logos/linux.png
 logo: opensuse.png
 images:
-- name: opensuse42-5.6.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/opensuse42-5.6.0.qcow2
+- name: opensuse42
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/opensuse42-5.6.0-0.20181019.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: d042d325b7ecf219b0036d8cb53e7332
-    sha256: d06e496ea6d453bc4a0cb249fab8a80be80c97b04d07fa056243c7fbedb250f8
+    md5: fc2f707cce37869caf29c7378fda2d25
+    sha256: b576872aec1555b506836fc346d7dd2ed08ce2679e37b81f9418c59c1a2fb819

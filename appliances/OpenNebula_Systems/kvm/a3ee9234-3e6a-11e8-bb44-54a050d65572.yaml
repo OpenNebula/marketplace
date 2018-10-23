@@ -1,6 +1,6 @@
 ---
 name: Amazon Linux 2 - KVM
-version: 5.6.0
+version: 5.6.0-0
 publisher: OpenNebula Systems
 description: |-
   [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/) image ready for the OpenNebula deployment on KVM hosts with [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) installed. The use of this software is governed by the terms of the AWS Customer Agreement (https://aws.amazon.com/agreement/) or other agreement with AWS governing the use of AWS services.
@@ -32,12 +32,12 @@ opennebula_template:
   logo: images/logos/linux.png
 logo: amazon.png
 images:
-- name: amazon2-5.6.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/amazon2-5.6.0.qcow2
+- name: amazon2
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/amazon2-5.6.0-0.20181019.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 26843545600
   checksum:
-    md5: 9f46edcf2d69d11f7633200e041ffea6
-    sha256: a8d1bb390487fdf829286e789e57bd5a6078b51d992cf40a7fe5a86407d2311d
+    md5: 4d6409f789cbf9a1e9c547f8768dd7d7
+    sha256: e29dae3cd108238c872fdd17f2c21bd487bc06ab23a6b7bb214fb7da6117dd6b

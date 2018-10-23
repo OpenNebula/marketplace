@@ -1,6 +1,6 @@
 ---
 name: Alpine Linux 3.6 - KVM
-version: 5.6.0
+version: 5.6.0-0
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.6 image ready for your OpenNebula deployment in KVM hosts.
@@ -34,12 +34,12 @@ opennebula_template:
   logo: images/logos/linux.png
 logo: alpine.png
 images:
-- name: alpine36-5.6.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine36-5.6.0.qcow2
+- name: alpine36
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine36-5.6.0-0.20181019.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 1b153f12ba4d4fad85c9e296f2326c61
-    sha256: 295a4546bf8b89d2af4767ae80f3f84a981d5e5af750ec78ae9ef140b252a053
+    md5: 1935932c89541be2c264ca39514096dc
+    sha256: 570069c7e91d9d017dab94d37100f2d3c93142ceac53a1dc978042dfb9e950c9

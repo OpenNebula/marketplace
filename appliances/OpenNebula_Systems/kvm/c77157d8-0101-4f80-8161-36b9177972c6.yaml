@@ -1,20 +1,20 @@
 ---
-name: Debian Testing - KVM
+name: Ubuntu 18.10 - KVM
 version: 5.6.0-0
 publisher: OpenNebula Systems
 description: |-
-  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) preinstalled. This image is **BETA**.
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) preinstalled.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Debian 10 Testing image for KVM hosts
+short_description: Ubuntu 18.10 image for KVM hosts
 tags:
-- debian
+- ubuntu
 format: qcow2
-creation_time: 1500454066
-os-id: Debian
-os-release: '10.0'
+creation_time: 1540309448
+os-id: Ubuntu
+os-release: '18.10'
 os-arch: x86_64
 hypervisor: KVM
 opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6
@@ -29,15 +29,15 @@ opennebula_template:
   memory: '768'
   os:
     arch: x86_64
-  logo: images/logos/debian.png
-logo: debian.png
+  logo: images/logos/ubuntu.png
+logo: ubuntu.png
 images:
-- name: debian10
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/debian10-5.6.0-0.20181019.qcow2
+- name: ubuntu1810
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1810-5.6.0-0.20181019.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 2147483648
+  size: 2361393152
   checksum:
-    md5: d9719a56da7ccbec698315508422580f
-    sha256: e46c161a435fc90a6a9660dd91f87e0a14dcaa931fedd9c96724073c23bd2148
+    md5: 520c90838b00c0d395f5ede18a207c07
+    sha256: 8f7e0ab3715d2dc1459eacf4c13ea0d7a59b1cbcaf74ef9e27708bf23ed06102

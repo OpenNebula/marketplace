@@ -1,6 +1,6 @@
 ---
 name: Fedora 27 - KVM
-version: 5.6.0
+version: 5.6.0-0
 publisher: OpenNebula Systems
 description: |-
   Fedora 27 image ready for your OpenNebula deployment in KVM hosts.
@@ -34,12 +34,12 @@ opennebula_template:
   logo: images/logos/fedora.png
 logo: fedora.png
 images:
-- name: fedora27-5.6.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/fedora27-5.6.0.qcow2
+- name: fedora27
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/fedora27-5.6.0-0.20181019.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 64cd1a3598d3e05f557423a83a88b252
-    sha256: ebd7418a54b67ee1ebbc334bf9e16e72218cb4d4ed7d22acb34699819ca1b457
+    md5: 16f7eca8fa5fc355eeeb686e7cf14ff9
+    sha256: e65c3be331bf97040edf0dabb75a2a364d64bf898024920d3c6e4639e024b441

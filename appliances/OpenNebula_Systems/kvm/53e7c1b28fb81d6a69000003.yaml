@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 14.04 - KVM
-version: 5.6.0
+version: 5.6.0-0
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) preinstalled.
@@ -32,12 +32,12 @@ opennebula_template:
   logo: images/logos/ubuntu.png
 logo: ubuntu.png
 images:
-- name: ubuntu1404-5.6.0
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1404-5.6.0.qcow2
+- name: ubuntu1404
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1404-5.6.0-0.20181019.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 1584d74f52611d582aeebcd38ddfd653
-    sha256: c9fee450815b8cf88ff9b0b3eddd02a95553c80af03bcab3a3cf692e4e8b71cd
+    md5: 0490a3e4e28604ca4752f405f71ace63
+    sha256: 8cb511d5a32f45929908e45bc59841a17ebfdf44fa5d2f7e56bd6af70f99e0fc
