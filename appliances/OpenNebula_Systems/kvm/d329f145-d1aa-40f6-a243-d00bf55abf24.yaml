@@ -1,6 +1,6 @@
 ---
 name: Debian 9 - KVM
-version: 5.6.0-0
+version: 5.6.0-0.20181120
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) preinstalled.
@@ -12,7 +12,7 @@ short_description: Debian 9 image for KVM hosts
 tags:
 - debian
 format: qcow2
-creation_time: 1500454066
+creation_time: 1542714127
 os-id: Debian
 os-release: '9.5'
 os-arch: x86_64
@@ -33,11 +33,11 @@ opennebula_template:
 logo: debian.png
 images:
 - name: debian9
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/debian9-5.6.0-0.20181019.qcow2
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/debian9-5.6.0-0.20181120.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: 0a6a910ba48590690aee513df66ba9d1
-    sha256: 6b9184dec1e59606681f28bce30225a99baa0dbb7b846c08ad0a1d8aa7755011
+    md5: 4de4a7dff76975888f8b034312978e28
+    sha256: 86bb296d4fb09e7c12123152c77da56de73d46e3c3060144dd0c206c332ec3d6

@@ -1,6 +1,6 @@
 ---
 name: Debian 8 - KVM
-version: 5.6.0-0
+version: 5.6.0-0.20181120
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) preinstalled.
@@ -12,7 +12,7 @@ short_description: Debian 8 image for KVM hosts
 tags:
 - debian
 format: qcow2
-creation_time: 1443105849
+creation_time: 1542714127
 os-id: Debian
 os-release: '8.11'
 os-arch: x86_64
@@ -33,11 +33,11 @@ opennebula_template:
 logo: debian.png
 images:
 - name: debian8
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/debian8-5.6.0-0.20181019.qcow2
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/debian8-5.6.0-0.20181120.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: 25ed273fbbb588dcbe26f68c9700f9d0
-    sha256: 4436e81168c98f95bc6e6030a0454eca20447074c2acdc6c79f775553a012d11
+    md5: 43b2cd19429420af86ba1147bee88abf
+    sha256: 104443bbc3182244661281547f31c44a4a6441bd3d49170856ac59c3d27320f5

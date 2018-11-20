@@ -1,6 +1,6 @@
 ---
 name: Devuan 2 - KVM
-version: 5.6.0-0
+version: 5.6.0-0.20181120
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) preinstalled.
@@ -12,7 +12,7 @@ short_description: Devuan 2 image for KVM hosts
 tags:
 - devuan
 format: qcow2
-creation_time: 1528468248
+creation_time: 1542714127
 os-id: Devuan
 os-release: '2.0'
 os-arch: x86_64
@@ -33,11 +33,11 @@ opennebula_template:
 logo: devuan.png
 images:
 - name: devuan2
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/devuan2-5.6.0-0.20181019.qcow2
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/devuan2-5.6.0-0.20181120.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21473787904
   checksum:
-    md5: 0f910847ec2c1b3d33447012cca18cf9
-    sha256: 97a628839f09fb90cd4726fccaea24fa1e12083f28a273aa25a4d7c60804b746
+    md5: 85035cff316d491e7084269b3233660a
+    sha256: ef971462f5eff17997b534cd6f7a82cbb89ebec3c57edd449e26f7b86adac50e
