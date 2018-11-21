@@ -1,6 +1,6 @@
 ---
 name: alpine-vrouter (vcenter)
-version: 1.0.6
+version: 5.0.2-0.20181121
 publisher: OpenNebula Systems
 description: Supports keepalived for HA.
 short_description: Virtual router appliance to be used with OpenNebula 5.x.
@@ -9,7 +9,7 @@ tags:
 - vrouter
 - alpine
 format: vmdk
-creation_time: 1457608461
+creation_time: 1542792693
 os-id: Alpine
 os-release: 3.3.1
 os-arch: x86_64
@@ -18,9 +18,9 @@ opennebula_version: 5.0, 5.2
 logo: router.png
 images:
 - name: alpine-quagga.vmdk
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine-vrouter-5.0.2.vmdk.gz
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine-vrouter-5.0.2-0.20181121.vmdk.gz
   type: OS
   size: 268435456
   checksum:
-    md5: 198b57682b71480a5231504de85496d4
-    sha256: ed7ecde4d8c28c7c7ec19f764a06c782ddd2b2a10a147d966d932b7a189f3f31
+    md5: 46e4473653adf56d348e42f4caae2010
+    sha256: eb602da6c535e1fa4a33536e3c568c9700e191992050ea6987c03344b99a7705

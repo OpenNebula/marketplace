@@ -1,6 +1,6 @@
 ---
 name: alpine-vrouter (KVM)
-version: 1.0.5
+version: 5.0.2-0.20181121
 publisher: OpenNebula Systems
 description: Supports keepalived for HA.
 short_description: Virtual router appliance to be used with OpenNebula 5.x.
@@ -9,7 +9,7 @@ tags:
 - vrouter
 - alpine
 format: qcow2
-creation_time: 1457608289
+creation_time: 1542792693
 os-id: Alpine
 os-release: 3.3.1
 os-arch: x86_64
@@ -31,11 +31,11 @@ opennebula_template:
 logo: router.png
 images:
 - name: alpine-vrouter.qcow2c
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine-vrouter-5.0.2.qcow2c
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine-vrouter-5.0.2-0.20181121.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 268435456
   checksum:
-    md5: d6b4f0aeed3810b6a8e53687607abe0c
-    sha256: da88bceafae4479c892c17d234346e83867643b8f92c24d0ae6b8821d9da99e7
+    md5: 47c10db30ef1c77a889de5e9727000a7
+    sha256: bc5ed5a641e83d00d95aa9209c9d873a3201758b0960a62c26b1303636ffb184
