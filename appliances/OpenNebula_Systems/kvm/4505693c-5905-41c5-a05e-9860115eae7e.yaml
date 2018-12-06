@@ -1,6 +1,6 @@
 ---
 name: WordPress - KVM
-version: 4.9.8-5.6.0-1.20181205
+version: 4.9.8-5.6.0-2.20181205
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled WordPress. Run, get WordPress setup web wizard
@@ -71,7 +71,7 @@ opennebula_template:
 logo: wordpress.png
 images:
 - name: wordpress
-  url: http://opennebula-marketplace.s3.amazonaws.com/service_wordpress-4.9.0-5.6.0-0.20181205.qcow2
+  url: http://opennebula-marketplace.s3.amazonaws.com/service_wordpress-4.9.8-5.6.0-0.20181205.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
