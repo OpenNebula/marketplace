@@ -1,12 +1,13 @@
 ---
 name: WordPress - KVM
-version: 4.9.8-0.20181205
+version: 4.9.8-5.6.0-0.20181205
 publisher: OpenNebula Systems
 description: |-
-  Appliance with preinstalled WordPress. Run and get WordPress setup web wizard
-  to finish the installation, or use contextualization variables to automate
-  the final configuration. For more information about credentials, connection,
-  and site URL check `/etc/appliance/config` in your running appliance.
+  Appliance with preinstalled WordPress. Run, get WordPress setup web wizard
+  and manually bootstrap the service, or use contextualization variables
+  to automate the bootstrap. For more information about credentials,
+  connections, and site URL check `/etc/appliance/config` on your running
+  appliance.
 
   Initial configuration can be customized via parameters:
 
@@ -22,9 +23,10 @@ description: |-
   * `ONEAPP_ADMIN_PASSWORD` -  Site Administrator Password
   * `ONEAPP_ADMIN_EMAIL` - Site Administrator E-mail
 
-  **WARNING: Do not use localhost or loopback for `ONEAPP_SITE_HOSTNAME`, it will
-  break the WordPress bootstrap. It's necessary to provide routable name/IP.**
-short_description: WordPress service appliance
+  **WARNING: Do not use localhost or loopback for `ONEAPP_SITE_HOSTNAME`, it
+  breaks the WordPress bootstrap. It's necessary to provide routable name
+  or IP.**
+short_description: Appliance with preinstalled WordPress for KVM hosts
 tags:
 - wordpress
 - service
@@ -56,11 +58,11 @@ opennebula_template:
   os:
     arch: x86_64
   user_inputs:
-    oneapp_admin_email: M|text|** Site Administrator E-mail (set all or
+    oneapp_admin_email: O|text|** Site Administrator E-mail (set all or
       none)
-    oneapp_admin_password: M|password|** Site Administrator Password (set
+    oneapp_admin_password: O|password|** Site Administrator Password (set
       all or none)
-    oneapp_admin_username: M|text|** Site Administrator Login (set all or
+    oneapp_admin_username: O|text|** Site Administrator Login (set all or
       none)
     oneapp_site_title: M|text|*** Site Title (set all or none)
     oneapp_ssl_cert: O|text64|SSL certificate
@@ -69,7 +71,7 @@ opennebula_template:
 logo: wordpress.png
 images:
 - name: wordpress
-  url: https://opennebula-marketplace.s3.amazonaws.com/service_wordpress_4.9.8-5.6.0-0.20181205.qcow2
+  url: http://opennebula-marketplace.s3.amazonaws.com/service_wordpress-4.9.0-5.6.0-0.20181205.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
