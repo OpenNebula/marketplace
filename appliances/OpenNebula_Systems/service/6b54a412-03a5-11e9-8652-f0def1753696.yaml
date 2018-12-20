@@ -26,9 +26,9 @@ description: |-
 
   And, optionally bootstrapped with (**ALL MUST BE SET**):
 
-  * `ONEAPP_ADMIN_USERNAME` - ** Site Administrator Login (default: root) (set all or none)
-  * `ONEAPP_ADMIN_PASSWORD` - ** Site Administrator Password (set all or none)
-  * `ONEAPP_ADMIN_EMAIL` - ** Site Administrator E-mail (set all or none)
+  * `ONEAPP_ADMIN_USERNAME` - Site Administrator Login (default: root)
+  * `ONEAPP_ADMIN_PASSWORD` - Site Administrator Password
+  * `ONEAPP_ADMIN_EMAIL` - Site Administrator E-mail
 
   For more information about configuration follow the GitLab
   [documentation](https://docs.gitlab.com/omnibus/settings/configuration.html).
