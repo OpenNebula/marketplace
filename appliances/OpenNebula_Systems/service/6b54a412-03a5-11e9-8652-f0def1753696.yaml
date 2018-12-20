@@ -1,0 +1,92 @@
+---
+name: Service GitLab CE - KVM
+version: 11.5.4-5.6.0-0.20181220
+publisher: OpenNebula Systems
+description: |-
+  Appliance with preinstalled GitLab CE. Run,  get GitLab initial web page for
+  setting up the default account password (login: `root`), or use contextualization
+  variables to automate the bootstrap (username, password, and email). Information
+  about credentials, connections, and site URL is stored in the text file
+  `/etc/one-appliance/config` on your running appliance.
+
+  Notes:
+
+  * Minimal password length is 8 characters, shorter breaks bootstrap
+  * Automatic HTTP to HTTPS redirection is placed when SSL is enabled - you
+    can disable this by setting `ONEAPP_HTTP_REDIRECT` to `no`.
+
+  Initial configuration can be customized via parameters:
+
+  * `ONEAPP_SITE_HOSTNAME` - Fully qualified domain name or IP
+  * `ONEAPP_SITE_RELATIVE_URL` - Relative URL to the service (default: /)
+  * `ONEAPP_HTTP_REDIRECT` - Automatic HTTP to HTTPS redirection (default: yes)
+  * `ONEAPP_SSL_CERT` - SSL certificate
+  * `ONEAPP_SSL_PRIVKEY` - SSL private key
+  * `ONEAPP_SSL_CHAIN` - SSL CA chain
+
+  And, optionally bootstrapped with (**ALL MUST BE SET**):
+
+  * `ONEAPP_ADMIN_USERNAME` - ** Site Administrator Login (default: root) (set all or none)
+  * `ONEAPP_ADMIN_PASSWORD` - ** Site Administrator Password (set all or none)
+  * `ONEAPP_ADMIN_EMAIL` - ** Site Administrator E-mail (set all or none)
+
+  For more information about configuration follow the GitLab
+  [documentation](https://docs.gitlab.com/omnibus/settings/configuration.html).
+
+  **WARNING: GitLab has few [reserved words](https://docs.gitlab.com/ee/user/reserved_names.html)
+  which cannot be used, e.g.: `ONEAPP_ADMIN_USERNAME` cannot be `admin`**
+
+  **WARNING: Do not use localhost or loopback for `ONEAPP_SITE_HOSTNAME`, it
+  breaks the service bootstrap. It's necessary to provide a routable name
+  or IP.**
+short_description: Appliance with preinstalled GitLab CE for KVM hosts
+tags:
+- gitlab
+- service
+- centos
+format: qcow2
+creation_time: 1545306200
+os-id: CentOS
+os-release: '7.6'
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_admin_email: $ONEAPP_ADMIN_EMAIL
+    oneapp_admin_password: $ONEAPP_ADMIN_PASSWORD
+    oneapp_admin_username: $ONEAPP_ADMIN_USERNAME
+    oneapp_ssl_cert: $ONEAPP_SSL_CERT
+    oneapp_ssl_chain: $ONEAPP_SSL_CHAIN
+    oneapp_ssl_privkey: $ONEAPP_SSL_PRIVKEY
+    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: ONEAPP_SSL_CERT,ONEAPP_SSL_PRIVKEY,ONEAPP_SSL_CHAIN,ONEAPP_ADMIN_USERNAME,ONEAPP_ADMIN_EMAIL,ONEAPP_ADMIN_PASSWORD
+  memory: '3096'
+  os:
+    arch: x86_64
+  user_inputs:
+    oneapp_admin_username: 'O|text|** Site Administrator Login (default:
+      root) (set all or none)'
+    oneapp_admin_password: O|password|** Site Administrator Password (set
+      all or none)
+    oneapp_admin_email: O|text|** Site Administrator E-mail (set all or
+      none)
+    oneapp_ssl_cert: O|text64|SSL certificate
+    oneapp_ssl_chain: O|text64|SSL CA chain
+    oneapp_ssl_privkey: O|text64|SSL private key
+logo: gitlab.png
+images:
+- name: gitlab
+  url: https://opennebula-marketplace.s3.amazonaws.com/service_gitlab-11.5.4-5.6.0-0.20181220.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 4294967296
+  checksum:
+    md5: ac002a586bc71ae24d87ce75e7af60a1
+    sha256: 31dc3ef1362ecfd7382634f03aeb2d4f16acb7d266d9cdde926a0bf9828be362
