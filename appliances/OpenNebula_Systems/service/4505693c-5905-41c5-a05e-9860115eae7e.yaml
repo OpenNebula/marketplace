@@ -7,7 +7,7 @@ description: |-
   and manually bootstrap the service, or use contextualization variables
   to automate the bootstrap. For more information about credentials,
   connections, and site URL check `/etc/appliance/config` on your running
-  appliance.
+  appliance. See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/wordpress.html).
 
   Initial configuration can be customized via parameters:
 

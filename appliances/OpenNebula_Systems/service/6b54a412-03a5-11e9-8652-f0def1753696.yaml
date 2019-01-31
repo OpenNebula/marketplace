@@ -8,6 +8,7 @@ description: |-
   variables to automate the bootstrap (username, password, and email). Information
   about credentials, connections, and site URL is stored in the text file
   `/etc/one-appliance/config` on your running appliance.
+  See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/gitlab.html).
 
   Notes:
 
