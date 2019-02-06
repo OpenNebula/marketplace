@@ -1,6 +1,6 @@
 ---
 name: FreeBSD 12 - KVM
-version: 5.7.80
+version: 5.7.80-1
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula beta [contextualization package](https://github.com/OpenNebula/addon-context-linux/releases/tag/v5.7.80) preinstalled. This image is **BETA**.
