@@ -1,9 +1,9 @@
 ---
 name: Amazon Linux 2 - KVM
-version: 5.6.0-0
+version: 5.8.0-1.20190222
 publisher: OpenNebula Systems
 description: |-
-  [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/) image ready for the OpenNebula deployment on KVM hosts with [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) installed. The use of this software is governed by the terms of the AWS Customer Agreement (https://aws.amazon.com/agreement/) or other agreement with AWS governing the use of AWS services.
+  [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/) image ready for the OpenNebula deployment on KVM hosts with [contextualization package](http://docs.opennebula.org/5.8/operation/vm_setup/kvm.html) installed. The use of this software is governed by the terms of the AWS Customer Agreement (https://aws.amazon.com/agreement/) or other agreement with AWS governing the use of AWS services.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -12,12 +12,12 @@ short_description: Amazon Linux 2 image for KVM hosts
 tags:
 - amazon
 format: qcow2
-creation_time: 1523548885
+creation_time: 1551174013
 os-id: Amazon Linux
 os-release: '2'
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8
 opennebula_template:
   context:
     network: 'YES'
@@ -33,11 +33,11 @@ opennebula_template:
 logo: amazon.png
 images:
 - name: amazon2
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/amazon2-5.6.0-0.20181019.qcow2
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/amazon2-5.8.0-1.20190222.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 26843545600
   checksum:
-    md5: 4d6409f789cbf9a1e9c547f8768dd7d7
-    sha256: e29dae3cd108238c872fdd17f2c21bd487bc06ab23a6b7bb214fb7da6117dd6b
+    md5: ef72c371291bc0de03fd351435494b42
+    sha256: 2dff1f2ba4754b7c81163502549f39ee0f8fd079e2da5e2e538791c28d12fc25

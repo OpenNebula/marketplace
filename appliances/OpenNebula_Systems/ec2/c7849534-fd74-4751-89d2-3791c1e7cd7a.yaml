@@ -1,6 +1,6 @@
 ---
 name: Debian 9 - EC2
-version: 5.6.0
+version: 5.8.0
 publisher: OpenNebula Systems
 description: |-
   Debian 9 image ready for the OpenNebula Cloud Bursting on the Amazon EC2.
@@ -10,7 +10,7 @@ description: |-
   EC2 image details:
 
   * **Region**: us-east-1
-  * **AMI**: ami-0099ae7f
+  * **AMI**: ami-0f383f87ac482f6b8
   * **Virtualization Type**: HVM
   * **Root Device Type**: EBS
   * **Volume Type**: GP2
@@ -18,12 +18,12 @@ short_description: Debian 9 image for Amazon EC2
 tags:
 - debian
 format: ami
-creation_time: 1515065188
+creation_time: 1551174013
 os-id: Debian
-os-release: '9.3'
+os-release: '9'
 os-arch: x86_64
 hypervisor: EC2
-opennebula_version: 5.0, 5.2, 5.4, 5.6
+opennebula_version: 5.0, 5.2, 5.4, 5.6, 5.8
 opennebula_template:
   context:
     ssh_public_key: $USER[SSH_PUBLIC_KEY]
@@ -31,7 +31,7 @@ opennebula_template:
   memory: '256'
   inputs_order: EC2_INSTANCETYPE,EC2_SECURITYGROUPIDS,EC2_SUBNETID
   public_cloud:
-    ami: ami-0099ae7f
+    ami: ami-0f383f87ac482f6b8
     instancetype: $EC2_INSTANCETYPE
     securitygroupids: $EC2_SECURITYGROUPIDS
     subnetid: $EC2_SUBNETID

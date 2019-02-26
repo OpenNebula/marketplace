@@ -1,9 +1,9 @@
 ---
 name: Ubuntu 18.04 - KVM
-version: 5.6.0-0
+version: 5.8.0-1.20190222
 publisher: OpenNebula Systems
 description: |-
-  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.6/operation/vm_setup/kvm.html) preinstalled.
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.8/operation/vm_setup/kvm.html) preinstalled.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -12,12 +12,12 @@ short_description: Ubuntu 18.04 image for KVM hosts
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1465895586
+creation_time: 1551174013
 os-id: Ubuntu
 os-release: '18.04'
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8
 opennebula_template:
   context:
     network: 'YES'
@@ -33,11 +33,11 @@ opennebula_template:
 logo: ubuntu.png
 images:
 - name: ubuntu1804
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1804-5.6.0-0.20181019.qcow2
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1804-5.8.0-1.20190222.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: ea8a070e92f537c13d3de189ebb337a2
-    sha256: 3701b786215536a525fd771296727ae8860d4c11a797007e7a3c5a5c42cabbbc
+    md5: f5c9cb786bd56cc7561b75aaf24103a5
+    sha256: 3f5ce0990359cb1a4096c261f8b0a1290a23f3c7feb46ea27d6a75806d552340
