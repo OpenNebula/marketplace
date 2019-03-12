@@ -43,13 +43,4 @@ opennebula_template:
     ec2_subnetid: M|text|EC2 Subnet ID
   logo: images/logos/centos.png
 logo: centos-5.5.png
-images:
-- name: empty
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/empty1024.raw
-  type: OS
-  dev_prefix: hd
-  driver: raw
-  size: 1024
-  checksum:
-    md5: 0f343b0931126a20f133d67c2b018a3b
-    sha256: 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+type: VMTEMPLATE
