@@ -53,3 +53,4 @@ images:
   checksum:
     md5: 0f343b0931126a20f133d67c2b018a3b
     sha256: 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+type: VMTEMPLATE
