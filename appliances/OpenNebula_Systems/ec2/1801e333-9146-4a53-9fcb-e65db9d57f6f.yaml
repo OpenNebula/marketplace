@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 18.04 - EC2
-version: 5.8.0
+version: 5.8.0-1.20190226
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 18.04 image ready for the OpenNebula Cloud Bursting on the Amazon EC2.
