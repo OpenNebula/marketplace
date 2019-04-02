@@ -1,6 +1,6 @@
 ---
 name: Service Kubernetes - KVM
-version: 1.13.4-5.8.0-1.20190315
+version: 1.13.4-5.8.0-2.20190315
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled Kubernetes to work as a single-node cluster,
@@ -41,7 +41,9 @@ opennebula_template:
     oneapp_k8s_pods_network: $ONEAPP_K8S_PODS_NETWORK
     oneapp_k8s_port: $ONEAPP_K8S_PORT
     oneapp_k8s_token: $ONEAPP_K8S_TOKEN
+    report_ready: 'YES'
     ssh_public_key: $USER[SSH_PUBLIC_KEY]
+    token: 'YES'
   cpu: '2'
   vcpu: '2'
   graphics:
