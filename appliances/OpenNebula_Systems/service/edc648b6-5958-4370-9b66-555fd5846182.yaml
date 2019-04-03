@@ -19,6 +19,12 @@ description: |-
   * `ONEAPP_K8S_PORT` - K8s API port (default 6443)
   * `ONEAPP_K8S_PODS_NETWORK` - K8s pods network in CIDR (default 10.244.0.0/16)
   * `ONEAPP_K8S_ADMIN_USERNAME` - UI dashboard admin account (default admin-user)
+
+  **WARNING: The provided VM template requires the OneGate service to be properly
+  configured and running on the OpenNebula Front-end. For single-node
+  and manual multi-node Kubernetes deployments, the OneGate is not necessary
+  and its use can be avoided by removing `TOKEN='YES'` from the imported
+  VM template.**
 short_description: Appliance with preinstalled Kubernetes for KVM hosts
 tags:
 - kubernetes
