@@ -1,6 +1,6 @@
 ---
 name: Service Kubernetes - KVM
-version: 1.13.4-5.8.0-2.20190315
+version: 1.13.4-5.8.0-3.20190315
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled Kubernetes to work as a single-node cluster,
@@ -20,11 +20,10 @@ description: |-
   * `ONEAPP_K8S_PODS_NETWORK` - K8s pods network in CIDR (default 10.244.0.0/16)
   * `ONEAPP_K8S_ADMIN_USERNAME` - UI dashboard admin account (default admin-user)
 
-  **WARNING: The provided VM template requires the OneGate service to be properly
-  configured and running on the OpenNebula Front-end. For single-node
-  and manual multi-node Kubernetes deployments, the OneGate is not necessary
-  and its use can be avoided by removing `TOKEN='YES'` from the imported
-  VM template.**
+  **WARNING: For multi-node deployment managed by OneFlow, it's necessary
+  to set `ONEGATE_ENABLE='YES'` to enable an exchange of the connection
+  parameters among the nodes via OneGate, and report when the nodes are
+  ready to use.**
 short_description: Appliance with preinstalled Kubernetes for KVM hosts
 tags:
 - kubernetes
@@ -47,19 +46,20 @@ opennebula_template:
     oneapp_k8s_pods_network: $ONEAPP_K8S_PODS_NETWORK
     oneapp_k8s_port: $ONEAPP_K8S_PORT
     oneapp_k8s_token: $ONEAPP_K8S_TOKEN
-    report_ready: 'YES'
+    report_ready: $ONEGATE_ENABLE
     ssh_public_key: $USER[SSH_PUBLIC_KEY]
-    token: 'YES'
+    token: $ONEGATE_ENABLE
   cpu: '2'
   vcpu: '2'
   graphics:
     listen: 0.0.0.0
     type: vnc
-  inputs_order: 'ONEAPP_K8S_ADDRESS,ONEAPP_K8S_TOKEN,ONEAPP_K8S_HASH,ONEAPP_K8S_NODENAME,ONEAPP_K8S_PORT,ONEAPP_K8S_PODS_NETWORK,ONEAPP_K8S_ADMIN_USERNAME'
+  inputs_order: 'ONEGATE_ENABLE,ONEAPP_K8S_ADDRESS,ONEAPP_K8S_TOKEN,ONEAPP_K8S_HASH,ONEAPP_K8S_NODENAME,ONEAPP_K8S_PORT,ONEAPP_K8S_PODS_NETWORK,ONEAPP_K8S_ADMIN_USERNAME'
   memory: '3096'
   os:
     arch: x86_64
   user_inputs:
+    onegate_enable: 'M|boolean|Enable OneGate reporting? (req. for multi-node)| |NO'
     oneapp_k8s_address: 'O|text|K8s master node address/network (CIDR subnet)'
     oneapp_k8s_admin_username: 'O|text|UI dashboard admin account (default admin-user)'
     oneapp_k8s_hash: 'O|text|K8s hash (to join node into the cluster)'
