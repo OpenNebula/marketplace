@@ -1,5 +1,5 @@
 ---
-name: ttylinux - kvm
+name: Ttylinux - KVM
 version: '1.0'
 publisher: OpenNebula Systems
 description: |-

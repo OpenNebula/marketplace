@@ -1,5 +1,5 @@
 ---
-name: WordPress - KVM
+name: Service WordPress - KVM
 version: 5.0-5.6.0-0.20181207
 publisher: OpenNebula Systems
 description: |-

@@ -1,5 +1,5 @@
 ---
-name: alpine-vrouter (KVM)
+name: Vrouter Alpine - KVM
 version: 5.0.2-0.20181121
 publisher: OpenNebula Systems
 description: Supports keepalived for HA.
