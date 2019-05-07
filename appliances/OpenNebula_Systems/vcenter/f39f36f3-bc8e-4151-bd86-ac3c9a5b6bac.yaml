@@ -17,7 +17,7 @@ creation_time: 1551174013
 os-id: Ubuntu
 os-release: '16.04'
 os-arch: x86_64
-hypervisor: VMWARE
+hypervisor: vCenter
 opennebula_version: 5.0, 5.2, 5.4, 5.6, 5.8
 logo: ubuntu.png
 images:
