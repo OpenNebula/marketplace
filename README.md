@@ -1,30 +1,26 @@
-# Marketplace Appliances
+# Public OpenNebula Marketplace Appliances
 
-Each Marketplace Appliance consists of a YAML file that contains the metadata
-and an image file stored in a web server.
+This is a repository with YAML metadata of the appliances available in the
+official public [OpenNebula Marketplace](https://marketplace.opennebula.systems),
+to be used with the [simple Marketplace](https://github.com/OpenNebula/appmarket-simple)
+server implementation.
 
-The steps to submit a new appliance or make changes to one of the available
-images is as follows:
+All appliances here are built and certified by the OpenNebula Systems.
+**No community appliances are accepted into the public OpenNebula Marketplace
+anymore!**.
 
-* Clone this repository
-* Make changes and upload them to your repo
-* Create a pull request
+## New appliance (internal steps)
 
-**Note**: When creating new YAML appliances put them in a directory with
-the name of the publisher and try not to use spaces in its dir name
-("My Company" -> "My\_Company").
+Filename must be a unique UUID with `.yaml` suffix. Use `uuidgen` or `uuid`
+to generate a new one.
 
-For **filename choose new random UUID** with `.yaml` suffix. You can use
-`uuidgen` or `uuid` commands to generate a new one.
-
-Here is an example of an appliance that you can use as a basis for a new one.
-
+Example of an appliance that you can be used as a basis for a new one.
 
 ```yaml
 ---
 name: Name of the appliance
 version: Version of this specific appliance
-publisher: Your name or company
+publisher: Company name
 description: |-
   Description of this appliance. The format is *Markdown* so you'll be able
   to [link](https://guides.github.com/features/mastering-markdown/) or
@@ -93,6 +89,3 @@ images:
     # You can also specify "sha1" hash
     md5: a661b9101d0e7427a9495967292f7285
 ```
-
-
-
