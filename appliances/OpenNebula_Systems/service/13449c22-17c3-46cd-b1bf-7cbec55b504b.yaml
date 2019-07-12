@@ -35,6 +35,8 @@ description: |-
   If no suitable contextualization parameters are provided, the virtual machines
   boots only into the AWS IoT Greengrass compatible system environment and don't
   configure anything.
+
+  The use of this appliance is governed by the terms of the AWS [Greengrass Core License Agreement](https://s3-us-west-2.amazonaws.com/greengrass-release-license/greengrass-license-v1.pdf) or other agreement with AWS governing the use of AWS services.
 short_description: Appliance with preinstalled AWS IoT Greengrass for KVM
   hosts
 tags:
