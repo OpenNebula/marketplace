@@ -1,0 +1,109 @@
+---
+name: Service AWS IoT Greengrass - KVM
+version: 1.9.1-5.8.0-1.20190709
+publisher: OpenNebula Systems
+description: |-
+  Appliance with preinstalled AWS IoT Greengrass SDK and services to run
+  Core, IoT device, or both roles on the same instance. Supports semi-manual
+  provisioning mode of entities precreated on AWS, or fully automatic
+  provision of new Core (and Greengrass Group) and IoT Device over API.
+  See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/aws-greengrass.html).
+
+  Available (AWS Lambda) runtimes:
+  - Python 2.7
+
+  Initial configuration can be customized via parameters:
+
+  * `ONEAPP_AWSGG_ROLE` - Deployment role (`core`, `device`, `bulk`, empty)
+  * `ONEAPP_AWSGG_BULK_DEVICES` - Number of devices created in bulk role (default 1)
+  * `ONEAPP_AWSGG_SSL_CERT` - Core/Device certificate
+  * `ONEAPP_AWSGG_SSL_PRIVKEY` - Core/Device private key
+  * `ONEAPP_AWSGG_SSL_PUBKEY` - Core/Device public key
+  * `ONEAPP_AWSGG_CONFIG` - (Core) Greengrass Group config file
+  * `ONEAPP_AWSGG_GROUP` - Greengrass Group name to create
+  * `ONEAPP_AWSGG_DEVICE_NAME` - Device name (postfixed by random for bulk role)
+  * `ONEAPP_AWSGG_DEVICE_HASH` - Hash prefix (created by AWS)
+  * `ONEAPP_AWSGG_ENDPOINT` - IoT Greengrass Endpoint
+  * `ONEAPP_AWSGG_ACCESS_KEY_ID` - AWS Access Key ID
+  * `ONEAPP_AWSGG_ACCESS_SECRET_KEY` - AWS Access Secret Key
+  * `ONEAPP_AWSGG_GGC_USER` - OS user name to own process/files
+  * `ONEAPP_AWSGG_GGC_GROUP` - OS user group to own process/files
+  * `ONEAPP_AWSGG_IOTMQTTPORT` - MQTT port to IoT (8883 or 443, default 8883)
+  * `ONEAPP_AWSGG_IOTHTTPPORT` - HTTPS port to IoT (8443 or 443, default 8443)
+  * `ONEAPP_AWSGG_GGHTTPPORT` - HTTPS port to GG (8443 or 443, default 8443)
+
+  If no suitable contextualization parameters are provided, the virtual machines
+  boots only into the AWS IoT Greengrass compatible system environment and don't
+  configure anything.
+short_description: Appliance with preinstalled AWS IoT Greengrass for KVM
+  hosts
+tags:
+- iot
+- greengrass
+- service
+- centos
+format: qcow2
+creation_time: 1562927085
+os-id: CentOS
+os-release: '7.6'
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_awsgg_access_key_id: $ONEAPP_AWSGG_ACCESS_KEY_ID
+    oneapp_awsgg_access_secret_key: $ONEAPP_AWSGG_ACCESS_SECRET_KEY
+    oneapp_awsgg_bulk_devices: $ONEAPP_AWSGG_BULK_DEVICES
+    oneapp_awsgg_config: $ONEAPP_AWSGG_CONFIG
+    oneapp_awsgg_device_hash: $ONEAPP_AWSGG_DEVICE_HASH
+    oneapp_awsgg_device_name: $ONEAPP_AWSGG_DEVICE_NAME
+    oneapp_awsgg_endpoint: $ONEAPP_AWSGG_ENDPOINT
+    oneapp_awsgg_ggc_group: $ONEAPP_AWSGG_GGC_GROUP
+    oneapp_awsgg_ggc_user: $ONEAPP_AWSGG_GGC_USER
+    oneapp_awsgg_gghttpport: $ONEAPP_AWSGG_GGHTTPPORT
+    oneapp_awsgg_group: $ONEAPP_AWSGG_GROUP
+    oneapp_awsgg_iothttpport: $ONEAPP_AWSGG_IOTHTTPPORT
+    oneapp_awsgg_iotmqttport: $ONEAPP_AWSGG_IOTMQTTPORT
+    oneapp_awsgg_role: $ONEAPP_AWSGG_ROLE
+    oneapp_awsgg_ssl_cert: $ONEAPP_AWSGG_SSL_CERT
+    oneapp_awsgg_ssl_privkey: $ONEAPP_AWSGG_SSL_PRIVKEY
+    oneapp_awsgg_ssl_pubkey: $ONEAPP_AWSGG_SSL_PUBKEY
+    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: ONEAPP_AWSGG_ROLE,ONEAPP_AWSGG_ENDPOINT,ONEAPP_AWSGG_ACCESS_KEY_ID,ONEAPP_AWSGG_ACCESS_SECRET_KEY,ONEAPP_AWSGG_GROUP,ONEAPP_AWSGG_DEVICE_NAME,ONEAPP_AWSGG_BULK_DEVICES,ONEAPP_AWSGG_SSL_CERT,ONEAPP_AWSGG_SSL_PRIVKEY,ONEAPP_AWSGG_SSL_PUBKEY,ONEAPP_AWSGG_CONFIG,ONEAPP_AWSGG_DEVICE_HASH,ONEAPP_AWSGG_GGC_USER,ONEAPP_AWSGG_GGC_GROUP,ONEAPP_AWSGG_IOTMQTTPORT,ONEAPP_AWSGG_GGHTTPPORT,ONEAPP_AWSGG_IOTHTTPPORT
+  memory: '1024'
+  os:
+    arch: x86_64
+  user_inputs:
+    oneapp_awsgg_access_key_id: O|password|AWS Access Key ID
+    oneapp_awsgg_access_secret_key: O|password|AWS Access Secret Key
+    oneapp_awsgg_bulk_devices: O|number|Numfer of Devices| |1
+    oneapp_awsgg_config: O|text64|(Core) Greengrass Group Config File
+    oneapp_awsgg_device_hash: O|text|Device Hash Prefix
+    oneapp_awsgg_device_name: O|text|Device Name
+    oneapp_awsgg_endpoint: O|text|IoT Greengrass Endpoint
+    oneapp_awsgg_ggc_group: O|text|Instance OS group
+    oneapp_awsgg_ggc_user: O|text|Instance OS user
+    oneapp_awsgg_gghttpport: O|list|HTTPS Port to Greengrass|8443,443|8443
+    oneapp_awsgg_group: O|text|Greengrass Group Name
+    oneapp_awsgg_iothttpport: O|list|HTTPS Port to IoT|8443,443|8443
+    oneapp_awsgg_iotmqttport: O|list|MQTT port to IoT|8883,443|8883
+    oneapp_awsgg_role: O|list|Deployment Role|,core,device,bulk|
+    oneapp_awsgg_ssl_cert: O|text64|Core/Device Certificate
+    oneapp_awsgg_ssl_privkey: O|text64|Core/Device Private Key
+    oneapp_awsgg_ssl_pubkey: O|text64|Core/Device Public Key
+logo: aws-iot-greengrass.png
+images:
+- name: aws-iot-greengrass
+  url: https://opennebula-marketplace.s3.amazonaws.com/service_aws_greengrass-1.9.1-5.8.0-1.20190709.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 4294967296
+  checksum:
+    md5: 94110b4616e46f64c544bf979dfa0a2f
+    sha256: 7c2e21bae663bca7945fc8fcee83cabea9b4cb96ba565826d9fb66d0832420bc
