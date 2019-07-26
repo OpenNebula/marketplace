@@ -1,6 +1,6 @@
 ---
 name: Service Kubernetes - KVM
-version: 1.13.4-5.8.0-3.20190315
+version: 1.15.1-5.8.0-1.20190722
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled Kubernetes to work as a single-node cluster,
@@ -30,7 +30,7 @@ tags:
 - service
 - centos
 format: qcow2
-creation_time: 1553883055
+creation_time: 1564161156
 os-id: CentOS
 os-release: '7.6'
 os-arch: x86_64
@@ -54,27 +54,29 @@ opennebula_template:
   graphics:
     listen: 0.0.0.0
     type: vnc
-  inputs_order: 'ONEGATE_ENABLE,ONEAPP_K8S_ADDRESS,ONEAPP_K8S_TOKEN,ONEAPP_K8S_HASH,ONEAPP_K8S_NODENAME,ONEAPP_K8S_PORT,ONEAPP_K8S_PODS_NETWORK,ONEAPP_K8S_ADMIN_USERNAME'
+  inputs_order: ONEGATE_ENABLE,ONEAPP_K8S_ADDRESS,ONEAPP_K8S_TOKEN,ONEAPP_K8S_HASH,ONEAPP_K8S_NODENAME,ONEAPP_K8S_PORT,ONEAPP_K8S_PODS_NETWORK,ONEAPP_K8S_ADMIN_USERNAME
   memory: '3096'
   os:
     arch: x86_64
   user_inputs:
-    onegate_enable: 'M|boolean|Enable OneGate reporting? (req. for multi-node)| |NO'
-    oneapp_k8s_address: 'O|text|K8s master node address/network (CIDR subnet)'
-    oneapp_k8s_admin_username: 'O|text|UI dashboard admin account (default admin-user)'
-    oneapp_k8s_hash: 'O|text|K8s hash (to join node into the cluster)'
-    oneapp_k8s_nodename: 'O|text|K8s master node name'
-    oneapp_k8s_pods_network: 'O|text|K8s pods network in CIDR (default 10.244.0.0/16)'
-    oneapp_k8s_port: 'O|text|K8s API port (default 6443)'
-    oneapp_k8s_token: 'O|password|K8s token (to join node into the cluster)'
+    onegate_enable: M|boolean|Enable OneGate reporting? (req. for multi-node)|
+      |NO
+    oneapp_k8s_address: O|text|K8s master node address/network (CIDR subnet)
+    oneapp_k8s_admin_username: O|text|UI dashboard admin account (default
+      admin-user)
+    oneapp_k8s_hash: O|text|K8s hash (to join node into the cluster)
+    oneapp_k8s_nodename: O|text|K8s master node name
+    oneapp_k8s_pods_network: O|text|K8s pods network in CIDR (default 10.244.0.0/16)
+    oneapp_k8s_port: O|text|K8s API port (default 6443)
+    oneapp_k8s_token: O|password|K8s token (to join node into the cluster)
 logo: kubernetes.png
 images:
 - name: kubernetes
-  url: https://opennebula-marketplace.s3.amazonaws.com/service_kubernetes-1.13.4-5.8.0-1.20190315.qcow2
+  url: https://opennebula-marketplace.s3.amazonaws.com/service_kubernetes-1.15.1-5.8.0-1.20190722.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 6531808d8979b34ab621b7f0bda0fdb5
-    sha256: 4ce26ec3baa29cd9e1b6474614cea0465d34480801d7c41434d4d3c781a32683
+    md5: 39292ff8c96099dc6b528e0896199325
+    sha256: 29f22078b19d42ebc3a288408b734fb0da6737406809ede455bf65064079fda1
