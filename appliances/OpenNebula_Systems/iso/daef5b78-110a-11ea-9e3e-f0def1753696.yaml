@@ -1,0 +1,22 @@
+---
+name: Windows VirtIO Drivers
+version: 0.1.171
+publisher: OpenNebula Systems
+description: CD-ROM image with stable VirtIO drivers for Windows.
+tags:
+- cdrom
+- virtio
+format: raw
+creation_time: 1551174013
+hypervisor: KVM
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10
+images:
+- name: virtio-win
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/virtio-win-0.1.171.iso
+  type: CDROM
+  dev_prefix: hd
+  driver: raw
+  size: 371732480
+  checksum:
+    md5: c55e2815bc7090f077cf82aed5c90423
+    sha256: 7bf7f53e30c69a360f89abb3d2cc19cc978f533766b1b2270c2d8344edf9b3ef
