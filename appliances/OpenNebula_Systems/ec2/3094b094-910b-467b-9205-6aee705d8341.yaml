@@ -1,6 +1,6 @@
 ---
 name: CentOS 7 - EC2
-version: 5.8.0-1.20190226
+version: 5.10.0-1.20191126
 publisher: OpenNebula Systems
 description: |-
   CentOS 7 image ready for the OpenNebula Cloud Bursting on the Amazon EC2.
@@ -10,7 +10,7 @@ description: |-
   EC2 image details:
 
   * **Region**: us-east-1
-  * **AMI**: ami-09f5c274338dc2e36
+  * **AMI**: ami-0492e1265802aa66e
   * **Virtualization Type**: HVM
   * **Root Device Type**: EBS
   * **Volume Type**: GP2
@@ -18,12 +18,12 @@ short_description: CentOS 7 image for Amazon EC2
 tags:
 - centos
 format: ami
-creation_time: 1551174013
+creation_time: 1574853626
 os-id: CentOS
 os-release: '7'
 os-arch: x86_64
 hypervisor: EC2
-opennebula_version: 5.0, 5.2, 5.4, 5.6, 5.8
+opennebula_version: 5.0, 5.2, 5.4, 5.6, 5.8, 5.10
 opennebula_template:
   context:
     ssh_public_key: $USER[SSH_PUBLIC_KEY]
@@ -31,7 +31,7 @@ opennebula_template:
   memory: '256'
   inputs_order: EC2_INSTANCETYPE,EC2_SECURITYGROUPIDS,EC2_SUBNETID
   public_cloud:
-    ami: ami-09f5c274338dc2e36
+    ami: ami-0492e1265802aa66e
     instancetype: $EC2_INSTANCETYPE
     securitygroupids: $EC2_SECURITYGROUPIDS
     subnetid: $EC2_SUBNETID

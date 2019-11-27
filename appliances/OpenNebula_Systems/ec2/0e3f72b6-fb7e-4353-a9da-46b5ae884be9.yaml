@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 16.04 - EC2
-version: 5.8.0-1.20190226
+version: 5.10.0-1.20191126
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 16.04 image ready for the OpenNebula Cloud Bursting on the Amazon EC2.
@@ -10,7 +10,7 @@ description: |-
   EC2 image details:
 
   * **Region**: us-east-1
-  * **AMI**: ami-0ec6fa161ad066657
+  * **AMI**: ami-0a425bbe3ceadb8a0
   * **Virtualization Type**: HVM
   * **Root Device Type**: EBS
   * **Volume Type**: GP2
@@ -18,12 +18,12 @@ short_description: Ubuntu 16.04 image for Amazon EC2
 tags:
 - ubuntu
 format: ami
-creation_time: 1551174013
+creation_time: 1574853626
 os-id: Ubuntu
 os-release: '16.04'
 os-arch: x86_64
 hypervisor: EC2
-opennebula_version: 5.0, 5.2, 5.4, 5.6, 5.8
+opennebula_version: 5.0, 5.2, 5.4, 5.6, 5.8, 5.10
 opennebula_template:
   context:
     ssh_public_key: $USER[SSH_PUBLIC_KEY]
@@ -31,7 +31,7 @@ opennebula_template:
   memory: '256'
   inputs_order: EC2_INSTANCETYPE,EC2_SECURITYGROUPIDS,EC2_SUBNETID
   public_cloud:
-    ami: ami-0ec6fa161ad066657
+    ami: ami-0a425bbe3ceadb8a0
     instancetype: $EC2_INSTANCETYPE
     securitygroupids: $EC2_SECURITYGROUPIDS
     subnetid: $EC2_SUBNETID
