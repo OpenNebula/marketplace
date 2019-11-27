@@ -1,0 +1,46 @@
+---
+name: Fedora 30
+version: 5.10.0-1.20191125
+publisher: OpenNebula Systems
+description: |-
+  Fedora 30 image ready for your OpenNebula deployment.
+
+  This image is based off a Fedora 30 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.org/5.10/operation/vm_setup/kvm.html).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Fedora 30 image for KVM, LXD, and vCenter
+tags:
+- fedora
+format: qcow2
+creation_time: 1574855313
+os-id: Fedora
+os-release: '30'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/fedora.png
+  lxd_security_privileged: 'true'
+logo: fedora.png
+images:
+- name: fedora30
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/fedora30-5.10.0-1.20191125.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 4294967296
+  checksum:
+    md5: e4ca9700046478118c3b5c2378414e8c
+    sha256: 0669bc8c5251b949ec5d048b22d24330ef84d04bcf18525e27c22bdecfd7c7dc
