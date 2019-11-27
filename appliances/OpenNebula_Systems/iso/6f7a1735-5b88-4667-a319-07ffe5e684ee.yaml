@@ -2,9 +2,8 @@
 name: Contextualization Packages
 version: 5.10.0-1
 publisher: OpenNebula Systems
-description: CD-ROM image with contextualization packages for Linux and
-  Windows.
-short_description: Contextualization Packages
+description: CD-ROM image with contextualization packages for Linux and Windows.
+short_description: CD-ROM with contextualization packages
 tags:
 - cdrom
 - context

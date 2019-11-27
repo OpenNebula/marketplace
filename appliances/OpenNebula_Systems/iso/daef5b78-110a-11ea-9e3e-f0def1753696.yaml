@@ -3,6 +3,7 @@ name: Windows VirtIO Drivers
 version: 0.1.171
 publisher: OpenNebula Systems
 description: CD-ROM image with stable VirtIO drivers for Windows.
+short_description: CD-ROM image with VirtIO drivers for Windows
 tags:
 - cdrom
 - virtio
