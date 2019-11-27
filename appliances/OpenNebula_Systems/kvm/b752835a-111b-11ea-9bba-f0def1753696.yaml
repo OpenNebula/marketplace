@@ -1,5 +1,5 @@
 ---
-name: FreeBSD 11 - KVM
+name: Ubuntu Minimal 19.10 - KVM
 version: 5.10.0-1.20191115
 publisher: OpenNebula Systems
 description: |-
@@ -8,13 +8,13 @@ description: |-
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: FreeBSD 11 image for KVM hosts
+short_description: Ubuntu Minimal 19.10 image for KVM
 tags:
-- freebsd
+- ubuntu
 format: qcow2
 creation_time: 1574859862
-os-id: FreeBSD
-os-release: '11.3'
+os-id: Ubuntu
+os-release: '19.10'
 os-arch: x86_64
 hypervisor: KVM
 opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10
@@ -29,14 +29,16 @@ opennebula_template:
   memory: '768'
   os:
     arch: x86_64
-logo: freebsd.png
+  logo: images/logos/ubuntu.png
+  lxd_security_privileged: true
+logo: ubuntu.png
 images:
-- name: freebsd11
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/freebsd11-5.10.0-1.20191115.qcow2
+- name: ubuntumin1910
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntumin1910-5.10.0-1.20191115.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 4294967296
+  size: 2361393152
   checksum:
-    md5: c1215da798d43cd517a4366f004eb87b
-    sha256: a3d359fe69d79ab44e48bb001f69fe6047ff26de88fa8769caf44cb1611d2b43
+    md5: 81345758ea98087c2c1bc15b7d90b6c7
+    sha256: c5eb3dbf1645264335bdc6e7c82f8b3dd195d3f4febfc84d63bdd3573305d666

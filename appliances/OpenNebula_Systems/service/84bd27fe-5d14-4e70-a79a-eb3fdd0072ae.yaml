@@ -1,6 +1,6 @@
 ---
 name: Service WordPress - KVM
-version: 5.0-5.6.0-0.20181207
+version: 5.1.3-5.10.0-1.20191122
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled WordPress. Run, get WordPress setup web wizard
@@ -32,12 +32,12 @@ tags:
 - service
 - centos
 format: qcow2
-creation_time: 1544177627
+creation_time: 1574859862
 os-id: CentOS
-os-release: '7.6'
+os-release: '7.7'
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.10
 opennebula_template:
   context:
     network: 'YES'
@@ -71,11 +71,11 @@ opennebula_template:
 logo: wordpress.png
 images:
 - name: wordpress
-  url: https://opennebula-marketplace.s3.amazonaws.com/service_wordpress-5.0-5.6.0-0.20181207.qcow2
+  url: https://opennebula-marketplace.s3.amazonaws.com/service_wordpress-5.1.3-5.10.0-1.20191122.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 14a58b3de8749c6156b98d4af5d436c4
-    sha256: 62333fb897feeaa14c91f9139c6c5ecd1105ff975d9fb659d3e23bcc4e874654
+    md5: 093fbfa8b549f01e2335a7754860f6d5
+    sha256: 63d748b1acf675fa35b4ee95686d95852adaf95ff16ade3dc5655b4594707344
