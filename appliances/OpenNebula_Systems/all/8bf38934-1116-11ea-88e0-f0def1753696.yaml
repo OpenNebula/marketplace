@@ -1,6 +1,6 @@
 ---
 name: Debian 10
-version: 5.10.0-1.20191117
+version: 5.10.0-2.20191117
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.10/operation/vm_setup/kvm.html) preinstalled.
@@ -31,6 +31,8 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/debian.png
   lxd_security_privileged: 'true'
+  info: 'Please do not use this VM Template for vCenter VMs. Refer to the documentation https://bit.ly/37NcJ0Y'
+  sched_requirements: 'HYPERVISOR!=\"vcenter\"'
 logo: debian.png
 images:
 - name: debian10

@@ -1,6 +1,6 @@
 ---
 name: CentOS 6
-version: 5.10.0-1.20191117
+version: 5.10.0-2.20191117
 publisher: OpenNebula Systems
 description: |-
   A CentOS 6 image ready for your OpenNebula deployment.
@@ -33,6 +33,8 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/centos.png
   lxd_security_privileged: 'true'
+  info: 'Please do not use this VM Template for vCenter VMs. Refer to the documentation https://bit.ly/37NcJ0Y'
+  sched_requirements: 'HYPERVISOR!=\"vcenter\"'
 logo: centos-5.5.png
 images:
 - name: centos6

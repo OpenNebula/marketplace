@@ -1,6 +1,6 @@
 ---
 name: Amazon Linux 2
-version: 5.10.0-1.20191117
+version: 5.10.0-2.20191117
 publisher: OpenNebula Systems
 description: |-
   [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/) image ready for the OpenNebula deployment with [contextualization package](http://docs.opennebula.org/5.10/operation/vm_setup/kvm.html) installed. The use of this software is governed by the terms of the AWS Customer Agreement (https://aws.amazon.com/agreement/) or other agreement with AWS governing the use of AWS services.
@@ -31,6 +31,8 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/linux.png
   lxd_security_privileged: 'true'
+  info: 'Please do not use this VM Template for vCenter VMs. Refer to the documentation https://bit.ly/37NcJ0Y'
+  sched_requirements: 'HYPERVISOR!=\"vcenter\"'
 logo: amazon.png
 images:
 - name: amazon2
