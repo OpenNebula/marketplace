@@ -1,6 +1,6 @@
 ---
 name: CentOS 8
-version: 5.10.0-2.20191115
+version: 5.10.0-1.20200116
 publisher: OpenNebula Systems
 description: |-
   A CentOS 8 image ready for your OpenNebula deployment.
@@ -14,16 +14,16 @@ short_description: CentOS 8 image for KVM, LXD and vCenter.
 tags:
 - centos
 format: qcow2
-creation_time: 1574858697
+creation_time: 1579279265
 os-id: CentOS
-os-release: '8.0'
+os-release: '8.1'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10
 opennebula_template:
   context:
     network: 'YES'
-    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
   cpu: '1'
   graphics:
     listen: 0.0.0.0
@@ -33,16 +33,19 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/centos.png
   lxd_security_privileged: 'true'
-  info: 'Please do not use this VM Template for vCenter VMs. Refer to the documentation https://bit.ly/37NcJ0Y'
-  sched_requirements: 'HYPERVISOR!=\"vcenter\"'
+  info: >-
+    Please do not use this VM Template for vCenter VMs. Refer to the documentation
+    https://bit.ly/37NcJ0Y
+  sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: centos-5.5.png
 images:
 - name: centos8
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/centos8-5.10.0-1.20191115.qcow2
+  url: >-
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/centos8-5.10.0-1.20200116.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 6f42d6298552e71f55fdd774b638f1f5
-    sha256: 1c668c3c2edbe1c40f125d3cd2e1cccbf5cfcd46c1bbf6bd571d08a2976becbc
+    md5: fbeccedfe02caf5574c5f43fe4b04602
+    sha256: 9ca5566bd505394eb135373c41c7a861430a31c858c011927ebe8b8734ca5c55
