@@ -1,6 +1,6 @@
 ---
 name: Ubuntu Minimal 19.04 - KVM
-version: 5.10.0-2.20191115
+version: 5.10.0-3.20191115
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.10/operation/vm_setup/kvm.html) preinstalled.
@@ -27,6 +27,8 @@ opennebula_template:
     listen: 0.0.0.0
     type: vnc
   memory: '768'
+  nic_default:
+    model: virtio
   os:
     arch: x86_64
   logo: images/logos/ubuntu.png
