@@ -1,0 +1,50 @@
+---
+name: Demo Edge Service OpenTTD - KVM
+version: 5.10.0-0.20200227
+publisher: OpenNebula Systems
+description: |-
+  Appliance with dynamically installed and configured OpenTTD server for demonstration purposes of the OpenNebula Edge deployments. Image is based on the Ubuntu 18.04 Minimal with preinstalled OpenNebula [contextualization package](http://docs.opennebula.org/5.10/operation/vm_setup/kvm.html). There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  Service bootstrap can be adjusted by contextualization parameters:
+
+  * `ONEAPP_NAME` - Name of OpenTTD server name (as announced)
+  * `ONEAPP_VERSION` - Version of OpenTTD server (default: 1.9.3)
+  * `ONEAPP_OPENGFX_VERSION` - Version of OpenGFX data (default: 0.5.5)
+  * `ONEAPP_ADVERTISE` - Enable or disable advertisement in public master server list (default: yes)
+
+  **WARNING: For demonstrational purposes only!**
+short_description: Demo Appliance with dynamically installed OpenTTD server for KVM hosts
+tags:
+- ubuntu
+format: qcow2
+creation_time: 1582799500
+os-id: Ubuntu
+os-release: '18.04'
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10
+opennebula_template:
+  context:
+    network: 'YES'
+    start_script_base64: 'IyEvYmluL2Jhc2gKCk9ORUFQUF9WRVJTSU9OPSR7T05FQVBQX1ZFUlNJT046LTEuOS4zfQpPTkVBUFBfT1BFTkdGWF9WRVJTSU9OPSR7T05FQVBQX09QRU5HRlhfVkVSU0lPTjotMC41LjV9Ck9ORUFQUF9OQU1FPSR7T05FQVBQX05BTUU6LU9uZUVkZ2UgT3BlblRURCBzZXJ2ZXIgJHtOQU1FfX0KT05FQVBQX0FEVkVSVElTRT0ke09ORUFQUF9BRFZFUlRJU0U6LXllc30KCmlmIFsgIiR7T05FQVBQX0FEVkVSVElTRV5efSIgPT0gJ1lFUycgXTsgdGhlbgogICAgT05FQVBQX1NFUlZFUl9BRFZFUlRJU0U9J3RydWUnCiAgICBPTkVBUFBfTEFOX0lOVEVSTkVUPTAKZWxzZQogICAgT05FQVBQX1NFUlZFUl9BRFZFUlRJU0U9J2ZhbHNlJwogICAgT05FQVBQX0xBTl9JTlRFUk5FVD0xCmZpCgojIyMjIwoKdGltZW91dCAzIG9uZWdhdGUgdm0gdXBkYXRlIC0tZGF0YSAiUkVBRFlfU0VSVklDRT1OTyIgPi9kZXYvbnVsbCAyPi9kZXYvbnVsbCAmCgpzZXQgLWUgLW8gcGlwZWZhaWwKCmlmIFsgLWYgL2V0Yy9vcy1yZWxlYXNlIF07IHRoZW4KICAgIHNvdXJjZSAvZXRjL29zLXJlbGVhc2UKZmkKCmV4cG9ydCBERUJJQU5fRlJPTlRFTkQ9bm9uaW50ZXJhY3RpdmUKCiggYXB0LWdldCB1cGRhdGUgfHwgYXB0LWdldCB1cGRhdGUgKSAmCgojIGRvd25sb2FkIE9wZW5UVEQgKHBhY2thZ2UgKyBncmFwaGljcykKX29wZW50dGRfcGtnPSQobWt0ZW1wKQp3Z2V0IC1PICIke19vcGVudHRkX3BrZ30iICJodHRwczovL2Nkbi5vcGVudHRkLm9yZy9vcGVudHRkLXJlbGVhc2VzLyR7T05FQVBQX1ZFUlNJT059L29wZW50dGQtJHtPTkVBUFBfVkVSU0lPTn0tbGludXgtJHtJRH0tJHtWRVJTSU9OX0NPREVOQU1FfS1hbWQ2NC5kZWIiCl9vcGVudHRkX2dmeD0kKG1rdGVtcCkKd2dldCAtTyAiJHtfb3BlbnR0ZF9nZnh9IiAiaHR0cHM6Ly9jZG4ub3BlbnR0ZC5vcmcvb3BlbmdmeC1yZWxlYXNlcy8ke09ORUFQUF9PUEVOR0ZYX1ZFUlNJT059L29wZW5nZngtJHtPTkVBUFBfT1BFTkdGWF9WRVJTSU9OfS1hbGwuemlwIgoKIyBpbnN0YWxsIHBhY2thZ2UgYW5kIGRlcGVuZGVuY2llcwp3YWl0CmRwa2cgLWkgIiR7X29wZW50dGRfcGtnfSIgfHwgYXB0LWdldCBpbnN0YWxsIC1meQpkcGtnIC1pICIke19vcGVudHRkX3BrZ30iCgojIHVucGFjayBkYXRhCm1rZGlyIC1wICIvdXNyL3NoYXJlL2dhbWVzL29wZW50dGQvZGF0YSIKdW56aXAgLXAgIiR7X29wZW50dGRfZ2Z4fSIgIm9wZW5nZngtJHtPTkVBUFBfT1BFTkdGWF9WRVJTSU9OfS50YXIiIHwgXAogICAgdGFyIC14diAtLW5vLXNhbWUtb3duZXIgLS1uby1zYW1lLXBlcm1pc3Npb25zIC0tc3RyaXAtY29tcG9uZW50cyAxIC1DICIvdXNyL3NoYXJlL2dhbWVzL29wZW50dGQvZGF0YSIKCiMgY29uZmlndXJlIHNlcnZpY2UKaWYgISBpZCBvbmVhcHAgPi9kZXYvbnVsbCAyPi9kZXYvbnVsbDsgdGhlbgogICAgYWRkdXNlciAtLWRpc2FibGVkLXBhc3N3b3JkIFwKICAgICAgICAtLWdlY29zICcnIFwKICAgICAgICAtLWhvbWUgJy92YXIvbGliL29uZWFwcCcgXAogICAgICAgIG9uZWFwcApmaQoKbWtkaXIgLXAgL3Zhci9saWIvb25lYXBwLy5vcGVudHRkLwpjYXQgPDwtRU9UID4iL3Zhci9saWIvb25lYXBwLy5vcGVudHRkL29wZW50dGQuY2ZnIgpbbmV0d29ya10Kc2VydmVyX25hbWUgPSAke09ORUFQUF9OQU1FfQpzZXJ2ZXJfYWR2ZXJ0aXNlID0gJHtPTkVBUFBfU0VSVkVSX0FEVkVSVElTRX0KbGFuX2ludGVybmV0ID0gJHtPTkVBUFBfTEFOX0lOVEVSTkVUfQpFT1QKY2hvd24gLVIgb25lYXBwOm9uZWFwcCAvdmFyL2xpYi9vbmVhcHAKCiMgcnVuIHNlcnZpY2UKcnVudXNlciAtbCBvbmVhcHAgLWMgJ25vaHVwIG9wZW50dGQgLUQgPi92YXIvbGliL29uZWFwcC9vcGVudHRkLm91dCAmJwoKdGltZW91dCAzIG9uZWdhdGUgdm0gdXBkYXRlIC0tZGF0YSAiUkVBRFlfU0VSVklDRT1ZRVMiID4vZGV2L251bGwgMj4vZGV2L251bGwgfHwgL2Jpbi90cnVlCg=='
+    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '1024'
+  os:
+    arch: x86_64
+  logo: images/logos/ubuntu.png
+  lxd_security_privileged: 'true'
+logo: openttd.png
+images:
+- name: openttd
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntumin1804-5.10.0-1.20191115.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 2361393152
+  checksum:
+    md5: 07395efc04aa4abffdfd4e1eb7fe5045
+    sha256: 1a7d8dfff91808bc46d1d71a2affb69e86b848da92badb77277771d2d092808a
