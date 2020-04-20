@@ -1,6 +1,6 @@
 ---
 name: Service GitLab CE - KVM
-version: 12.9.3-5.10.0-1.2020041
+version: 12.9.3-5.10.0-1.20200416
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled GitLab CE. Run,  get GitLab initial web page for
