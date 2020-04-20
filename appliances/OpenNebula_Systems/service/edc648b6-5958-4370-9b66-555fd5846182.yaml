@@ -1,6 +1,6 @@
 ---
 name: Service Kubernetes - KVM
-version: 1.15.6-5.10.0-1.20191122.qcow2
+version: 1.18.1-5.10.0-1.20200416
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled Kubernetes to work as a single-node cluster,
@@ -30,7 +30,7 @@ tags:
 - service
 - centos
 format: qcow2
-creation_time: 1574859862
+creation_time: 1587406908
 os-id: CentOS
 os-release: '7.7'
 os-arch: x86_64
@@ -39,23 +39,24 @@ opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10
 opennebula_template:
   context:
     network: 'YES'
-    oneapp_k8s_address: $ONEAPP_K8S_ADDRESS
-    oneapp_k8s_admin_username: $ONEAPP_K8S_ADMIN_USERNAME
-    oneapp_k8s_hash: $ONEAPP_K8S_HASH
-    oneapp_k8s_nodename: $ONEAPP_K8S_NODENAME
-    oneapp_k8s_pods_network: $ONEAPP_K8S_PODS_NETWORK
-    oneapp_k8s_port: $ONEAPP_K8S_PORT
-    oneapp_k8s_token: $ONEAPP_K8S_TOKEN
-    report_ready: $ONEGATE_ENABLE
-    ssh_public_key: $USER[SSH_PUBLIC_KEY]
-    token: $ONEGATE_ENABLE
+    oneapp_k8s_address: "$ONEAPP_K8S_ADDRESS"
+    oneapp_k8s_admin_username: "$ONEAPP_K8S_ADMIN_USERNAME"
+    oneapp_k8s_hash: "$ONEAPP_K8S_HASH"
+    oneapp_k8s_nodename: "$ONEAPP_K8S_NODENAME"
+    oneapp_k8s_pods_network: "$ONEAPP_K8S_PODS_NETWORK"
+    oneapp_k8s_port: "$ONEAPP_K8S_PORT"
+    oneapp_k8s_token: "$ONEAPP_K8S_TOKEN"
+    report_ready: "$ONEGATE_ENABLE"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    token: "$ONEGATE_ENABLE"
   cpu: '2'
   vcpu: '2'
   graphics:
     listen: 0.0.0.0
     type: vnc
-  inputs_order: ONEGATE_ENABLE,ONEAPP_K8S_ADDRESS,ONEAPP_K8S_TOKEN,ONEAPP_K8S_HASH,ONEAPP_K8S_NODENAME,ONEAPP_K8S_PORT,ONEAPP_K8S_PODS_NETWORK,ONEAPP_K8S_ADMIN_USERNAME
-  memory: '3096'
+  inputs_order: >-
+    ONEGATE_ENABLE,ONEAPP_K8S_ADDRESS,ONEAPP_K8S_TOKEN,ONEAPP_K8S_HASH,ONEAPP_K8S_NODENAME,ONEAPP_K8S_PORT,ONEAPP_K8S_PODS_NETWORK,ONEAPP_K8S_ADMIN_USERNAME
+  memory: '3072'
   os:
     arch: x86_64
   user_inputs:
@@ -72,11 +73,12 @@ opennebula_template:
 logo: kubernetes.png
 images:
 - name: kubernetes
-  url: https://opennebula-marketplace.s3.amazonaws.com/service_kubernetes-1.15.6-5.10.0-1.20191122.qcow2
+  url: >-
+    https://opennebula-marketplace.s3.amazonaws.com/service_kubernetes-1.18.1-5.10.0-1.20200416.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 3a298f6ca44c60c29c3eecc25a809c7b
-    sha256: 5ad78c28230492e587e548fd1b5d7d9d2cc23ec84622859c9f1ce53fe346679f
+    md5: '01488ceb5a6a743f7ebb4db134bdb3c2'
+    sha256: 697fc2a702ed7ca453348b9842a813f0dce2ef2433a2625cf8875dfc1e13ff3f

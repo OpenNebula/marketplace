@@ -1,6 +1,6 @@
 ---
 name: Service GitLab CE - KVM
-version: 11.5.4-5.6.0-0.20181220
+version: 12.9.3-5.10.0-1.2020041
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled GitLab CE. Run,  get GitLab initial web page for
@@ -46,28 +46,30 @@ tags:
 - service
 - centos
 format: qcow2
-creation_time: 1545306200
+creation_time: 1587406908
 os-id: CentOS
-os-release: '7.6'
+os-release: '7.7'
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.10
 opennebula_template:
   context:
     network: 'YES'
-    oneapp_admin_email: $ONEAPP_ADMIN_EMAIL
-    oneapp_admin_password: $ONEAPP_ADMIN_PASSWORD
-    oneapp_admin_username: $ONEAPP_ADMIN_USERNAME
-    oneapp_ssl_cert: $ONEAPP_SSL_CERT
-    oneapp_ssl_chain: $ONEAPP_SSL_CHAIN
-    oneapp_ssl_privkey: $ONEAPP_SSL_PRIVKEY
-    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+    oneapp_admin_email: "$ONEAPP_ADMIN_EMAIL"
+    oneapp_admin_password: "$ONEAPP_ADMIN_PASSWORD"
+    oneapp_admin_username: "$ONEAPP_ADMIN_USERNAME"
+    oneapp_site_hostname: "$ONEAPP_SITE_HOSTNAME"
+    oneapp_ssl_cert: "$ONEAPP_SSL_CERT"
+    oneapp_ssl_chain: "$ONEAPP_SSL_CHAIN"
+    oneapp_ssl_privkey: "$ONEAPP_SSL_PRIVKEY"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
   cpu: '1'
   graphics:
     listen: 0.0.0.0
     type: vnc
-  inputs_order: ONEAPP_SSL_CERT,ONEAPP_SSL_PRIVKEY,ONEAPP_SSL_CHAIN,ONEAPP_ADMIN_USERNAME,ONEAPP_ADMIN_EMAIL,ONEAPP_ADMIN_PASSWORD
-  memory: '3096'
+  inputs_order: >-
+    ONEAPP_SSL_CERT,ONEAPP_SSL_PRIVKEY,ONEAPP_SSL_CHAIN,ONEAPP_SITE_HOSTNAME,ONEAPP_ADMIN_USERNAME,ONEAPP_ADMIN_EMAIL,ONEAPP_ADMIN_PASSWORD
+  memory: '4096'
   os:
     arch: x86_64
   user_inputs:
@@ -77,17 +79,19 @@ opennebula_template:
       all or none)
     oneapp_admin_email: O|text|** Site Administrator E-mail (set all or
       none)
+    oneapp_site_hostname: O|text|Fully qualified domain name or IP
     oneapp_ssl_cert: O|text64|SSL certificate
     oneapp_ssl_chain: O|text64|SSL CA chain
     oneapp_ssl_privkey: O|text64|SSL private key
 logo: gitlab.png
 images:
 - name: gitlab
-  url: https://opennebula-marketplace.s3.amazonaws.com/service_gitlab-11.5.4-5.6.0-0.20181220.qcow2
+  url: >-
+    https://opennebula-marketplace.s3.amazonaws.com/service_gitlab-12.9.3-5.10.0-1.20200416.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: ac002a586bc71ae24d87ce75e7af60a1
-    sha256: 31dc3ef1362ecfd7382634f03aeb2d4f16acb7d266d9cdde926a0bf9828be362
+    md5: 721ecb33c489a74ec3c5127871f3490a
+    sha256: 2cb27319f0effb04d5967a57dd03b2a287665b26852ab7a7a0e18fe48242b1bb
