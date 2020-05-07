@@ -1,0 +1,52 @@
+---
+name: Fedora 32
+version: 5.11.80-1.20200506
+publisher: OpenNebula Systems
+description: |-
+  Fedora 32 image ready for your OpenNebula deployment.
+
+  This image is based off a Fedora 32 cloud image with the **BETA** OpenNebula [contextualization package](http://docs.opennebula.org/5.11/operation/vm_setup/kvm.html).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: BETA Fedora 32 image for KVM, LXD, and vCenter
+tags:
+- fedora
+format: qcow2
+creation_time: 1588867577
+os-id: Fedora
+os-release: '32'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10,
+  5.12
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/fedora.png
+  lxd_security_privileged: 'true'
+  info: >-
+    Please do not use this VM Template for vCenter VMs. Refer to the documentation
+    https://bit.ly/37NcJ0Y
+  sched_requirements: HYPERVISOR!=\"vcenter\"
+logo: fedora.png
+images:
+- name: fedora32
+  url: >-
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/fedora32-5.11.80-1.20200506.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 4294967296
+  checksum:
+    md5: d885ee0bd9e2aa8181ee4faab7aa64a4
+    sha256: 262b0db728034833750da211310981510537e51654cf0a26b7179c8f9b5ed7e0
