@@ -1,0 +1,25 @@
+---
+name: Kernel 4.15 x86_64 - Firecracker
+version: 4.15.0
+publisher: OpenNebula Systems
+description: |-
+  This kernel is a **BETA**.
+
+  Kernel 4.15 for x86_64 platforms to use with microVMs running on [Firecracker](http://docs.opennebula.io/5.11/deployment/open_cloud_host_setup/fc_driver.html) hypervisor.
+
+  Built based on following [configuration](https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/config-4.15.0-fc.x86_64).
+short_description: Kernel 4.15 x86_64 for Firecracker microVM
+tags:
+- kernel
+format: raw
+creation_time: 1590493378
+hypervisor: Firecracker
+opennebula_version: 5.12
+images:
+- name: vmlinuz-4.15-0-fc.x86_64
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/vmlinuz-4.15.0-fc.x86_64
+  type: KERNEL
+  size: 21484672
+  checksum:
+    md5: 574465376168a89f4fc8754bad8b47c3
+    sha256: 463851f06dadbda242cd5869a27427e3c5e68b377be03b2be563908fbec83360
