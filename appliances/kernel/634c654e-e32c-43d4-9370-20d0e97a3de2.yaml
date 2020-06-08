@@ -1,0 +1,23 @@
+---
+name: Kernel 5.4 x86_64 - Firecracker
+version: 5.4.43
+publisher: OpenNebula Systems
+description: |-
+  Kernel 5.4 for x86_64 platforms to use with microVMs running on [Firecracker](http://docs.opennebula.io/5.11/deployment/open_cloud_host_setup/fc_driver.html) hypervisor.
+
+  Built based on following [configuration](https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/config-5.4.43-fc.x86_64).
+short_description: Kernel 5.4 x86_64 for Firecracker microVM
+tags:
+- kernel
+format: raw
+creation_time: 1591603396
+hypervisor: Firecracker
+opennebula_version: 5.12
+images:
+- name: vmlinuz-5.4.43-fc.x86_64
+  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/vmlinuz-5.4.43-fc.x86_64
+  type: KERNEL
+  size: 36641936
+  checksum:
+    md5: cd24ea73535021cdd44ddd40d9ada932
+    sha256: d6eac7394d78cae6ae940b267a46292c40ba7aecf98b8b6c1b2a077bd028f396
