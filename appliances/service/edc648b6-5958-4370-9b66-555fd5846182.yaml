@@ -1,6 +1,6 @@
 ---
 name: Service Kubernetes - KVM
-version: 1.18.1-5.10.0-1.20200416
+version: 1.18.3-5.12.0-1.20200609
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled Kubernetes to work as a single-node cluster,
@@ -30,12 +30,13 @@ tags:
 - service
 - centos
 format: qcow2
-creation_time: 1587406908
+creation_time: 1591887721
 os-id: CentOS
-os-release: '7.7'
+os-release: '7.8'
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10,
+  5.12
 opennebula_template:
   context:
     network: 'YES'
@@ -74,11 +75,11 @@ logo: kubernetes.png
 images:
 - name: kubernetes
   url: >-
-    https://opennebula-marketplace.s3.amazonaws.com/service_kubernetes-1.18.1-5.10.0-1.20200416.qcow2
+    https://opennebula-marketplace.s3.amazonaws.com/service_wordpress-5.1.3-5.12.0-1.20200609.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: '01488ceb5a6a743f7ebb4db134bdb3c2'
-    sha256: 697fc2a702ed7ca453348b9842a813f0dce2ef2433a2625cf8875dfc1e13ff3f
+    md5: b1a50a8bf6cf5b292abef850ce7fe5aa
+    sha256: ae50e1a605c75b297146973e5716b99b66fc8db3ab57a27ef935f35fea79b719

@@ -1,5 +1,5 @@
 ---
-name: Ubuntu 19.10
+name: ALT Linux p9
 version: 5.12.0-1.20200609
 publisher: OpenNebula Systems
 description: |-
@@ -8,15 +8,16 @@ description: |-
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Ubuntu 19.10 image for KVM, LXD and vCenter
+short_description: ALT Linux p9 for KVM hosts
 tags:
-- ubuntu
+- alt
+- altlinux
 format: qcow2
 creation_time: 1591887721
-os-id: Ubuntu
-os-release: '19.10'
+os-id: ALT Linux
+os-release: p9
 os-arch: x86_64
-hypervisor: ALL
+hypervisor: KVM
 opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10,
   5.12
 opennebula_template:
@@ -30,21 +31,15 @@ opennebula_template:
   memory: '768'
   os:
     arch: x86_64
-  logo: images/logos/ubuntu.png
-  lxd_security_privileged: 'true'
-  info: >-
-    Please do not use this VM Template for vCenter VMs. Refer to the documentation
-    https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
-logo: ubuntu.png
+logo: freebsd.png
 images:
-- name: ubuntu1910
+- name: alt9
   url: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1910-5.12.0-1.20200609.qcow2
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alt9-5.12.0-1.20200609.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 2361393152
+  size: 1577058304
   checksum:
-    md5: 59298e7e606ba30fe5811cd48e2ba4bf
-    sha256: 4fbdc8417075193f11442e6591e5d7fc687863417a6c991f4f13f78fc528d599
+    md5: f32acefdfd3615200c1726ca5ef22d92
+    sha256: 46830b773a6527567170cbb60e01535fa4dccd7c7d7455a0fb90cbf1b7efc6e1

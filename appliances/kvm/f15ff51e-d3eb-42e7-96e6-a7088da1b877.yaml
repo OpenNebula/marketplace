@@ -1,18 +1,18 @@
 ---
 name: Ubuntu Minimal 20.04 - KVM
-version: 5.11.80-1.20200506
+version: 5.12.0-1.20200609
 publisher: OpenNebula Systems
 description: |-
-  This image has the **BETA** OpenNebula [contextualization package](http://docs.opennebula.org/5.11/operation/vm_setup/kvm.html) preinstalled.
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: BETA Ubuntu Minimal 20.04 image for KVM
+short_description: Ubuntu Minimal 20.04 image for KVM
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1588867577
+creation_time: 1591887721
 os-id: Ubuntu
 os-release: '20.04'
 os-arch: x86_64
@@ -38,11 +38,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2004min
   url: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu2004min-5.11.80-1.20200506.qcow2
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu2004min-5.12.0-1.20200609.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 46544379cdf79283104af0dca7698e11
-    sha256: cd075bb2af281d8a3417e6c8c6117736f9baa33f93360da98e42a946f5182c8f
+    md5: a9d7b4c8d9a82ed12fb079cacb326c3f
+    sha256: e4ece6a6c236fe0a8dbf24db2957954e48b9a50a2d235934cc1f492f996ab2b4

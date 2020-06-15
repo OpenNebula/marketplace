@@ -1,6 +1,6 @@
 ---
 name: Service AWS IoT Greengrass - KVM
-version: 1.9.1-5.10.0-1.20191122
+version: 1.9.1-5.12.0-1.20200609
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled AWS IoT Greengrass SDK and services to run
@@ -45,38 +45,40 @@ tags:
 - service
 - centos
 format: qcow2
-creation_time: 1574859862
+creation_time: 1591887721
 os-id: CentOS
-os-release: '7.7'
+os-release: '7.8'
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10,
+  5.12
 opennebula_template:
   context:
     network: 'YES'
-    oneapp_awsgg_access_key_id: $ONEAPP_AWSGG_ACCESS_KEY_ID
-    oneapp_awsgg_access_secret_key: $ONEAPP_AWSGG_ACCESS_SECRET_KEY
-    oneapp_awsgg_bulk_devices: $ONEAPP_AWSGG_BULK_DEVICES
-    oneapp_awsgg_config: $ONEAPP_AWSGG_CONFIG
-    oneapp_awsgg_device_hash: $ONEAPP_AWSGG_DEVICE_HASH
-    oneapp_awsgg_device_name: $ONEAPP_AWSGG_DEVICE_NAME
-    oneapp_awsgg_endpoint: $ONEAPP_AWSGG_ENDPOINT
-    oneapp_awsgg_ggc_group: $ONEAPP_AWSGG_GGC_GROUP
-    oneapp_awsgg_ggc_user: $ONEAPP_AWSGG_GGC_USER
-    oneapp_awsgg_gghttpport: $ONEAPP_AWSGG_GGHTTPPORT
-    oneapp_awsgg_group: $ONEAPP_AWSGG_GROUP
-    oneapp_awsgg_iothttpport: $ONEAPP_AWSGG_IOTHTTPPORT
-    oneapp_awsgg_iotmqttport: $ONEAPP_AWSGG_IOTMQTTPORT
-    oneapp_awsgg_role: $ONEAPP_AWSGG_ROLE
-    oneapp_awsgg_ssl_cert: $ONEAPP_AWSGG_SSL_CERT
-    oneapp_awsgg_ssl_privkey: $ONEAPP_AWSGG_SSL_PRIVKEY
-    oneapp_awsgg_ssl_pubkey: $ONEAPP_AWSGG_SSL_PUBKEY
-    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+    oneapp_awsgg_access_key_id: "$ONEAPP_AWSGG_ACCESS_KEY_ID"
+    oneapp_awsgg_access_secret_key: "$ONEAPP_AWSGG_ACCESS_SECRET_KEY"
+    oneapp_awsgg_bulk_devices: "$ONEAPP_AWSGG_BULK_DEVICES"
+    oneapp_awsgg_config: "$ONEAPP_AWSGG_CONFIG"
+    oneapp_awsgg_device_hash: "$ONEAPP_AWSGG_DEVICE_HASH"
+    oneapp_awsgg_device_name: "$ONEAPP_AWSGG_DEVICE_NAME"
+    oneapp_awsgg_endpoint: "$ONEAPP_AWSGG_ENDPOINT"
+    oneapp_awsgg_ggc_group: "$ONEAPP_AWSGG_GGC_GROUP"
+    oneapp_awsgg_ggc_user: "$ONEAPP_AWSGG_GGC_USER"
+    oneapp_awsgg_gghttpport: "$ONEAPP_AWSGG_GGHTTPPORT"
+    oneapp_awsgg_group: "$ONEAPP_AWSGG_GROUP"
+    oneapp_awsgg_iothttpport: "$ONEAPP_AWSGG_IOTHTTPPORT"
+    oneapp_awsgg_iotmqttport: "$ONEAPP_AWSGG_IOTMQTTPORT"
+    oneapp_awsgg_role: "$ONEAPP_AWSGG_ROLE"
+    oneapp_awsgg_ssl_cert: "$ONEAPP_AWSGG_SSL_CERT"
+    oneapp_awsgg_ssl_privkey: "$ONEAPP_AWSGG_SSL_PRIVKEY"
+    oneapp_awsgg_ssl_pubkey: "$ONEAPP_AWSGG_SSL_PUBKEY"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
   cpu: '1'
   graphics:
     listen: 0.0.0.0
     type: vnc
-  inputs_order: ONEAPP_AWSGG_ROLE,ONEAPP_AWSGG_ENDPOINT,ONEAPP_AWSGG_ACCESS_KEY_ID,ONEAPP_AWSGG_ACCESS_SECRET_KEY,ONEAPP_AWSGG_GROUP,ONEAPP_AWSGG_DEVICE_NAME,ONEAPP_AWSGG_BULK_DEVICES,ONEAPP_AWSGG_SSL_CERT,ONEAPP_AWSGG_SSL_PRIVKEY,ONEAPP_AWSGG_SSL_PUBKEY,ONEAPP_AWSGG_CONFIG,ONEAPP_AWSGG_DEVICE_HASH,ONEAPP_AWSGG_GGC_USER,ONEAPP_AWSGG_GGC_GROUP,ONEAPP_AWSGG_IOTMQTTPORT,ONEAPP_AWSGG_GGHTTPPORT,ONEAPP_AWSGG_IOTHTTPPORT
+  inputs_order: >-
+    ONEAPP_AWSGG_ROLE,ONEAPP_AWSGG_ENDPOINT,ONEAPP_AWSGG_ACCESS_KEY_ID,ONEAPP_AWSGG_ACCESS_SECRET_KEY,ONEAPP_AWSGG_GROUP,ONEAPP_AWSGG_DEVICE_NAME,ONEAPP_AWSGG_BULK_DEVICES,ONEAPP_AWSGG_SSL_CERT,ONEAPP_AWSGG_SSL_PRIVKEY,ONEAPP_AWSGG_SSL_PUBKEY,ONEAPP_AWSGG_CONFIG,ONEAPP_AWSGG_DEVICE_HASH,ONEAPP_AWSGG_GGC_USER,ONEAPP_AWSGG_GGC_GROUP,ONEAPP_AWSGG_IOTMQTTPORT,ONEAPP_AWSGG_GGHTTPPORT,ONEAPP_AWSGG_IOTHTTPPORT
   memory: '1024'
   os:
     arch: x86_64
@@ -101,11 +103,12 @@ opennebula_template:
 logo: aws-iot-greengrass.png
 images:
 - name: aws-iot-greengrass
-  url: https://opennebula-marketplace.s3.amazonaws.com/service_aws_greengrass-1.9.1-5.10.0-1.20191122.qcow2
+  url: >-
+    https://opennebula-marketplace.s3.amazonaws.com/service_aws_greengrass-1.9.1-5.12.0-1.20200609.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 803019612fe8ce40ef6fb60e8989a8ef
-    sha256: 4949745dd6a35173996eee4f07dfb1fb0abd19751d701526845a33f32136399b
+    md5: 6086e0f50bb29c07ca78e63518616f34
+    sha256: ce284b2dee744baf01cdf0629e212ffa5bb37b69366ac04f45e6fa7f9657e168

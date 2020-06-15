@@ -1,18 +1,18 @@
 ---
 name: Ubuntu 20.04
-version: 5.11.80-1.20200506
+version: 5.12.0-1.20200609
 publisher: OpenNebula Systems
 description: |-
-  This image has the **BETA** OpenNebula [contextualization package](http://docs.opennebula.org/5.11/operation/vm_setup/kvm.html) preinstalled.
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: BETA Ubuntu 20.04 image for KVM, LXD and vCenter
+short_description: Ubuntu 20.04 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1588867577
+creation_time: 1591887721
 os-id: Ubuntu
 os-release: '20.04'
 os-arch: x86_64
@@ -40,11 +40,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2004
   url: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu2004-5.11.80-1.20200506.qcow2
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu2004-5.12.0-1.20200609.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 45f5c6a9aa7b9d7535fc076d8d95fb56
-    sha256: a38c91269bb403394f358b08fbae4a15bf73c30acd01880a87bda51d410c2888
+    md5: 73d93cff5fddf916ffb4fdf835b6e4df
+    sha256: 2c3a5f4b915bc707399ee4105268ea21b9eb2885a2574daa5a8e057ed90e19cd

@@ -1,11 +1,11 @@
 ---
 name: Alpine Linux 3.11
-version: 5.10.0-1.20200108
+version: 5.12.0-1.20200609
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.11 image ready for your OpenNebula deployment.
 
-  This image is based of the Alpine Linux 3.11 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.org/5.10/operation/vm_setup/kvm.html).
+  This image is based of the Alpine Linux 3.11 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -14,12 +14,13 @@ short_description: Alpine Linux 3.11 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1578593723
+creation_time: 1591887721
 os-id: Alpine Linux
 os-release: '3.11'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10,
+  5.12
 opennebula_template:
   context:
     network: 'YES'
@@ -29,6 +30,8 @@ opennebula_template:
     listen: 0.0.0.0
     type: vnc
   memory: '128'
+  nic_default:
+    model: virtio
   os:
     arch: x86_64
   logo: images/logos/linux.png
@@ -41,11 +44,11 @@ logo: alpine.png
 images:
 - name: alpine311
   url: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine311-5.10.0-1.20200108.qcow2
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine311-5.12.0-1.20200609.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 268435456
   checksum:
-    md5: eced462478bf7f1412f5847373e75cf1
-    sha256: 6544e1061b622fd3b2dee3bbcf28049447683fae728f0f503185ea2b192087d8
+    md5: 67cb9d6f207fd6c0a70683dbd87fd713
+    sha256: 7ff6db06692e3d3b2622d8bec747588aa641065324728a6d65b1d34ef0e78bd7

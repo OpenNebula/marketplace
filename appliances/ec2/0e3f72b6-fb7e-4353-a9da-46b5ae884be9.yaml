@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 16.04 - EC2
-version: 5.10.0-1.20191126
+version: 5.12.0-1.20200609
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 16.04 image ready for the OpenNebula Cloud Bursting on the Amazon EC2.
@@ -10,7 +10,7 @@ description: |-
   EC2 image details:
 
   * **Region**: us-east-1
-  * **AMI**: ami-0a425bbe3ceadb8a0
+  * **AMI**: ami-0730504c311a2b01e
   * **Virtualization Type**: HVM
   * **Root Device Type**: EBS
   * **Volume Type**: GP2
@@ -18,23 +18,23 @@ short_description: Ubuntu 16.04 image for Amazon EC2
 tags:
 - ubuntu
 format: ami
-creation_time: 1574853626
+creation_time: 1591887721
 os-id: Ubuntu
 os-release: '16.04'
 os-arch: x86_64
 hypervisor: EC2
-opennebula_version: 5.0, 5.2, 5.4, 5.6, 5.8, 5.10
+opennebula_version: 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12
 opennebula_template:
   context:
-    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
   cpu: '0.1'
   memory: '256'
   inputs_order: EC2_INSTANCETYPE,EC2_SECURITYGROUPIDS,EC2_SUBNETID
   public_cloud:
-    ami: ami-0a425bbe3ceadb8a0
-    instancetype: $EC2_INSTANCETYPE
-    securitygroupids: $EC2_SECURITYGROUPIDS
-    subnetid: $EC2_SUBNETID
+    ami: ami-0730504c311a2b01e
+    instancetype: "$EC2_INSTANCETYPE"
+    securitygroupids: "$EC2_SECURITYGROUPIDS"
+    subnetid: "$EC2_SUBNETID"
     type: ec2
   sched_requirements: (PUBLIC_CLOUD=YES) & (REGION_NAME=\"us-east-1\")
   user_inputs:
@@ -43,9 +43,11 @@ opennebula_template:
     ec2_subnetid: M|text|EC2 Subnet ID
   logo: images/logos/ubuntu.png
 logo: ubuntu.png
+type: VMTEMPLATE
 images:
 - name: empty
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/empty1024.raw
+  url: >-
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/empty1024.raw
   type: OS
   dev_prefix: hd
   driver: raw
@@ -53,4 +55,3 @@ images:
   checksum:
     md5: 0f343b0931126a20f133d67c2b018a3b
     sha256: 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
-type: VMTEMPLATE
