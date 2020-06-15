@@ -31,7 +31,7 @@ opennebula_template:
   memory: '768'
   os:
     arch: x86_64
-logo: freebsd.png
+logo: alt.png
 images:
 - name: alt9
   url: >-
