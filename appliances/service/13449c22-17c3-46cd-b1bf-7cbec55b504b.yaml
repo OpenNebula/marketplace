@@ -1,6 +1,6 @@
 ---
 name: Service AWS IoT Greengrass - KVM
-version: 1.9.1-5.12.0-1.20200609
+version: 1.10.2-5.12.0-1.20200622
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled AWS IoT Greengrass SDK and services to run
@@ -45,7 +45,7 @@ tags:
 - service
 - centos
 format: qcow2
-creation_time: 1591887721
+creation_time: 1592921258
 os-id: CentOS
 os-release: '7.8'
 os-arch: x86_64
@@ -104,11 +104,11 @@ logo: aws-iot-greengrass.png
 images:
 - name: aws-iot-greengrass
   url: >-
-    https://opennebula-marketplace.s3.amazonaws.com/service_aws_greengrass-1.9.1-5.12.0-1.20200609.qcow2
+    https://opennebula-marketplace.s3.amazonaws.com/service_aws_greengrass-1.10.2-5.12.0-1.20200622.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 6086e0f50bb29c07ca78e63518616f34
-    sha256: ce284b2dee744baf01cdf0629e212ffa5bb37b69366ac04f45e6fa7f9657e168
+    md5: 2f6ca6549e7be61dae113d81ccfb1f92
+    sha256: e057478e4f8953125ceb21e2e95ce9561af66c84b912f1878a0b5b7ebc33f675
