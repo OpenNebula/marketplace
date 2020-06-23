@@ -1,6 +1,6 @@
 ---
 name: Service Kubernetes - KVM
-version: 1.18.3-5.12.0-1.20200609
+version: 1.18.3-5.12.0-2.20200609
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled Kubernetes to work as a single-node cluster,
@@ -75,11 +75,11 @@ logo: kubernetes.png
 images:
 - name: kubernetes
   url: >-
-    https://opennebula-marketplace.s3.amazonaws.com/service_wordpress-5.1.3-5.12.0-1.20200609.qcow2
+    https://opennebula-marketplace.s3.amazonaws.com/service_kubernetes-1.18.3-5.12.0-1.20200609.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: b1a50a8bf6cf5b292abef850ce7fe5aa
-    sha256: ae50e1a605c75b297146973e5716b99b66fc8db3ab57a27ef935f35fea79b719
+    md5: c8456e5587b1cfc61555e16d7e9b9619
+    sha256: 2d0e8f122a3ced32607f7f10c4889d68bccf76decc75c8f3513a5fbac2f51d1e
