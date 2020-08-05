@@ -1,6 +1,6 @@
 ---
 name: Service VNF
-version: 5.12.0-1.20200609
+version: 5.12.0-1.20200609.1
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS,
@@ -30,8 +30,8 @@ opennebula_template:
     oneapp_vnf_dns_interfaces: "$ONEAPP_VNF_DNS_INTERFACES"
     oneapp_vnf_dns_max_cache_ttl: "$ONEAPP_VNF_DNS_MAX_CACHE_TTL"
     oneapp_vnf_dns_use_rootservers: "$ONEAPP_VNF_DNS_USE_ROOTSERVERS"
-    oneapp_vnf_nat_enabled: "$ONEAPP_VNF_NAT_ENABLED"
-    oneapp_vnf_nat_interfaces: "$ONEAPP_VNF_NAT_INTERFACES"
+    oneapp_vnf_nat4_enabled: "$ONEAPP_VNF_NAT4_ENABLED"
+    oneapp_vnf_nat4_interfaces_out: "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
     oneapp_vnf_router4_enabled: "$ONEAPP_VNF_ROUTER4_ENABLED"
     oneapp_vnf_router4_interfaces: "$ONEAPP_VNF_ROUTER4_INTERFACES"
   cpu: '1'
@@ -39,7 +39,7 @@ opennebula_template:
     listen: 0.0.0.0
     type: vnc
   inputs_order: >-
-    ONEAPP_VNF_DHCP4_ENABLED,ONEAPP_VNF_DHCP4_INTERFACES,ONEAPP_VNF_DNS_ENABLED,ONEAPP_VNF_DNS_INTERFACES,ONEAPP_VNF_NAT_ENABLED,ONEAPP_VNF_NAT_INTERFACES,ONEAPP_VNF_ROUTER4_ENABLED,ONEAPP_VNF_ROUTER4_INTERFACES,ONEAPP_VNF_DHCP4_LEASE_TIME,ONEAPP_VNF_DNS_MAX_CACHE_TTL,ONEAPP_VNF_DNS_USE_ROOTSERVERS
+    ONEAPP_VNF_DHCP4_ENABLED,ONEAPP_VNF_DHCP4_INTERFACES,ONEAPP_VNF_DNS_ENABLED,ONEAPP_VNF_DNS_INTERFACES,ONEAPP_VNF_NAT4_ENABLED,ONEAPP_VNF_NAT4_INTERFACES_OUT,ONEAPP_VNF_ROUTER4_ENABLED,ONEAPP_VNF_ROUTER4_INTERFACES,ONEAPP_VNF_DHCP4_LEASE_TIME,ONEAPP_VNF_DNS_MAX_CACHE_TTL,ONEAPP_VNF_DNS_USE_ROOTSERVERS
   memory: '512'
   info: >-
     Please do not use this VM Template for vCenter VMs. Refer to the documentation
@@ -61,8 +61,8 @@ opennebula_template:
       [sec]| |3600
     oneapp_vnf_dns_use_rootservers: O|boolean|*** DNS - Use Rootservers|
       |YES
-    oneapp_vnf_nat_enabled: O|boolean|Enable NAT| |NO
-    oneapp_vnf_nat_interfaces: O|text|NAT - Outgoing Interfaces
+    oneapp_vnf_nat4_enabled: O|boolean|Enable NAT| |NO
+    oneapp_vnf_nat4_interfaces_out: O|text|NAT - Outgoing Interfaces
     oneapp_vnf_router4_enabled: O|boolean|Enable Router| |NO
     oneapp_vnf_router4_interfaces: O|text|Router - Interfaces
 logo: router.png
