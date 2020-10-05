@@ -1,6 +1,6 @@
 ---
 name: Service GitLab CE - KVM
-version: 13.0.5-5.12.0-1.20200609
+version: 13.4.2-5.12.0-1.20201002
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled GitLab CE. Run,  get GitLab initial web page for
@@ -46,7 +46,7 @@ tags:
 - service
 - centos
 format: qcow2
-creation_time: 1591887721
+creation_time: 1601901407
 os-id: CentOS
 os-release: '7.8'
 os-arch: x86_64
@@ -87,11 +87,11 @@ logo: gitlab.png
 images:
 - name: gitlab
   url: >-
-    https://opennebula-marketplace.s3.amazonaws.com/service_gitlab-13.0.5-5.12.0-1.20200609.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_gitlab-13.4.2-5.12.0-1.20201002.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 4494a4fcd7849cebd8591805e58cce48
-    sha256: '076904b5cbc8d7b1304d50a59917052db9315af4e7241a80c16fd6c56f8de9fa'
+    md5: 991f83b79b8bd898ca6314352b6a119d
+    sha256: 429e7272f97158f9a61b5ac518a7395d8d0d420834e8eb1a9db87387c09eef8e
