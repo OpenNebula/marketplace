@@ -1,6 +1,6 @@
 ---
 name: Fedora 31
-version: 5.12.0-1.20200609
+version: 5.12.0.1-1.20201029
 publisher: OpenNebula Systems
 description: |-
   Fedora 31 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Fedora 31 image for KVM, LXD, and vCenter
 tags:
 - fedora
 format: qcow2
-creation_time: 1591887721
+creation_time: 1604412849
 os-id: Fedora
 os-release: '31'
 os-arch: x86_64
@@ -42,11 +42,11 @@ logo: fedora.png
 images:
 - name: fedora31
   url: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/fedora31-5.12.0-1.20200609.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/fedora31-5.12.0.1-1.20201029.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 02db5abe8b7e96694a121f3196a36acb
-    sha256: fdf75f63aa7e4f479bd4ff849815969728716eadf08b95e141348ba879c30621
+    md5: 8ddbe51ba07b9bbc9b13507d1b268421
+    sha256: 5c027153758dab1d4d4d90b75aeec8e0a41f27051bc179ab3dbcca9d70c9b9a0

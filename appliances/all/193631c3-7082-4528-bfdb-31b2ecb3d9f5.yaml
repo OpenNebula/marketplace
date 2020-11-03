@@ -1,6 +1,6 @@
 ---
 name: Alpine Linux 3.11
-version: 5.12.0-1.20200609
+version: 5.12.0.1-1.20201029
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.11 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Alpine Linux 3.11 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1591887721
+creation_time: 1604412849
 os-id: Alpine Linux
 os-release: '3.11'
 os-arch: x86_64
@@ -44,11 +44,11 @@ logo: alpine.png
 images:
 - name: alpine311
   url: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine311-5.12.0-1.20200609.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/alpine311-5.12.0.1-1.20201029.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 268435456
   checksum:
-    md5: 67cb9d6f207fd6c0a70683dbd87fd713
-    sha256: 7ff6db06692e3d3b2622d8bec747588aa641065324728a6d65b1d34ef0e78bd7
+    md5: 552140c7d21023d228b8c95a8b683497
+    sha256: 0b579f85c8688e3945170d02c3773cb6fa74a9d49c95bf08e6b868b6777e98c6

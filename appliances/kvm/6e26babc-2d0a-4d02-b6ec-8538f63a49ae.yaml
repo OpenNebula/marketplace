@@ -1,6 +1,6 @@
 ---
 name: ALT Linux Sisyphus
-version: 5.12.0-1.20200609
+version: 5.12.0.1-1.20201029
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
@@ -13,7 +13,7 @@ tags:
 - alt
 - altlinux
 format: qcow2
-creation_time: 1591887721
+creation_time: 1604412849
 os-id: ALT Linux
 os-release: Sisyphus
 os-arch: x86_64
@@ -33,13 +33,13 @@ opennebula_template:
     arch: x86_64
 logo: alt.png
 images:
-- name: alt9
+- name: alt_sisyphus
   url: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alt_sisyphus-5.12.0-1.20200609.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/alt_sisyphus-5.12.0.1-1.20201029.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 1789919232
+  size: 1828716544
   checksum:
-    md5: a932c815bd8967aedd830f3bcff485e9
-    sha256: eca3c682b1746e2672bd1f4bde62bc075b9f5554efbd63c955e2d15210e96a06
+    md5: bd0d7ddb83545cc3ddd77f7427e9e7cf
+    sha256: ad687e0f2e94dfc08595350ab10faad8b893481ca3b754630e57c711e8795bf7

@@ -1,6 +1,6 @@
 ---
 name: FreeBSD 11 - KVM
-version: 5.12.0-1.20200609
+version: 5.12.0.1-1.20201030
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
@@ -12,7 +12,7 @@ short_description: FreeBSD 11 image for KVM hosts
 tags:
 - freebsd
 format: qcow2
-creation_time: 1591887721
+creation_time: 1604412849
 os-id: FreeBSD
 os-release: '11.3'
 os-arch: x86_64
@@ -34,11 +34,11 @@ logo: freebsd.png
 images:
 - name: freebsd11
   url: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/freebsd11-5.12.0-1.20200609.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/freebsd11-5.12.0.1-1.20201030.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: e477f354e5c623db56ac6b71aa353e68
-    sha256: e59ac5966d5b02f3b2ab535c65e087f4cf75f583aa6f011044a7cd680f7f4361
+    md5: 804414bdb9bc371d97c1d33f04e0cec1
+    sha256: 97a30d5bf64676f9f0cc781d831b3fe67fe58789cf1342a3934681b0d71d32e5

@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 16.04
-version: 5.12.0-1.20200609
+version: 5.12.0.1-1.20201029
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
@@ -12,7 +12,7 @@ short_description: Ubuntu 16.04 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1591887721
+creation_time: 1604412849
 os-id: Ubuntu
 os-release: '16.04'
 os-arch: x86_64
@@ -40,11 +40,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu1604
   url: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/ubuntu1604-5.12.0-1.20200609.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1604-5.12.0.1-1.20201029.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: de80e9133ff1b8c191eca8d8b289532f
-    sha256: d1b467ca08dbb45ffcf1c311084bab9c955454d25f0fc35a7f08e632cddc8b7d
+    md5: 1343e36b2d528dfbe89963249abc3f26
+    sha256: 67a825e0071415e89fa086e11f4034ae5155372f35bf18aae58928474c2ed117

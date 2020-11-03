@@ -1,6 +1,6 @@
 ---
 name: Fedora 32
-version: 5.12.0-1.202006096
+version: 5.12.0.1-1.20201029
 publisher: OpenNebula Systems
 description: |-
   Fedora 32 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Fedora 32 image for KVM, LXD, and vCenter
 tags:
 - fedora
 format: qcow2
-creation_time: 1591887721
+creation_time: 1604412849
 os-id: Fedora
 os-release: '32'
 os-arch: x86_64
@@ -42,11 +42,11 @@ logo: fedora.png
 images:
 - name: fedora32
   url: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/fedora32-5.12.0-1.20200609.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/fedora32-5.12.0.1-1.20201029.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: c948a6ac156c96b91683e9504455240b
-    sha256: 8f9ddedd4742110a01f0be5f846c38528b5a68810b8f7faf119638e44e8bd0b9
+    md5: 1279c528e816ea15f98b45af82c5aaed
+    sha256: 45c4a1e71aaaa9936f037cf76890acbfce2a08b67756ed748ef0951af30f1e97

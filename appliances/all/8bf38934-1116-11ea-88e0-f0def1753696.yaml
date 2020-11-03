@@ -1,6 +1,6 @@
 ---
 name: Debian 10
-version: 5.12.0-1.20200609
+version: 5.12.0.1-1.20201029
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
@@ -12,9 +12,9 @@ short_description: Debian 10 image for KVM, LXD and vCenter
 tags:
 - debian
 format: qcow2
-creation_time: 1574859862
+creation_time: 1604412849
 os-id: Debian
-os-release: '10.4'
+os-release: '10.6'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10,
@@ -40,11 +40,11 @@ logo: debian.png
 images:
 - name: debian10
   url: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/debian10-5.12.0-1.20200609.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/debian10-5.12.0.1-1.20201029.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: 7b671e64f0a4618b9db144ebbe4b2f87
-    sha256: 71c1654584be01c63ae7329d2a7c7e859e63cab6df63ded324ff9aa60b87a14a
+    md5: ec9835d7095f97ba20b55d0efb9e8fc9
+    sha256: 1a420f6400cb4c3dc9c369749515ef2e735f9ab240efa868731b4fb300ac9926
