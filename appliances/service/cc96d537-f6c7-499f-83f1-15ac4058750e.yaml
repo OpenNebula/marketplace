@@ -1,6 +1,6 @@
 ---
 name: Service Virtual Router
-version: 5.12.0.1-1.20201029
+version: 5.12.0-1.20200609.1
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS,
@@ -13,7 +13,7 @@ tags:
 - service
 - alpine
 format: qcow2
-creation_time: 1604503285
+creation_time: 1596528545
 os-id: Alpine
 os-release: '3.11'
 os-arch: x86_64
@@ -32,16 +32,13 @@ opennebula_template:
     oneapp_vnf_dns_use_rootservers: "$ONEAPP_VNF_DNS_USE_ROOTSERVERS"
     oneapp_vnf_nat4_enabled: "$ONEAPP_VNF_NAT4_ENABLED"
     oneapp_vnf_nat4_interfaces_out: "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
-    oneapp_vnf_sdnat4_enabled: "$ONEAPP_VNF_SDNAT4_ENABLED"
-    oneapp_vnf_sdnat4_interfaces: "$ONEAPP_VNF_SDNAT4_INTERFACES"
     oneapp_vnf_router4_enabled: 'YES'
-    token: "$ONEAPP_VNF_SDNAT4_ENABLED"
   cpu: '1'
   graphics:
     listen: 0.0.0.0
     type: vnc
   inputs_order: >-
-    ONEAPP_VNF_DHCP4_ENABLED,ONEAPP_VNF_DHCP4_INTERFACES,ONEAPP_VNF_DNS_ENABLED,ONEAPP_VNF_DNS_INTERFACES,ONEAPP_VNF_NAT4_ENABLED,ONEAPP_VNF_NAT4_INTERFACES_OUT, ONEAPP_VNF_SDNAT4_ENABLED, ONEAPP_VNF_SDNAT4_INTERFACES,ONEAPP_VNF_DHCP4_LEASE_TIME,ONEAPP_VNF_DNS_MAX_CACHE_TTL,ONEAPP_VNF_DNS_USE_ROOTSERVERS
+    ONEAPP_VNF_DHCP4_ENABLED,ONEAPP_VNF_DHCP4_INTERFACES,ONEAPP_VNF_DNS_ENABLED,ONEAPP_VNF_DNS_INTERFACES,ONEAPP_VNF_NAT4_ENABLED,ONEAPP_VNF_NAT4_INTERFACES_OUT,ONEAPP_VNF_DHCP4_LEASE_TIME,ONEAPP_VNF_DNS_MAX_CACHE_TTL,ONEAPP_VNF_DNS_USE_ROOTSERVERS
   memory: '512'
   info: >-
     Please do not use this VM Template for vCenter VMs. Refer to the documentation
@@ -65,18 +62,16 @@ opennebula_template:
       |YES
     oneapp_vnf_nat4_enabled: O|boolean|Enable NAT| |NO
     oneapp_vnf_nat4_interfaces_out: O|text|NAT - Outgoing Interfaces
-    oneapp_vnf_sdnat4_enabled: O|boolean|Enable SDNAT| |NO
-    oneapp_vnf_sdnat4_interfaces_out: O|text|SDNAT - Mapped Interfaces
   vrouter: 'YES'
 logo: router.png
 images:
 - name: vnf
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_vnf-5.12.0.1-1.20201029.qcow2
+    https://opennebula-marketplace.s3.amazonaws.com/service_vnf-5.12.0-1.20200609.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 1073741824
   checksum:
-    md5: 78600af4d20834f51fc0b63eb0f87463
-    sha256: 93dee5950edb9719490399425d4c4c56f1da6fdff9155c39d6e8e9aa7441a63e
+    md5: e775cdaf5b75fb651ff7052ef1b317d9
+    sha256: c84f58630e44b6a11d2e7401f4f33c7c26c953cf8d3aa0802e85e203537f3bfe
