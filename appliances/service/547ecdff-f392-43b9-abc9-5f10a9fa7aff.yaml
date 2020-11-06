@@ -1,6 +1,6 @@
 ---
 name: Service Kubernetes 1.18 - KVM
-version: 1.18.10-5.12.0.2-1.20201106
+version: 1.18.10-5.12.0.2-1.20201106.2
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled Kubernetes to work as a single-node cluster,
