@@ -1,6 +1,6 @@
 ---
 name: openSUSE Tumbleweed
-version: 5.12.0.1-1.20201029
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
@@ -12,7 +12,7 @@ short_description: openSUSE Tumbleweed image for KVM, LXD and vCenter
 tags:
 - opensuse
 format: qcow2
-creation_time: 1604412849
+creation_time: 1605112488
 os-id: openSUSE
 os-release: '20201026'
 os-arch: x86_64
@@ -40,11 +40,11 @@ logo: opensuse.png
 images:
 - name: opensuse_tumbleweed
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/opensuse_tumbleweed-5.12.0.1-1.20201029.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/opensuse_tumbleweed-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 1073741824
   checksum:
-    md5: bacfe43bd67eb81a950ef7197c18e937
-    sha256: c6ee8950497ffe1234258cfc0b55ba57312183e28b07efd8cc25f69c2849fdf8
+    md5: 92c9641b7fc75ca56fcd3deec416eb09
+    sha256: 6cbb46a4798a00b8ce48c74d2ca5c60609e2d020744f4a3d00a9e5d992b34e22

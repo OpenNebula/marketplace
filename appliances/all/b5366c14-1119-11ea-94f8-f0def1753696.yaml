@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 14.04
-version: 5.12.0.1-1.20201029
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
@@ -12,7 +12,7 @@ short_description: Ubuntu 14.04 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1604412849
+creation_time: 1605112488
 os-id: Ubuntu
 os-release: '14.04'
 os-arch: x86_64
@@ -40,11 +40,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu1404
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1404-5.12.0.1-1.20201029.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1404-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 5639695395cc8951b63f01dd3c4b554c
-    sha256: f70da73cb6f3b07110956478cd5325a691615d65cd74faec0476d575d0366966
+    md5: 5369791f7ddc24fdd4cc5bcd33975e10
+    sha256: 7b5b3321df175b520607c9b4c8623bdbacb1a2e52a36ce435d34dcd33a1dcfc0

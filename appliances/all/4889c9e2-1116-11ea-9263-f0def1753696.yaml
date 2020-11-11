@@ -1,6 +1,6 @@
 ---
 name: Debian 9
-version: 5.12.0.1-1.20201029
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
@@ -12,7 +12,7 @@ short_description: Debian 9 image for KVM, LXD and vCenter
 tags:
 - debian
 format: qcow2
-creation_time: 1604412849
+creation_time: 1605112488
 os-id: Debian
 os-release: '9.13'
 os-arch: x86_64
@@ -40,11 +40,11 @@ logo: debian.png
 images:
 - name: debian9
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/debian9-5.12.0.1-1.20201029.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/debian9-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: ba708c0d177eed366fc0508761f01087
-    sha256: 560e1c8f067d5cd741e84a708fa5881c39acc97cbc771f1af25fae6c01ee7f5e
+    md5: c1c03dd997b15b42aad6f085cc025de5
+    sha256: 7591a69849794e166b7e55a79a4e40b7eb8f663fbb5a7161531c5eaf4dc16b99

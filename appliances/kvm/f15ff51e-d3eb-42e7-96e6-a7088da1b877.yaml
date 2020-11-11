@@ -1,6 +1,6 @@
 ---
 name: Ubuntu Minimal 20.04 - KVM
-version: 5.12.0.1-1.20201029
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
@@ -12,7 +12,7 @@ short_description: Ubuntu Minimal 20.04 image for KVM
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1604412849
+creation_time: 1605112488
 os-id: Ubuntu
 os-release: '20.04'
 os-arch: x86_64
@@ -38,11 +38,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2004min
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004min-5.12.0.1-1.20201029.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004min-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 925e728651e135e2803c610fa252268d
-    sha256: 484582733e2f30c0c89d7633198556ac1ec726051cd2b50b8822ffe12ce1f935
+    md5: a9aec8a8c59c02a2c9886655ac2fa68b
+    sha256: 985f875b3ab6aac1d66f3ff74926248a2dfa53a3481320fa7eb95a960a95e448

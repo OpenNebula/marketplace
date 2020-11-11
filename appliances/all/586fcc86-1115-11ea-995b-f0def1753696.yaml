@@ -1,6 +1,6 @@
 ---
 name: Alpine Linux 3.10
-version: 5.12.0.1-1.20201029
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.10 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Alpine Linux 3.10 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1604412849
+creation_time: 1605112488
 os-id: Alpine Linux
 os-release: '3.10'
 os-arch: x86_64
@@ -44,11 +44,11 @@ logo: alpine.png
 images:
 - name: alpine310
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/alpine310-5.12.0.1-1.20201029.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/alpine310-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 268435456
   checksum:
-    md5: 6833c7f56b7cd1ac84839937078e421d
-    sha256: c9dad55d63d3693d1a3c89520be163cce64285924e9d26dd038aac2314c6c1b2
+    md5: c258d68f3296ced3cfc7085c11cccd81
+    sha256: 6d5349ad78b5c8cbea22a128954b8bbd9559a6eb48d015b4360247dc5e0a546c

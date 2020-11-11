@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 16.04 with Docker
-version: 5.12.0-1.20200609
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) and Docker-CE preinstalled.
@@ -13,7 +13,7 @@ tags:
 - ubuntu
 - docker
 format: qcow2
-creation_time: 1591887721
+creation_time: 1605112488
 os-id: Ubuntu
 os-release: '16.04'
 os-arch: x86_64
@@ -41,11 +41,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu1604_docker
   url: >-
-    https://opennebula-marketplace.s3.amazonaws.com/ubuntu1604_docker-5.12.0-1.20200609.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1604_docker-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 6d6e67a2a73d4d7877dc4fc10a521b78
-    sha256: 970fb9b47dfe796b0355a9096549969a9493313e12d792ccc0e30f4e61b86f93
+    md5: ed42924a90d3c2129f0b3be45eaddc79
+    sha256: 8214bdae617320c4c595465555a8972f97c21305f01da681a1aea76fd1ee549d

@@ -1,6 +1,6 @@
 ---
 name: CentOS 6
-version: 5.12.0.1-1.20201029
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   A CentOS 6 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: CentOS 6 image for KVM, LXD and vCenter
 tags:
 - centos
 format: qcow2
-creation_time: 1604412849
+creation_time: 1605112488
 os-id: CentOS
 os-release: '6.10'
 os-arch: ALL
@@ -42,11 +42,11 @@ logo: centos-5.5.png
 images:
 - name: centos6
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/centos6-5.12.0.1-1.20201029.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/centos6-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 8589934592
   checksum:
-    md5: 8b7d4428774727de587c0949dbe9c3f2
-    sha256: ad722cd48a4523777ade6e8afc73071caafa4ea9ab3590d035afa4535ae51d1c
+    md5: 62655ea9dfc580a4fd0c1d6647d4429f
+    sha256: 220bbc3f92063e0628cea1778a2d2c0c47a2bae7c01cef90b5549bd357dca0c1

@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 18.04
-version: 5.12.0.1-1.20201029
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
@@ -12,7 +12,7 @@ short_description: Ubuntu 18.04 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1604412849
+creation_time: 1605112488
 os-id: Ubuntu
 os-release: '18.04'
 os-arch: x86_64
@@ -40,11 +40,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu1804
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1804-5.12.0.1-1.20201029.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1804-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: f002a3e83077d20e7645d20c5d6a0655
-    sha256: e5529b9a65565f376a2337d638c7fbf1003ddf3da773274f4bcbd21b35e97136
+    md5: d6c79852a498514822e362e718a3e6a6
+    sha256: bda5d298c405628579f4bedec1f1c965aa727f6b6be51192a071ddfc78716500

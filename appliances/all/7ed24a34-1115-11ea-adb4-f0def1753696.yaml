@@ -1,6 +1,6 @@
 ---
 name: Debian 8
-version: 5.12.0.1-1.20201029
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
@@ -12,7 +12,7 @@ short_description: Debian 8 image for KVM, LXD and vCenter
 tags:
 - debian
 format: qcow2
-creation_time: 1604412849
+creation_time: 1605112488
 os-id: Debian
 os-release: '8.11'
 os-arch: x86_64
@@ -40,11 +40,11 @@ logo: debian.png
 images:
 - name: debian8
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/debian8-5.12.0.1-1.20201029.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/debian8-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: 1a95b2578d45356542e364c035eab9c4
-    sha256: a1a5248093c07c5a36bb0581df28057cacda46068259293cfe860225fff65d8f
+    md5: f60af11398c8f0866c336fec61d52f90
+    sha256: e820ddf8ca25dfc13a3d1df6bfe9a6e11bc817792c9536ea1add21aba8d775da

@@ -1,6 +1,6 @@
 ---
 name: ALT Linux p9
-version: 5.12.0.1-1.20201029
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
@@ -13,7 +13,7 @@ tags:
 - alt
 - altlinux
 format: qcow2
-creation_time: 1604412849
+creation_time: 1605112488
 os-id: ALT Linux
 os-release: p9
 os-arch: x86_64
@@ -34,11 +34,11 @@ opennebula_template:
 logo: alt.png
 images:
 - name: alt9
-  url: https://d24fmfybwxpuhu.cloudfront.net/alt9-5.12.0.1-1.20201029.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alt9-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 1620049920
   checksum:
-    md5: 92f8d61e53f38321d3463013e2a9f42e
-    sha256: be03fd9f0ecfdd50f7779b4242fd59126eb934e4b9e71b6f0dd5a3e509069333
+    md5: 3004589b54981ea52ceb4de682d3917c
+    sha256: b8d2ce0b29c7601bd1592453af2fefb85b4a7bdb3154e5c55fda92c390912fa2

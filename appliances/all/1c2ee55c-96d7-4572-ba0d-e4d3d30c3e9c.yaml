@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 20.10
-version: 5.12.0.1-1.20201029
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
@@ -12,7 +12,7 @@ short_description: Ubuntu 20.10 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1604412849
+creation_time: 1605112488
 os-id: Ubuntu
 os-release: '20.10'
 os-arch: x86_64
@@ -40,11 +40,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2010
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2010-5.12.0.1-1.20201029.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2010-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: c802c99dfe62bc4272269dc9f11a42a9
-    sha256: 5dda5fc5b902a621ba17e650ec59123a6b5eeee1973487376945dda5f4f96926
+    md5: 8dfa75412ec71959507c3eaf00f23560
+    sha256: e78ec61b63893fe27aee9f0819d413f46e95499f3e7d55e9d82c3b3a4db53e9b

@@ -1,6 +1,6 @@
 ---
 name: Ubuntu Minimal 18.04 - KVM
-version: 5.12.0.1-1.20201029
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
@@ -12,7 +12,7 @@ short_description: Ubuntu Minimal 18.04 image for KVM
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1604412849
+creation_time: 1605112488
 os-id: Ubuntu
 os-release: '18.04'
 os-arch: x86_64
@@ -38,11 +38,11 @@ logo: ubuntu.png
 images:
 - name: ubuntumin1804
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1804min-5.12.0.1-1.20201029.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1804min-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 90562ed3fcca0f43cd23036cadc7b71c
-    sha256: 26729df026b57b8d56c29ca713dab46c9ba85d2127bf13907eba10fc0bbcc876
+    md5: 455e31689efc6a7529b28cbf9966ac3b
+    sha256: 57793aedf091d6381e9b38d67de6b7a88c0775a272f3bf439003e0658e50b60e

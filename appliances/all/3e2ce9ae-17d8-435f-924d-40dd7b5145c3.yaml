@@ -1,6 +1,6 @@
 ---
 name: Fedora 33
-version: 5.12.0.1-1.20201029
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   Fedora 33 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Fedora 33 image for KVM, LXD, and vCenter
 tags:
 - fedora
 format: qcow2
-creation_time: 1604412849
+creation_time: 1605112488
 os-id: Fedora
 os-release: '33'
 os-arch: x86_64
@@ -42,11 +42,11 @@ logo: fedora.png
 images:
 - name: fedora33
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/fedora33-5.12.0.1-1.20201029.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/fedora33-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: fec7a89c353b747747f8ccde0aecab98
-    sha256: 6916870c0f307b9690f2c30d0caa38c90b5be9f993ec7244b58ec67f35ee64f1
+    md5: 191e9fe21baeab333ee320169e2c0138
+    sha256: fd63edbc682b4ab24a21384537e8017f87717e3ac487cdc434ec785728426868
