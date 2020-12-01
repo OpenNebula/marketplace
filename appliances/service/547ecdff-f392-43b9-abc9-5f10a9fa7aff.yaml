@@ -25,7 +25,8 @@ description: |-
   parameters among the nodes via OneGate, and report when the nodes are
   ready to use.**
 
-  This is [certified](https://landscape.cncf.io/selected=open-nebula-kubernetes-appliance) appliance as part of [Certified Kubernetes Conformance Program](https://www.cncf.io/certification/software-conformance/):
+  The appliance was [certified](https://landscape.cncf.io/selected=open-nebula-kubernetes-appliance) as part of [Certified Kubernetes Conformance Program](https://www.cncf.io/certification/software-conformance/):
+
   ![Certified Kubernetes](/logos/kubernetes-1.18-cert.png)
 short_description: Appliance with preinstalled Kubernetes for KVM hosts
 tags:
