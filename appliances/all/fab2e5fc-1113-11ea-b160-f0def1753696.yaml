@@ -1,6 +1,6 @@
 ---
 name: CentOS 8
-version: 5.12.0.2-1.20201109
+version: 5.12.0.2-1.20201208
 publisher: OpenNebula Systems
 description: |-
   A CentOS 8 image ready for your OpenNebula deployment.
@@ -14,9 +14,9 @@ short_description: CentOS 8 image for KVM, LXD and vCenter.
 tags:
 - centos
 format: qcow2
-creation_time: 1605112488
+creation_time: 1607598390
 os-id: CentOS
-os-release: '8.2'
+os-release: '8.3'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10,
@@ -42,11 +42,11 @@ logo: centos-5.5.png
 images:
 - name: centos8
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/centos8-5.12.0.2-1.20201109.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/centos8-5.12.0.2-1.20201208.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 0aad46e6e046a869de613ad7133d52d9
-    sha256: 36f6d4050999fde7c34ddac69960d67a7a0b9bd79b98c6f7c362af8c7d20a84c
+    md5: d9b076640fdedd12b771b8a946049f52
+    sha256: b62e7742e2155db6b7ee645f6a3744becae8004861e70845e39a0f6810314c85
