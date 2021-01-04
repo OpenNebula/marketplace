@@ -1,6 +1,6 @@
 ---
 name: Service Virtual Router
-version: 5.12.0.1-1.20201029
+version: 5.12.0.1-1.20201029.2
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS,
@@ -41,7 +41,7 @@ opennebula_template:
     listen: 0.0.0.0
     type: vnc
   inputs_order: >-
-    ONEAPP_VNF_DHCP4_ENABLED,ONEAPP_VNF_DHCP4_INTERFACES,ONEAPP_VNF_DNS_ENABLED,ONEAPP_VNF_DNS_INTERFACES,ONEAPP_VNF_NAT4_ENABLED,ONEAPP_VNF_NAT4_INTERFACES_OUT, ONEAPP_VNF_SDNAT4_ENABLED, ONEAPP_VNF_SDNAT4_INTERFACES,ONEAPP_VNF_DHCP4_LEASE_TIME,ONEAPP_VNF_DNS_MAX_CACHE_TTL,ONEAPP_VNF_DNS_USE_ROOTSERVERS
+    ONEAPP_VNF_DHCP4_ENABLED,ONEAPP_VNF_DHCP4_INTERFACES,ONEAPP_VNF_DNS_ENABLED,ONEAPP_VNF_DNS_INTERFACES,ONEAPP_VNF_NAT4_ENABLED,ONEAPP_VNF_NAT4_INTERFACES_OUT,ONEAPP_VNF_SDNAT4_ENABLED,ONEAPP_VNF_SDNAT4_INTERFACES,ONEAPP_VNF_DHCP4_LEASE_TIME,ONEAPP_VNF_DNS_MAX_CACHE_TTL,ONEAPP_VNF_DNS_USE_ROOTSERVERS
   memory: '512'
   info: >-
     Please do not use this VM Template for vCenter VMs. Refer to the documentation
@@ -66,7 +66,7 @@ opennebula_template:
     oneapp_vnf_nat4_enabled: O|boolean|Enable NAT| |NO
     oneapp_vnf_nat4_interfaces_out: O|text|NAT - Outgoing Interfaces
     oneapp_vnf_sdnat4_enabled: O|boolean|Enable SDNAT| |NO
-    oneapp_vnf_sdnat4_interfaces_out: O|text|SDNAT - Mapped Interfaces
+    oneapp_vnf_sdnat4_interfaces: O|text|SDNAT - Mapped Interfaces
   vrouter: 'YES'
 logo: router.png
 images:
