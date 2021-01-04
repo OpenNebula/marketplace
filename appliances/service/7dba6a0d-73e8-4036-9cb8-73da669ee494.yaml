@@ -1,6 +1,6 @@
 ---
 name: Service VNF
-version: 5.12.0.1-1.20201029
+version: 5.12.0.2-1.20201109
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS,
@@ -14,7 +14,7 @@ tags:
 - service
 - alpine
 format: qcow2
-creation_time: 1604503285
+creation_time: 1609770030
 os-id: Alpine
 os-release: '3.11'
 os-arch: x86_64
@@ -70,11 +70,11 @@ logo: router.png
 images:
 - name: vnf
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_vnf-5.12.0.1-1.20201029.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_vnf-5.12.0.2-1.20201109.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 1073741824
   checksum:
-    md5: 78600af4d20834f51fc0b63eb0f87463
-    sha256: 93dee5950edb9719490399425d4c4c56f1da6fdff9155c39d6e8e9aa7441a63e
+    md5: ad8cfcf6fe844a357322c8e84f4ceaa6
+    sha256: eba127f3fa0eeb010eadef2a713fad6f15de29ddf6f6f0a1d3c46186579d2f66
