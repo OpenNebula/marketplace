@@ -1,0 +1,58 @@
+---
+name: Service Kubernetes 1.18 for OneFlow - KVM
+version: 1.18.10-5.12.0.2-1.20201106
+publisher: OpenNebula Systems
+description: |-
+  Multi-node Kubernetes cluster for KVM hosts based on [Service Kubernetes 1.18 - KVM](/appliance/547ecdff-f392-43b9-abc9-5f10a9fa7aff) appliance and orchestrated by [OneFlow](http://docs.opennebula.io/5.12/advanced_components/application_flow_and_auto-scaling/index.html). Requires OneGate and OneFlow OpenNebula services. See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/kubernetes.html).
+
+  **WARNING**: This is a preview appliance for not-yet-released OpenNebula 6.0!
+
+  The appliance was [certified](https://landscape.cncf.io/selected=open-nebula-kubernetes-appliance) as part of [Certified Kubernetes Conformance Program](https://www.cncf.io/certification/software-conformance/):
+
+  ![Certified Kubernetes](/logos/kubernetes-1.18-cert.png)
+short_description: Multi-node Kubernetes cluster for KVM hosts orchestrated by OneFlow
+tags:
+- kubernetes
+- service
+- centos
+- oneflow
+creation_time: 1612268941
+os-id: CentOS
+os-release: '7.8'
+os-arch: x86_64
+hypervisor: KVM
+type: 'SERVICE_TEMPLATE'
+opennebula_version: 6.0
+roles:
+  master: 'Service Kubernetes 1.18 - KVM'
+  worker: 'Service Kubernetes 1.18 - KVM'
+opennebula_template: '{
+  "name": "Kubernetes",
+  "deployment": "straight",
+  "description": "",
+  "roles": [
+    {
+      "name": "master",
+      "cardinality": 1,
+      "vm_template_contents": "ONEGATE_ENABLE=\"YES\"\nNIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\n",
+      "elasticity_policies": [],
+      "scheduled_policies": []
+    },
+    {
+      "name": "worker",
+      "cardinality": 1,
+      "vm_template_contents": "ONEGATE_ENABLE=\"YES\"\nNIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\n",
+      "parents": [
+        "master"
+      ],
+      "elasticity_policies": [],
+      "scheduled_policies": []
+    }
+  ],
+  "networks": {
+    "Public": "M|network|Public| |id:"
+  },
+  "ready_status_gate": true
+}'
+logo: kubernetes.png
+images: []
