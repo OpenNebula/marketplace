@@ -1,6 +1,6 @@
 ---
 name: Service Kubernetes 1.18 for OneFlow - KVM
-version: 1.18.10-5.12.0.2-1.20201106
+version: 1.18.10-5.12.0.2-1.20201106.1
 publisher: OpenNebula Systems
 description: |-
   Multi-node Kubernetes cluster for KVM hosts based on [Service Kubernetes 1.18 - KVM](/appliance/547ecdff-f392-43b9-abc9-5f10a9fa7aff) appliance and orchestrated by [OneFlow](http://docs.opennebula.io/5.12/advanced_components/application_flow_and_auto-scaling/index.html). Requires OneGate and OneFlow OpenNebula services. See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/kubernetes.html).
