@@ -14,7 +14,7 @@ os-id: Alpine
 os-release: 3.3.1
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 5.0, 5.2
+opennebula_version: 5.0, 5.2, 5.4, 5.6, 5.8, 5.10
 opennebula_template:
   cpu: '1.0'
   memory: '128'
