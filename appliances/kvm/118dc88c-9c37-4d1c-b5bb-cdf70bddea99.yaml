@@ -1,0 +1,30 @@
+---
+name: netboot.xyz
+version: 2.0.32
+publisher: OpenNebula Systems
+description: >-
+  CD-ROM with network bootable operating system installer based on iPXE.
+  Requires DHCP!
+short_description: CD-ROM with network bootable operating system installer
+  based on iPXE
+tags:
+- cdrom
+- netboot.xyz
+format: raw
+creation_time: 1613055037
+os-id: none
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10,
+  5.12, 5.13, 6.0
+logo: netbootxyz.png
+images:
+- name: netboot.xyz
+  url: https://d24fmfybwxpuhu.cloudfront.net/netboot.xyz-2.0.32.iso
+  type: CDROM
+  dev_prefix: hd
+  driver: raw
+  size: 897024
+  checksum:
+    md5: 821e0de6eefa96e3d4806566553cb52e
+    sha256: aa732dda7e75ca3d1444799a7d267210c60d9ebf8d0e111914111fe9b309688f

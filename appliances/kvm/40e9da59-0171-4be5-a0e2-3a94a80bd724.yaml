@@ -1,0 +1,38 @@
+---
+name: Custom via netboot.xyz
+version: 2.0.32
+publisher: OpenNebula Systems
+description: Empty disk for custom installation via netboot.xyz. Requires DHCP!
+short_description: Empty disk for custom installation via netboot.xyz
+tags:
+- empty
+- cdrom
+- netboot.xyz
+type: 'VMTEMPLATE'
+creation_time: 1613055037
+hypervisor: KVM
+os-id: none
+os-arch: x86_64
+format: qcow2
+opennebula_version: 5.13, 6.0
+disks:
+  - 'Empty disk'
+  - 'netboot.xyz'
+logo: netbootxyz.png
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+    boot: 'disk0,disk1'
+  info: >-
+    Please do not use this VM Template for vCenter VMs. Refer to the documentation
+    https://bit.ly/37NcJ0Y
+  sched_requirements: HYPERVISOR!=\"vcenter\"
+images: []
