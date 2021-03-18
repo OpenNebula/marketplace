@@ -1,0 +1,74 @@
+---
+name: Service K3S Cluster 1.17 for OneFlow - Fircracker
+version: 1.18.10-5.12.0.2-1.20201106.1
+publisher: OpenNebula Systems
+description: |-
+  Appliance for the deployment of K3s clusters as OpenNebula OneFlow Services.
+  [K3s](https://k3s.io) is a certified Kubernetes distribution built for IoT & Edge computing.
+
+  The K3s cluster deployment consist of a single-server node and multiple workers (agents); it can be customized with the following parameters:
+
+    - EDGE_LOCATION: OpenNebula Cluster name where to deploy the K3s service
+    - K3S_VERSION: [K3s release](https://github.com/k3s-io/k3s/releases) to be used
+    - K3S_DNS_ENABLE: Option to enable/disable [K3s CoreDNS component](https://rancher.com/docs/k3s/latest/en/networking/#coredns)
+    - K3S_INGRESS_ENABLE: Option to enable/disable [K3s Traefik ingress controller](https://rancher.com/docs/k3s/latest/en/networking/#traefik-ingress-controlle
+    - K3S_LB_ENABLE - Option to enable/disable [K3s embedded Load Balancer](https://rancher.com/docs/k3s/latest/en/networking/#service-load-balancer)
+    - K3S_FLANNEL_BACKEND: Option to specify the [CNI flannel backend](https://rancher.com/docs/k3s/latest/en/installation/network-options/); possible values ar
+
+  **Note**: Remember to update the K3S VM template by adding the Firecracker kernel after importing it.
+short_description: Appliance for the deployment of K3s clusters as OpenNebula OneFlow Services.
+tags:
+- k3s
+- ubuntu
+creation_time: 1614944529
+os-id: Ubuntu
+os-release: '18.04'
+os-arch: x86_64
+hypervisor: FIRECRACKER
+type: 'SERVICE_TEMPLATE'
+opennebula_version: 5.13, 6.0
+roles:
+  server: 'K3S 1.17 Template'
+  agent: 'K3S 1.17 Template'
+opennebula_template: '{
+  "name": "k3s-cluster",
+  "deployment": "straight",
+  "description": "",
+  "roles": [
+    {
+      "name": "server",
+      "cardinality": 1,
+      "vm_template_contents": "K3S_ROLE = \"server\"\n ",
+      "min_vms": 1,
+      "max_vms": 1,
+      "elasticity_policies": [],
+      "scheduled_policies": []
+    },
+    {
+      "name": "agent",
+      "cardinality": 1,
+      "parents": [
+        "server"
+      ],
+      "vm_template_contents": "K3S_ROLE = \"agent\"\n ",
+      "min_vms": 1,
+      "max_vms": 10,
+      "cooldown": 2,
+      "elasticity_policies": [],
+      "scheduled_policies": []
+    }
+  ],
+  "ready_status_gate": true,
+  "automatic_deletion": false,
+  "custom_attrs": {
+    "EDGE_LOCATION": "M|text|Cluster Name| |\"default\"",
+    "K3S_VERSION": "M|text|K3S VERSION| |v1.17.17+k3s1",
+    "K3S_DNS_ENABLE": "M|boolean|K3S DNS ENABLE| |YES",
+    "K3S_INGRESS_ENABLE": "M|boolean|K3S INGRESS ENABLE| |YES",
+    "K3S_LB_ENABLE": "M|boolean|K3S LOADBALANCER ENABLE| |YES",
+    "K3S_FLANNEL_BACKEND": "M|text|K3S FLANNEL BACKEND| |host-gw"
+ }
+}'
+
+logo: k3s.png
+images: []

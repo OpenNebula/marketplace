@@ -1,0 +1,30 @@
+---
+name: K3S 1.17
+version: 5.12.0.2-1.20201109
+publisher: OpenNebula Systems
+description: |-
+  Image with preinstalled K3s binary release v1.17.17+k3s1
+short_description: Image with preinstalled K3s binary
+tags:
+  - ubuntu
+  - k3s
+format: qcow2
+creation_time: 1614943310
+os-id: Ubuntu
+os-release: '18.04'
+os-arch: x86_64
+hypervisor: FIRECRACKER
+opennebula_version: 5.13, 6.0
+type: 'IMAGE'
+logo: k3s.png
+images:
+- name: k3s
+  url: >-
+   # TODO: add valid URL
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 2147483648
+  checksum:
+    md5: 0387488c90f49bf79edbc95f2135ac15
+    sha256: 78904e39966530aa05207a33c066881c3c3490f806798bacb6cb11f62dea569d
