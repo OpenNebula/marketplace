@@ -5,6 +5,7 @@ publisher: OpenNebula Systems
 description: |-
   Kernel 4.19 for x86_64 platforms to use with microVMs running on Firecracker hypervisor.
 
+  # TODO: add configuration file link
   Built based on following [configuration](http://).
 short_description: Kernel 4.19 for Firecracker
 tags:
