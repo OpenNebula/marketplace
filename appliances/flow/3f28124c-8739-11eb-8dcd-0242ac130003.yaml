@@ -28,8 +28,8 @@ hypervisor: FIRECRACKER
 type: 'SERVICE_TEMPLATE'
 opennebula_version: 5.13, 6.0
 roles:
-  server: 'K3S 1.17 Template'
-  agent: 'K3S 1.17 Template'
+  server: 'K3S 1.17'
+  agent: 'K3S 1.17'
 opennebula_template: '{
   "name": "k3s-cluster",
   "deployment": "straight",
