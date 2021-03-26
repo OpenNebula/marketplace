@@ -1,24 +1,23 @@
 ---
 name: Kernel 4.19 x86_64 - Firecracker
-version: 5.4.43
+version: 4.19.155
 publisher: OpenNebula Systems
 description: |-
-  Kernel 4.19 for x86_64 platforms to use with microVMs running on Firecracker hypervisor.
+  Kernel 4.19 for x86_64 platforms to use with microVMs running on [Firecracker](http://docs.opennebula.io/5.12/deployment/open_cloud_host_setup/fc_driver.html) hypervisor.
 
-  # TODO: add configuration file link
-  Built based on following [configuration](http://).
+  Built based on following [configuration](https://d24fmfybwxpuhu.cloudfront.net//config-4.19.155-fc.x86_64).
 short_description: Kernel 4.19 for Firecracker
 tags:
 - kernel
 format: raw
-creation_time: 1614949637
+creation_time: 1616779866
 hypervisor: FIRECRACKER
 opennebula_version: 5.13, 6.0
 images:
-- name: vmlinuz-5.4.43-fc.x86_64
-  url: # TODO: add valid URL
+- name: vmlinuz-4.19.155-fc.x86_64
+  url: https://d24fmfybwxpuhu.cloudfront.net/vmlinuz-4.19.155-fc.x86_64
   type: KERNEL
-  size: 21100896
+  size: 21101056
   checksum:
     md5: 532b582da68b6ec98c263a8158d7284e
     sha256: fe61127d90dccb5341e0dddacd15e91968d51223efa581df9a94dbda5536dbc2

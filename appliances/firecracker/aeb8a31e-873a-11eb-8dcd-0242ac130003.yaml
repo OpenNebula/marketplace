@@ -1,21 +1,22 @@
 ---
-name: K3S 1.17
-version: 5.12.0.2-1.20201109
+name: K3s 1.17
+version: 1.17.17-5.12.0.2
 publisher: OpenNebula Systems
 description: |-
-  Image with preinstalled K3s binary release v1.17.17+k3s1
-short_description: Image with preinstalled K3s binary
+  Image with preinstalled K3s binary.
+
+  **IMPORTANT**: Firecracker VM requires [Kernel 4.19](/appliance/ba40d522-8739-11eb-8dcd-0242ac130003). Don't forget to import it as well and update K3s VM template to point to this kernel (see `KERNEL_DS = "$FILE[IMAGE_ID=<USER_ADD>]"`).
+short_description: Image with preinstalled K3s 1.17
 tags:
-  - ubuntu
-  - k3s
-format: qcow2
-creation_time: 1614943310
+- k3s
+- ubuntu
+format: raw
+creation_time: 1616780409
 os-id: Ubuntu
 os-release: '18.04'
 os-arch: x86_64
 hypervisor: FIRECRACKER
 opennebula_version: 5.13, 6.0
-type: 'IMAGE'
 logo: k3s.png
 opennebula_template:
   context:
@@ -46,11 +47,10 @@ opennebula_template:
   vcpu: "2"
 images:
 - name: k3s
-  url: >-
-   # TODO: add valid URL
+  url: https://d24fmfybwxpuhu.cloudfront.net/k3s-1.17.17-5.12.0.2.raw.gz
   type: OS
   dev_prefix: vd
-  driver: qcow2
+  driver: raw
   size: 2147483648
   checksum:
     md5: 0387488c90f49bf79edbc95f2135ac15

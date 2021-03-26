@@ -1,26 +1,27 @@
 ---
-name: Service K3S Cluster 1.17 for OneFlow - Fircracker
-version: 1.18.10-5.12.0.2-1.20201106.1
+name: Service K3s - Firecracker
+version: 1.17.17-5.12.0.2
 publisher: OpenNebula Systems
 description: |-
-  Appliance for the deployment of K3s clusters as OpenNebula OneFlow Services.
-  [K3s](https://k3s.io) is a certified Kubernetes distribution built for IoT & Edge computing.
+  Multi-node Kubernetes K3s cluster deployed as a Service via OpenNebula OneFlow. [K3s](https://k3s.io) is a certified Kubernetes distribution built for IoT & Edge computing.
 
-  The K3s cluster deployment consist of a single-server node and multiple workers (agents); it can be customized with the following parameters:
+  The K3s cluster deployment consist of a single server node and multiple workers (agents); it can be customized with the following parameters:
 
     - EDGE_LOCATION: OpenNebula Cluster name where to deploy the K3s service
-    - K3S_VERSION: [K3s release](https://github.com/k3s-io/k3s/releases) to be used
+    - K3S_VERSION: [K3s release](https://github.com/k3s-io/k3s/releases) to use
     - K3S_DNS_ENABLE: Option to enable/disable [K3s CoreDNS component](https://rancher.com/docs/k3s/latest/en/networking/#coredns)
-    - K3S_INGRESS_ENABLE: Option to enable/disable [K3s Traefik ingress controller](https://rancher.com/docs/k3s/latest/en/networking/#traefik-ingress-controlle
-    - K3S_LB_ENABLE - Option to enable/disable [K3s embedded Load Balancer](https://rancher.com/docs/k3s/latest/en/networking/#service-load-balancer)
-    - K3S_FLANNEL_BACKEND: Option to specify the [CNI flannel backend](https://rancher.com/docs/k3s/latest/en/installation/network-options/); possible values ar
+    - K3S_INGRESS_ENABLE: Option to enable/disable [K3s Traefik ingress controller](https://rancher.com/docs/k3s/latest/en/networking/#traefik-ingress-controller)
+    - K3S_LB_ENABLE: Option to enable/disable [K3s embedded Load Balancer](https://rancher.com/docs/k3s/latest/en/networking/#service-load-balancer)
+    - K3S_FLANNEL_BACKEND: Option to specify the [CNI flannel backend](https://rancher.com/docs/k3s/latest/en/installation/network-options/)
 
-  **Note**: Remember to update the K3S VM template by adding the Firecracker kernel after importing it.
-short_description: Appliance for the deployment of K3s clusters as OpenNebula OneFlow Services.
+  **IMPORTANT**: Firecracker VM requires [Kernel 4.19](/appliance/ba40d522-8739-11eb-8dcd-0242ac130003). Don't forget to import it as well and update K3s VM template to point to this kernel (see `KERNEL_DS = "$FILE[IMAGE_ID=<USER_ADD>]"`).
+short_description: Multi-node Kubernetes K3s cluster for Firecracker hosts orchestrated by OneFlow
 tags:
+- kubernetes
 - k3s
+- oneflow
 - ubuntu
-creation_time: 1614944529
+creation_time: 1616781015
 os-id: Ubuntu
 os-release: '18.04'
 os-arch: x86_64
@@ -28,8 +29,8 @@ hypervisor: FIRECRACKER
 type: 'SERVICE_TEMPLATE'
 opennebula_version: 5.13, 6.0
 roles:
-  server: 'K3S 1.17'
-  agent: 'K3S 1.17'
+  server: 'K3s 1.17'
+  agent: 'K3s 1.17'
 opennebula_template: '{
   "name": "k3s-cluster",
   "deployment": "straight",
