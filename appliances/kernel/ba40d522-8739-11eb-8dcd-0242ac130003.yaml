@@ -5,7 +5,7 @@ publisher: OpenNebula Systems
 description: |-
   Kernel 4.19 for x86_64 platforms to use with microVMs running on [Firecracker](http://docs.opennebula.io/5.12/deployment/open_cloud_host_setup/fc_driver.html) hypervisor.
 
-  Built based on following [configuration](https://d24fmfybwxpuhu.cloudfront.net//config-4.19.155-fc.x86_64).
+  Built based on following [configuration](https://d24fmfybwxpuhu.cloudfront.net/config-4.19.155-fc.x86_64).
 short_description: Kernel 4.19 for Firecracker
 tags:
 - kernel
