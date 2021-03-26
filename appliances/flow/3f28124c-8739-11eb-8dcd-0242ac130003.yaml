@@ -3,9 +3,9 @@ name: Service K3s - Firecracker
 version: 1.17.17-5.12.0.2
 publisher: OpenNebula Systems
 description: |-
-  Multi-node Kubernetes K3s cluster deployed as a Service via OpenNebula OneFlow. [K3s](https://k3s.io) is a certified Kubernetes distribution built for IoT & Edge computing.
+  Multi-node Kubernetes K3s cluster deployed as a Service via OpenNebula OneFlow. [K3s](https://k3s.io) is a certified Kubernetes distribution built for IoT & Edge computing. Requires OneGate and OneFlow OpenNebula Services.
 
-  The K3s cluster deployment consist of a single server node and multiple workers (agents); it can be customized with the following parameters:
+  The K3s cluster deployment consists of a single server and multiple workers (agents); it can be customized with the following parameters:
 
     - EDGE_LOCATION: OpenNebula Cluster name where to deploy the K3s service
     - K3S_VERSION: [K3s release](https://github.com/k3s-io/k3s/releases) to use
