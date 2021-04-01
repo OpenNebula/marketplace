@@ -1,11 +1,11 @@
 ---
 name: Fedora 32
-version: 5.12.0.2-1.20201109
+version: 6.0.0-1.20210329
 publisher: OpenNebula Systems
 description: |-
   Fedora 32 image ready for your OpenNebula deployment.
 
-  This image is based of Fedora 32 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html).
+  This image is based of Fedora 32 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -14,7 +14,7 @@ short_description: Fedora 32 image for KVM, LXD, and vCenter
 tags:
 - fedora
 format: qcow2
-creation_time: 1605112488
+creation_time: 1617293717
 os-id: Fedora
 os-release: '32'
 os-arch: x86_64
@@ -41,12 +41,11 @@ opennebula_template:
 logo: fedora.png
 images:
 - name: fedora32
-  url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/fedora32-5.12.0.2-1.20201109.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/fedora32-6.0.0-1.20210329.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 2b994c48e6ea565fcef36adfc2f88e80
-    sha256: ace3ea78f512b2a0e182e0cea982e33fb7214ef9a86accfa97a6a2dfc2130df0
+    md5: ab6bb9d097a351a1a18ef00719b497fe
+    sha256: ffeeb7495551296a5a1700de7b19f93bf4668ef5daed71f16a5f7262a1831185

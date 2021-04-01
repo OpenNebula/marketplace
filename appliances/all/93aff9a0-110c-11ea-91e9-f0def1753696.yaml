@@ -1,11 +1,11 @@
 ---
 name: CentOS 6
-version: 5.12.0.2-1.20201109
+version: 6.0.0-1.20210330
 publisher: OpenNebula Systems
 description: |-
   A CentOS 6 image ready for your OpenNebula deployment.
 
-  This image is based off a CentOS 6 minimal install with the [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html).
+  This image is based off a CentOS 6 minimal install with the [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -14,7 +14,7 @@ short_description: CentOS 6 image for KVM, LXD and vCenter
 tags:
 - centos
 format: qcow2
-creation_time: 1605112488
+creation_time: 1617293717
 os-id: CentOS
 os-release: '6.10'
 os-arch: ALL
@@ -41,12 +41,11 @@ opennebula_template:
 logo: centos-5.5.png
 images:
 - name: centos6
-  url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/centos6-5.12.0.2-1.20201109.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/centos6-6.0.0-1.20210330.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 8589934592
   checksum:
-    md5: 62655ea9dfc580a4fd0c1d6647d4429f
-    sha256: 220bbc3f92063e0628cea1778a2d2c0c47a2bae7c01cef90b5549bd357dca0c1
+    md5: 915bf1d59fa72b37bfbaa3d5a129108f
+    sha256: ad7761327c8b98c289e09cd3dd017483fca46d85c0a1fa6bff68886a806c19b7

@@ -1,11 +1,11 @@
 ---
 name: CentOS 8
-version: 5.12.0.2-1.20201208
+version: 6.0.0-1.20210329
 publisher: OpenNebula Systems
 description: |-
   A CentOS 8 image ready for your OpenNebula deployment.
 
-  This image is based off a CentOS 8 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html).
+  This image is based off a CentOS 8 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -14,7 +14,7 @@ short_description: CentOS 8 image for KVM, LXD and vCenter.
 tags:
 - centos
 format: qcow2
-creation_time: 1607598390
+creation_time: 1617293717
 os-id: CentOS
 os-release: '8.3'
 os-arch: x86_64
@@ -41,12 +41,11 @@ opennebula_template:
 logo: centos-5.5.png
 images:
 - name: centos8
-  url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/centos8-5.12.0.2-1.20201208.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/centos8-6.0.0-1.20210329.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: d9b076640fdedd12b771b8a946049f52
-    sha256: b62e7742e2155db6b7ee645f6a3744becae8004861e70845e39a0f6810314c85
+    md5: 56e1e3d19cb99d5da6af838d7b3d7295
+    sha256: 568822e5f8e9af48a3422883d967cf8c500837147594c5490abad8df2a9e1f40

@@ -1,9 +1,9 @@
 ---
 name: Ubuntu Minimal 18.04 - KVM
-version: 5.12.0.2-1.20201109
+version: 6.0.0-1.20210329
 publisher: OpenNebula Systems
 description: |-
-  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html) preinstalled.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -14,7 +14,7 @@ short_description: Ubuntu Minimal 18.04 image for KVM
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1605112488
+creation_time: 1617293717
 os-id: Ubuntu
 os-release: '18.04'
 os-arch: x86_64
@@ -40,11 +40,11 @@ logo: ubuntu.png
 images:
 - name: ubuntumin1804
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1804min-5.12.0.2-1.20201109.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1804min-6.0.0-1.20210329.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 455e31689efc6a7529b28cbf9966ac3b
-    sha256: 57793aedf091d6381e9b38d67de6b7a88c0775a272f3bf439003e0658e50b60e
+    md5: 736af740878272b397cf2791a07d4c01
+    sha256: 4c637e5ec1b2e947a014f007968bc10a93340572a432d0c88e4f88e2e21e3614

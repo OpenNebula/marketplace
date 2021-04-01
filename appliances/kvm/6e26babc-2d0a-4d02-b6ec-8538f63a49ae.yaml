@@ -1,9 +1,9 @@
 ---
 name: ALT Linux Sisyphus
-version: 5.12.0.2-1.20201109
+version: 6.0.0-1.20210329
 publisher: OpenNebula Systems
 description: |-
-  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html) preinstalled.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -13,7 +13,7 @@ tags:
 - alt
 - altlinux
 format: qcow2
-creation_time: 1605112488
+creation_time: 1617293717
 os-id: ALT Linux
 os-release: Sisyphus
 os-arch: x86_64
@@ -35,11 +35,11 @@ logo: alt.png
 images:
 - name: alt_sisyphus
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/alt_sisyphus-5.12.0.2-1.20201109.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/alt_sisyphus-6.0.0-1.20210329.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 1830813696
+  size: 1829765120
   checksum:
-    md5: 9e0f34f12799a5363664ffdca6cde6d2
-    sha256: a908a8946b4b89ab17892f01c6fb22ad4a64066163023138af3970a3283dc2ab
+    md5: e1b2d06a2af3a9982a0256beab913033
+    sha256: b0235a94dab3120f28989d4e394c21420034f06fa042d8266dabb2909f81ccf4

@@ -1,11 +1,11 @@
 ---
 name: Alpine Linux 3.12
-version: 5.12.0.2-1.20201109
+version: 6.0.0-1.20210329
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.12 image ready for your OpenNebula deployment.
 
-  This image is based of the Alpine Linux 3.12 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.org/5.11/operation/vm_setup/kvm.html).
+  This image is based of the Alpine Linux 3.12 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -14,7 +14,7 @@ short_description: Alpine Linux 3.12 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1605112488
+creation_time: 1617293717
 os-id: Alpine Linux
 os-release: '3.12'
 os-arch: x86_64
@@ -43,12 +43,11 @@ opennebula_template:
 logo: alpine.png
 images:
 - name: alpine312
-  url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/alpine312-5.12.0.2-1.20201109.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alpine312-6.0.0-1.20210329.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 268435456
   checksum:
-    md5: 8870a0063e67f662b5810fa0b64b00ee
-    sha256: 76c34c68e721bb2f2ffe06452546b6f5c7df94ec8e5d58111f54c39fb5a9016f
+    md5: 6cceea97f856ee9d86f2b1542c43232a
+    sha256: e9de629bfaaedc0f5d070da05d51927a6be4249c2b88e339e16a445a67f1d8c8

@@ -1,9 +1,9 @@
 ---
 name: Debian Testing
-version: 5.12.0-1.20200609
+version: 6.0.0-1.20210329
 publisher: OpenNebula Systems
 description: |-
-  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled. This image is **BETA**.
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html) preinstalled. This image is **BETA**.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -12,7 +12,7 @@ short_description: Debian 11 (Testing) image for KVM, LXD and vCenter
 tags:
 - debian
 format: qcow2
-creation_time: 1591887721
+creation_time: 1617293717
 os-id: Debian
 os-release: '11.0'
 os-arch: x86_64
@@ -40,11 +40,11 @@ logo: debian.png
 images:
 - name: debian11
   url: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/debian11-5.12.0-1.20200609.qcow2
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/debian11-6.0.0-1.20210329.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: b69c2ec0011031f15c0212bd2ba7b005
-    sha256: 53771ead85571ab12966b79ed248356862300cdfb06d54c97562f2b6dcc3a95e
+    md5: 94e0d6b9350f020f0b68fd32a5de3e58
+    sha256: c3e7d7000cabb243dcb4a0086b24eda1ff14768712b6e9b54079a226e2532ffe

@@ -1,6 +1,6 @@
 ---
 name: Service Kubernetes 1.18 - KVM
-version: 1.18.10-5.12.0.2-1.20201106.2
+version: 1.18.17-6.0.0-1.20210329
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled Kubernetes to work as a single-node cluster,
@@ -34,9 +34,9 @@ tags:
 - service
 - centos
 format: qcow2
-creation_time: 1604668282
+creation_time: 1617293717
 os-id: CentOS
-os-release: '7.8'
+os-release: '7.9'
 os-arch: x86_64
 hypervisor: KVM
 opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10,
@@ -79,11 +79,11 @@ logo: kubernetes.png
 images:
 - name: kubernetes
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes-1.18.10-5.12.0.2-1.20201106.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes-1.18.17-6.0.0-1.20210329.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 398274dadc7ff0f527d530362809f031
-    sha256: 380163fe865f00378f4e8a80f4a608103a70c644ec0d0ad96f797cab3ad03274
+    md5: 640cae4dce60f39ced90af3c0d27fa29
+    sha256: c31a7ce2fc83b7436def8191e86495dfb2bc335860c3650864e8a4a24a694133

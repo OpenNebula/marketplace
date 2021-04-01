@@ -1,9 +1,9 @@
 ---
 name: Amazon Linux 2
-version: 5.12.0.2-1.20201109
+version: 6.0.0-1.20210329
 publisher: OpenNebula Systems
 description: |-
-  [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/) image ready for the OpenNebula deployment with [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) installed. The use of this software is governed by the terms of the AWS Customer Agreement (https://aws.amazon.com/agreement/) or other agreement with AWS governing the use of AWS services.
+  [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/) image ready for the OpenNebula deployment with [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html) installed. The use of this software is governed by the terms of the AWS Customer Agreement (https://aws.amazon.com/agreement/) or other agreement with AWS governing the use of AWS services.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -12,7 +12,7 @@ short_description: Amazon Linux 2 image for KVM, LXD and vCenter.
 tags:
 - amazon
 format: qcow2
-creation_time: 1605112488
+creation_time: 1617293717
 os-id: Amazon Linux
 os-release: '2'
 os-arch: x86_64
@@ -39,12 +39,11 @@ opennebula_template:
 logo: amazon.png
 images:
 - name: amazon2
-  url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/amazon2-5.12.0.2-1.20201109.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/amazon2-6.0.0-1.20210329.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 26843545600
   checksum:
-    md5: 44de5595d1cd35ec05b18d535525a8d7
-    sha256: ab6561b36d8c6986365adcb2a2cdadaadb31a28c9fd3cfd1dd0a689b97aec35e
+    md5: 78134b178939004e9666358dd7c12dda
+    sha256: 2da1681ad3a0cf3bbca97615e16b353e7eea6698c5bacea345119efcf75e6c3a

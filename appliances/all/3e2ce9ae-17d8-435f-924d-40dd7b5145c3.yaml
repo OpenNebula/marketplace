@@ -1,11 +1,11 @@
 ---
 name: Fedora 33
-version: 5.12.0.2-1.20201109
+version: 6.0.0-1.20210329
 publisher: OpenNebula Systems
 description: |-
   Fedora 33 image ready for your OpenNebula deployment.
 
-  This image is based off a Fedora 33 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html).
+  This image is based off a Fedora 33 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -14,7 +14,7 @@ short_description: Fedora 33 image for KVM, LXD, and vCenter
 tags:
 - fedora
 format: qcow2
-creation_time: 1605112488
+creation_time: 1617293717
 os-id: Fedora
 os-release: '33'
 os-arch: x86_64
@@ -41,12 +41,11 @@ opennebula_template:
 logo: fedora.png
 images:
 - name: fedora33
-  url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/fedora33-5.12.0.2-1.20201109.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/fedora33-6.0.0-1.20210329.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 191e9fe21baeab333ee320169e2c0138
-    sha256: fd63edbc682b4ab24a21384537e8017f87717e3ac487cdc434ec785728426868
+    md5: d3dd3ddd1448d01ba5f2bb9e55caf0e3
+    sha256: 7bf06f85f562f72f60b3b518c87a42501af6240cbe89cce618a9fa48056e4cf0

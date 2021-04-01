@@ -1,9 +1,9 @@
 ---
 name: Ubuntu 20.10
-version: 5.12.0.2-1.20201109
+version: 6.0.0-1.20210329
 publisher: OpenNebula Systems
 description: |-
-  This image has the OpenNebula [contextualization package](http://docs.opennebula.org/5.12/operation/vm_setup/kvm.html) preinstalled.
+  This image has the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html) preinstalled.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -12,7 +12,7 @@ short_description: Ubuntu 20.10 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1605112488
+creation_time: 1617293717
 os-id: Ubuntu
 os-release: '20.10'
 os-arch: x86_64
@@ -40,11 +40,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2010
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2010-5.12.0.2-1.20201109.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2010-6.0.0-1.20210329.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 8dfa75412ec71959507c3eaf00f23560
-    sha256: e78ec61b63893fe27aee9f0819d413f46e95499f3e7d55e9d82c3b3a4db53e9b
+    md5: d55299bddb2df3307f62e1981c33f757
+    sha256: 06317fb7218f0af5b43b9f860380ca762551aec633045bc30c70e15d3c5f0f72
