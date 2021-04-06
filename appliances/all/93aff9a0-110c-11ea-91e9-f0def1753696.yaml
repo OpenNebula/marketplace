@@ -3,9 +3,9 @@ name: CentOS 6
 version: 6.0.0-1.20210330
 publisher: OpenNebula Systems
 description: |-
-  A CentOS 6 image ready for your OpenNebula deployment.
+  CentOS 6 image ready for your OpenNebula deployment.
 
-  This image is based off a CentOS 6 minimal install with the [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the CentOS 6 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 

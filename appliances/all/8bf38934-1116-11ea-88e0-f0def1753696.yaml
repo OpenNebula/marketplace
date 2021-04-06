@@ -3,7 +3,9 @@ name: Debian 10
 version: 6.0.0-1.20210329
 publisher: OpenNebula Systems
 description: |-
-  This image has the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html) preinstalled.
+  Debian 10 image ready for your OpenNebula deployment.
+
+  This image is based on the Debian 10 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
