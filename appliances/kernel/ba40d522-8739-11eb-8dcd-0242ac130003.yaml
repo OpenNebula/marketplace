@@ -12,7 +12,7 @@ tags:
 format: raw
 creation_time: 1616779866
 hypervisor: FIRECRACKER
-opennebula_version: 5.13, 6.0
+opennebula_version: 5.13, 6.0, 6.1
 images:
 - name: vmlinuz-4.19.155-fc.x86_64
   url: https://d24fmfybwxpuhu.cloudfront.net/vmlinuz-4.19.155-fc.x86_64

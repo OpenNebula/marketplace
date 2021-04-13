@@ -14,7 +14,7 @@ tags:
 format: raw
 creation_time: 1590493378
 hypervisor: Firecracker
-opennebula_version: 5.12, 5.13, 6.0
+opennebula_version: 5.12, 5.13, 6.0, 6.1
 images:
 - name: vmlinuz-4.15-0-fc.x86_64
   url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/vmlinuz-4.15.0-fc.x86_64

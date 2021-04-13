@@ -16,7 +16,7 @@ os-id: Ubuntu
 os-release: '18.04'
 os-arch: x86_64
 hypervisor: FIRECRACKER
-opennebula_version: 5.13, 6.0
+opennebula_version: 5.13, 6.0, 6.1
 logo: k3s.png
 opennebula_template:
   context:
