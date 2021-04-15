@@ -1,6 +1,6 @@
 ---
 name: Service Kubernetes 1.18 - KVM
-version: 1.18.17-6.0.0-1.20210329
+version: 1.18.18-6.0.0-1.20210415
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled Kubernetes to work as a single-node cluster,
@@ -19,6 +19,8 @@ description: |-
   * `ONEAPP_K8S_PORT` - K8s API port (default 6443)
   * `ONEAPP_K8S_PODS_NETWORK` - K8s pods network in CIDR (default 10.244.0.0/16)
   * `ONEAPP_K8S_ADMIN_USERNAME` - UI dashboard admin account (default admin-user)
+  * `ONEAPP_K8S_LOADBALANCER_RANGE` - LoadBalancer IP range (default none)
+  * `ONEAPP_K8S_LOADBALANCER_CONFIG` - Custom LoadBalancer config (encoded in BASE64)
 
   **WARNING: For multi-node deployment managed by OneFlow, it's necessary
   to set `ONEGATE_ENABLE='YES'` to enable an exchange of the connection
@@ -39,18 +41,22 @@ os-id: CentOS
 os-release: '7.9'
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10,
-  5.12, 5.13, 6.0, 6.1
+opennebula_version: >-
+  4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
+  6.1
 opennebula_template:
   context:
     network: 'YES'
     oneapp_k8s_address: "$ONEAPP_K8S_ADDRESS"
-    oneapp_k8s_admin_username: "$ONEAPP_K8S_ADMIN_USERNAME"
+    oneapp_k8s_token: "$ONEAPP_K8S_TOKEN"
     oneapp_k8s_hash: "$ONEAPP_K8S_HASH"
     oneapp_k8s_nodename: "$ONEAPP_K8S_NODENAME"
-    oneapp_k8s_pods_network: "$ONEAPP_K8S_PODS_NETWORK"
     oneapp_k8s_port: "$ONEAPP_K8S_PORT"
-    oneapp_k8s_token: "$ONEAPP_K8S_TOKEN"
+    oneapp_k8s_tainted_master: "$ONEAPP_K8S_TAINTED_MASTER"
+    oneapp_k8s_pods_network: "$ONEAPP_K8S_PODS_NETWORK"
+    oneapp_k8s_admin_username: "$ONEAPP_K8S_ADMIN_USERNAME"
+    oneapp_k8s_loadbalancer_range: "$ONEAPP_K8S_LOADBALANCER_RANGE"
+    oneapp_k8s_loadbalancer_config: "$ONEAPP_K8S_LOADBALANCER_CONFIG"
     report_ready: "$ONEGATE_ENABLE"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
     token: "$ONEGATE_ENABLE"
@@ -60,30 +66,35 @@ opennebula_template:
     listen: 0.0.0.0
     type: vnc
   inputs_order: >-
-    ONEGATE_ENABLE,ONEAPP_K8S_ADDRESS,ONEAPP_K8S_TOKEN,ONEAPP_K8S_HASH,ONEAPP_K8S_NODENAME,ONEAPP_K8S_PORT,ONEAPP_K8S_PODS_NETWORK,ONEAPP_K8S_ADMIN_USERNAME
+    ONEGATE_ENABLE,ONEAPP_K8S_ADDRESS,ONEAPP_K8S_TOKEN,ONEAPP_K8S_HASH,ONEAPP_K8S_NODENAME,ONEAPP_K8S_PORT,ONEAPP_K8S_TAINTED_MASTER,ONEAPP_K8S_PODS_NETWORK,ONEAPP_K8S_ADMIN_USERNAME,ONEAPP_K8S_LOADBALANCER_RANGE,ONEAPP_K8S_LOADBALANCER_CONFIG
   memory: '3072'
   os:
     arch: x86_64
   user_inputs:
     onegate_enable: M|boolean|Enable OneGate reporting? (req. for multi-node)|
       |NO
-    oneapp_k8s_address: O|text|K8s master node address/network (CIDR subnet)
+    oneapp_k8s_address: O|text|Master node address/network (CIDR subnet)
+    oneapp_k8s_token: O|password|Secret token (to join node into the cluster)
+    oneapp_k8s_hash: O|text|Secret hash (to join node into the cluster)
+    oneapp_k8s_nodename: O|text|Master node name
+    oneapp_k8s_port: O|text|Kubernetes API port (default 6443)
+    oneapp_k8s_tainted_master: O|boolean|Master node acts as control-plane
+      only (default no)
+    oneapp_k8s_pods_network: O|text|Pods network in CIDR (default 10.244.0.0/16)
     oneapp_k8s_admin_username: O|text|UI dashboard admin account (default
       admin-user)
-    oneapp_k8s_hash: O|text|K8s hash (to join node into the cluster)
-    oneapp_k8s_nodename: O|text|K8s master node name
-    oneapp_k8s_pods_network: O|text|K8s pods network in CIDR (default 10.244.0.0/16)
-    oneapp_k8s_port: O|text|K8s API port (default 6443)
-    oneapp_k8s_token: O|password|K8s token (to join node into the cluster)
+    oneapp_k8s_loadbalancer_range: O|text|LoadBalancer IP range (default
+      none)
+    oneapp_k8s_loadbalancer_config: O|text64|Custom LoadBalancer config
 logo: kubernetes.png
 images:
 - name: kubernetes
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes-1.18.17-6.0.0-1.20210329.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes-1.18.18-6.0.0-1.20210415.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 640cae4dce60f39ced90af3c0d27fa29
-    sha256: c31a7ce2fc83b7436def8191e86495dfb2bc335860c3650864e8a4a24a694133
+    md5: 5bbc9973e243290489a7a6782b3bd0ca
+    sha256: 0ce59188bcc1cb94dca39a50285e948a3c95b37f328cf0fe45a1946c3fe915c4
