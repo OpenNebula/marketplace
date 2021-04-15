@@ -62,21 +62,24 @@ opennebula_template:
     listen: 0.0.0.0
     type: vnc
   inputs_order: >-
-    ONEGATE_ENABLE,ONEAPP_K8S_ADDRESS,ONEAPP_K8S_TOKEN,ONEAPP_K8S_HASH,ONEAPP_K8S_NODENAME,ONEAPP_K8S_PORT,ONEAPP_K8S_PODS_NETWORK,ONEAPP_K8S_ADMIN_USERNAME
+    ONEGATE_ENABLE,ONEAPP_K8S_ADDRESS,ONEAPP_K8S_TOKEN,ONEAPP_K8S_HASH,ONEAPP_K8S_NODENAME,ONEAPP_K8S_PORT,ONEAPP_K8S_TAINTED_MASTER,ONEAPP_K8S_PODS_NETWORK,ONEAPP_K8S_ADMIN_USERNAME,ONEAPP_K8S_LOADBALANCER_RANGE,ONEAPP_K8S_LOADBALANCER_CONFIG
   memory: '3072'
   os:
     arch: x86_64
   user_inputs:
     onegate_enable: M|boolean|Enable OneGate reporting? (req. for multi-node)|
       |NO
-    oneapp_k8s_address: O|text|K8s master node address/network (CIDR subnet)
-    oneapp_k8s_admin_username: O|text|UI dashboard admin account (default
+    oneapp_k8s_address: O|text|Master node address/network (CIDR subnet)
+    oneapp_k8s_token: O|password|Secret token (to join node into the cluster)
+    oneapp_k8s_hash: O|text|Secret hash (to join node into the cluster)
       admin-user)
-    oneapp_k8s_hash: O|text|K8s hash (to join node into the cluster)
-    oneapp_k8s_nodename: O|text|K8s master node name
-    oneapp_k8s_pods_network: O|text|K8s pods network in CIDR (default 10.244.0.0/16)
-    oneapp_k8s_port: O|text|K8s API port (default 6443)
-    oneapp_k8s_token: O|password|K8s token (to join node into the cluster)
+    oneapp_k8s_nodename: O|text|Master node name
+    oneapp_k8s_port: O|text|Kubernetes API port (default 6443)
+    oneapp_k8s_tainted:master: O|boolean|Master node acts as control-plane only (default no)
+    oneapp_k8s_pods_network: O|text|Pods network in CIDR (default 10.244.0.0/16)
+    oneapp_k8s_admin_username: O|text|UI dashboard admin account (default
+    oneapp_k8s_loadbalancer_range: O|text|LoadBalancer IP range (default none)
+    oneapp_k8s_loadbalancer_config: O|text64|Custom LoadBalancer config (encoded in BASE64)
 logo: kubernetes.png
 images:
 - name: kubernetes
