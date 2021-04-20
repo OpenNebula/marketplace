@@ -10,7 +10,7 @@ description: |-
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Oracle Linux 7 image for KVM, LXD and vCenter.
+short_description: Oracle Linux 7 image for KVM hosts
 tags:
 - oracle
 - oraclelinux
