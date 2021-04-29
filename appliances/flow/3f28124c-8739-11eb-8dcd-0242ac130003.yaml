@@ -63,11 +63,11 @@ opennebula_template: '{
   "automatic_deletion": false,
   "custom_attrs": {
     "EDGE_LOCATION": "M|text|Cluster Name| |\"default\"",
-    "K3S_VERSION": "M|text|K3S VERSION| |v1.17.17+k3s1",
+    "K3S_VERSION": "M|text|K3S VERSION| |v1.19.9+k3s1",
     "K3S_DNS_ENABLE": "M|boolean|K3S DNS ENABLE| |YES",
     "K3S_INGRESS_ENABLE": "M|boolean|K3S INGRESS ENABLE| |YES",
     "K3S_LB_ENABLE": "M|boolean|K3S LOADBALANCER ENABLE| |YES",
-    "K3S_FLANNEL_BACKEND": "M|text|K3S FLANNEL BACKEND| |host-gw"
+    "K3S_FLANNEL_BACKEND": "M|text|K3S FLANNEL BACKEND| |vxlan"
  }
 }'
 
