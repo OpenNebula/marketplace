@@ -4,6 +4,10 @@ version: 1.21.1-6.0.0-1.20210525
 publisher: OpenNebula Systems
 description: |-
   Multi-node Kubernetes cluster for KVM hosts based on [Service Kubernetes 1.21 - KVM](/appliance/1318e7ca-bd6d-11eb-9ae8-98fa9bde1a93) appliance and orchestrated by [OneFlow](http://docs.opennebula.io/5.12/advanced_components/application_flow_and_auto-scaling/index.html). Requires OneGate and OneFlow OpenNebula services. See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/kubernetes.html).
+
+  The appliance was [certified](https://landscape.cncf.io/selected=open-nebula-kubernetes-appliance) as part of [Certified Kubernetes Conformance Program](https://www.cncf.io/certification/software-conformance/):
+
+  ![Certified Kubernetes](/logos/kubernetes-cert.png)
 short_description: Multi-node Kubernetes cluster for KVM hosts orchestrated by OneFlow
 tags:
 - kubernetes

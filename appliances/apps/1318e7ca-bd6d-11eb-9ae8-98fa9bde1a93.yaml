@@ -26,6 +26,10 @@ description: |-
   to set `ONEGATE_ENABLE='YES'` to enable an exchange of the connection
   parameters among the nodes via OneGate, and report when the nodes are
   ready to use.**
+
+  The appliance was [certified](https://landscape.cncf.io/selected=open-nebula-kubernetes-appliance) as part of [Certified Kubernetes Conformance Program](https://www.cncf.io/certification/software-conformance/):
+
+  ![Certified Kubernetes](/logos/kubernetes-cert.png)
 short_description: Appliance with preinstalled Kubernetes for KVM hosts
 tags:
 - kubernetes
