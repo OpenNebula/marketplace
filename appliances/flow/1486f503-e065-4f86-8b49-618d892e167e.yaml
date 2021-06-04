@@ -1,5 +1,5 @@
 ---
-name: Service Kubernetes 1.18 for OneFlow - KVM
+name: Service Kubernetes 1.18 - KVM
 version: 1.18.18-6.0.0-1.20210415
 publisher: OpenNebula Systems
 description: |-
@@ -14,7 +14,7 @@ tags:
 - service
 - centos
 - oneflow
-creation_time: 1618501661
+creation_time: 1622810632
 os-id: CentOS
 os-release: '7.9'
 os-arch: x86_64
@@ -22,8 +22,8 @@ hypervisor: KVM
 type: 'SERVICE_TEMPLATE'
 opennebula_version: 5.13, 6.0, 6.1
 roles:
-  master: 'Service Kubernetes 1.18 - KVM'
-  worker: 'Service Kubernetes 1.18 - KVM'
+  master: 'Kubernetes 1.18 - KVM'
+  worker: 'Kubernetes 1.18 - KVM'
 opennebula_template: '{
   "name": "Kubernetes",
   "deployment": "straight",

@@ -1,5 +1,5 @@
 ---
-name: Service Kubernetes 1.18 - KVM
+name: Kubernetes 1.18 - KVM
 version: 1.18.18-6.0.0-1.20210505
 publisher: OpenNebula Systems
 description: |-
@@ -36,7 +36,7 @@ tags:
 - service
 - centos
 format: qcow2
-creation_time: 1620652602
+creation_time: 1622810632
 os-id: CentOS
 os-release: '7.9'
 os-arch: x86_64
