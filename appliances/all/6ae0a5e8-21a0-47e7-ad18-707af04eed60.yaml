@@ -1,6 +1,6 @@
 ---
 name: AlmaLinux 8
-version: 6.0.0-1.20210331
+version: 6.0.0-1.20210609
 publisher: OpenNebula Systems
 description: |-
   AlmaLinux 8 image ready for your OpenNebula deployment.
@@ -14,13 +14,14 @@ short_description: AlmaLinux 8 image for KVM, LXD and vCenter.
 tags:
 - almalinux
 format: qcow2
-creation_time: 1617293717
+creation_time: 1623329157
 os-id: AlmaLinux
-os-release: '8.3'
+os-release: '8.4'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10,
-  5.12, 5.13, 6.0, 6.1
+opennebula_version: >-
+  4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
+  6.1
 opennebula_template:
   context:
     network: 'YES'
@@ -40,11 +41,11 @@ opennebula_template:
 logo: alma.png
 images:
 - name: almalinux8
-  url: https://d24fmfybwxpuhu.cloudfront.net/alma8-6.0.0-1.20210331.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alma8-6.0.0-1.20210609.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 4ce3c960d744a9ff17d376d4f032975d
-    sha256: ddd9625a902c825d8884402688b9bebbdef1bbaeaf21a3d5eb81c30e3d0ddf55
+    md5: c8b0b1d2c4c2bc5a745ba68ab957f041
+    sha256: 0a67d17079c50ca06894a3211116b50c5a8dfe2885da76f97c94567116e286dd
