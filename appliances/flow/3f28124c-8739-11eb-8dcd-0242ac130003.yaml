@@ -1,6 +1,6 @@
 ---
 name: Service K3s - Firecracker
-version: 1.19.9-5.12.0.2
+version: 1.19.9-5.12.0.2-20210621
 publisher: OpenNebula Systems
 description: |-
   Multi-node Kubernetes K3s cluster deployed as a Service via OpenNebula OneFlow. [K3s](https://k3s.io) is a certified Kubernetes distribution built for IoT & Edge computing. Requires OneGate and OneFlow OpenNebula Services.
@@ -14,6 +14,11 @@ description: |-
     - K3S_LB_ENABLE: Option to enable/disable [K3s embedded Load Balancer](https://rancher.com/docs/k3s/latest/en/networking/#service-load-balancer)
     - K3S_FLANNEL_BACKEND: Option to specify the [CNI flannel backend](https://rancher.com/docs/k3s/latest/en/installation/network-options/)
 
+  The service appliance allows to auto register the K3s cluster to Rancher, by setting RANCHER_AUTO_REGISTRATION_ENABLE to YES and then using the following parameters:
+    - RANCHER_URL: Rancher url address
+    - RANCHER_ACCESS_KEY: Rancher API Access key
+    - RANCHER_SECRET_KEY: Rancher API Secret key
+
   **IMPORTANT**: Firecracker VM requires [Kernel 4.19](/appliance/ba40d522-8739-11eb-8dcd-0242ac130003). Don't forget to import it as well and update K3s VM template to point to this kernel (see `KERNEL_DS = "$FILE[IMAGE_ID=<USER_ADD>]"`).
 short_description: Multi-node Kubernetes K3s cluster for Firecracker hosts orchestrated by OneFlow
 tags:
@@ -21,7 +26,7 @@ tags:
 - k3s
 - oneflow
 - ubuntu
-creation_time: 1619687447
+creation_time: 1624269995
 os-id: Ubuntu
 os-release: '18.04'
 os-arch: x86_64
@@ -62,12 +67,16 @@ opennebula_template: '{
   "ready_status_gate": true,
   "automatic_deletion": false,
   "custom_attrs": {
-    "EDGE_LOCATION": "M|text|Cluster Name| |\"default\"",
+    "EDGE_LOCATION": "M|text|Cluster Name| |default",
     "K3S_VERSION": "M|text|K3S VERSION| |v1.19.9+k3s1",
     "K3S_DNS_ENABLE": "M|boolean|K3S DNS ENABLE| |YES",
     "K3S_INGRESS_ENABLE": "M|boolean|K3S INGRESS ENABLE| |YES",
     "K3S_LB_ENABLE": "M|boolean|K3S LOADBALANCER ENABLE| |YES",
-    "K3S_FLANNEL_BACKEND": "M|text|K3S FLANNEL BACKEND| |vxlan"
+    "K3S_FLANNEL_BACKEND": "M|text|K3S FLANNEL BACKEND| |vxlan",
+    "RANCHER_AUTO_REGISTRATION_ENABLE": "M|boolean|Rancher Auto Registration| |NO",
+    "RANCHER_URL": "O|text|Rancher URL| |RANCHER_URL",
+    "RANCHER_ACCESS_KEY": "O|text|Rancher Access API Key| |YOUR_RANCHER_ACCESS_KEY",
+    "RANCHER_SECRET_KEY": "O|text|Rancher Secret Key| |YOUR_RANCHER_SECRET_KEY"
  }
 }'
 
