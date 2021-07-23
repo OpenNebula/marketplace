@@ -1,6 +1,6 @@
 ---
 name: Kubernetes 1.21 - KVM
-version: 1.21.1-6.0.0-1.202105255
+version: 1.21.2-6.0.0-1.202107085
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled Kubernetes to work as a single-node cluster,
@@ -36,11 +36,11 @@ tags:
 - service
 - centos
 format: qcow2
-creation_time: 1621956265
+creation_time: 1627040703
 os-id: CentOS
 os-release: '7.9'
 os-arch: x86_64
-hypervisor: KVM
+hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
   6.1
@@ -90,11 +90,11 @@ logo: kubernetes.png
 images:
 - name: kubernetes
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes-1.21.1-6.0.0-1.20210525.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes-1.21.2-6.0.0-1.20210708.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 430fa32ee9dda701d389f92142ca2cd5
-    sha256: b140c5386fbb27e4433533caeb3eb784ebb3b501bcf3c2600ff81148e9f9a84f
+    md5: 545e5d021a0e4f46dfe0f2be6171fd6a
+    sha256: 15edace305019f53ffec070a3640ff063c603fd797de4ae50f1e6eecb9a82b0f
