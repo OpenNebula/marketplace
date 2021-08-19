@@ -1,22 +1,22 @@
 ---
-name: Debian Testing
+name: Debian 11
 version: 6.0.0-1.20210818
 publisher: OpenNebula Systems
 description: |-
-  Debian 12 (Testing) image ready for your OpenNebula deployment.
+  Debian 11 image ready for your OpenNebula deployment.
 
-  This image is based on the Debian 12 (Testing) cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Debian 11 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Debian 12 (Testing) image for KVM and vCenter
+short_description: Debian 11 image for KVM and vCenter
 tags:
 - debian
 format: qcow2
-creation_time: 1629374219
+creation_time: 1629374350
 os-id: Debian
-os-release: '12.0'
+os-release: '11.0'
 os-arch: x86_64
 hypervisor: KVM
 opennebula_version: >-
@@ -41,13 +41,12 @@ opennebula_template:
   sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: debian.png
 images:
-- name: debian12
-  url: >-
-    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/debian12-6.0.0-1.20210818.qcow2
+- name: debian11
+  url: https://d24fmfybwxpuhu.cloudfront.net/debian11-6.0.0-1.20210818.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: e57866a2b47da5b09581238e71c9bcae
-    sha256: b9e777c0e2f4ed9adf39f942deece6c21b142c1123758c747544e3fa89a7c135
+    md5: 27b0541930dbf94773ea143c22f61f3d
+    sha256: f0ad6f6fab452af873f9c37337ea74d8da8e8ab04cdea2d5dac27ae80b768746
