@@ -1,11 +1,11 @@
 ---
 name: Ubuntu 16.04 with Docker
-version: 6.0.0-1.20210616
+version: 6.2.0-1.20211027
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 16.04 image with preinstalled Docker CE for your OpenNebula deployment.
 
-  This image is based on the Ubuntu 16.04 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html) and preinstalled Docker CE.
+  This image is based on the Ubuntu 16.04 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html) and preinstalled Docker CE.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -15,14 +15,14 @@ tags:
 - ubuntu
 - docker
 format: qcow2
-creation_time: 1623917810
+creation_time: 1635328783
 os-id: Ubuntu
 os-release: '16.04'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1
+  6.1, 6.2, 6.3
 opennebula_template:
   context:
     network: 'YES'
@@ -44,11 +44,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu1604_docker
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1604_docker-6.0.0-1.20210616.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1604_docker-6.2.0-1.20211022.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: a67b4382d2933a8dc79ba481b81a1205
-    sha256: 22018a0649d2818642a51ba0d1b6b47e2a9b2069e6a8783002965cf14c444505
+    md5: c638be8c8d0c637d70409d4ee42352cb
+    sha256: 135c94bdebe729668ab9afd664d1bd7c56e1a034578b52fd369ea2d34153679c

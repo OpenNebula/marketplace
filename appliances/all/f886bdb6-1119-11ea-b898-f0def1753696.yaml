@@ -1,11 +1,11 @@
 ---
 name: Ubuntu 16.04
-version: 6.0.0-1.20210329
+version: 6.2.0-1.20211027
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 16.04 image ready for your OpenNebula deployment.
 
-  This image is based on the Ubuntu 16.04 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Ubuntu 16.04 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -14,13 +14,14 @@ short_description: Ubuntu 16.04 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1617293717
+creation_time: 1635328783
 os-id: Ubuntu
 os-release: '16.04'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: 4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10,
-  5.12, 5.13, 6.0, 6.1
+opennebula_version: >-
+  4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
+  6.1, 6.2, 6.3
 opennebula_template:
   context:
     network: 'YES'
@@ -42,11 +43,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu1604
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1604-6.0.0-1.20210329.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1604-6.2.0-1.20211022.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: fea374bd37852eece603d0377eff1e64
-    sha256: 6949b92e3e909899ab08365933aec3f6606253a5d8c2a38bd20d0b987d37a26a
+    md5: 250443da197e9d985dad3a685614f4ec
+    sha256: 7a48af02cd316dc7f5e8f8b6fcb0d349b2d76e61d46b05f997ff23025a393d7e

@@ -10,14 +10,15 @@ short_description: Kernel 5.4 x86_64 for Firecracker microVM
 tags:
 - kernel
 format: raw
-creation_time: 1591603396
+creation_time: 1635328783
 hypervisor: Firecracker
-opennebula_version: 5.12, 5.13, 6.0, 6.1
+opennebula_version: 5.12, 5.13, 6.0, 6.1, 6.2, 6.3
 images:
 - name: vmlinuz-5.4.43-fc.x86_64
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/vmlinuz-5.4.43-fc.x86_64
+  url: >-
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/vmlinuz-5.4.43-fc.x86_64
   type: KERNEL
-  size: 36641936
+  size: 36642304
   checksum:
     md5: cd24ea73535021cdd44ddd40d9ada932
     sha256: d6eac7394d78cae6ae940b267a46292c40ba7aecf98b8b6c1b2a077bd028f396

@@ -10,14 +10,15 @@ short_description: Kernel 5.4 x86_64 for KVM
 tags:
 - kernel
 format: raw
-creation_time: 1591603396
+creation_time: 1635328783
 hypervisor: KVM
-opennebula_version: 5.12, 5.13, 6.0, 6.1
+opennebula_version: 5.12, 5.13, 6.0, 6.1, 6.2, 6.3
 images:
 - name: vmlinuz-5.4.43-pvh.x86_64
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/vmlinuz-5.4.43-pvh.x86_64
+  url: >-
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/vmlinuz-5.4.43-pvh.x86_64
   type: KERNEL
-  size: 58506448
+  size: 58506752
   checksum:
     md5: ed6ac036eed7ee44ec0664585166ce17
     sha256: f3f77fd1c5f2c2e7a272c7a5f83d80b726e5846dd3aaf82ce00cd36e66521586

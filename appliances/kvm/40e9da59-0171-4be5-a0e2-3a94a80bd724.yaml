@@ -17,12 +17,12 @@ tags:
 - cdrom
 - netboot.xyz
 type: 'VMTEMPLATE'
-creation_time: 1613055037
+creation_time: 1635328783
 hypervisor: KVM
 os-id: none
 os-arch: x86_64
 format: qcow2
-opennebula_version: 5.13, 6.0, 6.1
+opennebula_version: 5.13, 6.0, 6.1, 6.2, 6.3
 disks:
   - 'Empty disk'
   - 'netboot.xyz'
