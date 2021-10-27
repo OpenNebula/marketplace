@@ -22,7 +22,7 @@ images:
   url: >-
     https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine-vrouter-5.0.2-0.20181121.vmdk.gz
   type: OS
-  size: 268435456
+  size: 50992128
   checksum:
     md5: 46e4473653adf56d348e42f4caae2010
     sha256: eb602da6c535e1fa4a33536e3c568c9700e191992050ea6987c03344b99a7705

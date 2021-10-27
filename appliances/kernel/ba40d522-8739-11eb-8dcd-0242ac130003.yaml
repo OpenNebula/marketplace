@@ -10,9 +10,9 @@ short_description: Kernel 4.19 for Firecracker
 tags:
 - kernel
 format: raw
-creation_time: 1616779866
+creation_time: 1635328783
 hypervisor: FIRECRACKER
-opennebula_version: 5.13, 6.0, 6.1
+opennebula_version: 5.13, 6.0, 6.1, 6.2, 6.3
 images:
 - name: vmlinuz-4.19.155-fc.x86_64
   url: https://d24fmfybwxpuhu.cloudfront.net/vmlinuz-4.19.155-fc.x86_64

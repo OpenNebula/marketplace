@@ -3,8 +3,9 @@ name: Vrouter Alpine - KVM
 version: 5.0.2-0.20181121
 publisher: OpenNebula Systems
 description: Supports keepalived for HA.
-short_description: Virtual router appliance to be used with OpenNebula 5.x.
-  Based on Alpine linux.
+short_description: >-
+  Virtual router appliance to be used with OpenNebula 5.x. Based on Alpine
+  linux.
 tags:
 - vrouter
 - alpine
@@ -21,7 +22,7 @@ opennebula_template:
   vcpu: '1'
   context:
     network: 'yes'
-    ssh_public_key: $USER[SSH_PUBLIC_KEY]
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
   graphics:
     listen: 0.0.0.0
     type: vnc
@@ -31,7 +32,8 @@ opennebula_template:
 logo: router.png
 images:
 - name: alpine-vrouter.qcow2c
-  url: https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine-vrouter-5.0.2-0.20181121.qcow2
+  url: >-
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/alpine-vrouter-5.0.2-0.20181121.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
