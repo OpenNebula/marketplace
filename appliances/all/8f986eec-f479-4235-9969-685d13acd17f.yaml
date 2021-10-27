@@ -19,8 +19,7 @@ os-id: Ubuntu
 os-release: '21.04'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: >-
-  6.2, 6.3
+opennebula_version: 6.2, 6.3
 opennebula_template:
   context:
     network: 'YES'
@@ -48,5 +47,5 @@ images:
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: be6311629a17199ae2193679a61e71e7
-    sha256: 278a5946e82bd942f8473718caff9a773664a7f54980687e8ec93040c4e08002
+    md5: bff6b7ba3270a6cbf932a76ec3770a6d
+    sha256: 9cf4e132f901a1fbe7f656c6502af998157530bb6c1f44d34f2c2a3fbe14b37d

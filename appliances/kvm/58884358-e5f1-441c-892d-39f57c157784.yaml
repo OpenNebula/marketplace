@@ -20,8 +20,7 @@ os-id: ALT Linux
 os-release: p10
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: >-
-  6.2, 6.3
+opennebula_version: 6.2, 6.3
 opennebula_template:
   context:
     network: 'YES'
@@ -40,7 +39,7 @@ images:
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 1651507200
+  size: 1943011328
   checksum:
-    md5: eec2d42f31652cdedcc7431b15e62be2
-    sha256: c6fbc1a5356371163f12d3d4f0df6809da691bd4e34c06fbc7b53eb388da7a8a
+    md5: 5122bb68514f5d3a58782cf1e31b734c
+    sha256: db987ae0c48e18b9743bcc1f9791dd21fa9df105c914d122e765310ebc60b0db
