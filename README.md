@@ -1,13 +1,15 @@
+
 # Public OpenNebula Marketplace Appliances
 
 This is a repository with YAML metadata of the appliances available in the
 official public [OpenNebula Marketplace](https://marketplace.opennebula.io),
 to be used with the [simple Marketplace](https://github.com/OpenNebula/appmarket-simple)
 server implementation. All appliances here are built and certified by the OpenNebula Systems.
-**No community appliances are accepted into the public OpenNebula Marketplace
-anymore!**.
 
-:exclamation: Important when **updating** existing appliance:
+---
+⚠️ Please report any bug or feature request [in the OpenNebula main repository using label "Category: Marketplace"](https://github.com/OpenNebula/one/issues/new/choose) 🙏
+
+⚠️ Important when **updating** existing appliance:
 
 - bump `version`, so that OpenNebula clients are force to update their cached metadata
 - update `creation_time` to current epoch time
