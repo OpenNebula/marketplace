@@ -1,28 +1,28 @@
 ---
-name: Service K3S 1.21.5 - KVM
+name: Service K3s 1.21.5+k3s2 - KVM
 version: 1.21.2-6.2.0-1.20211027
 publisher: OpenNebula Systems
 description: |-
-  Multi-node K3S cluster for KVM hosts based on [Service K3S 1.21.5 - KVM](/appliance/319d21ea-1a39-4c28-bc36-5ac86a966a48) appliance and orchestrated by [OneFlow](https://docs.opennebula.io/6.2/management_and_operations/multivm_service_management/appflow_elasticity.html). Requires OneGate and OneFlow OpenNebula services. See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/k3s.html).
+  Multi-node K3s cluster for KVM hosts based on [Service K3s 1.21.5+k3s2 - KVM](/appliance/319d21ea-1a39-4c28-bc36-5ac86a966a48) appliance and orchestrated by [OneFlow](https://docs.opennebula.io/6.2/management_and_operations/multivm_service_management/appflow_elasticity.html). Requires OneGate and OneFlow OpenNebula services. See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/k3s.html).
 
-short_description: Multi-node K3S cluster for KVM hosts orchestrated by OneFlow
+short_description: Multi-node K3s cluster for KVM hosts orchestrated by OneFlow
 tags:
 - k3s
 - service
-- centos
+- alpine
 - oneflow
 creation_time: 1635328783
-os-id: CentOS
-os-release: '7.9'
+os-id: Alpine Linux
+os-release: '3.14'
 os-arch: x86_64
 hypervisor: ALL
 type: 'SERVICE_TEMPLATE'
 opennebula_version: 5.13, 6.0, 6.1, 6.2, 6.3
 roles:
-  master: 'K3S 1.21.5 - KVM'
-  worker: 'K3S 1.21.5 - KVM'
+  master: 'K3s 1.21.5+k3s2 - KVM'
+  worker: 'K3s 1.21.5+k3s2 - KVM'
 opennebula_template: '{
-  "name": "K3S",
+  "name": "K3s",
   "deployment": "straight",
   "description": "",
   "roles": [
