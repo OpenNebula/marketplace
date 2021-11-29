@@ -3,7 +3,7 @@ name: Service Kubernetes 1.18 - KVM
 version: 1.18.18-6.2.0-1.20211027
 publisher: OpenNebula Systems
 description: |-
-  Multi-node Kubernetes cluster for KVM hosts based on [Service Kubernetes 1.18 - KVM](/appliance/547ecdff-f392-43b9-abc9-5f10a9fa7aff) appliance and orchestrated by [OneFlow](http://docs.opennebula.io/5.12/advanced_components/application_flow_and_auto-scaling/index.html). Requires OneGate and OneFlow OpenNebula services. See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/kubernetes.html).
+  Multi-node Kubernetes cluster for KVM hosts based on [Service Kubernetes 1.18 - KVM](/appliance/547ecdff-f392-43b9-abc9-5f10a9fa7aff) appliance and orchestrated by [OneFlow](https://docs.opennebula.io/6.2/management_and_operations/multivm_service_management/appflow_elasticity.html). Requires OneGate and OneFlow OpenNebula services. See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/kubernetes.html).
 
   The appliance was [certified](https://landscape.cncf.io/selected=open-nebula-kubernetes-appliance) as part of [Certified Kubernetes Conformance Program](https://www.cncf.io/certification/software-conformance/):
 

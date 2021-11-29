@@ -1,16 +1,13 @@
 ---
-name: Service Kubernetes 1.21 - KVM
+name: Service K3S 1.21.5 - KVM
 version: 1.21.2-6.2.0-1.20211027
 publisher: OpenNebula Systems
 description: |-
-  Multi-node Kubernetes cluster for KVM hosts based on [Service Kubernetes 1.21 - KVM](/appliance/1318e7ca-bd6d-11eb-9ae8-98fa9bde1a93) appliance and orchestrated by [OneFlow](https://docs.opennebula.io/6.2/management_and_operations/multivm_service_management/appflow_elasticity.html). Requires OneGate and OneFlow OpenNebula services. See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/kubernetes.html).
+  Multi-node K3S cluster for KVM hosts based on [Service K3S 1.21.5 - KVM](/appliance/319d21ea-1a39-4c28-bc36-5ac86a966a48) appliance and orchestrated by [OneFlow](https://docs.opennebula.io/6.2/management_and_operations/multivm_service_management/appflow_elasticity.html). Requires OneGate and OneFlow OpenNebula services. See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/k3s.html).
 
-  The appliance was [certified](https://landscape.cncf.io/selected=open-nebula-kubernetes-appliance) as part of [Certified Kubernetes Conformance Program](https://www.cncf.io/certification/software-conformance/):
-
-  ![Certified Kubernetes](/logos/kubernetes-cert.png)
-short_description: Multi-node Kubernetes cluster for KVM hosts orchestrated by OneFlow
+short_description: Multi-node K3S cluster for KVM hosts orchestrated by OneFlow
 tags:
-- kubernetes
+- k3s
 - service
 - centos
 - oneflow
@@ -22,10 +19,10 @@ hypervisor: ALL
 type: 'SERVICE_TEMPLATE'
 opennebula_version: 5.13, 6.0, 6.1, 6.2, 6.3
 roles:
-  master: 'Kubernetes 1.21 - KVM'
-  worker: 'Kubernetes 1.21 - KVM'
+  master: 'K3S 1.21.5 - KVM'
+  worker: 'K3S 1.21.5 - KVM'
 opennebula_template: '{
-  "name": "Kubernetes",
+  "name": "K3S",
   "deployment": "straight",
   "description": "",
   "roles": [
@@ -52,5 +49,5 @@ opennebula_template: '{
   },
   "ready_status_gate": true
 }'
-logo: kubernetes.png
+logo: k3s.png
 images: []
