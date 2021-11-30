@@ -1,0 +1,103 @@
+---
+name: K3s 1.21.5+k3s2 - KVM
+version: 1.21.5-6.2.0-1.20211027
+publisher: OpenNebula Systems
+description: |-
+  Appliance with preinstalled K3s to work as a single-node cluster,
+  manualy managed multi-node cluster, or automatically managed multi-node
+  cluster as OpenNebula OneFlow Service. The appliance supports a few alternatives
+  to the K3s builtin components. The CNI network driver can be set to use Flannel
+  (default), Canal or Calico. The default Load Balancer can be switched to MetalLB.
+  For more information about credentials and connections check `/etc/appliance/config`
+  on your running appliance. See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/k3s.html).
+
+  Initial configuration can be customized via parameters:
+
+  * `ONEAPP_K8S_OVERRIDE_VERSION` - User required K3s version (default empty)
+  * `ONEAPP_K8S_ADDRESS` - K3s master node address/network (CIDR subnet)
+  * `ONEAPP_K8S_TOKEN` - K3s token (to join node into the cluster)
+  * `ONEAPP_K8S_NODENAME` - K3s master node name
+  * `ONEAPP_K8S_PORT` - K3s API port (default 6443)
+  * `ONEAPP_K8S_CNI` - Container Network Interface (default flannel)
+  * `ONEAPP_K8S_PODS_NETWORK` - K3s pods network in CIDR (default 10.244.0.0/16)
+  * `ONEAPP_K8S_LOADBALANCER` - LoadBalancer provider (default servicelb)
+  * `ONEAPP_K8S_LOADBALANCER_RANGE` - LoadBalancer IP range (default none)
+  * `ONEAPP_K8S_LOADBALANCER_CONFIG` - Custom LoadBalancer config (encoded in BASE64)
+
+  **WARNING: For multi-node deployment managed by OneFlow, it's necessary
+  to set `ONEGATE_ENABLE='YES'` to enable an exchange of the connection
+  parameters among the nodes via OneGate, and report when the nodes are
+  ready to use.**
+
+short_description: Appliance with preinstalled K3S for KVM hosts
+tags:
+- k3s
+- service
+- alpine
+format: qcow2
+creation_time: 1638201042
+os-id: Alpine Linux
+os-release: '3.14'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.2, 6.3
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_k8s_override_version: "$ONEAPP_K8S_OVERRIDE_VERSION"
+    oneapp_k8s_address: "$ONEAPP_K8S_ADDRESS"
+    oneapp_k8s_token: "$ONEAPP_K8S_TOKEN"
+    oneapp_k8s_nodename: "$ONEAPP_K8S_NODENAME"
+    oneapp_k8s_port: "$ONEAPP_K8S_PORT"
+    oneapp_k8s_tainted_master: "$ONEAPP_K8S_TAINTED_MASTER"
+    oneapp_k8s_cni: "$ONEAPP_K8S_CNI"
+    oneapp_k8s_flannel_backend: "$ONEAPP_K8S_FLANNEL_BACKEND"
+    oneapp_k8s_pods_network: "$ONEAPP_K8S_PODS_NETWORK"
+    oneapp_k8s_service_network: "$ONEAPP_K8S_SERVICE_NETWORK"
+    oneapp_k8s_service_dns: "$ONEAPP_K8S_SERVICE_DNS"
+    oneapp_k8s_loadbalancer: "$ONEAPP_K8S_LOADBALANCER"
+    oneapp_k8s_loadbalancer_range: "$ONEAPP_K8S_LOADBALANCER_RANGE"
+    oneapp_k8s_loadbalancer_config: "$ONEAPP_K8S_LOADBALANCER_CONFIG"
+    report_ready: "$ONEGATE_ENABLE"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    token: "$ONEGATE_ENABLE"
+  cpu: '1'
+  vcpu: '2'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONEGATE_ENABLE,ONEAPP_K8S_ADDRESS,ONEAPP_K8S_TOKEN,ONEAPP_K8S_HASH,ONEAPP_K8S_NODENAME,ONEAPP_K8S_PORT,ONEAPP_K8S_TAINTED_MASTER,ONEAPP_K8S_PODS_NETWORK,ONEAPP_K8S_ADMIN_USERNAME,ONEAPP_K8S_LOADBALANCER_RANGE,ONEAPP_K8S_LOADBALANCER_CONFIG
+  memory: '2048'
+  os:
+    arch: x86_64
+  user_inputs:
+    onegate_enable: M|boolean|Enable OneGate reporting? (req. for multi-node)|
+      |NO
+    oneapp_k8s_override_version: O|text|User required K3s version (default empty)
+    oneapp_k8s_address: O|text|Master node address/network (CIDR subnet)
+    oneapp_k8s_token: O|password|Secret token (to join node into the cluster)
+    oneapp_k8s_nodename: O|text|Master node name
+    oneapp_k8s_port: O|text|Kubernetes API port (default 6443)
+    oneapp_k8s_tainted_master: O|boolean|Master node acts as control-plane
+      only (default no)
+    oneapp_k8s_cni: O|text|Container Network Interface (default flannel)
+    oneapp_k8s_flannel_backend: O|text|Flannel CNI backenddd (default vxlan)
+    oneapp_k8s_pods_network: O|text|Pods network in CIDR (default 10.244.0.0/16)
+    oneapp_k8s_service_network: O|text|Service network in CIDR (default 10.96.0.0/12)
+    oneapp_k8s_service_dns: O|text|DNS in the service network (default 10.96.0.10)
+    oneapp_k8s_loadbalancer_range: O|text|LoadBalancer IP range (default
+      none)
+    oneapp_k8s_loadbalancer_config: O|text64|Custom LoadBalancer config
+logo: k3s.png
+images:
+- name: k3s
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_k3s-6.2.0-1.20211129.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 1073741824
+  checksum:
+    md5: 3bc48d001fdf12cdfcad8a66b1060d23
+    sha256: 860073abf0dcf9ab9c20122ba634dc713bbdcfbb858097fdf3ba1a783221ff7a
