@@ -83,14 +83,14 @@ opennebula_template:
     oneapp_k8s_tainted_master: O|boolean|Master node acts as control-plane
       only (default no)
     oneapp_k8s_cni: O|text|Container Network Interface (default flannel)
-    oneapp_k8s_flannel_backend: O|text|Flannel CNI backenddd (default vxlan)
+    oneapp_k8s_flannel_backend: O|text|Flannel CNI backend (default vxlan)
     oneapp_k8s_pods_network: O|text|Pods network in CIDR (default 10.244.0.0/16)
     oneapp_k8s_service_network: O|text|Service network in CIDR (default 10.96.0.0/12)
     oneapp_k8s_service_dns: O|text|DNS in the service network (default 10.96.0.10)
     oneapp_k8s_loadbalancer: O|text|LoadBalancer provider (default servicelb)
-    oneapp_k8s_loadbalancer_range: O|text|LoadBalancer IP range (default
+    oneapp_k8s_loadbalancer_range: O|text|MetalLB IP range (default
       none)
-    oneapp_k8s_loadbalancer_config: O|text64|Custom LoadBalancer config
+    oneapp_k8s_loadbalancer_config: O|text64|Custom MetalLB config
 logo: k3s.png
 images:
 - name: k3s
