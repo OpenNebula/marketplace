@@ -1,6 +1,6 @@
 ---
 name: K3s 1.21.5+k3s2 - KVM
-version: 1.21.5-6.2.0-1.20211028
+version: 1.21.5-6.2.0-1.20211029
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled K3s to work as a single-node cluster,
@@ -13,8 +13,8 @@ description: |-
 
   Initial configuration can be customized via parameters:
 
-  * `ONEAPP_K8S_OVERRIDE_VERSION` - User required K3s version (default empty)
-  * `ONEAPP_K8S_ADDRESS` - K3s master node address/network (CIDR subnet)
+  * `ONEAPP_K8S_OVERRIDE_VERSION` - Custom K3s version (to override preinstalled)
+  * `ONEAPP_K8S_ADDRESS` - K3s master node address
   * `ONEAPP_K8S_TOKEN` - K3s token (to join node into the cluster)
   * `ONEAPP_K8S_NODENAME` - K3s master node name
   * `ONEAPP_K8S_PORT` - K3s API port (default 6443)
@@ -36,7 +36,7 @@ tags:
 - service
 - alpine
 format: qcow2
-creation_time: 1638201043
+creation_time: 1638201044
 os-id: Alpine Linux
 os-release: '3.14'
 os-arch: x86_64
@@ -75,8 +75,8 @@ opennebula_template:
   user_inputs:
     onegate_enable: M|boolean|Enable OneGate reporting? (req. for multi-node)|
       |NO
-    oneapp_k8s_override_version: O|text|User required K3s version (default empty)
-    oneapp_k8s_address: O|text|Master node address/network (CIDR subnet)
+    oneapp_k8s_override_version: O|text|Custom K3s version (to override preinstalled)
+    oneapp_k8s_address: O|text|Master node address
     oneapp_k8s_token: O|password|Secret token (to join node into the cluster)
     oneapp_k8s_nodename: O|text|Master node name
     oneapp_k8s_port: O|text|Kubernetes API port (default 6443)
