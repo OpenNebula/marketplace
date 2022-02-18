@@ -1,6 +1,6 @@
 ---
 name: Kubernetes 1.18 - KVM
-version: 1.18.18-6.0.0-1.20211027
+version: 1.18.20-6.2.0-1.20220217
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled Kubernetes to work as a single-node cluster,
@@ -85,11 +85,11 @@ logo: kubernetes.png
 images:
 - name: kubernetes
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes-1.18.18-6.0.0-1.20210505.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes-1.18.20-6.2.0-1.20220217.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 4294967296
+  size: 5368709120
   checksum:
-    md5: a25785666cba783c0f8521bea458d75b
-    sha256: b9ee7cf5287f194f01a2cfe54fb7a43e9dc4a9f29669d0e89df9db0e66f4c752
+    md5: 347a82a7d3f6a2567d6c2939d5b567eb
+    sha256: 958886ce2c5f8dad5a003c7f7fe20a6780ff3e9502e0300eb837e606069cd50d
