@@ -1,6 +1,6 @@
 ---
 name: Service K3s 1.21.5+k3s2 - KVM
-version: 1.21.5-6.2.0-1.20220217
+version: 1.21.5-6.2.0-1.20220310
 publisher: OpenNebula Systems
 description: |-
   Multi-node K3s cluster for KVM hosts based on [Service K3s 1.21.5+k3s2 - KVM](/appliance/319d21ea-1a39-4c28-bc36-5ac86a966a48) appliance and orchestrated by [OneFlow](https://docs.opennebula.io/6.2/management_and_operations/multivm_service_management/appflow_elasticity.html). Requires OneGate and OneFlow OpenNebula services. See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/k3s.html).
@@ -11,7 +11,7 @@ tags:
 - service
 - alpine
 - oneflow
-creation_time: 1635328783
+creation_time: 1635328784
 os-id: Alpine Linux
 os-release: '3.14'
 os-arch: x86_64
