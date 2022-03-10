@@ -1,6 +1,6 @@
 ---
 name: Kubernetes 1.18 - KVM
-version: 1.18.20-6.2.0-1.20220217
+version: 1.18.20-6.2.0-1.20220310
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled Kubernetes to work as a single-node cluster,
@@ -35,7 +35,7 @@ tags:
 - service
 - centos
 format: qcow2
-creation_time: 1622810632
+creation_time: 1622810633
 os-id: CentOS
 os-release: '7.9'
 os-arch: x86_64
@@ -46,6 +46,8 @@ opennebula_version: >-
 opennebula_template:
   context:
     network: 'YES'
+    report_ready: 'YES'
+    token: 'YES'
     oneapp_k8s_address: "$ONEAPP_K8S_ADDRESS"
     oneapp_k8s_token: "$ONEAPP_K8S_TOKEN"
     oneapp_k8s_hash: "$ONEAPP_K8S_HASH"

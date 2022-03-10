@@ -32,7 +32,7 @@ opennebula_template: '{
     {
       "name": "master",
       "cardinality": 1,
-      "vm_template_contents": "REPORT_READY=\"YES\"\nTOKEN=\"YES\"\nNIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\n",
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\n",
       "elasticity_policies": [],
       "scheduled_policies": []
     },
