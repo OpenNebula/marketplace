@@ -1,0 +1,95 @@
+---
+name: Kubernetes 1.23 VNF - KVM
+version: 1.23.6-6.2.0-1.20220428
+publisher: OpenNebula Systems
+description: |-
+  Beta release.
+
+  Appliance providing several Virtual Network Functions (routing, NAT, DNS,
+  DHCP) to run as regular **Virtual Machine**. See the dedicated
+  [documentation](https://docs.opennebula.io/appliances/service/vnf.html).
+short_description: Appliance with several Virtual Network Functions to run
+  as VM
+tags:
+- alpine
+- kubernetes
+- service
+- vnf
+format: qcow2
+creation_time: 1651140000
+os-id: Alpine
+os-release: "3.14"
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: >-
+  5.13, 6.0, 6.1, 6.2, 6.3, 6.4
+opennebula_template:
+  sched_requirements: HYPERVISOR=kvm
+  context:
+    network: "YES"
+    oneapp_vnf_dhcp4_enabled: "$ONEAPP_VNF_DHCP4_ENABLED"
+    oneapp_vnf_dhcp4_interfaces: "$ONEAPP_VNF_DHCP4_INTERFACES"
+    oneapp_vnf_dhcp4_lease_time: "$ONEAPP_VNF_DHCP4_LEASE_TIME"
+    oneapp_vnf_dns_enabled: "$ONEAPP_VNF_DNS_ENABLED"
+    oneapp_vnf_dns_interfaces: "$ONEAPP_VNF_DNS_INTERFACES"
+    oneapp_vnf_dns_max_cache_ttl: "$ONEAPP_VNF_DNS_MAX_CACHE_TTL"
+    oneapp_vnf_dns_use_rootservers: "$ONEAPP_VNF_DNS_USE_ROOTSERVERS"
+    oneapp_vnf_keepalived_enabled: "YES"
+    oneapp_vnf_keepalived_vrid: ""
+    oneapp_vnf_lb0_ip: "$ONEAPP_VNF_LB0_IP"
+    oneapp_vnf_lb0_port: "$ONEAPP_K8S_PORT"
+    oneapp_vnf_lb0_method: "$ONEAPP_VNF_LB0_METHOD"
+    oneapp_vnf_lb0_protocol: "tcp"
+    oneapp_vnf_lb0_scheduler: ""
+    oneapp_vnf_lb_enabled: "YES"
+    oneapp_vnf_lb_onegate_enabled: "YES"
+    oneapp_vnf_lb_refresh_rate: "$ONEAPP_VNF_LB_REFRESH_RATE"
+    oneapp_vnf_nat4_enabled: "$ONEAPP_VNF_NAT4_ENABLED"
+    oneapp_vnf_nat4_interfaces_out: "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
+    oneapp_vnf_router4_enabled: "$ONEAPP_VNF_ROUTER4_ENABLED"
+    oneapp_vnf_router4_interfaces: "$ONEAPP_VNF_ROUTER4_INTERFACES"
+    oneapp_vrouter_eth0_vip0: "$ONEAPP_VNF_LB0_IP"
+    report_ready: "YES"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    token: "YES"
+  cpu: "1"
+  graphics:
+    listen: "0.0.0.0"
+    type: vnc
+  inputs_order: >-
+    ONEAPP_VNF_DHCP4_ENABLED,ONEAPP_VNF_DHCP4_INTERFACES,ONEAPP_VNF_DNS_ENABLED,ONEAPP_VNF_DNS_INTERFACES,ONEAPP_VNF_NAT4_ENABLED,ONEAPP_VNF_NAT4_INTERFACES_OUT,ONEAPP_VNF_ROUTER4_ENABLED,ONEAPP_VNF_ROUTER4_INTERFACES,ONEAPP_VNF_DHCP4_LEASE_TIME,ONEAPP_VNF_DNS_MAX_CACHE_TTL,ONEAPP_VNF_DNS_USE_ROOTSERVERS,ONEAPP_VNF_LB_ENABLED,ONEAPP_VNF_LB_REFRESH_RATE,ONEAPP_VNF_LB0_IP,ONEAPP_VNF_LB0_PORT,ONEAPP_VNF_LB0_METHOD
+  memory: "512"
+  nic_default:
+    model: virtio
+  lxd_security_privileged: "true"
+  os:
+    arch: x86_64
+  user_inputs:
+    oneapp_vnf_dhcp4_enabled: "O|boolean|Enable DHCPv4| |NO"
+    oneapp_vnf_dhcp4_interfaces: "O|text|DHCP4 - Listening Interfaces| |"
+    oneapp_vnf_dhcp4_lease_time: "O|number|*** DHCP4 - Lease Time [sec]| |3600"
+    oneapp_vnf_dns_enabled: "O|boolean|Enable DNS Server| |NO"
+    oneapp_vnf_dns_interfaces: "O|text|DNS - Listening Interfaces| |"
+    oneapp_vnf_dns_max_cache_ttl: "O|number|*** DNS - Maximum Caching Time [sec]| |3600"
+    oneapp_vnf_dns_use_rootservers: "O|boolean|*** DNS - Use Rootservers| |YES"
+    oneapp_vnf_lb_enabled: "O|boolean|ONEAPP_VNF_LB_ENABLED| |YES"
+    oneapp_vnf_lb_refresh_rate: "O|number|ONEAPP_VNF_LB_REFRESH_RATE| |30"
+    oneapp_vnf_lb0_ip: "O|text|ONEAPP_VNF_LB0_IP| |"
+    oneapp_vnf_lb0_port: "O|number|ONEAPP_VNF_LB0_PORT| |6443"
+    oneapp_vnf_lb0_method: "O|text|ONEAPP_VNF_LB0_METHOD| |dr"
+    oneapp_vnf_nat4_enabled: "O|boolean|Enable NAT| |NO"
+    oneapp_vnf_nat4_interfaces_out: "O|text|NAT - Outgoing Interfaces| |"
+    oneapp_vnf_router4_enabled: "O|boolean|Enable Router| |NO"
+    oneapp_vnf_router4_interfaces: "O|text|Router - Interfaces| |"
+logo: router.png
+images:
+- name: kubernetes_vnf
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.2.0-1.20220411.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 2147483648
+  checksum:
+    md5: a70ad56b8f5f13ea949d29e2169302a3
+    sha256: 21ae7b565e810ca4c924eaf4e55edb585eca50458b604171a0f8fa09a77a0171

@@ -1,0 +1,85 @@
+---
+name: Service Kubernetes 1.23 - KVM
+version: 1.23.6-6.2.0-1.20220428
+publisher: OpenNebula Systems
+description: |-
+  Beta release.
+
+  Multi-master/multi-node Kubernetes/Ubuntu cluster for KVM hosts orchestrated by [OneFlow](https://docs.opennebula.io/6.2/management_and_operations/multivm_service_management/appflow_elasticity.html).
+
+  Requires OneGate and OneFlow OpenNebula services.
+
+  Based on appliances: [Kubernetes 1.23 - KVM](/appliance/9b06e6e8-8c40-4a5c-b218-27c749db6a1a), [Kubernetes 1.23 VNF - KVM](/appliance/8148a8d0-81d9-4062-a54f-8c0fd290f32b), [Kubernetes 1.23 Storage - KVM](/appliance/8fe8be73-7e60-4f0e-9047-7b88e41b577a).
+short_description: Multi-master/multi-node Kubernetes/Ubuntu cluster for KVM hosts orchestrated by OneFlow
+tags:
+- kubernetes
+- oneflow
+- service
+- ubuntu
+creation_time: 1651140000
+os-id: Ubuntu
+os-release: "20.04.4 LTS"
+os-arch: x86_64
+hypervisor: KVM
+type: SERVICE_TEMPLATE
+opennebula_version: >-
+  5.13, 6.0, 6.1, 6.2, 6.3, 6.4
+roles:
+  vnf: "Kubernetes 1.23 VNF - KVM"
+  master: "Kubernetes 1.23 - KVM"
+  worker: "Kubernetes 1.23 - KVM"
+  storage: "Kubernetes 1.23 Storage - KVM"
+opennebula_template: '{
+  "name": "Kubernetes",
+  "deployment": "straight",
+  "description": "",
+  "roles": [
+    {
+      "name": "vnf",
+      "cardinality": 2,
+      "min_vms": 2,
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\n",
+      "elasticity_policies": [],
+      "scheduled_policies": []
+    },
+    {
+      "name": "master",
+      "cardinality": 3,
+      "min_vms": 3,
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\n",
+      "parents": ["vnf"],
+      "elasticity_policies": [],
+      "scheduled_policies": []
+    },
+    {
+      "name": "worker",
+      "cardinality": 2,
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\n",
+      "parents": ["master"],
+      "elasticity_policies": [],
+      "scheduled_policies": []
+    },
+    {
+      "name": "storage",
+      "cardinality": 3,
+      "min_vms": 3,
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\n",
+      "parents": ["master"],
+      "elasticity_policies": [],
+      "scheduled_policies": []
+    }
+  ],
+  "networks": {
+    "Public": "M|network|Public| |id:"
+  },
+  "custom_attrs": {
+    "ONEAPP_VNF_LB0_IP": "M|text|Control Plane Endpoint| |I.P.V.4",
+    "ONEAPP_K8S_PODS_NETWORK": "O|text|Pods network in CIDR (default 10.244.0.0/16)| |10.244.0.0/16",
+    "ONEAPP_K8S_PORT": "O|text|Kubernetes API port (default 6443)| |6443",
+    "ONEAPP_K8S_LOADBALANCER_RANGE": "O|text|LoadBalancer IP range (default none)",
+    "ONEAPP_K8S_LOADBALANCER_CONFIG": "O|text64|Custom LoadBalancer config (default none)"
+  },
+  "ready_status_gate": true
+}'
+logo: kubernetes.png
+images: []
