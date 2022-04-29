@@ -17,15 +17,15 @@ os-id: none
 os-arch: all
 hypervisor: KVM
 opennebula_version: >-
-  5.13, 6.0, 6.1, 6.2, 6.3, 6.4
+  6.2, 6.3, 6.4
 images:
 - name: kubernetes_ubuntu
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes_ubuntu-6.2.0-1.20220428.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes_ubuntu-6.2.0-1.20220429.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: 7e53fb2122e779cd1c946db81dc07743
-    sha256: 372544c64c241fc3b29e588c2884e3cdddb757c5b18dfad8c930535e6b171e90
+    md5: 391b1a9cbc779897ee7b9e3b3beb7a24
+    sha256: fea96b6b558541f391898b879fd6f0ac631f3595cdca037c313442b4dcb18232

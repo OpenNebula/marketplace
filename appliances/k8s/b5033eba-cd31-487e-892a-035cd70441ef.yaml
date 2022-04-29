@@ -23,7 +23,7 @@ os-arch: x86_64
 hypervisor: KVM
 type: SERVICE_TEMPLATE
 opennebula_version: >-
-  5.13, 6.0, 6.1, 6.2, 6.3, 6.4
+  6.2, 6.3, 6.4
 roles:
   vnf: "Kubernetes 1.23 VNF - KVM"
   master: "Kubernetes 1.23 - KVM"
