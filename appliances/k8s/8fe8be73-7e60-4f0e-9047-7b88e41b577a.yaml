@@ -21,7 +21,7 @@ os-release: "20.04.4 LTS"
 os-arch: x86_64
 hypervisor: KVM
 opennebula_version: >-
-  5.13, 6.0, 6.1, 6.2, 6.3, 6.4
+  6.2, 6.3, 6.4
 opennebula_template:
   sched_requirements: HYPERVISOR=kvm
   context:
@@ -34,19 +34,26 @@ opennebula_template:
     oneapp_k8s_port: "$ONEAPP_K8S_PORT"
     oneapp_k8s_loadbalancer_config: "$ONEAPP_K8S_LOADBALANCER_CONFIG"
     oneapp_k8s_loadbalancer_range: "$ONEAPP_K8S_LOADBALANCER_RANGE"
+    oneapp_storage_device: "$ONEAPP_STORAGE_DEVICE"
+    oneapp_storage_label: "$ONEAPP_STORAGE_LABEL"
+    oneapp_storage_filesystem: "$ONEAPP_STORAGE_FILESYSTEM"
+    oneapp_storage_mountpoint: "$ONEAPP_STORAGE_MOUNTPOINT"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
-    start_script_base64: >-
-      IyEvdXNyL2Jpbi9lbnYgc2gKCjogIiR7X0JMS19ERVY6PS9kZXYvdmRifSIKOiAiJHtfQkxLX0xCTDo9U1RPUkFHRX0iCjogIiR7X0JMS19NTlQ6PS92YXIvbGliL2xvbmdob3JufSIKOiAiJHtfQkxLX0ZTOj14ZnN9IgoKc2V0IC1ldXgKCiMgU2lsZW50bHkgYWJvcnQgd2hlbiB0aGVyZSBpcyBubyBkaXNrIGF0dGFjaGVkLgppZiAhIGxzYmxrIC1uIC1vIG5hbWUgIiRfQkxLX0RFViI7IHRoZW4gZXhpdCAwOyBmaQoKIyBNYWtlIHN1cmUgbW91bnRwb2ludCBleGlzdHMuCmluc3RhbGwgLW8gMCAtZyAwIC1tIHU9cnd4LGdvPXJ4IC1kICIkX0JMS19NTlQiLwoKIyBTaWxlbnRseSBhYm9ydCB3aGVuIG1vdW50cG9pbnQgaXMgdGFrZW4uCmlmIG1vdW50cG9pbnQgIiRfQkxLX01OVCIvOyB0aGVuIGV4aXQgMDsgZmkKCiMgQ3JlYXRlIG5ldyBmaWxlc3lzdGVtIGlmIHRoZSBkZXZpY2UgZG9lcyBub3QgY29udGFpbiBhbnkuCmlmICEgYmxraWQgLXMgVFlQRSAtbyB2YWx1ZSAiJF9CTEtfREVWIjsgdGhlbgogICAgbWtmcy4iJF9CTEtfRlMiICIkX0JMS19ERVYiIC1MICIkX0JMS19MQkwiCmZpCgojIFVwZGF0ZSBmc3RhYiBpZiBuZWNlc3NhcnkuCmF3ayAtaSBpbnBsYWNlIC1mLSAvZXRjL2ZzdGFiIDw8RU9GCkJFR0lOIHsgaW5zZXJ0ID0gIkxBQkVMPSRfQkxLX0xCTCAkX0JMS19NTlQvICRfQkxLX0ZTIGRlZmF1bHRzIDAgMSIgfQovTEFCRUw9JF9CTEtfTEJMLyB7IGZvdW5kID0gMSB9CnsgcHJpbnQgfQpFTkQgeyBpZiAoIWZvdW5kKSBwcmludCBpbnNlcnQgPj5GSUxFTkFNRSB9CkVPRgoKIyBNb3VudCB0aGUgZGV2aWNlIHVzaW5nIGZzdGFiLgptb3VudCAiJF9CTEtfTU5UIi8K
   cpu: "2"
   vcpu: "2"
   graphics:
     listen: "0.0.0.0"
     type: vnc
-  inputs_order: ""
+  inputs_order: >-
+    ONEAPP_STORAGE_DEVICE,ONEAPP_STORAGE_LABEL,ONEAPP_STORAGE_FILESYSTEM,ONEAPP_STORAGE_MOUNTPOINT
   memory: "3072"
   os:
     arch: x86_64
-  user_inputs: {}
+  user_inputs:
+    oneapp_storage_device: "O|text|Storage device path||/dev/vdb"
+    oneapp_storage_label: "O|text|Storage device label||STORAGE"
+    oneapp_storage_filesystem: "O|text|Storage device filesystem||xfs"
+    oneapp_storage_mountpoint: "O|text|Storage device mountpoint||/var/lib/longhorn"
 logo: kubernetes.png
 disks:
 - "Kubernetes 1.23 OS disk - KVM"

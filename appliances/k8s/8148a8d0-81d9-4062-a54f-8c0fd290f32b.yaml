@@ -22,7 +22,7 @@ os-release: "3.14"
 os-arch: x86_64
 hypervisor: KVM
 opennebula_version: >-
-  5.13, 6.0, 6.1, 6.2, 6.3, 6.4
+  6.2, 6.3, 6.4
 opennebula_template:
   sched_requirements: HYPERVISOR=kvm
   context:
@@ -65,22 +65,22 @@ opennebula_template:
   os:
     arch: x86_64
   user_inputs:
-    oneapp_vnf_dhcp4_enabled: "O|boolean|Enable DHCPv4| |NO"
-    oneapp_vnf_dhcp4_interfaces: "O|text|DHCP4 - Listening Interfaces| |"
-    oneapp_vnf_dhcp4_lease_time: "O|number|*** DHCP4 - Lease Time [sec]| |3600"
-    oneapp_vnf_dns_enabled: "O|boolean|Enable DNS Server| |NO"
-    oneapp_vnf_dns_interfaces: "O|text|DNS - Listening Interfaces| |"
-    oneapp_vnf_dns_max_cache_ttl: "O|number|*** DNS - Maximum Caching Time [sec]| |3600"
-    oneapp_vnf_dns_use_rootservers: "O|boolean|*** DNS - Use Rootservers| |YES"
-    oneapp_vnf_lb_enabled: "O|boolean|ONEAPP_VNF_LB_ENABLED| |YES"
-    oneapp_vnf_lb_refresh_rate: "O|number|ONEAPP_VNF_LB_REFRESH_RATE| |30"
-    oneapp_vnf_lb0_ip: "O|text|ONEAPP_VNF_LB0_IP| |"
-    oneapp_vnf_lb0_port: "O|number|ONEAPP_VNF_LB0_PORT| |6443"
-    oneapp_vnf_lb0_method: "O|text|ONEAPP_VNF_LB0_METHOD| |dr"
-    oneapp_vnf_nat4_enabled: "O|boolean|Enable NAT| |NO"
-    oneapp_vnf_nat4_interfaces_out: "O|text|NAT - Outgoing Interfaces| |"
-    oneapp_vnf_router4_enabled: "O|boolean|Enable Router| |NO"
-    oneapp_vnf_router4_interfaces: "O|text|Router - Interfaces| |"
+    oneapp_vnf_dhcp4_enabled: "O|boolean|Enable DHCPv4||NO"
+    oneapp_vnf_dhcp4_interfaces: "O|text|DHCP4 - Listening Interfaces||"
+    oneapp_vnf_dhcp4_lease_time: "O|number|*** DHCP4 - Lease Time [sec]||3600"
+    oneapp_vnf_dns_enabled: "O|boolean|Enable DNS Server||NO"
+    oneapp_vnf_dns_interfaces: "O|text|DNS - Listening Interfaces||"
+    oneapp_vnf_dns_max_cache_ttl: "O|number|*** DNS - Maximum Caching Time [sec]||3600"
+    oneapp_vnf_dns_use_rootservers: "O|boolean|*** DNS - Use Rootservers||YES"
+    oneapp_vnf_lb_enabled: "O|boolean|ONEAPP_VNF_LB_ENABLED||YES"
+    oneapp_vnf_lb_refresh_rate: "O|number|ONEAPP_VNF_LB_REFRESH_RATE||30"
+    oneapp_vnf_lb0_ip: "O|text|ONEAPP_VNF_LB0_IP||"
+    oneapp_vnf_lb0_port: "O|number|ONEAPP_VNF_LB0_PORT||6443"
+    oneapp_vnf_lb0_method: "O|text|ONEAPP_VNF_LB0_METHOD||dr"
+    oneapp_vnf_nat4_enabled: "O|boolean|Enable NAT||NO"
+    oneapp_vnf_nat4_interfaces_out: "O|text|NAT - Outgoing Interfaces||"
+    oneapp_vnf_router4_enabled: "O|boolean|Enable Router||NO"
+    oneapp_vnf_router4_interfaces: "O|text|Router - Interfaces||"
 logo: router.png
 images:
 - name: kubernetes_vnf
