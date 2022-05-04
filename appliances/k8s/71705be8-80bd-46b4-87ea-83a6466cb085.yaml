@@ -5,8 +5,10 @@ publisher: OpenNebula Systems
 description: |-
   Beta release.
 
-  OS disk for the Kubernetes/Ubuntu appliance.
-short_description: OS disk of the Kubernets/Ubuntu appliance
+  OS disk for the Kubernetes 1.23 appliance.
+
+  Please refer to the [documentation](https://docs.opennebula.io/appliances/service/kubernetes_service.html).
+short_description: OS disk for the Kubernets 1.23 appliance
 tags:
 - disk
 - kubernetes
@@ -21,11 +23,11 @@ opennebula_version: >-
 images:
 - name: kubernetes_ubuntu
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes_ubuntu-6.2.0-1.20220429.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes_ubuntu-6.2.0-1.20220504.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: 391b1a9cbc779897ee7b9e3b3beb7a24
-    sha256: fea96b6b558541f391898b879fd6f0ac631f3595cdca037c313442b4dcb18232
+    md5: e30754209a248efeef092938276e6fb1
+    sha256: 43d207e79f58988a5c17aa247862b610a9fe7b9733aee56f9173b46c3cd556e6

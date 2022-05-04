@@ -5,8 +5,10 @@ publisher: OpenNebula Systems
 description: |-
   Beta release.
 
-  Empty Storage disk for the Kubernetes/Ubuntu appliance.
-short_description: Empty Storage disk for the Kubernetes/Ubuntu appliance
+  Empty Storage disk for the Kubernetes 1.23 appliance.
+
+  Please refer to the [documentation](https://docs.opennebula.io/appliances/service/kubernetes_service.html).
+short_description: Empty Storage disk for the Kubernetes 1.23 appliance
 tags:
 - disk
 - kubernetes
