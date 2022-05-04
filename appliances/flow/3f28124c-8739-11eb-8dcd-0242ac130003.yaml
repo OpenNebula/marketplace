@@ -32,7 +32,7 @@ os-release: '18.04'
 os-arch: x86_64
 hypervisor: FIRECRACKER
 type: 'SERVICE_TEMPLATE'
-opennebula_version: 5.13, 6.0, 6.1, 6.2, 6.3
+opennebula_version: 5.13, 6.0, 6.1, 6.2, 6.3, 6.4
 roles:
   server: 'K3s 1.17'
   agent: 'K3s 1.17'
