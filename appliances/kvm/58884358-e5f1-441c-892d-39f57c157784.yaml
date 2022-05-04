@@ -20,7 +20,7 @@ os-id: ALT Linux
 os-release: p10
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 6.2, 6.3
+opennebula_version: 6.2, 6.3, 6.4
 opennebula_template:
   context:
     network: 'YES'

@@ -20,7 +20,7 @@ os-release: '7.9'
 os-arch: x86_64
 hypervisor: ALL
 type: 'SERVICE_TEMPLATE'
-opennebula_version: 5.13, 6.0, 6.1, 6.2, 6.3
+opennebula_version: 5.13, 6.0, 6.1, 6.2, 6.3, 6.4
 roles:
   master: 'Kubernetes 1.21 - KVM'
   worker: 'Kubernetes 1.21 - KVM'
