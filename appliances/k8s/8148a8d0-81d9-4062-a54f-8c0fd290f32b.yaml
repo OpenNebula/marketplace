@@ -27,9 +27,7 @@ opennebula_template:
   sched_requirements: HYPERVISOR=kvm
   context:
     network: "YES"
-    oneapp_vnf_dhcp4_enabled: "$ONEAPP_VNF_DHCP4_ENABLED"
-    oneapp_vnf_dhcp4_interfaces: "$ONEAPP_VNF_DHCP4_INTERFACES"
-    oneapp_vnf_dhcp4_lease_time: "$ONEAPP_VNF_DHCP4_LEASE_TIME"
+    oneapp_vnf_dhcp4_enabled: "NO"
     oneapp_vnf_dns_enabled: "$ONEAPP_VNF_DNS_ENABLED"
     oneapp_vnf_dns_interfaces: "$ONEAPP_VNF_DNS_INTERFACES"
     oneapp_vnf_dns_max_cache_ttl: "$ONEAPP_VNF_DNS_MAX_CACHE_TTL"
@@ -37,8 +35,8 @@ opennebula_template:
     oneapp_vnf_keepalived_enabled: "YES"
     oneapp_vnf_keepalived_vrid: ""
     oneapp_vnf_lb0_ip: "$ONEAPP_VNF_LB0_IP"
-    oneapp_vnf_lb0_port: "$ONEAPP_K8S_PORT"
-    oneapp_vnf_lb0_method: "$ONEAPP_VNF_LB0_METHOD"
+    oneapp_vnf_lb0_port: "$ONEAPP_VNF_LB0_PORT"
+    oneapp_vnf_lb0_method: "dr"
     oneapp_vnf_lb0_protocol: "tcp"
     oneapp_vnf_lb0_scheduler: ""
     oneapp_vnf_lb_enabled: "YES"
@@ -56,31 +54,14 @@ opennebula_template:
   graphics:
     listen: "0.0.0.0"
     type: vnc
-  inputs_order: >-
-    ONEAPP_VNF_DHCP4_ENABLED,ONEAPP_VNF_DHCP4_INTERFACES,ONEAPP_VNF_DNS_ENABLED,ONEAPP_VNF_DNS_INTERFACES,ONEAPP_VNF_NAT4_ENABLED,ONEAPP_VNF_NAT4_INTERFACES_OUT,ONEAPP_VNF_ROUTER4_ENABLED,ONEAPP_VNF_ROUTER4_INTERFACES,ONEAPP_VNF_DHCP4_LEASE_TIME,ONEAPP_VNF_DNS_MAX_CACHE_TTL,ONEAPP_VNF_DNS_USE_ROOTSERVERS,ONEAPP_VNF_LB_ENABLED,ONEAPP_VNF_LB_REFRESH_RATE,ONEAPP_VNF_LB0_IP,ONEAPP_VNF_LB0_PORT,ONEAPP_VNF_LB0_METHOD
+  inputs_order: ""
   memory: "512"
   nic_default:
     model: virtio
   lxd_security_privileged: "true"
   os:
     arch: x86_64
-  user_inputs:
-    oneapp_vnf_dhcp4_enabled: "O|boolean|Enable DHCPv4||NO"
-    oneapp_vnf_dhcp4_interfaces: "O|text|DHCP4 - Listening Interfaces||"
-    oneapp_vnf_dhcp4_lease_time: "O|number|*** DHCP4 - Lease Time [sec]||3600"
-    oneapp_vnf_dns_enabled: "O|boolean|Enable DNS Server||NO"
-    oneapp_vnf_dns_interfaces: "O|text|DNS - Listening Interfaces||"
-    oneapp_vnf_dns_max_cache_ttl: "O|number|*** DNS - Maximum Caching Time [sec]||3600"
-    oneapp_vnf_dns_use_rootservers: "O|boolean|*** DNS - Use Rootservers||YES"
-    oneapp_vnf_lb_enabled: "O|boolean|ONEAPP_VNF_LB_ENABLED||YES"
-    oneapp_vnf_lb_refresh_rate: "O|number|ONEAPP_VNF_LB_REFRESH_RATE||30"
-    oneapp_vnf_lb0_ip: "O|text|ONEAPP_VNF_LB0_IP||"
-    oneapp_vnf_lb0_port: "O|number|ONEAPP_VNF_LB0_PORT||6443"
-    oneapp_vnf_lb0_method: "O|text|ONEAPP_VNF_LB0_METHOD||dr"
-    oneapp_vnf_nat4_enabled: "O|boolean|Enable NAT||NO"
-    oneapp_vnf_nat4_interfaces_out: "O|text|NAT - Outgoing Interfaces||"
-    oneapp_vnf_router4_enabled: "O|boolean|Enable Router||NO"
-    oneapp_vnf_router4_interfaces: "O|text|Router - Interfaces||"
+  user_inputs: {}
 logo: router.png
 images:
 - name: kubernetes_vnf

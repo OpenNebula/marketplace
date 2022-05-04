@@ -5,10 +5,12 @@ publisher: OpenNebula Systems
 description: |-
   Beta release.
 
-  Appliance with preinstalled Kubernetes/Ubuntu to work as a multi-master/multi-node cluster as OpenNebula OneFlow Service.
+  Appliance with preinstalled Kubernetes 1.23 to work as a multi-master/multi-node cluster orchestrated by [OneFlow](https://docs.opennebula.io/6.2/management_and_operations/multivm_service_management/appflow_elasticity.html).
 
   Preconfigured with Canal CNI networking (Calico and Flannel) and CNCF Longhorn to handle persistence.
-short_description: Appliance with preinstalled Kubernetes/Ubuntu for KVM hosts (Storage workers)
+
+  Please refer to the [documentation](https://docs.opennebula.io/appliances/service/kubernetes_service.html).
+short_description: Appliance with preinstalled Kubernetes 1.23 for KVM hosts (Storage workers)
 tags:
 - kubernetes
 - service
@@ -32,28 +34,21 @@ opennebula_template:
     oneapp_k8s_control_plane_ep: "$ONEAPP_VNF_LB0_IP"
     oneapp_k8s_pods_network: "$ONEAPP_K8S_PODS_NETWORK"
     oneapp_k8s_port: "$ONEAPP_K8S_PORT"
-    oneapp_k8s_loadbalancer_config: "$ONEAPP_K8S_LOADBALANCER_CONFIG"
-    oneapp_k8s_loadbalancer_range: "$ONEAPP_K8S_LOADBALANCER_RANGE"
     oneapp_storage_device: "$ONEAPP_STORAGE_DEVICE"
-    oneapp_storage_label: "$ONEAPP_STORAGE_LABEL"
+    oneapp_storage_label: "STORAGE"
     oneapp_storage_filesystem: "$ONEAPP_STORAGE_FILESYSTEM"
-    oneapp_storage_mountpoint: "$ONEAPP_STORAGE_MOUNTPOINT"
+    oneapp_storage_mountpoint: "/var/lib/longhorn"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
   cpu: "2"
   vcpu: "2"
   graphics:
     listen: "0.0.0.0"
     type: vnc
-  inputs_order: >-
-    ONEAPP_STORAGE_DEVICE,ONEAPP_STORAGE_LABEL,ONEAPP_STORAGE_FILESYSTEM,ONEAPP_STORAGE_MOUNTPOINT
+  inputs_order: ""
   memory: "3072"
   os:
     arch: x86_64
-  user_inputs:
-    oneapp_storage_device: "O|text|Storage device path||/dev/vdb"
-    oneapp_storage_label: "O|text|Storage device label||STORAGE"
-    oneapp_storage_filesystem: "O|text|Storage device filesystem||xfs"
-    oneapp_storage_mountpoint: "O|text|Storage device mountpoint||/var/lib/longhorn"
+  user_inputs: {}
 logo: kubernetes.png
 disks:
 - "Kubernetes 1.23 OS disk - KVM"
