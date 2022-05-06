@@ -49,4 +49,4 @@ opennebula_template:
   user_inputs: {}
 logo: kubernetes.png
 disks:
-- "Kubernetes 1.23 OS disk - KVM"
+- "Kubernetes 1.23 OS disk"
