@@ -76,8 +76,8 @@ opennebula_template: '{
     "Private": "M|network|Private||id:"
   },
   "custom_attrs": {
-    "ONEAPP_VROUTER_ETH1_VIP0": "O|text|Default Gateway VIP (I.P.V.4)||",
-    "ONEAPP_VNF_LB0_IP": "M|text|Control Plane Endpoint VIP (I.P.V.4)||",
+    "ONEAPP_VROUTER_ETH1_VIP0": "O|text|Default Gateway VIP (IPv4)||",
+    "ONEAPP_VNF_LB0_IP": "M|text|Control Plane Endpoint VIP (IPv4)||",
     "ONEAPP_K8S_PORT": "O|text|Kubernetes API port||6443",
     "ONEAPP_K8S_PODS_NETWORK": "O|text|Pods network in CIDR||10.244.0.0/16",
     "ONEAPP_K8S_LOADBALANCER_RANGE": "O|text|LoadBalancer IP range (default none)||",
