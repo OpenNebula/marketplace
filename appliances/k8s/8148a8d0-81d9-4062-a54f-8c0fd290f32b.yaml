@@ -1,5 +1,5 @@
 ---
-name: Kubernetes 1.23 VNF - KVM
+name: Kubernetes 1.23 VNF
 version: 1.23.6-6.2.0-1.20220428
 publisher: OpenNebula Systems
 description: |-
@@ -20,11 +20,10 @@ creation_time: 1651140000
 os-id: Alpine
 os-release: "3.14"
 os-arch: x86_64
-hypervisor: KVM
+hypervisor: ALL
 opennebula_version: >-
   6.2, 6.3, 6.4
 opennebula_template:
-  sched_requirements: HYPERVISOR=kvm
   context:
     network: "YES"
     oneapp_vnf_dhcp4_enabled: "NO"
