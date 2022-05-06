@@ -1,18 +1,18 @@
 ---
-name: Service Kubernetes 1.23 - KVM
+name: Service Kubernetes 1.23
 version: 1.23.6-6.2.0-1.20220428
 publisher: OpenNebula Systems
 description: |-
   Beta release.
 
-  Multi-master/multi-node Kubernetes 1.23 cluster for KVM hosts orchestrated by [OneFlow](https://docs.opennebula.io/6.2/management_and_operations/multivm_service_management/appflow_elasticity.html).
+  Multi-master/multi-node Kubernetes 1.23 cluster for KVM and vCenter hosts orchestrated by [OneFlow](https://docs.opennebula.io/6.2/management_and_operations/multivm_service_management/appflow_elasticity.html).
 
   Requires OneGate and OneFlow OpenNebula services.
 
   Please refer to the [documentation](https://docs.opennebula.io/appliances/service/kubernetes_service.html).
 
-  Based on VM templates: [Kubernetes 1.23 - KVM](/appliance/9b06e6e8-8c40-4a5c-b218-27c749db6a1a), [Kubernetes 1.23 VNF - KVM](/appliance/8148a8d0-81d9-4062-a54f-8c0fd290f32b), [Kubernetes 1.23 Storage - KVM](/appliance/8fe8be73-7e60-4f0e-9047-7b88e41b577a).
-short_description: Multi-master/multi-node Kubernetes 1.23 cluster for KVM hosts orchestrated by OneFlow
+  Based on VM templates: [Kubernetes 1.23](/appliance/9b06e6e8-8c40-4a5c-b218-27c749db6a1a), [Kubernetes 1.23 VNF](/appliance/8148a8d0-81d9-4062-a54f-8c0fd290f32b), [Kubernetes 1.23 Storage](/appliance/8fe8be73-7e60-4f0e-9047-7b88e41b577a).
+short_description: Multi-master/multi-node Kubernetes 1.23 cluster for KVM and vCenter hosts orchestrated by OneFlow
 tags:
 - kubernetes
 - oneflow
@@ -22,15 +22,15 @@ creation_time: 1651140000
 os-id: Ubuntu
 os-release: "20.04.4 LTS"
 os-arch: x86_64
-hypervisor: KVM
+hypervisor: ALL
 type: SERVICE_TEMPLATE
 opennebula_version: >-
   6.2, 6.3, 6.4
 roles:
-  vnf: "Kubernetes 1.23 VNF - KVM"
-  master: "Kubernetes 1.23 - KVM"
-  worker: "Kubernetes 1.23 - KVM"
-  storage: "Kubernetes 1.23 Storage - KVM"
+  vnf: "Kubernetes 1.23 VNF"
+  master: "Kubernetes 1.23"
+  worker: "Kubernetes 1.23"
+  storage: "Kubernetes 1.23 Storage"
 opennebula_template: '{
   "name": "Kubernetes",
   "deployment": "straight",
