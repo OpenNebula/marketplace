@@ -1,6 +1,6 @@
 ---
 name: Kubernetes 1.23
-version: 1.23.6-6.2.0-1.20220428
+version: 1.23.6-6.4.0-1.20220506
 publisher: OpenNebula Systems
 description: |-
   Beta release.
@@ -49,4 +49,4 @@ opennebula_template:
   user_inputs: {}
 logo: kubernetes.png
 disks:
-- "Kubernetes 1.23 OS disk"
+- "Kubernetes 1.23 OS disk - KVM"
