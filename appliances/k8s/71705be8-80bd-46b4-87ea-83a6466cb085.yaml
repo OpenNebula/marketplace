@@ -1,6 +1,6 @@
 ---
 name: Kubernetes 1.23 OS disk - KVM
-version: 1.23.6-6.2.0-1.20220428
+version: 1.23.6-6.4.0-1.20220506
 publisher: OpenNebula Systems
 description: |-
   Beta release.
@@ -23,11 +23,11 @@ opennebula_version: >-
 images:
 - name: kubernetes_ubuntu
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes_ubuntu-6.2.0-1.20220505.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes_ubuntu-6.4.0-1.20220506.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: e4632a61449a8598e42c04d3ae0ebd00
-    sha256: 97e17493a89e120258a6a64cb5b596cd8517824cdc2c43201599c612fcc8f7f6
+    md5: 1ebfd84faff42f5de18431c27d6b810f
+    sha256: 2bb7bbbb6e8732a03d824139c6dc0c61ec1f672cc2f895d15ea981f2c19d7114
