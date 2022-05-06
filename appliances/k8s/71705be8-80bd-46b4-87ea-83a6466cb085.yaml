@@ -1,5 +1,5 @@
 ---
-name: Kubernetes 1.23 OS disk - KVM
+name: Kubernetes 1.23 OS disk
 version: 1.23.6-6.4.0-1.20220506
 publisher: OpenNebula Systems
 description: |-
@@ -17,7 +17,7 @@ format: qcow2
 creation_time: 1651140000
 os-id: none
 os-arch: all
-hypervisor: KVM
+hypervisor: ALL
 opennebula_version: >-
   6.2, 6.3, 6.4
 images:
