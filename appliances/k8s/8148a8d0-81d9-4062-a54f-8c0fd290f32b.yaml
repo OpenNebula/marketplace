@@ -47,6 +47,7 @@ opennebula_template:
     oneapp_vnf_router4_enabled: "$ONEAPP_VNF_ROUTER4_ENABLED"
     oneapp_vnf_router4_interfaces: "$ONEAPP_VNF_ROUTER4_INTERFACES"
     oneapp_vrouter_eth0_vip0: "$ONEAPP_VNF_LB0_IP"
+    oneapp_vrouter_eth1_vip0: "$ONEAPP_VROUTER_ETH1_VIP0"
     report_ready: "YES"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
     token: "YES"

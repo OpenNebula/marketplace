@@ -23,11 +23,11 @@ opennebula_version: >-
 images:
 - name: kubernetes_ubuntu
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes_ubuntu-6.2.0-1.20220504.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes_ubuntu-6.2.0-1.20220505.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: e30754209a248efeef092938276e6fb1
-    sha256: 43d207e79f58988a5c17aa247862b610a9fe7b9733aee56f9173b46c3cd556e6
+    md5: e4632a61449a8598e42c04d3ae0ebd00
+    sha256: 97e17493a89e120258a6a64cb5b596cd8517824cdc2c43201599c612fcc8f7f6
