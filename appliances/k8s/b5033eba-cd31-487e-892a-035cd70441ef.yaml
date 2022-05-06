@@ -40,7 +40,7 @@ opennebula_template: '{
       "name": "vnf",
       "cardinality": 1,
       "min_vms": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VNF_LB0_IP\"\nONEAPP_VNF_LB0_PORT=\"$ONEAPP_K8S_PORT\"\nONEAPP_VNF_NAT4_ENABLED=\"$ONEAPP_VNF_NAT4_ENABLED\"\nONEAPP_VNF_NAT4_INTERFACES_OUT=\"$ONEAPP_VNF_NAT4_INTERFACES_OUT\"\nONEAPP_VNF_ROUTER4_ENABLED=\"$ONEAPP_VNF_ROUTER4_ENABLED\"\nONEAPP_VNF_ROUTER4_INTERFACES=\"$ONEAPP_VNF_ROUTER4_INTERFACES\"\n",
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\nNIC=[NAME=\"NIC1\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VNF_LB0_IP\"\nONEAPP_VNF_LB0_PORT=\"$ONEAPP_K8S_PORT\"\nONEAPP_VNF_NAT4_ENABLED=\"$ONEAPP_VNF_NAT4_ENABLED\"\nONEAPP_VNF_NAT4_INTERFACES_OUT=\"$ONEAPP_VNF_NAT4_INTERFACES_OUT\"\nONEAPP_VNF_ROUTER4_ENABLED=\"$ONEAPP_VNF_ROUTER4_ENABLED\"\nONEAPP_VNF_ROUTER4_INTERFACES=\"$ONEAPP_VNF_ROUTER4_INTERFACES\"\n",
       "elasticity_policies": [],
       "scheduled_policies": []
     },
@@ -48,7 +48,7 @@ opennebula_template: '{
       "name": "master",
       "cardinality": 1,
       "min_vms": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VNF_LB0_IP\"\nONEAPP_K8S_PODS_NETWORK=\"$ONEAPP_K8S_PODS_NETWORK\"\nONEAPP_K8S_PORT=\"$ONEAPP_K8S_PORT\"\nONEAPP_K8S_LOADBALANCER_RANGE=\"$ONEAPP_K8S_LOADBALANCER_RANGE\"\nONEAPP_K8S_LOADBALANCER_CONFIG=\"$ONEAPP_K8S_LOADBALANCER_CONFIG\"\n",
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VNF_LB0_IP\"\nONEAPP_K8S_PODS_NETWORK=\"$ONEAPP_K8S_PODS_NETWORK\"\nONEAPP_K8S_PORT=\"$ONEAPP_K8S_PORT\"\nONEAPP_K8S_LOADBALANCER_RANGE=\"$ONEAPP_K8S_LOADBALANCER_RANGE\"\nONEAPP_K8S_LOADBALANCER_CONFIG=\"$ONEAPP_K8S_LOADBALANCER_CONFIG\"\n",
       "parents": ["vnf"],
       "elasticity_policies": [],
       "scheduled_policies": []
@@ -56,7 +56,7 @@ opennebula_template: '{
     {
       "name": "worker",
       "cardinality": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VNF_LB0_IP\"\nONEAPP_K8S_PODS_NETWORK=\"$ONEAPP_K8S_PODS_NETWORK\"\nONEAPP_K8S_PORT=\"$ONEAPP_K8S_PORT\"\n",
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VNF_LB0_IP\"\nONEAPP_K8S_PODS_NETWORK=\"$ONEAPP_K8S_PODS_NETWORK\"\nONEAPP_K8S_PORT=\"$ONEAPP_K8S_PORT\"\n",
       "parents": ["master"],
       "elasticity_policies": [],
       "scheduled_policies": []
@@ -65,27 +65,29 @@ opennebula_template: '{
       "name": "storage",
       "cardinality": 1,
       "min_vms": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VNF_LB0_IP\"\nONEAPP_K8S_PODS_NETWORK=\"$ONEAPP_K8S_PODS_NETWORK\"\nONEAPP_K8S_PORT=\"$ONEAPP_K8S_PORT\"\nONEAPP_STORAGE_DEVICE=\"$ONEAPP_STORAGE_DEVICE\"\nONEAPP_STORAGE_FILESYSTEM=\"$ONEAPP_STORAGE_FILESYSTEM\"\n",
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VNF_LB0_IP\"\nONEAPP_K8S_PODS_NETWORK=\"$ONEAPP_K8S_PODS_NETWORK\"\nONEAPP_K8S_PORT=\"$ONEAPP_K8S_PORT\"\nONEAPP_STORAGE_DEVICE=\"$ONEAPP_STORAGE_DEVICE\"\nONEAPP_STORAGE_FILESYSTEM=\"$ONEAPP_STORAGE_FILESYSTEM\"\n",
       "parents": ["master"],
       "elasticity_policies": [],
       "scheduled_policies": []
     }
   ],
   "networks": {
-    "Public": "M|network|Public||id:"
+    "Public": "M|network|Public||id:",
+    "Private": "M|network|Private||id:"
   },
   "custom_attrs": {
-    "ONEAPP_VNF_LB0_IP": "M|text|Control Plane Endpoint (I.P.V.4[:PORT])||",
-    "ONEAPP_K8S_PODS_NETWORK": "O|text|Pods network in CIDR||10.244.0.0/16",
+    "ONEAPP_VROUTER_ETH1_VIP0": "O|text|Default Gateway VIP (I.P.V.4)||",
+    "ONEAPP_VNF_LB0_IP": "M|text|Control Plane Endpoint VIP (I.P.V.4)||",
     "ONEAPP_K8S_PORT": "O|text|Kubernetes API port||6443",
+    "ONEAPP_K8S_PODS_NETWORK": "O|text|Pods network in CIDR||10.244.0.0/16",
     "ONEAPP_K8S_LOADBALANCER_RANGE": "O|text|LoadBalancer IP range (default none)||",
-    "ONEAPP_K8S_LOADBALANCER_CONFIG": "O|text64|Custom LoadBalancer config (default none)||",
+    "ONEAPP_K8S_LOADBALANCER_CONFIG": "O|text64|MetalLB custom LoadBalancer config (default none)||",
     "ONEAPP_STORAGE_DEVICE": "M|text|Storage device path||/dev/vdb",
     "ONEAPP_STORAGE_FILESYSTEM": "O|text|Storage device filesystem||xfs",
-    "ONEAPP_VNF_NAT4_ENABLED": "O|boolean|Enable NAT||NO",
-    "ONEAPP_VNF_NAT4_INTERFACES_OUT": "O|text|NAT - Outgoing Interfaces (default none)||",
-    "ONEAPP_VNF_ROUTER4_ENABLED": "O|boolean|Enable Router||NO",
-    "ONEAPP_VNF_ROUTER4_INTERFACES": "O|text|Router - Interfaces (default none)||"
+    "ONEAPP_VNF_NAT4_ENABLED": "O|boolean|Enable NAT||YES",
+    "ONEAPP_VNF_NAT4_INTERFACES_OUT": "O|text|NAT - Outgoing Interfaces||eth0",
+    "ONEAPP_VNF_ROUTER4_ENABLED": "O|boolean|Enable Router||YES",
+    "ONEAPP_VNF_ROUTER4_INTERFACES": "O|text|Router - Interfaces||eth0,eth1"
   },
   "ready_status_gate": true
 }'
