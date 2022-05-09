@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 20.04
-version: 6.2.0-1.20211027
+version: 6.4.0-1.20220504
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 20.04 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Ubuntu 20.04 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1635328783
+creation_time: 1652088478
 os-id: Ubuntu
 os-release: '20.04'
 os-arch: x86_64
@@ -35,19 +35,15 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/ubuntu.png
   lxd_security_privileged: 'true'
-  info: >-
-    Please do not use this VM Template for vCenter VMs. Refer to the documentation
-    https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: ubuntu.png
 images:
 - name: ubuntu2004
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004-6.2.0-1.20211022.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004-6.4.0-1.20220504.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: be6311629a17199ae2193679a61e71e7
-    sha256: 278a5946e82bd942f8473718caff9a773664a7f54980687e8ec93040c4e08002
+    md5: bff868b5e538a82a33990b6938c44066
+    sha256: 16e058bbe149f9b6c78443408d4a5730673240bf92cd3e9606ed82bbdfdbfb82

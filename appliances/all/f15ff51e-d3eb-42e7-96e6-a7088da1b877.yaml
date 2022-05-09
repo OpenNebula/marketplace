@@ -1,6 +1,6 @@
 ---
-name: Ubuntu Minimal 20.04 - KVM
-version: 6.2.0-1.20211027
+name: Ubuntu Minimal 20.04
+version: 6.4.0-1.20220504
 publisher: OpenNebula Systems
 description: |-
   Ubuntu Minimal 20.04 image ready for your OpenNebula deployment.
@@ -12,15 +12,15 @@ description: |-
   **Note**: Remember to update the template in order to add a network after importing it.
 
   **WARNING: Learn more about [Minimal Ubuntu](https://wiki.ubuntu.com/Minimal) images before using them! They focus on minimal image size and fast boot times and are suitable for short-living environments. They don't come with virtual console support and any boot problems are hard to troubleshoot over VNC. For common use check regular Ubuntu images.**
-short_description: Ubuntu Minimal 20.04 image for KVM
+short_description: Ubuntu Minimal 20.04 image for KVM and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1635328783
+creation_time: 1652088478
 os-id: Ubuntu
 os-release: '20.04'
 os-arch: x86_64
-hypervisor: KVM
+hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
   6.1, 6.2, 6.3, 6.4
@@ -43,11 +43,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2004min
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004min-6.2.0-1.20211022.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004min-6.4.0-1.20220504.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: ed7aa8ce05d2ad6aebc6908332184064
-    sha256: a04e59dc368fc6aa2f283d67e3527d9b570df0d309377d07e0952a04701ea1cb
+    md5: c12edbf87aba54c94697f5ff7f2a4eec
+    sha256: 6bdf9acc32a787f58f623f9d5358c0e96b030780b5ee26ddcc346e62ce10f9cd

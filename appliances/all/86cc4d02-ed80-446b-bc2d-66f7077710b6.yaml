@@ -1,6 +1,6 @@
 ---
 name: Oracle Linux 8
-version: 6.2.0-1.20211027
+version: 6.4.0-1.20220509
 publisher: OpenNebula Systems
 description: |-
   Oracle Linux 8 image ready for your OpenNebula deployment.
@@ -15,7 +15,7 @@ tags:
 - oracle
 - oraclelinux
 format: qcow2
-creation_time: 1635328783
+creation_time: 1652088478
 os-id: Oracle Linux
 os-release: '8.3'
 os-arch: x86_64
@@ -35,18 +35,14 @@ opennebula_template:
   os:
     arch: x86_64
   lxd_security_privileged: 'true'
-  info: >-
-    Please do not use this VM Template for vCenter VMs. Refer to the documentation
-    https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: ol.png
 images:
 - name: ol8
-  url: https://d24fmfybwxpuhu.cloudfront.net/ol8-6.2.0-1.20211022.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/ol8-6.4.0-1.20220509.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 39728447488
   checksum:
-    md5: 89ad172902bc8a52264b40f734a7a85c
-    sha256: c60d283c9aaf15765d1343fab13c4996269ed3dd4d6d8d328fe9621338aab209
+    md5: ffc05a02a1bd5f5b2dd5375edef064f8
+    sha256: bfb686773b1af35c88a6f95f95305eb052800d10352b980a0258ca936aae1a2d

@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 18.04
-version: 6.2.0-1.20211027
+version: 6.4.0-1.20220504
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 18.04 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Ubuntu 18.04 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1635328783
+creation_time: 1652088478
 os-id: Ubuntu
 os-release: '18.04'
 os-arch: x86_64
@@ -35,19 +35,15 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/ubuntu.png
   lxd_security_privileged: 'true'
-  info: >-
-    Please do not use this VM Template for vCenter VMs. Refer to the documentation
-    https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: ubuntu.png
 images:
 - name: ubuntu1804
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1804-6.2.0-1.20211022.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1804-6.4.0-1.20220504.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 9fe0aea0dbe80d7f7c794890b81f0c38
-    sha256: e9efbe3fdb7cf0b379ee25d2690ad05c26105e041904e6663392509603d89c8e
+    md5: 417a5a8cc4cdace119c3965842c9fb9e
+    sha256: 54a8ad83cbb678612c6b35ae4ade2e83246f69806b16317c4848a0d0a7f46954

@@ -1,6 +1,6 @@
 ---
 name: Devuan 2
-version: 6.2.0-1.20211027
+version: 6.4.0-1.20220504
 publisher: OpenNebula Systems
 description: |-
   Devuan 2 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Devuan 2 image for KVM, LXD and vCenter
 tags:
 - devuan
 format: qcow2
-creation_time: 1635328783
+creation_time: 1652088478
 os-id: Devuan
 os-release: '2'
 os-arch: x86_64
@@ -35,18 +35,14 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/linux.png
   lxd_security_privileged: 'true'
-  info: >-
-    Please do not use this VM Template for vCenter VMs. Refer to the documentation
-    https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: devuan.png
 images:
 - name: devuan2
-  url: https://d24fmfybwxpuhu.cloudfront.net/devuan2-6.2.0-1.20211022.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/devuan2-6.4.0-1.20220504.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21473787904
   checksum:
-    md5: 4c12e930b4b77b9e760bf0383435c381
-    sha256: 749b31ff412126a633fc5caff566ef86dae885ab60f8ccd6cab7169a1de7191d
+    md5: af14b46d601025a1e737f7271dac5bcb
+    sha256: 72b8419cb55653d1dd747a71d3e49fa37b6f3b32d85baa17fd98d8426f42df5b

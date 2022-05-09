@@ -1,6 +1,6 @@
 ---
 name: Alpine Linux 3.14
-version: 6.2.0-1.20211027
+version: 6.4.0-1.20220504
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.14 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Alpine Linux 3.14 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1635328783
+creation_time: 1652088478
 os-id: Alpine Linux
 os-release: '3.14'
 os-arch: x86_64
@@ -37,18 +37,14 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/linux.png
   lxd_security_privileged: 'true'
-  info: >-
-    Please do not use this VM Template for vCenter VMs. Refer to the documentation
-    https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: alpine.png
 images:
 - name: alpine314
-  url: https://d24fmfybwxpuhu.cloudfront.net/alpine314-6.2.0-1.20211022.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alpine314-6.4.0-1.20220504.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 268435456
   checksum:
-    md5: 5ff0f4cd3bc864cf08b342367e8fe681
-    sha256: 4010545ff7224a47f95af6a875e176117a9ea68ceaee2d54c9488a64becac230
+    md5: de19798b2f9d495a77976e2863224a02
+    sha256: 9da1853b6bafb7a548182bf1b5c9b0f80632e683fb71af3390ebb3bd9e5aaf84

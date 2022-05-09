@@ -1,6 +1,6 @@
 ---
 name: Amazon Linux 2
-version: 6.2.0-1.20211027
+version: 6.4.0-1.20220508
 publisher: OpenNebula Systems
 description: |-
   [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/) image ready for the OpenNebula deployment with [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html) installed. The use of this software is governed by the terms of the AWS Customer Agreement (https://aws.amazon.com/agreement/) or other agreement with AWS governing the use of AWS services.
@@ -12,7 +12,7 @@ short_description: Amazon Linux 2 image for KVM, LXD and vCenter.
 tags:
 - amazon
 format: qcow2
-creation_time: 1635328783
+creation_time: 1652088478
 os-id: Amazon Linux
 os-release: '2'
 os-arch: x86_64
@@ -33,18 +33,14 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/linux.png
   lxd_security_privileged: 'true'
-  info: >-
-    Please do not use this VM Template for vCenter VMs. Refer to the documentation
-    https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: amazon.png
 images:
 - name: amazon2
-  url: https://d24fmfybwxpuhu.cloudfront.net/amazon2-6.2.0-1.20211022.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/amazon2-6.4.0-1.20220508.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 26843545600
   checksum:
-    md5: 9d7912934a14fef0281952e76d455ce5
-    sha256: c6d97729c125fcf104bcd0946927b9ba18fc50e5b8205c30410dbc3ac7db01be
+    md5: e36d478b5f89a3ff9013b118dc1e6e68
+    sha256: 2b0d37d160405f1934b5b5ceab8d29e0fa9b00f59cc8c62111c8567fe2d2e7b3

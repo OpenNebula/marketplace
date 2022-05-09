@@ -1,6 +1,6 @@
 ---
 name: CentOS 7
-version: 6.2.0-1.20211027
+version: 6.4.0-1.20220508
 publisher: OpenNebula Systems
 description: |-
   CentOS 7 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: CentOS 7 image for KVM, LXD and vCenter.
 tags:
 - centos
 format: qcow2
-creation_time: 1635328783
+creation_time: 1652088478
 os-id: CentOS
 os-release: '7.9'
 os-arch: x86_64
@@ -35,18 +35,14 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/centos.png
   lxd_security_privileged: 'true'
-  info: >-
-    Please do not use this VM Template for vCenter VMs. Refer to the documentation
-    https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: centos-5.5.png
 images:
 - name: centos7
-  url: https://d24fmfybwxpuhu.cloudfront.net/centos7-6.2.0-1.20211022.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/centos7-6.4.0-1.20220508.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 8589934592
   checksum:
-    md5: 213509b5e5c4e5793ea57f087961a9bf
-    sha256: 56da7096a344a6e876b12f7c8e376ba8fb4eecf2730a00e3cfb5dca5f70c3210
+    md5: 02f914e5db532ab7c33a241a67581a3b
+    sha256: cb308e5f003893000e605b70a462a8a667227aaec673c4c1630012c7f3348d88

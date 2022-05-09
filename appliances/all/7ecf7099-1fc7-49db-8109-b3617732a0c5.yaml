@@ -1,6 +1,6 @@
 ---
 name: CentOS 8 Stream
-version: 6.2.0-1.20211027
+version: 6.4.0-1.20220509
 publisher: OpenNebula Systems
 description: |-
   CentOS 8 Stream image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: CentOS 8 Stream image for KVM, LXD and vCenter.
 tags:
 - centos
 format: qcow2
-creation_time: 1635328783
+creation_time: 1652088478
 os-id: CentOS
 os-release: '8'
 os-arch: x86_64
@@ -35,19 +35,15 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/centos.png
   lxd_security_privileged: 'true'
-  info: >-
-    Please do not use this VM Template for vCenter VMs. Refer to the documentation
-    https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: centos-5.5.png
 images:
 - name: centos8stream
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/centos8stream-6.2.0-1.20211022.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/centos8stream-6.4.0-1.20220509.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: f622ed148a1ac90eea447fde559dc7e2
-    sha256: 441ef149016cd4f8e73d3c4a2572c978fd6811d531d7e528f279f5469923758b
+    md5: 858ff69a7b77ad90e2f4199cc81cdb33
+    sha256: 5861f81f6e36f7ff4ec5a95288d25dc7aca46c95b3ae6469d0abad6684e3c6af

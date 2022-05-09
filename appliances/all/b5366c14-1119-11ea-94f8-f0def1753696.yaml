@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 14.04
-version: 6.2.0-1.20211027
+version: 6.4.0-1.20220504
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 14.04 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Ubuntu 14.04 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1635328783
+creation_time: 1652088478
 os-id: Ubuntu
 os-release: '14.04'
 os-arch: x86_64
@@ -35,19 +35,15 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/ubuntu.png
   lxd_security_privileged: 'true'
-  info: >-
-    Please do not use this VM Template for vCenter VMs. Refer to the documentation
-    https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: ubuntu.png
 images:
 - name: ubuntu1404
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1404-6.2.0-1.20211022.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1404-6.4.0-1.20220504.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: f6bcf364f9f42a3922038e9c75717a68
-    sha256: 9625e4333b192c5c40ea701b0de037b0858b9ad1849ee7e8dfd5f15e2f7a16d5
+    md5: c47c3a8ccd6838d669655e9cae00a6eb
+    sha256: e7da65f1cb04b909d61019aa744f2f97ac9aade308910663de74b565b21f62c9
