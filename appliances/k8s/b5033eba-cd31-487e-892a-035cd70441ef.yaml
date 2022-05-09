@@ -48,7 +48,7 @@ opennebula_template: '{
       "name": "master",
       "cardinality": 1,
       "min_vms": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VNF_LB0_IP\"\nONEAPP_K8S_PODS_NETWORK=\"$ONEAPP_K8S_PODS_NETWORK\"\nONEAPP_K8S_PORT=\"$ONEAPP_K8S_PORT\"\nONEAPP_K8S_LOADBALANCER_RANGE=\"$ONEAPP_K8S_LOADBALANCER_RANGE\"\nONEAPP_K8S_LOADBALANCER_CONFIG=\"$ONEAPP_K8S_LOADBALANCER_CONFIG\"\n",
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VNF_LB0_IP\"\nONEAPP_K8S_PODS_NETWORK=\"$ONEAPP_K8S_PODS_NETWORK\"\nONEAPP_K8S_PORT=\"$ONEAPP_K8S_PORT\"\nONEAPP_K8S_EXTRA_SANS=\"$ONEAPP_K8S_EXTRA_SANS\"\nONEAPP_K8S_LOADBALANCER_RANGE=\"$ONEAPP_K8S_LOADBALANCER_RANGE\"\nONEAPP_K8S_LOADBALANCER_CONFIG=\"$ONEAPP_K8S_LOADBALANCER_CONFIG\"\n",
       "parents": ["vnf"],
       "elasticity_policies": [],
       "scheduled_policies": []
@@ -80,6 +80,7 @@ opennebula_template: '{
     "ONEAPP_VNF_LB0_IP": "M|text|Control Plane Endpoint VIP (IPv4)||",
     "ONEAPP_K8S_PORT": "O|text|Kubernetes API port||6443",
     "ONEAPP_K8S_PODS_NETWORK": "O|text|Pods network in CIDR||10.244.0.0/16",
+    "ONEAPP_K8S_EXTRA_SANS": "O|text|ApiServer extra certificate SANs||localhost,127.0.0.1",
     "ONEAPP_K8S_LOADBALANCER_RANGE": "O|text|LoadBalancer IP range (default none)||",
     "ONEAPP_K8S_LOADBALANCER_CONFIG": "O|text64|MetalLB custom LoadBalancer config (default none)||",
     "ONEAPP_STORAGE_DEVICE": "M|text|Storage device path||/dev/vdb",
