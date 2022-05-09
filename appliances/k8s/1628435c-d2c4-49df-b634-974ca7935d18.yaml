@@ -1,6 +1,6 @@
 ---
 name: Kubernetes 1.23 Storage disk
-version: 1.23.6-6.2.0-1.20220428
+version: 1.23.6-6.4.0-1.20220509
 publisher: OpenNebula Systems
 description: |-
   Beta release.
@@ -23,7 +23,7 @@ opennebula_version: >-
 images:
 - name: kubernetes_ubuntu_storage
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes_ubuntu_storage-6.2.0-1.20220428.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes_ubuntu_storage-6.4.0-1.20220509.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2

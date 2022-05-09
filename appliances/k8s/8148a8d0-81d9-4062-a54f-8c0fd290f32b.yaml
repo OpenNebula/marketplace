@@ -1,6 +1,6 @@
 ---
 name: Kubernetes 1.23 VNF
-version: 1.23.6-6.2.0-1.20220428
+version: 1.23.6-6.4.0-1.20220506
 publisher: OpenNebula Systems
 description: |-
   Beta release.
@@ -66,11 +66,11 @@ logo: router.png
 images:
 - name: kubernetes_vnf
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.2.0-1.20220411.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.4.0-1.20220506.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: a70ad56b8f5f13ea949d29e2169302a3
-    sha256: 21ae7b565e810ca4c924eaf4e55edb585eca50458b604171a0f8fa09a77a0171
+    md5: 31ebc9d41f147712a1fbb9b924014709
+    sha256: 7716999ecc4f303413ae276c6c7892fca5fc5b7aeb7dcffd55acfe1d26f15777
