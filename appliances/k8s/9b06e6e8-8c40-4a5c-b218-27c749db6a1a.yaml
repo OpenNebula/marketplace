@@ -34,6 +34,7 @@ opennebula_template:
     oneapp_vnf_lb0_ip: "$ONEAPP_VNF_LB0_IP"
     oneapp_k8s_port: "$ONEAPP_K8S_PORT"
     oneapp_k8s_pods_network: "$ONEAPP_K8S_PODS_NETWORK"
+    oneapp_k8s_extra_sans: "$ONEAPP_K8S_EXTRA_SANS"
     oneapp_k8s_loadbalancer_config: "$ONEAPP_K8S_LOADBALANCER_CONFIG"
     oneapp_k8s_loadbalancer_range: "$ONEAPP_K8S_LOADBALANCER_RANGE"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
