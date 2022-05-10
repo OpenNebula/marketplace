@@ -1,6 +1,6 @@
 ---
 name: Rocky Linux 8
-version: 6.2.0-1.20211027
+version: 6.4.0-1.20220509
 publisher: OpenNebula Systems
 description: |-
   Rocky Linux 8 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Rocky Linux 8 image for KVM, LXD and vCenter.
 tags:
 - rockylinux
 format: qcow2
-creation_time: 1635328783
+creation_time: 1652088478
 os-id: RockyLinux
 os-release: '8.4'
 os-arch: x86_64
@@ -34,18 +34,14 @@ opennebula_template:
   os:
     arch: x86_64
   lxd_security_privileged: 'true'
-  info: >-
-    Please do not use this VM Template for vCenter VMs. Refer to the documentation
-    https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: rocky.png
 images:
 - name: rocky8
-  url: https://d24fmfybwxpuhu.cloudfront.net/rocky8-6.2.0-1.20211022.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/rocky8-6.4.0-1.20220509.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: dd1e2f9d16b52c52a296becaf5e6a85e
-    sha256: 3852c334dd8891d3c6c2dc5095df0d7821f72513bb145080027acc0aa1f41b03
+    md5: e9b37f388f171bfefcb4888ea2174363
+    sha256: e0b324c09414abb8b50ccb79fd78cb1fc44a276c10a457aed868b063381f6297

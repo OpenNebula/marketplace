@@ -1,6 +1,6 @@
 ---
 name: Debian 10
-version: 6.2.0-1.20211027
+version: 6.4.0-1.20220504
 publisher: OpenNebula Systems
 description: |-
   Debian 10 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Debian 10 image for KVM, LXD and vCenter
 tags:
 - debian
 format: qcow2
-creation_time: 1635328783
+creation_time: 1652088478
 os-id: Debian
 os-release: '10.9'
 os-arch: x86_64
@@ -35,18 +35,14 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/debian.png
   lxd_security_privileged: 'true'
-  info: >-
-    Please do not use this VM Template for vCenter VMs. Refer to the documentation
-    https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: debian.png
 images:
 - name: debian10
-  url: https://d24fmfybwxpuhu.cloudfront.net/debian10-6.2.0-1.20211022.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/debian10-6.4.0-1.20220504.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: dfd113b333d2f1e8d17013e64eebf173
-    sha256: e7f46fbe2b8d30968867a2e01d57f621f21100190d1ef75164d58051593bab71
+    md5: 11127bf69eb7b91a08c334ac8bb00f81
+    sha256: 68ce8a41e68e890674b06bd469f7cfb2895b9cb030bd1543223c2c344651df6a

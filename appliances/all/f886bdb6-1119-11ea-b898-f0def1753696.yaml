@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 16.04
-version: 6.2.0-1.20211027
+version: 6.4.0-1.20220504
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 16.04 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Ubuntu 16.04 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1635328783
+creation_time: 1652088478
 os-id: Ubuntu
 os-release: '16.04'
 os-arch: x86_64
@@ -35,19 +35,15 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/ubuntu.png
   lxd_security_privileged: 'true'
-  info: >-
-    Please do not use this VM Template for vCenter VMs. Refer to the documentation
-    https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
 logo: ubuntu.png
 images:
 - name: ubuntu1604
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1604-6.2.0-1.20211022.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1604-6.4.0-1.20220504.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 250443da197e9d985dad3a685614f4ec
-    sha256: 7a48af02cd316dc7f5e8f8b6fcb0d349b2d76e61d46b05f997ff23025a393d7e
+    md5: 33e3fd8a84328f229137145b25a35d0f
+    sha256: a03252dc1e3547fc125c1e5f54daea7068856741bcb83cb23add6a5e63ead612
