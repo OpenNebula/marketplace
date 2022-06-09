@@ -1,6 +1,6 @@
 ---
 name: Kubernetes 1.23 VNF
-version: 1.23.6-6.4.0-1.20220509
+version: 1.23.7-6.4.0-1.20220609
 publisher: OpenNebula Systems
 description: |-
   Beta release.
@@ -26,6 +26,8 @@ opennebula_version: >-
 opennebula_template:
   context:
     network: "YES"
+    oneapp_vrouter_eth0_vip0: "$ONEAPP_VROUTER_ETH0_VIP0"
+    oneapp_vrouter_eth1_vip0: "$ONEAPP_VROUTER_ETH1_VIP0"
     oneapp_vnf_dhcp4_enabled: "NO"
     oneapp_vnf_dns_enabled: "$ONEAPP_VNF_DNS_ENABLED"
     oneapp_vnf_dns_interfaces: "$ONEAPP_VNF_DNS_INTERFACES"
@@ -38,15 +40,24 @@ opennebula_template:
     oneapp_vnf_lb0_method: "dr"
     oneapp_vnf_lb0_protocol: "tcp"
     oneapp_vnf_lb0_scheduler: ""
-    oneapp_vnf_lb_enabled: "YES"
+    oneapp_vnf_lb_enabled: "$ONEAPP_VNF_LB_ENABLED"
     oneapp_vnf_lb_onegate_enabled: "YES"
     oneapp_vnf_lb_refresh_rate: "$ONEAPP_VNF_LB_REFRESH_RATE"
     oneapp_vnf_nat4_enabled: "$ONEAPP_VNF_NAT4_ENABLED"
     oneapp_vnf_nat4_interfaces_out: "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
     oneapp_vnf_router4_enabled: "$ONEAPP_VNF_ROUTER4_ENABLED"
     oneapp_vnf_router4_interfaces: "$ONEAPP_VNF_ROUTER4_INTERFACES"
-    oneapp_vrouter_eth0_vip0: "$ONEAPP_VNF_LB0_IP"
-    oneapp_vrouter_eth1_vip0: "$ONEAPP_VROUTER_ETH1_VIP0"
+    oneapp_vnf_haproxy_enabled: "$ONEAPP_VNF_HAPROXY_ENABLED"
+    oneapp_vnf_haproxy_onegate_enabled: "YES"
+    oneapp_vnf_haproxy_interfaces: "$ONEAPP_VNF_HAPROXY_INTERFACES"
+    oneapp_vnf_haproxy_refresh_rate: "$ONEAPP_VNF_HAPROXY_REFRESH_RATE"
+    oneapp_vnf_haproxy_config: "$ONEAPP_VNF_HAPROXY_CONFIG"
+    oneapp_vnf_haproxy_lb0_ip: "$ONEAPP_VNF_HAPROXY_LB0_IP"
+    oneapp_vnf_haproxy_lb0_port: "$ONEAPP_VNF_HAPROXY_LB0_PORT"
+    oneapp_vnf_haproxy_lb1_ip: "$ONEAPP_VNF_HAPROXY_LB1_IP"
+    oneapp_vnf_haproxy_lb1_port: "$ONEAPP_VNF_HAPROXY_LB1_PORT"
+    oneapp_vnf_haproxy_lb2_ip: "$ONEAPP_VNF_HAPROXY_LB2_IP"
+    oneapp_vnf_haproxy_lb2_port: "$ONEAPP_VNF_HAPROXY_LB2_PORT"
     report_ready: "YES"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
     token: "YES"
@@ -65,12 +76,11 @@ opennebula_template:
 logo: router.png
 images:
 - name: kubernetes_vnf
-  url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.4.0-1.20220509.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.4.0-1.20220609.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: 81ffd1f60c8f4860726ac712498daddd
-    sha256: 5b2d33d98b20592a9750eda8ef78c0c976105d2d7048ef03d63d1ab23addc480
+    md5: 921bc316ee84ae967b7dd5538000619f
+    sha256: 19a20fe58330663fe26272ab6213b2649e7859768632d755d1b16f797ba21113
