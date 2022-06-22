@@ -1,14 +1,14 @@
 ---
-name: Kubernetes 1.23 Storage disk
-version: 1.23.6-6.4.0-1.20220509
+name: Kubernetes 1.24 Storage disk
+version: 1.24.1-6.4.0-1.20220622
 publisher: OpenNebula Systems
 description: |-
   Beta release.
 
-  Empty Storage disk for the Kubernetes 1.23 appliance.
+  Empty Storage disk for the Kubernetes 1.24 appliance.
 
   Please refer to the [documentation](https://docs.opennebula.io/appliances/service/kubernetes_service.html).
-short_description: Empty Storage disk for the Kubernetes 1.23 appliance
+short_description: Empty Storage disk for the Kubernetes 1.24 appliance
 tags:
 - disk
 - kubernetes
@@ -22,7 +22,7 @@ opennebula_version: >-
   6.2, 6.3, 6.4
 images:
 - name: kubernetes_ubuntu_storage
-  url: https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes_ubuntu_storage-6.4.0-1.20220509.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes_ubuntu_storage-6.4.0-1.20220622.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
