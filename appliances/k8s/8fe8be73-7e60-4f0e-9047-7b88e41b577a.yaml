@@ -1,16 +1,16 @@
 ---
-name: Kubernetes 1.23 Storage
-version: 1.23.7-6.4.0-1.20220609
+name: Kubernetes 1.24 Storage
+version: 1.24.1-6.4.0-1.20220622
 publisher: OpenNebula Systems
 description: |-
   Beta release.
 
-  Appliance with preinstalled Kubernetes 1.23 to work as a multi-master/multi-node cluster orchestrated by [OneFlow](https://docs.opennebula.io/6.2/management_and_operations/multivm_service_management/appflow_elasticity.html).
+  Appliance with preinstalled Kubernetes 1.24 to work as a multi-master/multi-node cluster orchestrated by [OneFlow](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/appflow_elasticity.html).
 
   Preconfigured with Canal CNI networking (Calico and Flannel) and CNCF Longhorn to handle persistence.
 
   Please refer to the [documentation](https://docs.opennebula.io/appliances/service/kubernetes_service.html).
-short_description: Appliance with preinstalled Kubernetes 1.23 for KVM and vCenter hosts (Storage workers)
+short_description: Appliance with preinstalled Kubernetes 1.24 for KVM and vCenter hosts (Storage workers)
 tags:
 - kubernetes
 - service
@@ -19,7 +19,7 @@ type: VMTEMPLATE
 format: qcow2
 creation_time: 1651140000
 os-id: Ubuntu
-os-release: "20.04.4 LTS"
+os-release: "22.04 LTS"
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
@@ -32,8 +32,6 @@ opennebula_template:
     token: "YES"
     oneapp_vrouter_eth0_vip0: "$ONEAPP_VROUTER_ETH0_VIP0"
     oneapp_vrouter_eth1_vip0: "$ONEAPP_VROUTER_ETH1_VIP0"
-    oneapp_k8s_port: "$ONEAPP_K8S_PORT"
-    oneapp_k8s_pods_network: "$ONEAPP_K8S_PODS_NETWORK"
     oneapp_storage_device: "$ONEAPP_STORAGE_DEVICE"
     oneapp_storage_label: "STORAGE"
     oneapp_storage_filesystem: "$ONEAPP_STORAGE_FILESYSTEM"
@@ -51,5 +49,5 @@ opennebula_template:
   user_inputs: {}
 logo: kubernetes.png
 disks:
-- "Kubernetes 1.23 OS disk"
-- "Kubernetes 1.23 Storage disk"
+- "Kubernetes 1.24 OS disk"
+- "Kubernetes 1.24 Storage disk"

@@ -1,6 +1,6 @@
 ---
-name: Kubernetes 1.23 VNF
-version: 1.23.7-6.4.0-1.20220614
+name: Kubernetes 1.24 VNF
+version: 1.24.1-6.4.0-1.20220622
 publisher: OpenNebula Systems
 description: |-
   Beta release.
@@ -29,25 +29,16 @@ opennebula_template:
     oneapp_vrouter_eth0_vip0: "$ONEAPP_VROUTER_ETH0_VIP0"
     oneapp_vrouter_eth1_vip0: "$ONEAPP_VROUTER_ETH1_VIP0"
     oneapp_vnf_dhcp4_enabled: "NO"
-    oneapp_vnf_dns_enabled: "$ONEAPP_VNF_DNS_ENABLED"
-    oneapp_vnf_dns_interfaces: "$ONEAPP_VNF_DNS_INTERFACES"
-    oneapp_vnf_dns_max_cache_ttl: "$ONEAPP_VNF_DNS_MAX_CACHE_TTL"
-    oneapp_vnf_dns_use_rootservers: "$ONEAPP_VNF_DNS_USE_ROOTSERVERS"
+    oneapp_vnf_dns_enabled: "NO"
     oneapp_vnf_keepalived_enabled: "YES"
-    oneapp_vnf_keepalived_vrid: ""
-    oneapp_vnf_lb0_ip: "$ONEAPP_VNF_LB0_IP"
-    oneapp_vnf_lb0_port: "$ONEAPP_VNF_LB0_PORT"
-    oneapp_vnf_lb0_method: "dr"
-    oneapp_vnf_lb0_protocol: "tcp"
-    oneapp_vnf_lb0_scheduler: ""
-    oneapp_vnf_lb_enabled: "$ONEAPP_VNF_LB_ENABLED"
-    oneapp_vnf_lb_onegate_enabled: "YES"
-    oneapp_vnf_lb_refresh_rate: "$ONEAPP_VNF_LB_REFRESH_RATE"
+    oneapp_vnf_keepalived_vrid: "$ONEAPP_VNF_KEEPALIVED_VRID"
+    oneapp_vnf_lb_enabled: "NO"
+    oneapp_vnf_lb_onegate_enabled: "NO"
     oneapp_vnf_nat4_enabled: "$ONEAPP_VNF_NAT4_ENABLED"
     oneapp_vnf_nat4_interfaces_out: "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
     oneapp_vnf_router4_enabled: "$ONEAPP_VNF_ROUTER4_ENABLED"
     oneapp_vnf_router4_interfaces: "$ONEAPP_VNF_ROUTER4_INTERFACES"
-    oneapp_vnf_haproxy_enabled: "$ONEAPP_VNF_HAPROXY_ENABLED"
+    oneapp_vnf_haproxy_enabled: "YES"
     oneapp_vnf_haproxy_onegate_enabled: "YES"
     oneapp_vnf_haproxy_interfaces: "$ONEAPP_VNF_HAPROXY_INTERFACES"
     oneapp_vnf_haproxy_refresh_rate: "$ONEAPP_VNF_HAPROXY_REFRESH_RATE"
@@ -58,6 +49,8 @@ opennebula_template:
     oneapp_vnf_haproxy_lb1_port: "$ONEAPP_VNF_HAPROXY_LB1_PORT"
     oneapp_vnf_haproxy_lb2_ip: "$ONEAPP_VNF_HAPROXY_LB2_IP"
     oneapp_vnf_haproxy_lb2_port: "$ONEAPP_VNF_HAPROXY_LB2_PORT"
+    oneapp_vnf_haproxy_lb3_ip: "$ONEAPP_VNF_HAPROXY_LB3_IP"
+    oneapp_vnf_haproxy_lb3_port: "$ONEAPP_VNF_HAPROXY_LB3_PORT"
     report_ready: "YES"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
     token: "YES"

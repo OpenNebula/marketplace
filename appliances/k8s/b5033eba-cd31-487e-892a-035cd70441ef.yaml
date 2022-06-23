@@ -1,18 +1,18 @@
 ---
-name: Service Kubernetes 1.23
-version: 1.23.7-6.4.0-1.20220614
+name: Service Kubernetes 1.24
+version: 1.24.1-6.4.0-1.20220622
 publisher: OpenNebula Systems
 description: |-
   Beta release.
 
-  Multi-master/multi-node Kubernetes 1.23 cluster for KVM and vCenter hosts orchestrated by [OneFlow](https://docs.opennebula.io/6.2/management_and_operations/multivm_service_management/appflow_elasticity.html).
+  Multi-master/multi-node Kubernetes 1.24 cluster for KVM and vCenter hosts orchestrated by [OneFlow](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/appflow_elasticity.html).
 
   Requires OneGate and OneFlow OpenNebula services.
 
   Please refer to the [documentation](https://docs.opennebula.io/appliances/service/kubernetes_service.html).
 
-  Based on VM templates: [Kubernetes 1.23](/appliance/9b06e6e8-8c40-4a5c-b218-27c749db6a1a), [Kubernetes 1.23 VNF](/appliance/8148a8d0-81d9-4062-a54f-8c0fd290f32b), [Kubernetes 1.23 Storage](/appliance/8fe8be73-7e60-4f0e-9047-7b88e41b577a).
-short_description: Multi-master/multi-node Kubernetes 1.23 cluster for KVM and vCenter hosts orchestrated by OneFlow
+  Based on VM templates: [Kubernetes 1.24](/appliance/9b06e6e8-8c40-4a5c-b218-27c749db6a1a), [Kubernetes 1.24 VNF](/appliance/8148a8d0-81d9-4062-a54f-8c0fd290f32b), [Kubernetes 1.24 Storage](/appliance/8fe8be73-7e60-4f0e-9047-7b88e41b577a).
+short_description: Multi-master/multi-node Kubernetes 1.24 cluster for KVM and vCenter hosts orchestrated by OneFlow
 tags:
 - kubernetes
 - oneflow
@@ -20,17 +20,17 @@ tags:
 - ubuntu
 creation_time: 1651140000
 os-id: Ubuntu
-os-release: "20.04.4 LTS"
+os-release: "22.04 LTS"
 os-arch: x86_64
 hypervisor: ALL
 type: SERVICE_TEMPLATE
 opennebula_version: >-
   6.2, 6.3, 6.4
 roles:
-  vnf: "Kubernetes 1.23 VNF"
-  master: "Kubernetes 1.23"
-  worker: "Kubernetes 1.23"
-  storage: "Kubernetes 1.23 Storage"
+  vnf: "Kubernetes 1.24 VNF"
+  master: "Kubernetes 1.24"
+  worker: "Kubernetes 1.24"
+  storage: "Kubernetes 1.24 Storage"
 opennebula_template: '{
   "name": "Kubernetes",
   "deployment": "straight",
@@ -40,7 +40,7 @@ opennebula_template: '{
       "name": "vnf",
       "cardinality": 1,
       "min_vms": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\nNIC=[NAME=\"NIC1\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_LB0_PORT=\"$ONEAPP_K8S_PORT\"\nONEAPP_VNF_NAT4_ENABLED=\"$ONEAPP_VNF_NAT4_ENABLED\"\nONEAPP_VNF_NAT4_INTERFACES_OUT=\"$ONEAPP_VNF_NAT4_INTERFACES_OUT\"\nONEAPP_VNF_ROUTER4_ENABLED=\"$ONEAPP_VNF_ROUTER4_ENABLED\"\nONEAPP_VNF_ROUTER4_INTERFACES=\"$ONEAPP_VNF_ROUTER4_INTERFACES\"\nONEAPP_VNF_HAPROXY_ENABLED=\"$ONEAPP_VNF_HAPROXY_ENABLED\"\nONEAPP_VNF_HAPROXY_INTERFACES=\"$ONEAPP_VNF_HAPROXY_INTERFACES\"\nONEAPP_VNF_HAPROXY_REFRESH_RATE=\"$ONEAPP_VNF_HAPROXY_REFRESH_RATE\"\nONEAPP_VNF_HAPROXY_CONFIG=\"$ONEAPP_VNF_HAPROXY_CONFIG\"\nONEAPP_VNF_HAPROXY_LB0_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB0_PORT=\"$ONEAPP_K8S_PORT\"\nONEAPP_VNF_HAPROXY_LB1_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB1_PORT=\"$ONEAPP_VNF_HAPROXY_LB1_PORT\"\nONEAPP_VNF_HAPROXY_LB2_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB2_PORT=\"$ONEAPP_VNF_HAPROXY_LB2_PORT\"\n",
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\nNIC=[NAME=\"NIC1\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_NAT4_ENABLED=\"$ONEAPP_VNF_NAT4_ENABLED\"\nONEAPP_VNF_NAT4_INTERFACES_OUT=\"$ONEAPP_VNF_NAT4_INTERFACES_OUT\"\nONEAPP_VNF_ROUTER4_ENABLED=\"$ONEAPP_VNF_ROUTER4_ENABLED\"\nONEAPP_VNF_ROUTER4_INTERFACES=\"$ONEAPP_VNF_ROUTER4_INTERFACES\"\nONEAPP_VNF_HAPROXY_INTERFACES=\"$ONEAPP_VNF_HAPROXY_INTERFACES\"\nONEAPP_VNF_HAPROXY_REFRESH_RATE=\"$ONEAPP_VNF_HAPROXY_REFRESH_RATE\"\nONEAPP_VNF_HAPROXY_CONFIG=\"$ONEAPP_VNF_HAPROXY_CONFIG\"\nONEAPP_VNF_HAPROXY_LB0_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB0_PORT=\"9345\"\nONEAPP_VNF_HAPROXY_LB1_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB1_PORT=\"6443\"\nONEAPP_VNF_HAPROXY_LB2_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB2_PORT=\"$ONEAPP_VNF_HAPROXY_LB2_PORT\"\nONEAPP_VNF_HAPROXY_LB3_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB3_PORT=\"$ONEAPP_VNF_HAPROXY_LB3_PORT\"\nONEAPP_VNF_KEEPALIVED_VRID=\"$ONEAPP_VNF_KEEPALIVED_VRID\"\n",
       "elasticity_policies": [],
       "scheduled_policies": []
     },
@@ -48,7 +48,7 @@ opennebula_template: '{
       "name": "master",
       "cardinality": 1,
       "min_vms": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_K8S_PODS_NETWORK=\"$ONEAPP_K8S_PODS_NETWORK\"\nONEAPP_K8S_PORT=\"$ONEAPP_K8S_PORT\"\nONEAPP_K8S_EXTRA_SANS=\"$ONEAPP_K8S_EXTRA_SANS\"\nONEAPP_K8S_METALLB_ENABLED=\"$ONEAPP_K8S_METALLB_ENABLED\"\nONEAPP_K8S_LOADBALANCER_RANGE=\"$ONEAPP_K8S_LOADBALANCER_RANGE\"\nONEAPP_K8S_LOADBALANCER_CONFIG=\"$ONEAPP_K8S_LOADBALANCER_CONFIG\"\n",
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_K8S_EXTRA_SANS=\"$ONEAPP_K8S_EXTRA_SANS\"\nONEAPP_K8S_LOADBALANCER_RANGE=\"$ONEAPP_K8S_LOADBALANCER_RANGE\"\nONEAPP_K8S_LOADBALANCER_CONFIG=\"$ONEAPP_K8S_LOADBALANCER_CONFIG\"\n",
       "parents": ["vnf"],
       "elasticity_policies": [],
       "scheduled_policies": []
@@ -56,8 +56,8 @@ opennebula_template: '{
     {
       "name": "worker",
       "cardinality": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB1_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB1_PORT=\"$ONEAPP_VNF_HAPROXY_LB1_PORT\"\nONEAPP_VNF_HAPROXY_LB2_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB2_PORT=\"$ONEAPP_VNF_HAPROXY_LB2_PORT\"\nONEAPP_K8S_PODS_NETWORK=\"$ONEAPP_K8S_PODS_NETWORK\"\nONEAPP_K8S_PORT=\"$ONEAPP_K8S_PORT\"\n",
-      "parents": ["master"],
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_HAPROXY_LB2_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB2_PORT=\"$ONEAPP_VNF_HAPROXY_LB2_PORT\"\nONEAPP_VNF_HAPROXY_LB3_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB3_PORT=\"$ONEAPP_VNF_HAPROXY_LB3_PORT\"\n",
+      "parents": ["vnf"],
       "elasticity_policies": [],
       "scheduled_policies": []
     },
@@ -65,8 +65,8 @@ opennebula_template: '{
       "name": "storage",
       "cardinality": 1,
       "min_vms": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_LB0_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_K8S_PODS_NETWORK=\"$ONEAPP_K8S_PODS_NETWORK\"\nONEAPP_K8S_PORT=\"$ONEAPP_K8S_PORT\"\nONEAPP_STORAGE_DEVICE=\"$ONEAPP_STORAGE_DEVICE\"\nONEAPP_STORAGE_FILESYSTEM=\"$ONEAPP_STORAGE_FILESYSTEM\"\n",
-      "parents": ["master"],
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_STORAGE_DEVICE=\"$ONEAPP_STORAGE_DEVICE\"\nONEAPP_STORAGE_FILESYSTEM=\"$ONEAPP_STORAGE_FILESYSTEM\"\n",
+      "parents": ["vnf"],
       "elasticity_policies": [],
       "scheduled_policies": []
     }
@@ -78,24 +78,21 @@ opennebula_template: '{
   "custom_attrs": {
     "ONEAPP_VROUTER_ETH0_VIP0": "M|text|Control Plane Endpoint VIP (IPv4)||",
     "ONEAPP_VROUTER_ETH1_VIP0": "O|text|Default Gateway VIP (IPv4)||",
-    "ONEAPP_K8S_PORT": "O|text|Kubernetes API port||6443",
-    "ONEAPP_K8S_PODS_NETWORK": "O|text|Pods network in CIDR||10.244.0.0/16",
     "ONEAPP_K8S_EXTRA_SANS": "O|text|ApiServer extra certificate SANs||localhost,127.0.0.1",
-    "ONEAPP_K8S_METALLB_ENABLED": "O|boolean|Enable MetalLB||NO",
-    "ONEAPP_K8S_LOADBALANCER_RANGE": "O|text|LoadBalancer IP range (default none)||",
-    "ONEAPP_K8S_LOADBALANCER_CONFIG": "O|text64|MetalLB custom LoadBalancer config (default none)||",
+    "ONEAPP_K8S_LOADBALANCER_RANGE": "O|text|MetalLB IP range (default none)||",
+    "ONEAPP_K8S_LOADBALANCER_CONFIG": "O|text64|MetalLB custom config (default none)||",
     "ONEAPP_STORAGE_DEVICE": "M|text|Storage device path||/dev/vdb",
     "ONEAPP_STORAGE_FILESYSTEM": "O|text|Storage device filesystem||xfs",
     "ONEAPP_VNF_NAT4_ENABLED": "O|boolean|Enable NAT||YES",
     "ONEAPP_VNF_NAT4_INTERFACES_OUT": "O|text|NAT - Outgoing Interfaces||eth0",
     "ONEAPP_VNF_ROUTER4_ENABLED": "O|boolean|Enable Router||YES",
     "ONEAPP_VNF_ROUTER4_INTERFACES": "O|text|Router - Interfaces||eth0,eth1",
-    "ONEAPP_VNF_HAPROXY_ENABLED": "O|boolean|Enable Haproxy||YES",
     "ONEAPP_VNF_HAPROXY_INTERFACES": "O|text|Interfaces to run Haproxy on||eth0",
-    "ONEAPP_VNF_HAPROXY_REFRESH_RATE": "O|text|Haproxy refresh rate||30",
-    "ONEAPP_VNF_HAPROXY_CONFIG": "O|text|Custom Haproxy config||",
-    "ONEAPP_VNF_HAPROXY_LB1_PORT": "O|text|HTTPS ingress port||443",
-    "ONEAPP_VNF_HAPROXY_LB2_PORT": "O|text|HTTP ingress port||80"
+    "ONEAPP_VNF_HAPROXY_REFRESH_RATE": "O|number|Haproxy refresh rate||30",
+    "ONEAPP_VNF_HAPROXY_CONFIG": "O|text|Custom Haproxy config (default none)||",
+    "ONEAPP_VNF_HAPROXY_LB2_PORT": "O|number|HTTPS ingress port||443",
+    "ONEAPP_VNF_HAPROXY_LB3_PORT": "O|number|HTTP ingress port||80",
+    "ONEAPP_VNF_KEEPALIVED_VRID": "O|number|Global vrouter id (1-255)||1"
   },
   "ready_status_gate": true
 }'
