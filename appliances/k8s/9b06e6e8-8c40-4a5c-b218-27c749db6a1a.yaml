@@ -1,16 +1,16 @@
 ---
-name: Kubernetes 1.24
-version: 1.24.1-6.4.0-1.20220622
+name: OneKE 1.24 CE
+version: 1.24.1-6.4.0-1.20220624
 publisher: OpenNebula Systems
 description: |-
   Beta release.
 
-  Appliance with preinstalled Kubernetes 1.24 to work as a multi-master/multi-node cluster orchestrated by [OneFlow](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/appflow_elasticity.html).
+  Appliance with preinstalled OneKE 1.24 CE to work as a multi-master/multi-node cluster orchestrated by [OneFlow](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/appflow_elasticity.html).
 
   Preconfigured with Canal CNI networking (Calico and Flannel) and MetalLB to handle load-balancing.
 
   Please refer to the [documentation](https://docs.opennebula.io/appliances/service/kubernetes_service.html).
-short_description: Appliance with preinstalled Kubernetes 1.24 for KVM and vCenter hosts
+short_description: Appliance with preinstalled OneKE 1.24 CE for KVM and vCenter hosts
 tags:
 - kubernetes
 - service
@@ -50,4 +50,4 @@ opennebula_template:
   user_inputs: {}
 logo: kubernetes.png
 disks:
-- "Kubernetes 1.24 OS disk"
+- "OneKE 1.24 CE OS disk"
