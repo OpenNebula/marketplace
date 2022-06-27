@@ -1,14 +1,14 @@
 ---
-name: Kubernetes 1.24 OS disk
-version: 1.24.1-6.4.0-1.20220622
+name: OneKE 1.24 CE OS disk
+version: 1.24.1-6.4.0-1.20220624
 publisher: OpenNebula Systems
 description: |-
   Beta release.
 
-  OS disk for the Kubernetes 1.24 appliance.
+  OS disk for the OneKE 1.24 CE appliance.
 
   Please refer to the [documentation](https://docs.opennebula.io/appliances/service/kubernetes_service.html).
-short_description: OS disk for the Kubernets 1.24 appliance
+short_description: OS disk for the OneKE 1.24 CE appliance
 tags:
 - disk
 - kubernetes
@@ -22,11 +22,11 @@ opennebula_version: >-
   6.2, 6.3, 6.4
 images:
 - name: kubernetes_ubuntu
-  url: https://d24fmfybwxpuhu.cloudfront.net/service_kubernetes_ubuntu-6.4.0-1.20220622.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/service_OneKE_CE-6.4.0-1.20220624.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: d0ad774a1dbcb08f5ca520c180473349
-    sha256: 03b67c84b0b4372f817de8e5c19fda5c700f415f7c28eeaa6971d5c9ac2427fb
+    md5: 18d9b4e6e899a10d77c3db07426383ce
+    sha256: 02c0327f3ec30bff7e2f93d610222f5469289c1cc0a0e47d63a29e722e264a22

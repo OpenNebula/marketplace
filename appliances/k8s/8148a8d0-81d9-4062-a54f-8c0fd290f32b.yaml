@@ -1,6 +1,6 @@
 ---
-name: Kubernetes 1.24 VNF
-version: 1.24.1-6.4.0-1.20220622
+name: OneKE 1.24 CE VNF
+version: 1.24.1-6.4.0-1.20220624
 publisher: OpenNebula Systems
 description: |-
   Beta release.
@@ -69,7 +69,7 @@ opennebula_template:
 logo: router.png
 images:
 - name: kubernetes_vnf
-  url: https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.4.0-1.20220614.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.4.0-1.20220624.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
