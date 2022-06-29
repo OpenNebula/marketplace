@@ -33,7 +33,6 @@ opennebula_template:
     oneapp_vrouter_eth0_vip0: "$ONEAPP_VROUTER_ETH0_VIP0"
     oneapp_vrouter_eth1_vip0: "$ONEAPP_VROUTER_ETH1_VIP0"
     oneapp_storage_device: "$ONEAPP_STORAGE_DEVICE"
-    oneapp_storage_label: "STORAGE"
     oneapp_storage_filesystem: "$ONEAPP_STORAGE_FILESYSTEM"
     oneapp_storage_mountpoint: "/var/lib/longhorn"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
