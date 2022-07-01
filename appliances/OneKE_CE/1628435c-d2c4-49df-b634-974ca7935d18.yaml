@@ -3,12 +3,12 @@ name: OneKE 1.24 CE Storage disk
 version: 1.24.1-6.4.0-1.20220624
 publisher: OpenNebula Systems
 description: |-
-  Beta release.
+  Technology Preview.
 
-  Empty Storage disk for the OneKE 1.24 CE appliance.
+  OneKE 1.24 CE appliance Storage disk (empty).
 
-  Please refer to the [documentation](https://docs.opennebula.io/appliances/service/kubernetes_service.html).
-short_description: Empty Storage disk for the OneKE 1.24 CE appliance
+  See the dedicated [documentation](https://docs.opennebula.io/appliances/service/oneke.html).
+short_description: OneKE 1.24 CE appliance Storage disk
 tags:
 - disk
 - kubernetes
@@ -21,7 +21,7 @@ hypervisor: ALL
 opennebula_version: >-
   6.2, 6.3, 6.4
 images:
-- name: kubernetes_ubuntu_storage
+- name: oneke_ce_storage
   url: https://d24fmfybwxpuhu.cloudfront.net/service_OneKE_CE_storage-6.4.0-1.20220624.qcow2
   type: OS
   dev_prefix: vd

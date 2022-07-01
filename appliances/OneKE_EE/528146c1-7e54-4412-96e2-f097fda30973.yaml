@@ -1,23 +1,21 @@
 ---
-name: OneKE 1.24 CE Storage
+name: OneKE 1.24 EE Storage
 version: 1.24.1-6.4.0-1.20220624
 publisher: OpenNebula Systems
 description: |-
-  Beta release.
+  Technology Preview.
 
-  Appliance with preinstalled OneKE 1.24 CE to work as a multi-master/multi-node cluster orchestrated by [OneFlow](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/appflow_elasticity.html).
+  OneKE 1.24 EE VM template for Storage VMs.
 
-  Preconfigured with Canal CNI networking (Calico and Flannel) and CNCF Longhorn to handle persistence.
-
-  Please refer to the [documentation](https://docs.opennebula.io/appliances/service/kubernetes_service.html).
-short_description: Appliance with preinstalled OneKE 1.24 CE for KVM and vCenter hosts (Storage workers)
+  See the dedicated [documentation](https://docs.opennebula.io/appliances/service/oneke.html).
+short_description: OneKE 1.24 EE VM template for Storage VMs
 tags:
 - kubernetes
 - service
 - ubuntu
 type: VMTEMPLATE
 format: qcow2
-creation_time: 1651140000
+creation_time: 1656648428
 os-id: Ubuntu
 os-release: "22.04 LTS"
 os-arch: x86_64
@@ -48,5 +46,5 @@ opennebula_template:
   user_inputs: {}
 logo: kubernetes.png
 disks:
-- "OneKE 1.24 CE OS disk"
-- "OneKE 1.24 CE Storage disk"
+- "OneKE 1.24 EE OS disk"
+- "OneKE 1.24 EE Storage disk"

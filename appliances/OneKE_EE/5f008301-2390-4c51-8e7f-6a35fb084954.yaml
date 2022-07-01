@@ -1,24 +1,33 @@
 ---
-name: Service OneKE 1.24 CE
+name: Service OneKE 1.24 EE
 version: 1.24.1-6.4.0-1.20220624
 publisher: OpenNebula Systems
 description: |-
-  Beta release.
+  Technology Preview.
 
-  Multi-master/multi-node Kubernetes 1.24 cluster for KVM and vCenter hosts orchestrated by [OneFlow](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/appflow_elasticity.html).
+  [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.24 cluster for KVM and vCenter hosts,
+  orchestrated by
+  [OneFlow](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/appflow_elasticity.html).
 
-  Requires OneGate and OneFlow OpenNebula services.
+  Requires
+  [OneFlow](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/overview.html)
+  and
+  [OneGate](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/onegate_usage.html)
+  OpenNebula components.
 
-  Please refer to the [documentation](https://docs.opennebula.io/appliances/service/kubernetes_service.html).
+  See the dedicated [documentation](https://docs.opennebula.io/appliances/service/oneke.html).
 
-  Based on VM templates: [OneKE 1.24 CE](/appliance/9b06e6e8-8c40-4a5c-b218-27c749db6a1a), [OneKE 1.24 CE VNF](/appliance/8148a8d0-81d9-4062-a54f-8c0fd290f32b), [OneKE 1.24 CE Storage](/appliance/8fe8be73-7e60-4f0e-9047-7b88e41b577a).
-short_description: Multi-master/multi-node Kubernetes 1.24 cluster for KVM and vCenter hosts orchestrated by OneFlow
+  Based on VM templates
+  - [OneKE 1.24 EE](/appliance/91bdc1a0-4861-4d54-97f9-b9967a6d0796)
+  - [OneKE 1.24 EE VNF](/appliance/f54e1d4d-ddda-42ad-825a-badb1df8aa2e)
+  - [OneKE 1.24 EE Storage](/appliance/528146c1-7e54-4412-96e2-f097fda30973)
+short_description: Multi-master Kubernetes 1.24 cluster for KVM and vCenter hosts, orchestrated by OneFlow
 tags:
 - kubernetes
 - oneflow
 - service
 - ubuntu
-creation_time: 1651140000
+creation_time: 1656648428
 os-id: Ubuntu
 os-release: "22.04 LTS"
 os-arch: x86_64
@@ -27,12 +36,12 @@ type: SERVICE_TEMPLATE
 opennebula_version: >-
   6.2, 6.3, 6.4
 roles:
-  vnf: "OneKE 1.24 CE VNF"
-  master: "OneKE 1.24 CE"
-  worker: "OneKE 1.24 CE"
-  storage: "OneKE 1.24 CE Storage"
+  vnf: "OneKE 1.24 EE VNF"
+  master: "OneKE 1.24 EE"
+  worker: "OneKE 1.24 EE"
+  storage: "OneKE 1.24 EE Storage"
 opennebula_template: '{
-  "name": "Kubernetes",
+  "name": "OneKE 1.24 EE",
   "deployment": "straight",
   "description": "",
   "roles": [
