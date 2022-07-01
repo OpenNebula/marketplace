@@ -3,16 +3,25 @@ name: Service OneKE 1.24 CE
 version: 1.24.1-6.4.0-1.20220624
 publisher: OpenNebula Systems
 description: |-
-  Beta release.
+  Technology Preview.
 
-  Multi-master/multi-node Kubernetes 1.24 cluster for KVM and vCenter hosts orchestrated by [OneFlow](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/appflow_elasticity.html).
+  [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.24 cluster for KVM and vCenter hosts,
+  orchestrated by
+  [OneFlow](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/appflow_elasticity.html).
 
-  Requires OneGate and OneFlow OpenNebula services.
+  Requires
+  [OneFlow](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/overview.html)
+  and
+  [OneGate](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/onegate_usage.html)
+  OpenNebula components.
 
-  Please refer to the [documentation](https://docs.opennebula.io/appliances/service/kubernetes_service.html).
+  See the dedicated [documentation](https://docs.opennebula.io/appliances/service/oneke.html).
 
-  Based on VM templates: [OneKE 1.24 CE](/appliance/9b06e6e8-8c40-4a5c-b218-27c749db6a1a), [OneKE 1.24 CE VNF](/appliance/8148a8d0-81d9-4062-a54f-8c0fd290f32b), [OneKE 1.24 CE Storage](/appliance/8fe8be73-7e60-4f0e-9047-7b88e41b577a).
-short_description: Multi-master/multi-node Kubernetes 1.24 cluster for KVM and vCenter hosts orchestrated by OneFlow
+  Based on VM templates
+  - [OneKE 1.24 CE](/appliance/9b06e6e8-8c40-4a5c-b218-27c749db6a1a)
+  - [OneKE 1.24 CE VNF](/appliance/8148a8d0-81d9-4062-a54f-8c0fd290f32b)
+  - [OneKE 1.24 CE Storage](/appliance/8fe8be73-7e60-4f0e-9047-7b88e41b577a)
+short_description: Multi-master Kubernetes 1.24 cluster for KVM and vCenter hosts, orchestrated by OneFlow
 tags:
 - kubernetes
 - oneflow
@@ -32,7 +41,7 @@ roles:
   worker: "OneKE 1.24 CE"
   storage: "OneKE 1.24 CE Storage"
 opennebula_template: '{
-  "name": "Kubernetes",
+  "name": "OneKE 1.24 CE",
   "deployment": "straight",
   "description": "",
   "roles": [

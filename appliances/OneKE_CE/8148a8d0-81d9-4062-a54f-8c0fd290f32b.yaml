@@ -3,13 +3,13 @@ name: OneKE 1.24 CE VNF
 version: 1.24.1-6.4.0-1.20220624
 publisher: OpenNebula Systems
 description: |-
-  Beta release.
+  Technology Preview.
 
-  Appliance providing several Virtual Network Functions (routing, NAT, DNS,
-  DHCP) to run as regular **Virtual Machine**. See the dedicated
-  [documentation](https://docs.opennebula.io/appliances/service/vnf.html).
-short_description: Appliance with several Virtual Network Functions to run
-  as VM
+  Appliance providing several Virtual Network Functions (routing, NAT, DNS, DHCP)
+  to run as regular VM.
+
+  See the dedicated [documentation](https://docs.opennebula.io/appliances/service/vnf.html).
+short_description: Appliance with several Virtual Network Functions to run as VM
 tags:
 - alpine
 - kubernetes
@@ -68,7 +68,7 @@ opennebula_template:
   user_inputs: {}
 logo: router.png
 images:
-- name: kubernetes_vnf
+- name: oneke_ce_vnf
   url: https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.4.0-1.20220624.qcow2
   type: OS
   dev_prefix: vd
