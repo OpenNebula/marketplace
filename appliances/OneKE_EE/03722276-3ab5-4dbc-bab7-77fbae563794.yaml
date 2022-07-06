@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.24 EE OS disk
-version: 1.24.1-6.4.0-1.20220630
+version: 1.24.1-6.4.0-1.20220707
 publisher: OpenNebula Systems
 description: |-
   Technology Preview.
@@ -22,11 +22,11 @@ opennebula_version: >-
   6.2, 6.3, 6.4
 images:
 - name: oneke_ee_os
-  url: https://d24fmfybwxpuhu.cloudfront.net/service_OneKE_EE-6.4.0-1.20220630.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/service_OneKE_EE-6.4.0-1.20220707.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: fbb868288610dd4bf960308d193fc74f
-    sha256: 2cf7974e160d7763da504fafb504d87ec7c07beb091a0940c7aaa88459af0395
+    md5: a8ac8b47c960faf159ebfba68dad3f89
+    sha256: 786e2d12e61f1a2042e97ec6887b63892a13dfda24804a9545fe4ceaadb5c2ff
