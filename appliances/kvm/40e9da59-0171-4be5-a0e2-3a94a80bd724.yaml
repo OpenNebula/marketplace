@@ -22,7 +22,7 @@ hypervisor: KVM
 os-id: none
 os-arch: x86_64
 format: qcow2
-opennebula_version: 5.13, 6.0, 6.1, 6.2, 6.3, 6.4
+opennebula_version: 5.12, 6.0, 6.2, 6.4
 disks:
   - 'Empty disk'
   - 'netboot.xyz'
