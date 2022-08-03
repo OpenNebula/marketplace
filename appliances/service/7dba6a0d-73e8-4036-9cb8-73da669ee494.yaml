@@ -78,7 +78,7 @@ logo: router.png
 images:
 - name: vnf
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.4.0-1.20220509.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.4.0-1.20220624.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
