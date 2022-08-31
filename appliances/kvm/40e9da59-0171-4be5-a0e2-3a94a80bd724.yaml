@@ -1,6 +1,6 @@
 ---
 name: Custom via netboot.xyz
-version: 2.0.32
+version: 2.0.32-1
 publisher: OpenNebula Systems
 description: |
   Empty disk for custom installation via [netboot.xyz](https://netboot.xyz).
