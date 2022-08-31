@@ -1,6 +1,6 @@
 ---
 name: netboot.xyz
-version: 2.0.32
+version: 2.0.32-1
 publisher: OpenNebula Systems
 description: >-
   CD-ROM with network bootable operating system installer based on iPXE.
