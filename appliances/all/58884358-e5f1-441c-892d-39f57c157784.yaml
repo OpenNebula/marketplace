@@ -1,11 +1,11 @@
 ---
 name: ALT Linux p10
-version: 6.4.0-1.20220503
+version: 6.6.0-1.20230118
 publisher: OpenNebula Systems
 description: |-
   ALT Linux p10 image ready for your OpenNebula deployment.
 
-  This image is based on the ALT Linux p10 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the ALT Linux p10 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -20,7 +20,7 @@ os-id: ALT Linux
 os-release: p10
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: 6.2, 6.3, 6.4
+opennebula_version: 6.2, 6.3, 6.4, 6.6
 opennebula_template:
   context:
     network: 'YES'
@@ -35,11 +35,11 @@ opennebula_template:
 logo: alt.png
 images:
 - name: alt10
-  url: https://d24fmfybwxpuhu.cloudfront.net/alt10-6.4.0-1.20220503.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alt10-6.6.0-1.20230118.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 1947205632
+  size: 1950351360
   checksum:
-    md5: 9c5e692d0b1f227a7ceceebb918025d4
-    sha256: 57cc52c8aaf675640349ac5831ae2fbf18cd8f4b4c11ddc33ba5c4ade3e64ff2
+    md5: a42200e4fa98a9756f8f9d1fb7ae0008
+    sha256: 5bd4c4fbf7cfca22185478933f9903c16190b9292bc708233427801f3a181b05

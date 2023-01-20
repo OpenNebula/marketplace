@@ -1,11 +1,11 @@
 ---
 name: CentOS 8 Stream
-version: 6.4.0-1.20220509
+version: 6.6.0-1.20230118
 publisher: OpenNebula Systems
 description: |-
   CentOS 8 Stream image ready for your OpenNebula deployment.
 
-  This image is based on the CentOS 8 Stream cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the CentOS 8 Stream cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -21,7 +21,7 @@ os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4
+  6.1, 6.2, 6.3, 6.4, 6.6
 opennebula_template:
   context:
     network: 'YES'
@@ -39,11 +39,11 @@ logo: centos-5.5.png
 images:
 - name: centos8stream
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/centos8stream-6.4.0-1.20220509.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/centos8stream-6.6.0-1.20230118.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 858ff69a7b77ad90e2f4199cc81cdb33
-    sha256: 5861f81f6e36f7ff4ec5a95288d25dc7aca46c95b3ae6469d0abad6684e3c6af
+    md5: 12d2f27e3ce406ee26642e3057285e60
+    sha256: 6a1c46b100d9c835735245d50a37b3a09508d3a1a1a9721757e197a4ccfc011b

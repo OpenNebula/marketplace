@@ -1,27 +1,27 @@
 ---
-name: Alpine Linux 3.13
-version: 6.4.0-1.20220504
+name: Devuan 4
+version: 6.6.0-1.20230118
 publisher: OpenNebula Systems
 description: |-
-  Alpine Linux 3.13 image ready for your OpenNebula deployment.
+  Devuan 4 image ready for your OpenNebula deployment.
 
-  This image is based on the Alpine Linux 3.13 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Devuan 4 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Alpine Linux 3.13 image for KVM, LXD and vCenter
+short_description: Devuan 4 image for KVM, LXD and vCenter
 tags:
-- alpine
+- devuan
 format: qcow2
 creation_time: 1652088478
-os-id: Alpine Linux
-os-release: '3.13'
+os-id: Devuan
+os-release: '4'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4
+  6.1, 6.2, 6.3, 6.4, 6.6
 opennebula_template:
   context:
     network: 'YES'
@@ -30,21 +30,19 @@ opennebula_template:
   graphics:
     listen: 0.0.0.0
     type: vnc
-  memory: '128'
-  nic_default:
-    model: virtio
+  memory: '768'
   os:
     arch: x86_64
   logo: images/logos/linux.png
   lxd_security_privileged: 'true'
-logo: alpine.png
+logo: devuan.png
 images:
-- name: alpine313
-  url: https://d24fmfybwxpuhu.cloudfront.net/alpine313-6.4.0-1.20220504.qcow2
+- name: devuan4
+  url: https://d24fmfybwxpuhu.cloudfront.net/devuan4-6.6.0-1.20230118.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 268435456
+  size: 4294967296
   checksum:
-    md5: e401d9f65c8a8f879d9d623c70cb1489
-    sha256: 772042a2f58f076295e6194ab6b0576e163e7c4b1699c9dd275d673f7ba1b1ae
+    md5: d32a4e8251273f5040694b6988746bd9
+    sha256: 17a3a39ed4c79b7a29154ad4326d5c8e9d8a7666087b0f9bbb936b5ce82f6251

@@ -1,11 +1,11 @@
 ---
 name: Debian 10
-version: 6.4.0-1.20220504
+version: 6.6.0-1.20230118
 publisher: OpenNebula Systems
 description: |-
   Debian 10 image ready for your OpenNebula deployment.
 
-  This image is based on the Debian 10 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Debian 10 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -16,12 +16,12 @@ tags:
 format: qcow2
 creation_time: 1652088478
 os-id: Debian
-os-release: '10.9'
+os-release: '10.13'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4
+  6.1, 6.2, 6.3, 6.4, 6.6
 opennebula_template:
   context:
     network: 'YES'
@@ -38,11 +38,11 @@ opennebula_template:
 logo: debian.png
 images:
 - name: debian10
-  url: https://d24fmfybwxpuhu.cloudfront.net/debian10-6.4.0-1.20220504.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/debian10-6.6.0-1.20230118.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: 11127bf69eb7b91a08c334ac8bb00f81
-    sha256: 68ce8a41e68e890674b06bd469f7cfb2895b9cb030bd1543223c2c344651df6a
+    md5: b45dc9ce1b2733e11f6fc22767041bf4
+    sha256: 18ce3994aa16b32e8419844f245db7c81f85b8a19ecdcd2bc299d7e1d46d5c51

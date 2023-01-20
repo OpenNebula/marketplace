@@ -1,11 +1,11 @@
 ---
 name: AlmaLinux 8
-version: 6.4.0-1.20220508
+version: 6.6.0-1.20230118
 publisher: OpenNebula Systems
 description: |-
   AlmaLinux 8 image ready for your OpenNebula deployment.
 
-  This image is based on the AlmaLinux 8 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the AlmaLinux 8 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -16,12 +16,12 @@ tags:
 format: qcow2
 creation_time: 1652088478
 os-id: AlmaLinux
-os-release: '8.4'
+os-release: '8.7'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4
+  6.1, 6.2, 6.3, 6.4, 6.6
 opennebula_template:
   context:
     network: 'YES'
@@ -37,11 +37,11 @@ opennebula_template:
 logo: alma.png
 images:
 - name: almalinux8
-  url: https://d24fmfybwxpuhu.cloudfront.net/alma8-6.4.0-1.20220508.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alma8-6.6.0-1.20230118.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 10737418240
+  size: 4294967296
   checksum:
-    md5: 11d726effc7c9ad644673a873dbdf6f9
-    sha256: b4ab3c8d3b865b5e97515a723c250e794b546261985559a5f736f3f184621468
+    md5: 2375589abf48e5063a0d5a09ed59b8be
+    sha256: c558dce9ad7ef121676ffb25729297d80281c2397c7b59011698d0e1fa9a6017

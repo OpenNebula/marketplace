@@ -1,11 +1,11 @@
 ---
 name: CentOS 7
-version: 6.4.0-1.20220508
+version: centos7-6.6.0-1.20230118
 publisher: OpenNebula Systems
 description: |-
   CentOS 7 image ready for your OpenNebula deployment.
 
-  This image is based on the CentOS 7 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the CentOS 7 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -21,7 +21,7 @@ os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4
+  6.1, 6.2, 6.3, 6.4, 6.6
 opennebula_template:
   context:
     network: 'YES'
@@ -38,11 +38,11 @@ opennebula_template:
 logo: centos-5.5.png
 images:
 - name: centos7
-  url: https://d24fmfybwxpuhu.cloudfront.net/centos7-6.4.0-1.20220508.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/centos7-6.6.0-1.20230118.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 8589934592
   checksum:
-    md5: 02f914e5db532ab7c33a241a67581a3b
-    sha256: cb308e5f003893000e605b70a462a8a667227aaec673c4c1630012c7f3348d88
+    md5: fdca5c5725071ea62648255a9830183c
+    sha256: 4bde7aa65a5aef1bd145f33782797a639af1803a9a3d04245eb9f2563e531443

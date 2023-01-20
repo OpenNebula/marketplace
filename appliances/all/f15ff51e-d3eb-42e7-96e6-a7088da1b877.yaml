@@ -1,11 +1,11 @@
 ---
 name: Ubuntu Minimal 20.04
-version: 6.4.0-1.20220504
+version: 6.6.0-1.20230118
 publisher: OpenNebula Systems
 description: |-
   Ubuntu Minimal 20.04 image ready for your OpenNebula deployment.
 
-  This image is based on the Ubuntu Minimal 20.04 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Ubuntu Minimal 20.04 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -23,7 +23,7 @@ os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4
+  6.1, 6.2, 6.3, 6.4, 6.6
 opennebula_template:
   context:
     network: 'YES'
@@ -43,11 +43,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2004min
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004min-6.4.0-1.20220504.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004min-6.6.0-1.20230118.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: c12edbf87aba54c94697f5ff7f2a4eec
-    sha256: 6bdf9acc32a787f58f623f9d5358c0e96b030780b5ee26ddcc346e62ce10f9cd
+    md5: c71ea9c7cec0411715000b6d9eed29ae
+    sha256: 2c19f9cefcef8865f0d5dd2e3b3effaf56789b8548089213f0943629eb17ff33
