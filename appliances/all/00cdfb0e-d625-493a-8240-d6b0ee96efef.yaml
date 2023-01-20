@@ -1,11 +1,11 @@
 ---
 name: ALT Linux p9
-version: 6.4.0-1.20220503
+version: 6.6.0-1.20230118
 publisher: OpenNebula Systems
 description: |-
   ALT Linux p9 image ready for your OpenNebula deployment.
 
-  This image is based on the ALT Linux p9 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the ALT Linux p9 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -22,7 +22,7 @@ os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4
+  6.1, 6.2, 6.3, 6.4, 6.6
 opennebula_template:
   context:
     network: 'YES'
@@ -37,11 +37,11 @@ opennebula_template:
 logo: alt.png
 images:
 - name: alt9
-  url: https://d24fmfybwxpuhu.cloudfront.net/alt9-6.4.0-1.20220503.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alt9-6.6.0-1.20230118.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 1653604352
   checksum:
-    md5: 7fdca07f1ed390cd32411554ed05d9e8
-    sha256: 2c53091971fb6acc6fe21c9c2330ef5556e2b7159d2525dff17aec0734330baa
+    md5: 80bc82c163ce9620157f2c67244b0d8b
+    sha256: 5abde4992ca351a9c7ece3d50e7f2b2f9d743ad3295089330b1288d80680527b

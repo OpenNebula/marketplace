@@ -1,11 +1,11 @@
 ---
 name: Alpine Linux 3.15
-version: 6.4.0-1.20220504
+version: 6.6.0-1.20230118
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.15 image ready for your OpenNebula deployment.
 
-  This image is based on the Alpine Linux 3.15 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Alpine Linux 3.15 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -21,7 +21,7 @@ os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4
+  6.1, 6.2, 6.3, 6.4, 6.6
 opennebula_template:
   context:
     network: 'YES'
@@ -40,11 +40,11 @@ opennebula_template:
 logo: alpine.png
 images:
 - name: alpine315
-  url: https://d24fmfybwxpuhu.cloudfront.net/alpine315-6.4.0-1.20220504.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alpine315-6.6.0-1.20230118.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 268435456
   checksum:
-    md5: df3f495d8b7aff5d261d6e3b030b7c81
-    sha256: 877e62c66affdba4b3eede77ef652ddff43b6454d347643f638c5a878e47a4e1
+    md5: c3ad807eb48ffc2e4ff9f14d94ec1b51
+    sha256: 4e58cb6f8ae4385aa9619e87f57420d8efd34850702bd1f6c2ab0e45f82422be

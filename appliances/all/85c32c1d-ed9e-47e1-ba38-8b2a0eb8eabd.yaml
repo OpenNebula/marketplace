@@ -1,25 +1,25 @@
 ---
-name: Fedora 34
-version: 6.4.0-1.20220509
+name: Fedora 36
+version: 6.6.0-1.20230118
 publisher: OpenNebula Systems
 description: |-
-  Fedora 34 image ready for your OpenNebula deployment.
+  Fedora 36 image ready for your OpenNebula deployment.
 
-  This image is based on the Fedora 34 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Fedora 36 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Fedora 34 image for KVM, LXD, and vCenter
+short_description: Fedora 36 image for KVM, LXD, and vCenter
 tags:
 - fedora
 format: qcow2
 creation_time: 1652088478
 os-id: Fedora
-os-release: '34'
+os-release: '36'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: 6.2, 6.3, 6.4
+opennebula_version: 6.2, 6.3, 6.4, 6.6
 opennebula_template:
   context:
     network: 'YES'
@@ -35,12 +35,12 @@ opennebula_template:
   lxd_security_privileged: 'true'
 logo: fedora.png
 images:
-- name: fedora34
-  url: https://d24fmfybwxpuhu.cloudfront.net/fedora34-6.4.0-1.20220509.qcow2
+- name: fedora36
+  url: https://d24fmfybwxpuhu.cloudfront.net/fedora36-6.6.0-1.20230118.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 5368709120
+  size: 21474836480
   checksum:
-    md5: ddd108a207046a98c4cfe19716aff9cb
-    sha256: 733100534a2f6b30cf0050cfba05fb3e60ec8209d0f53dc272a49c802836d553
+    md5: c8dca3016b57e17b0e2106bc59e16dc2
+    sha256: a24c16b221b95a978770721b3d08af849e3947d931d003200546bff70c9514f1

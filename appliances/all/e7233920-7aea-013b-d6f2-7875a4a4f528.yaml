@@ -1,22 +1,22 @@
 ---
-name: Ubuntu 20.04
+name: AlmaLinux 9
 version: 6.6.0-1.20230118
 publisher: OpenNebula Systems
 description: |-
-  Ubuntu 20.04 image ready for your OpenNebula deployment.
+  AlmaLinux 9 image ready for your OpenNebula deployment.
 
-  This image is based on the Ubuntu 20.04 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the AlmaLinux 9 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Ubuntu 20.04 image for KVM, LXD and vCenter
+short_description: AlmaLinux 9 image for KVM, LXD and vCenter.
 tags:
-- ubuntu
+- almalinux
 format: qcow2
 creation_time: 1652088478
-os-id: Ubuntu
-os-release: '20.04'
+os-id: AlmaLinux
+os-release: '9.1'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
@@ -33,17 +33,15 @@ opennebula_template:
   memory: '768'
   os:
     arch: x86_64
-  logo: images/logos/ubuntu.png
   lxd_security_privileged: 'true'
-logo: ubuntu.png
+logo: alma.png
 images:
-- name: ubuntu2004
-  url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004-6.6.0-1.20230118.qcow2
+- name: almalinux9
+  url: https://d24fmfybwxpuhu.cloudfront.net/alma9-6.6.0-1.20230118.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 2361393152
+  size: 4294967296
   checksum:
-    md5: 526eb0745b8aa4213286976ef79d8429
-    sha256: e569ea06f3856a0ebfd7286c89fa80b3d4d454b1b554207e4a64d03b833334cf
+    md5: 04b4abd8f4e39d0e8b3b0ec3b7c78d8e
+    sha256: 7c2fe02e105135c5540a245237b526614d6ab0f0f1054781afa1d0458403f6c3

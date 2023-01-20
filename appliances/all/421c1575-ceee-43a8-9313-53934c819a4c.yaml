@@ -1,11 +1,11 @@
 ---
 name: Rocky Linux 8
-version: 6.4.0-1.20220509
+version: 6.6.0-1.20230118
 publisher: OpenNebula Systems
 description: |-
   Rocky Linux 8 image ready for your OpenNebula deployment.
 
-  This image is based on the Rocky Linux 8 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Rocky Linux 8 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -16,12 +16,12 @@ tags:
 format: qcow2
 creation_time: 1652088478
 os-id: RockyLinux
-os-release: '8.4'
+os-release: '8.7'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4
+  6.1, 6.2, 6.3, 6.4, 6.6
 opennebula_template:
   context:
     network: 'YES'
@@ -37,11 +37,11 @@ opennebula_template:
 logo: rocky.png
 images:
 - name: rocky8
-  url: https://d24fmfybwxpuhu.cloudfront.net/rocky8-6.4.0-1.20220509.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/rocky8-6.6.0-1.20230118.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: e9b37f388f171bfefcb4888ea2174363
-    sha256: e0b324c09414abb8b50ccb79fd78cb1fc44a276c10a457aed868b063381f6297
+    md5: 13f040146d7cf8899e51041bf9d53adf
+    sha256: 62258002d49a9a7c464368c6f8cebf8ac56f8b5f2015381bf61aaf30f5aed70e

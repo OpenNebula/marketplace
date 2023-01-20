@@ -1,27 +1,27 @@
 ---
-name: Devuan 2
-version: 6.4.0-1.20220504
+name: Devuan 3
+version: 6.6.0-1.20230118
 publisher: OpenNebula Systems
 description: |-
-  Devuan 2 image ready for your OpenNebula deployment.
+  Devuan 3 image ready for your OpenNebula deployment.
 
-  This image is based on the Devuan 2 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.2/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Devuan 3 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Devuan 2 image for KVM, LXD and vCenter
+short_description: Devuan 3 image for KVM, LXD and vCenter
 tags:
 - devuan
 format: qcow2
 creation_time: 1652088478
 os-id: Devuan
-os-release: '2'
+os-release: '3'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4
+  6.1, 6.2, 6.3, 6.4, 6.6
 opennebula_template:
   context:
     network: 'YES'
@@ -37,12 +37,12 @@ opennebula_template:
   lxd_security_privileged: 'true'
 logo: devuan.png
 images:
-- name: devuan2
-  url: https://d24fmfybwxpuhu.cloudfront.net/devuan2-6.4.0-1.20220504.qcow2
+- name: devuan3
+  url: https://d24fmfybwxpuhu.cloudfront.net/devuan3-6.6.0-1.20230118.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 21473787904
+  size: 4294967296
   checksum:
-    md5: af14b46d601025a1e737f7271dac5bcb
-    sha256: 72b8419cb55653d1dd747a71d3e49fa37b6f3b32d85baa17fd98d8426f42df5b
+    md5: 9418246c2725be1c09d94c1957c2206f
+    sha256: b26b1771de852518b5779bef3d5c191ff336e0b1760af337c23f3e2db29946da
