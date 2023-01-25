@@ -19,7 +19,7 @@ os-id: none
 os-arch: all
 hypervisor: ALL
 opennebula_version: >-
-  6.2, 6.3, 6.4
+  6.2, 6.3, 6.4, 6.6
 images:
 - name: oneke_ce_storage
   url: https://d24fmfybwxpuhu.cloudfront.net/service_OneKE_CE_storage-6.4.0-1.20220624.qcow2
