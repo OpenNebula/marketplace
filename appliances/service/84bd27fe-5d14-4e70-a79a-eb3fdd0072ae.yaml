@@ -1,6 +1,6 @@
 ---
 name: Service WordPress - KVM
-version: 5.1.3-6.2.0-1.20211027
+version: 6.6.0-1.20230120
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled WordPress. Run, get WordPress setup web wizard
@@ -75,11 +75,11 @@ logo: wordpress.png
 images:
 - name: wordpress
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_wordpress-5.1.11-6.2.0-1.20211022.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_wordpress-6.6.0-1.20230120.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 5368709120
   checksum:
-    md5: 2fbed39539ae5dd4201bb8d441a1320a
-    sha256: '008319baad67b037ac70458d9238cf0c6bb368d554cafc5def1cbac007d79a31'
+    md5: dc32cae6c4cb8d4041d211a454432955
+    sha256: 768cc95faedaf0a3a35df3a95f8515f6c7458d30490493644560abcbc5f0196f
