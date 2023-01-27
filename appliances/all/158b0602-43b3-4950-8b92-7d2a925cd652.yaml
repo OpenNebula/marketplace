@@ -1,6 +1,6 @@
 ---
 name: FreeBSD 13
-version: 6.6.0-1.20230118
+version: 6.6.0-1.20230126
 publisher: OpenNebula Systems
 description: |-
   FreeBSD 13 image ready for your OpenNebula deployment.
@@ -36,11 +36,11 @@ opennebula_template:
 logo: freebsd.png
 images:
 - name: freebsd13
-  url: https://d24fmfybwxpuhu.cloudfront.net/freebsd13-6.6.0-1.20230118.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/freebsd13-6.6.0-1.20230126.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 82ac2b3fa6a24b90a05db6b54cd4cb21
-    sha256: 0730a3ce5e68a3519860eb6eb849226405f4823e5aba62b0ae240e77b9de9dce
+    md5: 1062525a31084c0c68ad94d008b9143c
+    sha256: fc21ccfe0f3282a380c0e29ba960bba7859f1a9ffaf4188b7c740c4833c45b8d

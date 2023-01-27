@@ -1,6 +1,6 @@
 ---
 name: Fedora 37
-version: 6.6.0-1.20230118
+version: 6.6.0-1.20230126
 publisher: OpenNebula Systems
 description: |-
   Fedora 37 image ready for your OpenNebula deployment.
@@ -36,11 +36,11 @@ opennebula_template:
 logo: fedora.png
 images:
 - name: fedora37
-  url: https://d24fmfybwxpuhu.cloudfront.net/fedora37-6.6.0-1.20230118.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/fedora37-6.6.0-1.20230126.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: 8aad43cfc190d5a8dcadd94372adc9f5
-    sha256: 2f5782775c7a5d4163b6ea64ea994cc041a4a3b0484600317e359684e9ff6672
+    md5: 04003fc0b61f2f33628cc849e1fa2b9b
+    sha256: 4e98091aef29acd2915f21b0c270c04b4c7745b1a163df1a42bf7ee72351a4b5

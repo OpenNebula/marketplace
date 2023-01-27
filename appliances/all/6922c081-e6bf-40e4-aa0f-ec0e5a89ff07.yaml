@@ -1,6 +1,6 @@
 ---
 name: Alpine Linux 3.15
-version: 6.6.0-1.20230118
+version: 6.6.0-1.20230126
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.15 image ready for your OpenNebula deployment.
@@ -40,11 +40,11 @@ opennebula_template:
 logo: alpine.png
 images:
 - name: alpine315
-  url: https://d24fmfybwxpuhu.cloudfront.net/alpine315-6.6.0-1.20230118.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alpine315-6.6.0-1.20230126.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 268435456
   checksum:
-    md5: c3ad807eb48ffc2e4ff9f14d94ec1b51
-    sha256: 4e58cb6f8ae4385aa9619e87f57420d8efd34850702bd1f6c2ab0e45f82422be
+    md5: f364e95fb0b0f3b2c10511ac99a52fd9
+    sha256: 900179caffd3b089a17591be240001ab700898dfa006d93486f08d702fb1f586

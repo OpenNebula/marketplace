@@ -1,6 +1,6 @@
 ---
 name: CentOS 7
-version: centos7-6.6.0-1.20230118
+version: 6.6.0-1.20230126
 publisher: OpenNebula Systems
 description: |-
   CentOS 7 image ready for your OpenNebula deployment.
@@ -38,11 +38,11 @@ opennebula_template:
 logo: centos-5.5.png
 images:
 - name: centos7
-  url: https://d24fmfybwxpuhu.cloudfront.net/centos7-6.6.0-1.20230118.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/centos7-6.6.0-1.20230126.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 8589934592
   checksum:
-    md5: fdca5c5725071ea62648255a9830183c
-    sha256: 4bde7aa65a5aef1bd145f33782797a639af1803a9a3d04245eb9f2563e531443
+    md5: ddaf8ab6e253c8d8ca4b97f042a7c362
+    sha256: 70bbf24b2d9abf9a74ebe001d792aaf24e05b4965a2c2a389b70d34337e75255

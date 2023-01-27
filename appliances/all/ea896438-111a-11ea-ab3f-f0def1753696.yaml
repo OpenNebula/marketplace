@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 18.04
-version: 6.6.0-1.20230118
+version: 6.6.0-1.20230126
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 18.04 image ready for your OpenNebula deployment.
@@ -39,11 +39,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu1804
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1804-6.6.0-1.20230118.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1804-6.6.0-1.20230126.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 7087aeb357ca337b1fc8182daf9309f9
-    sha256: 633450314a0398eb2af3804918c5f77a1f9cf6da0b885e73e5121baa81e209ba
+    md5: e2c281fb7bc61604282a912ef11037b4
+    sha256: fe167d3017a812687f5fd7af725e83553665cf6ec2317c89a54f3e1a08404d4c
