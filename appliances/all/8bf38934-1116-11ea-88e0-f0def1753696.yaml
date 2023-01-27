@@ -1,6 +1,6 @@
 ---
 name: Debian 10
-version: 6.6.0-1.20230118
+version: 6.6.0-1.20230126
 publisher: OpenNebula Systems
 description: |-
   Debian 10 image ready for your OpenNebula deployment.
@@ -38,11 +38,11 @@ opennebula_template:
 logo: debian.png
 images:
 - name: debian10
-  url: https://d24fmfybwxpuhu.cloudfront.net/debian10-6.6.0-1.20230118.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/debian10-6.6.0-1.20230126.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: b45dc9ce1b2733e11f6fc22767041bf4
-    sha256: 18ce3994aa16b32e8419844f245db7c81f85b8a19ecdcd2bc299d7e1d46d5c51
+    md5: 4307f0b74d39501d018b70d348dce508
+    sha256: 4beb8fc83d3aad17520d649936ef81beb46e9bd5c29f9f97beb1306c6e9643ca

@@ -1,6 +1,6 @@
 ---
 name: Devuan 3
-version: 6.6.0-1.20230118
+version: 6.6.0-1.20230126
 publisher: OpenNebula Systems
 description: |-
   Devuan 3 image ready for your OpenNebula deployment.
@@ -38,11 +38,11 @@ opennebula_template:
 logo: devuan.png
 images:
 - name: devuan3
-  url: https://d24fmfybwxpuhu.cloudfront.net/devuan3-6.6.0-1.20230118.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/devuan3-6.6.0-1.20230126.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 9418246c2725be1c09d94c1957c2206f
-    sha256: b26b1771de852518b5779bef3d5c191ff336e0b1760af337c23f3e2db29946da
+    md5: 4d8b6428e10951c918cbc030d4dd6000
+    sha256: bd5f5b192310a87d83785bea3395c8a439cd075b425a03f281369610e14f0edb

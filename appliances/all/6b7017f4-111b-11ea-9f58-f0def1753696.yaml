@@ -1,6 +1,6 @@
 ---
 name: Ubuntu Minimal 18.04
-version: 6.6.0-1.20230118
+version: 6.6.0-1.20230126
 publisher: OpenNebula Systems
 description: |-
   Ubuntu Minimal 18.04 image ready for your OpenNebula deployment.
@@ -43,11 +43,11 @@ logo: ubuntu.png
 images:
 - name: ubuntumin1804
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1804min-6.6.0-1.20230118.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1804min-6.6.0-1.20230126.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: c33d5210cd11f333c15b8f52afe4d303
-    sha256: 5464d176fef977e97c6f9341fa26a5cbe3bff470a1962165ed5f209d274a85ae
+    md5: 8f91f07ad821ea73370adc136aae74d8
+    sha256: c987076d3403b1a7556e6e982cc5730ef1435bdcb48077a6afad00427a2fcf42

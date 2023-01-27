@@ -1,6 +1,6 @@
 ---
 name: Rocky Linux 9
-version: 6.6.0-1.20230118
+version: 6.6.0-1.20230126
 publisher: OpenNebula Systems
 description: |-
   Rocky Linux 9 image ready for your OpenNebula deployment.
@@ -37,11 +37,11 @@ opennebula_template:
 logo: rocky.png
 images:
 - name: rocky9
-  url: https://d24fmfybwxpuhu.cloudfront.net/rocky9-6.6.0-1.20230118.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/rocky9-6.6.0-1.20230126.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 824482fbad31200fc663d6c74d0345c8
-    sha256: bf111b9354efa2988979bad9a123723f6755c904685ae5bc83f2896ca7184176
+    md5: 602ec0a397acc433123128b6e165fd04
+    sha256: 75e9d1856eb2197321a1ff805f4d8d9cdd85f57290cff15ea93b5f48e168d1d7

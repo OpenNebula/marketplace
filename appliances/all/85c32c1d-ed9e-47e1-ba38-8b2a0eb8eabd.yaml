@@ -1,6 +1,6 @@
 ---
 name: Fedora 36
-version: 6.6.0-1.20230118
+version: 6.6.0-1.20230126
 publisher: OpenNebula Systems
 description: |-
   Fedora 36 image ready for your OpenNebula deployment.
@@ -36,11 +36,11 @@ opennebula_template:
 logo: fedora.png
 images:
 - name: fedora36
-  url: https://d24fmfybwxpuhu.cloudfront.net/fedora36-6.6.0-1.20230118.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/fedora36-6.6.0-1.20230126.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: c8dca3016b57e17b0e2106bc59e16dc2
-    sha256: a24c16b221b95a978770721b3d08af849e3947d931d003200546bff70c9514f1
+    md5: e81ac2938dcbe86b58bd59e9c54776ef
+    sha256: 1034e702f9f5d07dbf7b311f3da02811c1afafa6842255b69ea96a2973d2bb09

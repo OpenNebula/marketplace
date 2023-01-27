@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 16.04
-version: 6.6.0-1.20230118
+version: 6.6.0-1.20230126
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 16.04 image ready for your OpenNebula deployment.
@@ -39,11 +39,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu1604
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1604-6.6.0-1.20230118.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1604-6.6.0-1.20230126.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: a144d083689b1fecd7670ab2cb6ad7d7
-    sha256: f3072af1e41202d289b2cc698ce5601de520b750b491d3f84f489cb328c650c4
+    md5: e35062202ed94766bc4dfb22280ee87a
+    sha256: 5aa5720967ebdb63ce05343b9205c630e88db7f94e34d824decb57b902be3db4

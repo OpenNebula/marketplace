@@ -1,6 +1,6 @@
 ---
 name: Service Virtual Router
-version: 6.6.0-1.20230115
+version: 6.6.0-1.20230126
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS,
@@ -79,11 +79,11 @@ logo: router.png
 images:
 - name: vnf
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.6.0-1.20230115.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.6.0-1.20230126.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: 07725b57dfceee33523051c4d00fcd2d
-    sha256: b036e0968e385739a1a9387c65e5b48b6a34f2b0c8b0d916c529e2340302f162
+    md5: dd9e5da13c274bc399eef01fc2e20acb
+    sha256: 670ba580c75a2deafa3f11c8d6f8f60578b94b332cee4edc11beccb0217454a3
