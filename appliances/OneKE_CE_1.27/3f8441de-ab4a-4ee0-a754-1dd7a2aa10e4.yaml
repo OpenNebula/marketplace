@@ -1,0 +1,77 @@
+---
+name: OneKE 1.27 CE VNF
+version: 1.27.1-6.6.1-1.20230511
+publisher: OpenNebula Systems
+description: |-
+  Appliance providing several Virtual Network Functions (routing, NAT, DNS, DHCP)
+  to run as regular VM.
+
+  See the dedicated [documentation](https://docs.opennebula.io/appliances/service/vnf.html).
+short_description: Appliance with several Virtual Network Functions to run as VM
+tags:
+- alpine
+- kubernetes
+- service
+- vnf
+format: qcow2
+creation_time: 1683807014
+os-id: Alpine
+os-release: "3.14"
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: >-
+  6.2, 6.3, 6.4, 6.6
+opennebula_template:
+  context:
+    network: "YES"
+    oneapp_vrouter_eth0_vip0: "$ONEAPP_VROUTER_ETH0_VIP0"
+    oneapp_vrouter_eth1_vip0: "$ONEAPP_VROUTER_ETH1_VIP0"
+    oneapp_vnf_dhcp4_enabled: "NO"
+    oneapp_vnf_dns_enabled: "NO"
+    oneapp_vnf_keepalived_enabled: "YES"
+    oneapp_vnf_keepalived_vrid: "$ONEAPP_VNF_KEEPALIVED_VRID"
+    oneapp_vnf_lb_enabled: "NO"
+    oneapp_vnf_lb_onegate_enabled: "NO"
+    oneapp_vnf_nat4_enabled: "$ONEAPP_VNF_NAT4_ENABLED"
+    oneapp_vnf_nat4_interfaces_out: "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
+    oneapp_vnf_router4_enabled: "$ONEAPP_VNF_ROUTER4_ENABLED"
+    oneapp_vnf_router4_interfaces: "$ONEAPP_VNF_ROUTER4_INTERFACES"
+    oneapp_vnf_haproxy_enabled: "YES"
+    oneapp_vnf_haproxy_onegate_enabled: "YES"
+    oneapp_vnf_haproxy_interfaces: "$ONEAPP_VNF_HAPROXY_INTERFACES"
+    oneapp_vnf_haproxy_refresh_rate: "$ONEAPP_VNF_HAPROXY_REFRESH_RATE"
+    oneapp_vnf_haproxy_config: "$ONEAPP_VNF_HAPROXY_CONFIG"
+    oneapp_vnf_haproxy_lb0_ip: "$ONEAPP_VNF_HAPROXY_LB0_IP"
+    oneapp_vnf_haproxy_lb0_port: "$ONEAPP_VNF_HAPROXY_LB0_PORT"
+    oneapp_vnf_haproxy_lb1_ip: "$ONEAPP_VNF_HAPROXY_LB1_IP"
+    oneapp_vnf_haproxy_lb1_port: "$ONEAPP_VNF_HAPROXY_LB1_PORT"
+    oneapp_vnf_haproxy_lb2_ip: "$ONEAPP_VNF_HAPROXY_LB2_IP"
+    oneapp_vnf_haproxy_lb2_port: "$ONEAPP_VNF_HAPROXY_LB2_PORT"
+    oneapp_vnf_haproxy_lb3_ip: "$ONEAPP_VNF_HAPROXY_LB3_IP"
+    oneapp_vnf_haproxy_lb3_port: "$ONEAPP_VNF_HAPROXY_LB3_PORT"
+    report_ready: "YES"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    token: "YES"
+  cpu: "1"
+  graphics:
+    listen: "0.0.0.0"
+    type: vnc
+  inputs_order: ""
+  memory: "512"
+  nic_default:
+    model: virtio
+  lxd_security_privileged: "true"
+  os:
+    arch: x86_64
+  user_inputs: {}
+logo: router.png
+images:
+- name: oneke_ce_vnf
+  url: https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.4.0-1.20220624.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 2147483648
+  checksum:
+    md5: ce24dd6603e79de750b461aa6d0893ae
+    sha256: f1fa876e5dd0f81927f969c560f13164f9adb1c2a20cc3952b8e51ebd1f17140
