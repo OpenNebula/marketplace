@@ -1,0 +1,49 @@
+---
+name: OneKE 1.27 EE
+version: 1.27.1-6.6.1-1.20230511
+publisher: OpenNebula Systems
+description: |-
+  OneKE 1.27 EE VM template for Master and Worker VMs.
+
+  See the dedicated [documentation](https://docs.opennebula.io/appliances/service/oneke.html).
+short_description: OneKE 1.27 EE VM template for Master and Worker VMs
+tags:
+- kubernetes
+- service
+- ubuntu
+type: VMTEMPLATE
+format: qcow2
+creation_time: 1683810523
+os-id: Ubuntu
+os-release: "22.04 LTS"
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: >-
+  6.2, 6.3, 6.4, 6.6
+opennebula_template:
+  context:
+    grow_fs: "/"
+    network: "YES"
+    report_ready: "YES"
+    token: "YES"
+    oneapp_vrouter_eth0_vip0: "$ONEAPP_VROUTER_ETH0_VIP0"
+    oneapp_vrouter_eth1_vip0: "$ONEAPP_VROUTER_ETH1_VIP0"
+    oneapp_vnf_haproxy_lb2_port: "$ONEAPP_VNF_HAPROXY_LB2_PORT"
+    oneapp_vnf_haproxy_lb3_port: "$ONEAPP_VNF_HAPROXY_LB3_PORT"
+    oneapp_k8s_extra_sans: "$ONEAPP_K8S_EXTRA_SANS"
+    oneapp_k8s_loadbalancer_config: "$ONEAPP_K8S_LOADBALANCER_CONFIG"
+    oneapp_k8s_loadbalancer_range: "$ONEAPP_K8S_LOADBALANCER_RANGE"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: "2"
+  vcpu: "2"
+  graphics:
+    listen: "0.0.0.0"
+    type: vnc
+  inputs_order: ""
+  memory: "3072"
+  os:
+    arch: x86_64
+  user_inputs: {}
+logo: kubernetes.png
+disks:
+- "OneKE 1.27 EE OS disk"
