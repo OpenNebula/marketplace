@@ -1,6 +1,6 @@
 ---
 name: AlmaLinux 9
-version: 6.6.1-1.20230607
+version: 6.6.1-2.20230607
 publisher: OpenNebula Systems
 description: |-
   AlmaLinux 9 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: AlmaLinux 9 image for KVM, LXD and vCenter.
 tags:
 - almalinux
 format: qcow2
-creation_time: 1686581516
+creation_time: 1686592717
 os-id: AlmaLinux
 os-release: '9.1'
 os-arch: x86_64
@@ -27,6 +27,8 @@ opennebula_template:
     network: 'YES'
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
   cpu: '1'
+  cpu_model:
+    model: host-passthrough
   graphics:
     listen: 0.0.0.0
     type: vnc
