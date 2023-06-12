@@ -1,6 +1,6 @@
 ---
 name: ALT Linux p10
-version: 6.6.0-1.20230118
+version: 6.6.1-1.20230607
 publisher: OpenNebula Systems
 description: |-
   ALT Linux p10 image ready for your OpenNebula deployment.
@@ -15,7 +15,7 @@ tags:
 - alt
 - altlinux
 format: qcow2
-creation_time: 1652088478
+creation_time: 1686581516
 os-id: ALT Linux
 os-release: p10
 os-arch: x86_64
@@ -35,11 +35,11 @@ opennebula_template:
 logo: alt.png
 images:
 - name: alt10
-  url: https://d24fmfybwxpuhu.cloudfront.net/alt10-6.6.0-1.20230118.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alt10-6.6.1-1.20230607.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 1950351360
+  size: 1990197248
   checksum:
-    md5: a42200e4fa98a9756f8f9d1fb7ae0008
-    sha256: 5bd4c4fbf7cfca22185478933f9903c16190b9292bc708233427801f3a181b05
+    md5: 9d80defdc2107054e7a4f35935440b74
+    sha256: ce6a95e60f19ddb83a82fb75eb21df810f6c704a584748837b42e1ad13a72aa3

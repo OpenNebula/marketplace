@@ -1,6 +1,6 @@
 ---
 name: FreeBSD 13
-version: 6.6.0-1.20230126
+version: 6.6.1-1.20230607
 publisher: OpenNebula Systems
 description: |-
   FreeBSD 13 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: FreeBSD 13 image for KVM and vCenter hosts
 tags:
 - freebsd
 format: qcow2
-creation_time: 1652088478
+creation_time: 1686581516
 os-id: FreeBSD
 os-release: '13.1'
 os-arch: x86_64
@@ -36,11 +36,11 @@ opennebula_template:
 logo: freebsd.png
 images:
 - name: freebsd13
-  url: https://d24fmfybwxpuhu.cloudfront.net/freebsd13-6.6.0-1.20230126.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/freebsd13-6.6.1-1.20230607.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 1062525a31084c0c68ad94d008b9143c
-    sha256: fc21ccfe0f3282a380c0e29ba960bba7859f1a9ffaf4188b7c740c4833c45b8d
+    md5: 0d9414df3cb3d17813cb9b20c6917671
+    sha256: f6c646daa40f460da4464942143ce9d851cd49d97d8f7663a5d415eb980b2833

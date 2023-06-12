@@ -1,6 +1,6 @@
 ---
 name: Oracle Linux 7
-version: 6.6.0-1.20230126
+version: 6.6.1-1.20230607
 publisher: OpenNebula Systems
 description: |-
   Oracle Linux 7 image ready for your OpenNebula deployment.
@@ -15,7 +15,7 @@ tags:
 - oracle
 - oraclelinux
 format: qcow2
-creation_time: 1652088478
+creation_time: 1686581516
 os-id: Oracle Linux
 os-release: '7.9'
 os-arch: x86_64
@@ -38,11 +38,11 @@ opennebula_template:
 logo: ol.png
 images:
 - name: ol7
-  url: https://d24fmfybwxpuhu.cloudfront.net/ol7-6.6.0-1.20230126.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/ol7-6.6.1-1.20230607.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 39728447488
   checksum:
-    md5: f21de370c388b314d8a765dbd7d25b8c
-    sha256: ee64f53dd3487382a085b8a39f663690eabffa0fa7e27bf78a71caa83ada132a
+    md5: 4fd8d4e7c2ae7f9cbe300cf9d90fa21b
+    sha256: a5d4ce997a30a1d9626c0b12c2e638cd0460cdc2efbf7c35654c3300d95bc1a1

@@ -1,6 +1,6 @@
 ---
 name: Oracle Linux 9
-version: 6.6.0-1.20230126
+version: 6.6.1-1.20230607
 publisher: OpenNebula Systems
 description: |-
   Oracle Linux 9 image ready for your OpenNebula deployment.
@@ -15,7 +15,7 @@ tags:
 - oracle
 - oraclelinux
 format: qcow2
-creation_time: 1652088478
+creation_time: 1686581516
 os-id: Oracle Linux
 os-release: '9.1'
 os-arch: x86_64
@@ -38,11 +38,11 @@ opennebula_template:
 logo: ol.png
 images:
 - name: ol9
-  url: https://d24fmfybwxpuhu.cloudfront.net/ol9-6.6.0-1.20230126.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/ol9-6.6.1-1.20230607.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 39728447488
   checksum:
-    md5: e2ce05cbc441b2787797cd44eacd9770
-    sha256: 1050e5bfbeebd4b74226b7aba0a94cbf9053a89873a132eb9f3474b2e804f078
+    md5: fbc75e9e8961e899a609e7fd87c1fb57
+    sha256: fef177a05fd8fd81c9c1709d8daf2cdf35f5778adb3e8ef3d0cc1d51eb2a2f67
