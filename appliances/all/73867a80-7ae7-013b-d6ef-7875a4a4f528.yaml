@@ -1,6 +1,6 @@
 ---
 name: Alpine Linux 3.16
-version: 6.6.0-1.20230126
+version: 6.6.1-1.20230607
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.16 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Alpine Linux 3.16 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1652088478
+creation_time: 1686581516
 os-id: Alpine Linux
 os-release: '3.16'
 os-arch: x86_64
@@ -40,11 +40,11 @@ opennebula_template:
 logo: alpine.png
 images:
 - name: alpine316
-  url: https://d24fmfybwxpuhu.cloudfront.net/alpine316-6.6.0-1.20230126.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alpine316-6.6.1-1.20230607.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 268435456
   checksum:
-    md5: 2b841e63c5333509f9c82e44f168d3dc
-    sha256: 270103a7289a014f51a016e1799cb1cbf417759747a39efcce92b6a6933e926b
+    md5: 8b7757797723a3bc84b9eab88298e6b7
+    sha256: 1d27cd0b869d167f2eddddcea92babc5d68a429dd0e0202a99a14f76cf1df374

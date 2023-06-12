@@ -1,6 +1,6 @@
 ---
 name: Oracle Linux 8
-version: 6.6.0-1.20230126
+version: 6.6.1-1.20230607
 publisher: OpenNebula Systems
 description: |-
   Oracle Linux 8 image ready for your OpenNebula deployment.
@@ -15,7 +15,7 @@ tags:
 - oracle
 - oraclelinux
 format: qcow2
-creation_time: 1652088478
+creation_time: 1686581516
 os-id: Oracle Linux
 os-release: '8.7'
 os-arch: x86_64
@@ -38,11 +38,11 @@ opennebula_template:
 logo: ol.png
 images:
 - name: ol8
-  url: https://d24fmfybwxpuhu.cloudfront.net/ol8-6.6.0-1.20230126.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/ol8-6.6.1-1.20230607.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 39728447488
   checksum:
-    md5: 06647173a9193114344285d16e20905e
-    sha256: 6a73a62a5fe8d335ad47abad7ed912b26adc61126f725d3416c65795ca3d22dc
+    md5: c9188a4d83acf973fb4bb94e22e1e13e
+    sha256: cf378fb02d5ac50e09812610551c7da0c986cbdd0aec1ed7a6ea240136c12d10

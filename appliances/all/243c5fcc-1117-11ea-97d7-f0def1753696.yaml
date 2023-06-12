@@ -1,6 +1,6 @@
 ---
 name: Devuan 3
-version: 6.6.0-1.20230126
+version: 6.6.1-1.20230607
 publisher: OpenNebula Systems
 description: |-
   Devuan 3 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Devuan 3 image for KVM, LXD and vCenter
 tags:
 - devuan
 format: qcow2
-creation_time: 1652088478
+creation_time: 1686581516
 os-id: Devuan
 os-release: '3'
 os-arch: x86_64
@@ -38,11 +38,11 @@ opennebula_template:
 logo: devuan.png
 images:
 - name: devuan3
-  url: https://d24fmfybwxpuhu.cloudfront.net/devuan3-6.6.0-1.20230126.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/devuan3-6.6.1-1.20230607.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 4d8b6428e10951c918cbc030d4dd6000
-    sha256: bd5f5b192310a87d83785bea3395c8a439cd075b425a03f281369610e14f0edb
+    md5: 3d0edc5c23212248aeb14e8e392111b9
+    sha256: 539955f52c896f6bf67bf34e3820c959630ba6784e6e60753a4aabd00dd4ddde

@@ -1,6 +1,6 @@
 ---
 name: FreeBSD 12
-version: 6.6.0-1.20230126
+version: 6.6.1-1.20230607
 publisher: OpenNebula Systems
 description: |-
   FreeBSD 12 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: FreeBSD 12 image for KVM and vCenter hosts
 tags:
 - freebsd
 format: qcow2
-creation_time: 1652088478
+creation_time: 1686581516
 os-id: FreeBSD
 os-release: '12.4'
 os-arch: x86_64
@@ -36,11 +36,11 @@ opennebula_template:
 logo: freebsd.png
 images:
 - name: freebsd12
-  url: https://d24fmfybwxpuhu.cloudfront.net/freebsd12-6.6.0-1.20230126.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/freebsd12-6.6.1-1.20230607.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: d2596395d77d06aea1cc2f909e28bb06
-    sha256: 7e4e94cd7ae68e2b378818ec3cada29e5696887c8d40a51a05d8429f420095c8
+    md5: 2d4307c32b08233de526af4c475b388f
+    sha256: 7f1004b63586e74a59f0f99c97b07a743e8407fe7627485864a13188142c6f1d
