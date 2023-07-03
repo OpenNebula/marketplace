@@ -1,6 +1,6 @@
 ---
-name: Service OneKE 1.27 CE
-version: 1.27.1-6.6.1-1.20230519
+name: Service OneKE 1.27
+version: 1.27.1-6.6.1-1.20230702
 publisher: OpenNebula Systems
 description: |-
   [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.27 cluster for KVM and vCenter hosts,
@@ -16,16 +16,16 @@ description: |-
   See the dedicated [documentation](https://docs.opennebula.io/appliances/service/oneke.html).
 
   Based on VM templates
-  - [OneKE 1.27 CE](/appliance/38cba842-ca61-470a-8849-fc5470316f52)
-  - [OneKE 1.27 CE VNF](/appliance/3f8441de-ab4a-4ee0-a754-1dd7a2aa10e4)
-  - [OneKE 1.27 CE Storage](/appliance/ac157470-437b-4ed4-83a4-726d315480ec)
+  - [OneKE 1.27](/appliance/0b0d2ae3-c5ec-4949-bd2e-7f4f2da0cb96)
+  - [OneKE 1.27 VNF](/appliance/8285d732-0741-4623-ba9e-4eacd2421e91)
+  - [OneKE 1.27 Storage](/appliance/c76926e6-4c0a-499f-848f-716b3164bf31)
 short_description: Multi-master Kubernetes 1.27 cluster for KVM and vCenter hosts, orchestrated by OneFlow
 tags:
 - kubernetes
 - oneflow
 - service
 - ubuntu
-creation_time: 1683807014
+creation_time: 1683810523
 os-id: Ubuntu
 os-release: "22.04 LTS"
 os-arch: x86_64
@@ -34,12 +34,12 @@ type: SERVICE_TEMPLATE
 opennebula_version: >-
   6.2, 6.3, 6.4, 6.6
 roles:
-  vnf: "OneKE 1.27 CE VNF"
-  master: "OneKE 1.27 CE"
-  worker: "OneKE 1.27 CE"
-  storage: "OneKE 1.27 CE Storage"
+  vnf: "OneKE 1.27 VNF"
+  master: "OneKE 1.27"
+  worker: "OneKE 1.27"
+  storage: "OneKE 1.27 Storage"
 opennebula_template: '{
-  "name": "OneKE 1.27 CE",
+  "name": "OneKE 1.27",
   "deployment": "straight",
   "description": "",
   "roles": [

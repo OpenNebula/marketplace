@@ -1,31 +1,33 @@
 ---
-name: Service OneKE 1.27 EE
-version: 1.27.1-6.6.1-1.20230519
+name: Service OneKE 1.24
+version: 1.24.1-6.4.0-1.20220624
 publisher: OpenNebula Systems
 description: |-
-  [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.27 cluster for KVM and vCenter hosts,
+  Technology Preview.
+
+  [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.24 cluster for KVM and vCenter hosts,
   orchestrated by
-  [OneFlow](https://docs.opennebula.io/6.6/management_and_operations/multivm_service_management/appflow_elasticity.html).
+  [OneFlow](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/appflow_elasticity.html).
 
   Requires
-  [OneFlow](https://docs.opennebula.io/6.6/management_and_operations/multivm_service_management/overview.html)
+  [OneFlow](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/overview.html)
   and
-  [OneGate](https://docs.opennebula.io/6.6/management_and_operations/multivm_service_management/onegate_usage.html)
+  [OneGate](https://docs.opennebula.io/6.4/management_and_operations/multivm_service_management/onegate_usage.html)
   OpenNebula components.
 
   See the dedicated [documentation](https://docs.opennebula.io/appliances/service/oneke.html).
 
   Based on VM templates
-  - [OneKE 1.27 EE](/appliance/0b0d2ae3-c5ec-4949-bd2e-7f4f2da0cb96)
-  - [OneKE 1.27 EE VNF](/appliance/8285d732-0741-4623-ba9e-4eacd2421e91)
-  - [OneKE 1.27 EE Storage](/appliance/c76926e6-4c0a-499f-848f-716b3164bf31)
-short_description: Multi-master Kubernetes 1.27 cluster for KVM and vCenter hosts, orchestrated by OneFlow
+  - [OneKE 1.24](/appliance/91bdc1a0-4861-4d54-97f9-b9967a6d0796)
+  - [OneKE 1.24 VNF](/appliance/f54e1d4d-ddda-42ad-825a-badb1df8aa2e)
+  - [OneKE 1.24 Storage](/appliance/528146c1-7e54-4412-96e2-f097fda30973)
+short_description: Multi-master Kubernetes 1.24 cluster for KVM and vCenter hosts, orchestrated by OneFlow
 tags:
 - kubernetes
 - oneflow
 - service
 - ubuntu
-creation_time: 1683810523
+creation_time: 1656648428
 os-id: Ubuntu
 os-release: "22.04 LTS"
 os-arch: x86_64
@@ -34,12 +36,12 @@ type: SERVICE_TEMPLATE
 opennebula_version: >-
   6.2, 6.3, 6.4, 6.6
 roles:
-  vnf: "OneKE 1.27 EE VNF"
-  master: "OneKE 1.27 EE"
-  worker: "OneKE 1.27 EE"
-  storage: "OneKE 1.27 EE Storage"
+  vnf: "OneKE 1.24 VNF"
+  master: "OneKE 1.24"
+  worker: "OneKE 1.24"
+  storage: "OneKE 1.24 Storage"
 opennebula_template: '{
-  "name": "OneKE 1.27 EE",
+  "name": "OneKE 1.24",
   "deployment": "straight",
   "description": "",
   "roles": [

@@ -1,5 +1,5 @@
 ---
-name: OneKE 1.24 EE VNF
+name: OneKE 1.24 VNF
 version: 1.24.1-6.4.0-1.20220624
 publisher: OpenNebula Systems
 description: |-
@@ -68,7 +68,7 @@ opennebula_template:
   user_inputs: {}
 logo: router.png
 images:
-- name: oneke_ee_vnf
+- name: oneke_vnf
   url: https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.4.0-1.20220624.qcow2
   type: OS
   dev_prefix: vd
