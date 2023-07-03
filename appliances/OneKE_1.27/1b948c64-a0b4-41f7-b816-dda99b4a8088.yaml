@@ -1,12 +1,12 @@
 ---
-name: OneKE 1.27 EE Storage disk
-version: 1.27.1-6.6.1-1.20230519
+name: OneKE 1.27 Storage disk
+version: 1.27.1-6.6.1-1.20230702
 publisher: OpenNebula Systems
 description: |-
-  OneKE 1.27 EE appliance Storage disk (empty).
+  OneKE 1.27 appliance Storage disk (empty).
 
   See the dedicated [documentation](https://docs.opennebula.io/appliances/service/oneke.html).
-short_description: OneKE 1.27 EE appliance Storage disk
+short_description: OneKE 1.27 appliance Storage disk
 tags:
 - disk
 - kubernetes
@@ -19,8 +19,8 @@ hypervisor: ALL
 opennebula_version: >-
   6.2, 6.3, 6.4, 6.6
 images:
-- name: oneke_ee_storage
-  url: https://d24fmfybwxpuhu.cloudfront.net/service_OneKE_EE_storage-6.6.1-1.20230511.qcow2
+- name: oneke_storage
+  url: https://d24fmfybwxpuhu.cloudfront.net/service_OneKE_storage-6.6.1-1.20230702.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2

@@ -1,6 +1,6 @@
 ---
-name: OneKE 1.27 EE VNF
-version: 1.27.1-6.6.1-1.20230519
+name: OneKE 1.27 VNF
+version: 1.27.1-6.6.1-1.20230702
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS, DHCP)
@@ -66,12 +66,12 @@ opennebula_template:
   user_inputs: {}
 logo: router.png
 images:
-- name: oneke_ee_vnf
-  url: https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.4.0-1.20220624.qcow2
+- name: oneke_vnf
+  url: https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.6.1-1.20230607.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: ce24dd6603e79de750b461aa6d0893ae
-    sha256: f1fa876e5dd0f81927f969c560f13164f9adb1c2a20cc3952b8e51ebd1f17140
+    md5: d3044cba08d935b70d4f732c313362c9
+    sha256: d9af26e9424933c9a3b0b81f0d8b265ab777bdb33984b840d2ec061ab3758bcc
