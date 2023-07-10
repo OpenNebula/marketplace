@@ -8,7 +8,7 @@ description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS, DHCP)
   to run as regular VM.
 
-  See the dedicated [documentation](https://docs.opennebula.io/appliances/service/vnf.html).
+  See the dedicated [documentation](https://docs.opennebula.io/stable/marketplace/appliances/vnf.html).
 short_description: Appliance with several Virtual Network Functions to run as VM
 tags:
 - alpine

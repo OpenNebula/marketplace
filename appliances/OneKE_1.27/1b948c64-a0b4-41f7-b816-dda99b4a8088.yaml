@@ -5,7 +5,7 @@ publisher: OpenNebula Systems
 description: |-
   OneKE 1.27 appliance Storage disk (empty).
 
-  See the dedicated [documentation](https://docs.opennebula.io/appliances/service/oneke.html).
+  See the dedicated [documentation](https://docs.opennebula.io/stable/marketplace/appliances/oneke.html).
 short_description: OneKE 1.27 appliance Storage disk
 tags:
 - disk

@@ -5,7 +5,7 @@ publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS,
   DHCP, LoadBalancer) to run as regular **Virtual Machine**. See the dedicated
-  [documentation](https://docs.opennebula.io/appliances/service/vnf.html).
+  [documentation](https://docs.opennebula.io/stable/marketplace/appliances/vnf.html).
 short_description: Appliance with several Virtual Network Functions to run
   as VM
 tags:
