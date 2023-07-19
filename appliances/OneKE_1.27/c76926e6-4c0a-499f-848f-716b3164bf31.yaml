@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.27 Storage
-version: 1.27.1-6.6.1-1.20230702
+version: 1.27.2-6.6.1-1.20230721
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.27 VM template for Storage VMs.
@@ -28,6 +28,7 @@ opennebula_template:
     token: "YES"
     oneapp_vrouter_eth0_vip0: "$ONEAPP_VROUTER_ETH0_VIP0"
     oneapp_vrouter_eth1_vip0: "$ONEAPP_VROUTER_ETH1_VIP0"
+    oneapp_k8s_longhorn_enabled: "$ONEAPP_K8S_LONGHORN_ENABLED"
     oneapp_storage_device: "$ONEAPP_STORAGE_DEVICE"
     oneapp_storage_filesystem: "$ONEAPP_STORAGE_FILESYSTEM"
     oneapp_storage_mountpoint: "/var/lib/longhorn"

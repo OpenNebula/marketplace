@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.27
-version: 1.27.1-6.6.1-1.20230702
+version: 1.27.2-6.6.1-1.20230721
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.27 VM template for Master and Worker VMs.
@@ -31,8 +31,16 @@ opennebula_template:
     oneapp_vnf_haproxy_lb2_port: "$ONEAPP_VNF_HAPROXY_LB2_PORT"
     oneapp_vnf_haproxy_lb3_port: "$ONEAPP_VNF_HAPROXY_LB3_PORT"
     oneapp_k8s_extra_sans: "$ONEAPP_K8S_EXTRA_SANS"
-    oneapp_k8s_loadbalancer_config: "$ONEAPP_K8S_LOADBALANCER_CONFIG"
-    oneapp_k8s_loadbalancer_range: "$ONEAPP_K8S_LOADBALANCER_RANGE"
+    oneapp_k8s_multus_enabled: "$ONEAPP_K8S_MULTUS_ENABLED"
+    oneapp_k8s_multus_config: "$ONEAPP_K8S_MULTUS_CONFIG"
+    oneapp_k8s_cni_plugin: "$ONEAPP_K8S_CNI_PLUGIN"
+    oneapp_k8s_cni_config: "$ONEAPP_K8S_CNI_CONFIG"
+    oneapp_k8s_cilium_range: "$ONEAPP_K8S_CILIUM_RANGE"
+    oneapp_k8s_longhorn_enabled: "$ONEAPP_K8S_LONGHORN_ENABLED"
+    oneapp_k8s_metallb_enabled: "$ONEAPP_K8S_METALLB_ENABLED"
+    oneapp_k8s_metallb_config: "$ONEAPP_K8S_METALLB_CONFIG"
+    oneapp_k8s_metallb_range: "$ONEAPP_K8S_METALLB_RANGE"
+    oneapp_k8s_traefik_enabled: "$ONEAPP_K8S_TRAEFIK_ENABLED"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
   cpu: "2"
   vcpu: "2"

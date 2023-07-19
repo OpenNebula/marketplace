@@ -1,6 +1,6 @@
 ---
 name: Service OneKE 1.27
-version: 1.27.1-6.6.1-1.20230702
+version: 1.27.2-6.6.1-1.20230721
 publisher: OpenNebula Systems
 description: |-
   [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.27 cluster for KVM and vCenter hosts,
@@ -57,7 +57,7 @@ opennebula_template: '{
       "parents": ["vnf"],
       "cardinality": 1,
       "min_vms": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_K8S_EXTRA_SANS=\"$ONEAPP_K8S_EXTRA_SANS\"\nONEAPP_K8S_LOADBALANCER_RANGE=\"$ONEAPP_K8S_LOADBALANCER_RANGE\"\nONEAPP_K8S_LOADBALANCER_CONFIG=\"$ONEAPP_K8S_LOADBALANCER_CONFIG\"\n",
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_K8S_EXTRA_SANS=\"$ONEAPP_K8S_EXTRA_SANS\"\nONEAPP_K8S_MULTUS_ENABLED=\"$ONEAPP_K8S_MULTUS_ENABLED\"\nONEAPP_K8S_MULTUS_CONFIG=\"$ONEAPP_K8S_MULTUS_CONFIG\"\nONEAPP_K8S_CNI_PLUGIN=\"$ONEAPP_K8S_CNI_PLUGIN\"\nONEAPP_K8S_CNI_CONFIG=\"$ONEAPP_K8S_CNI_CONFIG\"\nONEAPP_K8S_CILIUM_RANGE=\"$ONEAPP_K8S_CILIUM_RANGE\"\nONEAPP_K8S_LONGHORN_ENABLED=\"$ONEAPP_K8S_LONGHORN_ENABLED\"\nONEAPP_K8S_METALLB_ENABLED=\"$ONEAPP_K8S_METALLB_ENABLED\"\nONEAPP_K8S_METALLB_CONFIG=\"$ONEAPP_K8S_METALLB_CONFIG\"\nONEAPP_K8S_METALLB_RANGE=\"$ONEAPP_K8S_METALLB_RANGE\"\nONEAPP_K8S_TRAEFIK_ENABLED=\"$ONEAPP_K8S_TRAEFIK_ENABLED\"\n",
       "cooldown": 120,
       "elasticity_policies": [],
       "scheduled_policies": []
@@ -66,7 +66,7 @@ opennebula_template: '{
       "name": "worker",
       "parents": ["vnf"],
       "cardinality": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_HAPROXY_LB2_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB2_PORT=\"$ONEAPP_VNF_HAPROXY_LB2_PORT\"\nONEAPP_VNF_HAPROXY_LB3_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB3_PORT=\"$ONEAPP_VNF_HAPROXY_LB3_PORT\"\n",
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_K8S_LONGHORN_ENABLED=\"$ONEAPP_K8S_LONGHORN_ENABLED\"\nONEAPP_K8S_METALLB_ENABLED=\"$ONEAPP_K8S_METALLB_ENABLED\"\nONEAPP_K8S_TRAEFIK_ENABLED=\"$ONEAPP_K8S_TRAEFIK_ENABLED\"\nONEAPP_VNF_HAPROXY_LB2_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB2_PORT=\"$ONEAPP_VNF_HAPROXY_LB2_PORT\"\nONEAPP_VNF_HAPROXY_LB3_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB3_PORT=\"$ONEAPP_VNF_HAPROXY_LB3_PORT\"\n",
       "cooldown": 120,
       "elasticity_policies": [],
       "scheduled_policies": []
@@ -75,8 +75,7 @@ opennebula_template: '{
       "name": "storage",
       "parents": ["vnf"],
       "cardinality": 1,
-      "min_vms": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_STORAGE_DEVICE=\"$ONEAPP_STORAGE_DEVICE\"\nONEAPP_STORAGE_FILESYSTEM=\"$ONEAPP_STORAGE_FILESYSTEM\"\n",
+      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_K8S_LONGHORN_ENABLED=\"$ONEAPP_K8S_LONGHORN_ENABLED\"\nONEAPP_STORAGE_DEVICE=\"$ONEAPP_STORAGE_DEVICE\"\nONEAPP_STORAGE_FILESYSTEM=\"$ONEAPP_STORAGE_FILESYSTEM\"\n",
       "cooldown": 120,
       "elasticity_policies": [],
       "scheduled_policies": []
@@ -90,8 +89,16 @@ opennebula_template: '{
     "ONEAPP_VROUTER_ETH0_VIP0": "M|text|Control Plane Endpoint VIP (IPv4)||",
     "ONEAPP_VROUTER_ETH1_VIP0": "O|text|Default Gateway VIP (IPv4)||",
     "ONEAPP_K8S_EXTRA_SANS": "O|text|ApiServer extra certificate SANs||localhost,127.0.0.1",
-    "ONEAPP_K8S_LOADBALANCER_RANGE": "O|text|MetalLB IP range (default none)||",
-    "ONEAPP_K8S_LOADBALANCER_CONFIG": "O|text64|MetalLB custom config (default none)||",
+    "ONEAPP_K8S_MULTUS_ENABLED": "O|boolean|Enable Multus||NO",
+    "ONEAPP_K8S_MULTUS_CONFIG": "O|text64|Multus custom config (default none)||",
+    "ONEAPP_K8S_CNI_PLUGIN": "O|text|CNI plugin supported by RKE2||cilium",
+    "ONEAPP_K8S_CNI_CONFIG": "O|text64|CNI custom config (default none)||",
+    "ONEAPP_K8S_CILIUM_RANGE": "O|text|Cilium LB IP CIDR (default none)||",
+    "ONEAPP_K8S_LONGHORN_ENABLED": "O|boolean|Enable Longhorn||NO",
+    "ONEAPP_K8S_METALLB_ENABLED": "O|boolean|Enable MetalLB||NO",
+    "ONEAPP_K8S_METALLB_RANGE": "O|text|MetalLB IP range (default none)||",
+    "ONEAPP_K8S_METALLB_CONFIG": "O|text64|MetalLB custom config (default none)||",
+    "ONEAPP_K8S_TRAEFIK_ENABLED": "O|boolean|Enable Traefik||NO",
     "ONEAPP_STORAGE_DEVICE": "M|text|Storage device path||/dev/vdb",
     "ONEAPP_STORAGE_FILESYSTEM": "O|text|Storage device filesystem||xfs",
     "ONEAPP_VNF_NAT4_ENABLED": "O|boolean|Enable NAT||YES",

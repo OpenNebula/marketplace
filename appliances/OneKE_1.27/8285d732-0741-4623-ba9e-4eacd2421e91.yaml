@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.27 VNF
-version: 1.27.1-6.6.1-1.20230702
+version: 1.27.2-6.6.1-1.20230721
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS, DHCP)
