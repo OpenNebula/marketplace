@@ -74,7 +74,7 @@ opennebula_template: '{
     {
       "name": "storage",
       "parents": ["vnf"],
-      "cardinality": 1,
+      "cardinality": 0,
       "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_K8S_LONGHORN_ENABLED=\"$ONEAPP_K8S_LONGHORN_ENABLED\"\nONEAPP_STORAGE_DEVICE=\"$ONEAPP_STORAGE_DEVICE\"\nONEAPP_STORAGE_FILESYSTEM=\"$ONEAPP_STORAGE_FILESYSTEM\"\n",
       "cooldown": 120,
       "elasticity_policies": [],
