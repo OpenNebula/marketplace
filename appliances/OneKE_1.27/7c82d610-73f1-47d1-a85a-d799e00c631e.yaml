@@ -1,6 +1,6 @@
 ---
 name: Service OneKE 1.27
-version: 1.27.2-6.6.1-1.20230721
+version: 1.27.2-6.6.1-1.20230724
 publisher: OpenNebula Systems
 description: |-
   [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.27 cluster for KVM and vCenter hosts,
@@ -94,22 +94,22 @@ opennebula_template: '{
     "ONEAPP_K8S_CNI_PLUGIN": "O|text|CNI plugin supported by RKE2||cilium",
     "ONEAPP_K8S_CNI_CONFIG": "O|text64|CNI custom config (default none)||",
     "ONEAPP_K8S_CILIUM_RANGE": "O|text|Cilium LB IP CIDR (default none)||",
-    "ONEAPP_K8S_LONGHORN_ENABLED": "O|boolean|Enable Longhorn||NO",
     "ONEAPP_K8S_METALLB_ENABLED": "O|boolean|Enable MetalLB||NO",
     "ONEAPP_K8S_METALLB_RANGE": "O|text|MetalLB IP range (default none)||",
     "ONEAPP_K8S_METALLB_CONFIG": "O|text64|MetalLB custom config (default none)||",
-    "ONEAPP_K8S_TRAEFIK_ENABLED": "O|boolean|Enable Traefik||NO",
+    "ONEAPP_K8S_LONGHORN_ENABLED": "O|boolean|Enable Longhorn||NO",
     "ONEAPP_STORAGE_DEVICE": "M|text|Storage device path||/dev/vdb",
     "ONEAPP_STORAGE_FILESYSTEM": "O|text|Storage device filesystem||xfs",
-    "ONEAPP_VNF_NAT4_ENABLED": "O|boolean|Enable NAT||YES",
-    "ONEAPP_VNF_NAT4_INTERFACES_OUT": "O|text|NAT - Outgoing Interfaces||eth0",
-    "ONEAPP_VNF_ROUTER4_ENABLED": "O|boolean|Enable Router||YES",
-    "ONEAPP_VNF_ROUTER4_INTERFACES": "O|text|Router - Interfaces||eth0,eth1",
+    "ONEAPP_K8S_TRAEFIK_ENABLED": "O|boolean|Enable Traefik||NO",
     "ONEAPP_VNF_HAPROXY_INTERFACES": "O|text|Interfaces to run Haproxy on||eth0",
     "ONEAPP_VNF_HAPROXY_REFRESH_RATE": "O|number|Haproxy refresh rate||30",
     "ONEAPP_VNF_HAPROXY_CONFIG": "O|text|Custom Haproxy config (default none)||",
     "ONEAPP_VNF_HAPROXY_LB2_PORT": "O|number|HTTPS ingress port||443",
     "ONEAPP_VNF_HAPROXY_LB3_PORT": "O|number|HTTP ingress port||80",
+    "ONEAPP_VNF_NAT4_ENABLED": "O|boolean|Enable NAT||YES",
+    "ONEAPP_VNF_NAT4_INTERFACES_OUT": "O|text|NAT - Outgoing Interfaces||eth0",
+    "ONEAPP_VNF_ROUTER4_ENABLED": "O|boolean|Enable Router||YES",
+    "ONEAPP_VNF_ROUTER4_INTERFACES": "O|text|Router - Interfaces||eth0,eth1",
     "ONEAPP_VNF_KEEPALIVED_VRID": "O|number|Global vrouter id (1-255)||1"
   },
   "ready_status_gate": true
