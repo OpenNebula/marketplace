@@ -91,7 +91,7 @@ opennebula_template: '{
     "ONEAPP_K8S_EXTRA_SANS": "O|text|ApiServer extra certificate SANs||localhost,127.0.0.1",
     "ONEAPP_K8S_MULTUS_ENABLED": "O|boolean|Enable Multus||NO",
     "ONEAPP_K8S_MULTUS_CONFIG": "O|text64|Multus custom config (default none)||",
-    "ONEAPP_K8S_CNI_PLUGIN": "O|text|CNI plugin supported by RKE2||cilium",
+    "ONEAPP_K8S_CNI_PLUGIN": "O|list|CNI plugin supported by RKE2|canal,calico,cilium|cilium",
     "ONEAPP_K8S_CNI_CONFIG": "O|text64|CNI custom config (default none)||",
     "ONEAPP_K8S_CILIUM_RANGE": "O|text|Cilium LB IP CIDR (default none)||",
     "ONEAPP_K8S_METALLB_ENABLED": "O|boolean|Enable MetalLB||NO",
