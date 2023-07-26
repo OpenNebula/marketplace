@@ -98,7 +98,7 @@ opennebula_template: '{
     "ONEAPP_K8S_METALLB_RANGE": "O|text|MetalLB IP range (default none)||",
     "ONEAPP_K8S_METALLB_CONFIG": "O|text64|MetalLB custom config (default none)||",
     "ONEAPP_K8S_LONGHORN_ENABLED": "O|boolean|Enable Longhorn||NO",
-    "ONEAPP_STORAGE_DEVICE": "M|text|Storage device path||/dev/vdb",
+    "ONEAPP_STORAGE_DEVICE": "O|text|Storage device path||/dev/vdb",
     "ONEAPP_STORAGE_FILESYSTEM": "O|text|Storage device filesystem||xfs",
     "ONEAPP_K8S_TRAEFIK_ENABLED": "O|boolean|Enable Traefik||NO",
     "ONEAPP_VNF_HAPROXY_INTERFACES": "O|text|Interfaces to run Haproxy on||eth0",
