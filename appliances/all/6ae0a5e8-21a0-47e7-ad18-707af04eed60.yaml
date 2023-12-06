@@ -36,7 +36,7 @@ opennebula_template:
   lxd_security_privileged: 'true'
 logo: alma.png
 images:
-- name: almalinux8
+- name: alma8
   url: https://d24fmfybwxpuhu.cloudfront.net/alma8-6.6.1-1.20230607.qcow2
   type: OS
   dev_prefix: vd

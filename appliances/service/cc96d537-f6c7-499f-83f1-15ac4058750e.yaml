@@ -77,7 +77,7 @@ opennebula_template:
   vrouter: 'YES'
 logo: router.png
 images:
-- name: vnf
+- name: service_vnf
   url: >-
     https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.6.0-1.20230126.qcow2
   type: OS

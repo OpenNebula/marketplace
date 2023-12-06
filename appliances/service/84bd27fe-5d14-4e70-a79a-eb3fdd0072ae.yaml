@@ -73,7 +73,7 @@ opennebula_template:
     oneapp_ssl_privkey: O|text64|SSL private key
 logo: wordpress.png
 images:
-- name: wordpress
+- name: service_wordpress
   url: >-
     https://d24fmfybwxpuhu.cloudfront.net/service_wordpress-6.6.1-1.20230607.qcow2
   type: OS

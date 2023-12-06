@@ -38,7 +38,7 @@ opennebula_template:
   lxd_security_privileged: 'true'
 logo: alma.png
 images:
-- name: almalinux9
+- name: alma9
   url: https://d24fmfybwxpuhu.cloudfront.net/alma9-6.6.1-1.20230607.qcow2
   type: OS
   dev_prefix: vd
