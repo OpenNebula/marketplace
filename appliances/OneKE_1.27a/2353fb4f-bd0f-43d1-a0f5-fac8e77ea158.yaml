@@ -1,18 +1,18 @@
 ---
-name: OneKE 1.27 OS disk
+name: OneKE 1.27a OS disk
 version: 1.27.2-6.6.1-1.20231211
 publisher: OpenNebula Systems
 description: |-
-  OneKE 1.27 appliance OS disk.
+  OneKE 1.27a appliance OS disk (**airgapped install**).
 
   See the dedicated [documentation](https://docs.opennebula.io/stable/marketplace/appliances/oneke.html).
-short_description: OneKE 1.27 appliance OS disk
+short_description: OneKE 1.27a appliance OS disk
 tags:
 - disk
 - kubernetes
 - service
 format: qcow2
-creation_time: 1683810523
+creation_time: 1702323038
 os-id: none
 os-arch: all
 hypervisor: ALL
@@ -20,11 +20,11 @@ opennebula_version: >-
   6.2, 6.3, 6.4, 6.6, 6.8
 images:
 - name: oneke_os
-  url: https://d24fmfybwxpuhu.cloudfront.net/service_OneKE-6.6.1-1.20231211.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/service_OneKEa-6.6.1-1.20231211.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: b4835ac32093b89d05993da9ecac5e59
-    sha256: de0d711208abea309aca6d7901d51af1a47e5f81943ba16f27e2f079f6496de3
+    md5: 66030955913bcd7c04d5bb35fb1b94cf
+    sha256: 23ad460cc5cc84b23b0cccaff17e6d3cc5bcc0ffe5e2399a4f25bebd2f256afe
