@@ -39,11 +39,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2204
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2204-6.6.1-1.20230607.qcow2
+    https://d1u3t3vit86qcd.cloudfront.net/ubuntu2204-6.8.1-1-20240116.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: fe641fc78f38cd05c955e7e2976b92c9
-    sha256: 264b88d7921902ebfe56b97fe7d3e8ee83373f57685dc62e8c53a22a74874df1
+    md5: 4b32451e04e0f902a05cb0b782268b8b
+    sha256: 4f91d478a2d23b4819b3161b34c97b5b36b086f96797e4005582f407955f2396

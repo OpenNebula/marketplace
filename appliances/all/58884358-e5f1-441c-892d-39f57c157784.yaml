@@ -35,11 +35,11 @@ opennebula_template:
 logo: alt.png
 images:
 - name: alt10
-  url: https://d24fmfybwxpuhu.cloudfront.net/alt10-6.6.1-1.20230607.qcow2
+  url: https://d1u3t3vit86qcd.cloudfront.net/alt10-6.8.1-1-20240116.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 1990197248
+  size: 2005925888
   checksum:
-    md5: 9d80defdc2107054e7a4f35935440b74
-    sha256: ce6a95e60f19ddb83a82fb75eb21df810f6c704a584748837b42e1ad13a72aa3
+    md5: 6f9720e6dadb0a72fa396abb0f3587fe
+    sha256: 4fada147caaf7cfb442ffa7738b4a9a7385f1e45787fff2761251d7400596408

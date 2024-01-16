@@ -38,11 +38,11 @@ opennebula_template:
 logo: devuan.png
 images:
 - name: devuan3
-  url: https://d24fmfybwxpuhu.cloudfront.net/devuan3-6.6.1-1.20230607.qcow2
+  url: https://d1u3t3vit86qcd.cloudfront.net/devuan3-6.8.1-1-20240116.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 3d0edc5c23212248aeb14e8e392111b9
-    sha256: 539955f52c896f6bf67bf34e3820c959630ba6784e6e60753a4aabd00dd4ddde
+    md5: a82b099da5b9b53020b93022fa1dcc0c
+    sha256: d43d82a5587c204633ef8cb833a57b6ead3b1e9bf708d5fe68cb0d67d9e34fd0

@@ -36,11 +36,11 @@ opennebula_template:
 logo: freebsd.png
 images:
 - name: freebsd13
-  url: https://d24fmfybwxpuhu.cloudfront.net/freebsd13-6.6.1-1.20230607.qcow2
+  url: https://d1u3t3vit86qcd.cloudfront.net/freebsd13-6.8.1-1-20240116.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 0d9414df3cb3d17813cb9b20c6917671
-    sha256: f6c646daa40f460da4464942143ce9d851cd49d97d8f7663a5d415eb980b2833
+    md5: 6decaa4e9254e73fb0f5124d2e783230
+    sha256: fa9a7dda68db73779f4f33c433bbc0e913a4c24639ea76e383c9014c1d507ae7

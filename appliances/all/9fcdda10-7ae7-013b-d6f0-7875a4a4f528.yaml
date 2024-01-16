@@ -40,11 +40,11 @@ opennebula_template:
 logo: alpine.png
 images:
 - name: alpine317
-  url: https://d24fmfybwxpuhu.cloudfront.net/alpine317-6.6.1-1.20230607.qcow2
+  url: https://d1u3t3vit86qcd.cloudfront.net/alpine317-6.8.1-1-20240116.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 268435456
   checksum:
-    md5: 62d87f43c85ef0c23118125c59a1e20c
-    sha256: 109bbc0d9c358813b059d7fd7647af1f5859b3dbc86d1c4c01bf6676d98fc37a
+    md5: 386dc602e65e7613b6287adaee53f936
+    sha256: 45be9eb808c0e24998303e2b230d352edae16a0d27bff90a2d21dca589c4607a

@@ -40,11 +40,11 @@ opennebula_template:
 logo: ol.png
 images:
 - name: ol9
-  url: https://d24fmfybwxpuhu.cloudfront.net/ol9-6.6.1-1.20230607.qcow2
+  url: https://d1u3t3vit86qcd.cloudfront.net/ol9-6.8.1-1-20240116.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 39728447488
   checksum:
-    md5: fbc75e9e8961e899a609e7fd87c1fb57
-    sha256: fef177a05fd8fd81c9c1709d8daf2cdf35f5778adb3e8ef3d0cc1d51eb2a2f67
+    md5: 7a1721bebe9ae09ea7dd61180b15cef5
+    sha256: 3184ee60e9c046832da755b2816ffad4a08ad1e8b337e6f96661bd33fe8b40ea

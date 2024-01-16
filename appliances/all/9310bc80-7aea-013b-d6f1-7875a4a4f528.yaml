@@ -39,11 +39,11 @@ opennebula_template:
 logo: rocky.png
 images:
 - name: rocky9
-  url: https://d24fmfybwxpuhu.cloudfront.net/rocky9-6.6.1-1.20230607.qcow2
+  url: https://d1u3t3vit86qcd.cloudfront.net/rocky9-6.8.1-1-20240116.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: cbee904165aafe4bb898c530ed1716f9
-    sha256: 60e732e9104309892b7b4ca2f083bc032c52021a7d282400ced639603ffa8f16
+    md5: '038c79aa96c7e7ccc9b0235012602e89'
+    sha256: 8d13d719c9350c03e6154c0ff085007a9b31c21f1ff7bcb40f49611586a13359

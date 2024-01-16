@@ -38,11 +38,11 @@ opennebula_template:
 logo: centos-5.5.png
 images:
 - name: centos7
-  url: https://d24fmfybwxpuhu.cloudfront.net/centos7-6.6.1-1.20230607.qcow2
+  url: https://d1u3t3vit86qcd.cloudfront.net/centos7-6.8.1-1-20240116.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 8589934592
   checksum:
-    md5: 484547f91fc1bf0946b2a91293f8e7f1
-    sha256: aae1d924b364b94ee1b42b4f51de6d2ad141552384af1b4aa116fe2839645f30
+    md5: 2af50c2fda0d9373e30259aa835289b1
+    sha256: 42e071d11200f59b575d05011b24df9f94f440dd5a94a65a3b451848f638e3e2

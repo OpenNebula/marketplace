@@ -36,11 +36,11 @@ opennebula_template:
 logo: amazon.png
 images:
 - name: amazon2
-  url: https://d24fmfybwxpuhu.cloudfront.net/amazon2-6.6.1-1.20230607.qcow2
+  url: https://d1u3t3vit86qcd.cloudfront.net/amazon2-6.8.1-1-20240116.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 26843545600
   checksum:
-    md5: 93246cf30d5762b8fd0230edca43d273
-    sha256: 9926df398808776658df05542bf04685527a353aa5eeb6291c74ba92cf920a72
+    md5: 19cfdbd9375279f09b329b90d15eded0
+    sha256: 943f4f09addbb892849322f8bf47330a9ae7637dde550491130214fe37c172d7

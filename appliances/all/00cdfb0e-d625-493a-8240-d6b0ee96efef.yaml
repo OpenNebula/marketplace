@@ -37,11 +37,11 @@ opennebula_template:
 logo: alt.png
 images:
 - name: alt9
-  url: https://d24fmfybwxpuhu.cloudfront.net/alt9-6.6.1-1.20230607.qcow2
+  url: https://d1u3t3vit86qcd.cloudfront.net/alt9-6.8.1-1-20240116.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 1653604352
+  size: 1654652928
   checksum:
-    md5: a827beacf305b492a2acbcef86ad97d5
-    sha256: 9b6d26386994159d319b2e237e9a6a570373b471c5ee1b4c4f9dbabecbff4256
+    md5: 947937e72cbfb88cc5b78bcd2b2ed117
+    sha256: c01dcba4a3eea50b589d77752316845ab1a77b8b0758b17939054fe32c06e085

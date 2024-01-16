@@ -38,11 +38,11 @@ opennebula_template:
 logo: debian.png
 images:
 - name: debian11
-  url: https://d24fmfybwxpuhu.cloudfront.net/debian11-6.6.1-1.20230607.qcow2
+  url: https://d1u3t3vit86qcd.cloudfront.net/debian11-6.8.1-1-20240116.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: 400f4f626a8ebf9c3d82add63d9961e4
-    sha256: 67886517708812a4985cff81656d1669ebcb5351f1fe34cfe8766cff62795a93
+    md5: 2fe520eb245f8a15e53080396fbd0e36
+    sha256: e2633d6f95ca5052b30d428706258d3d9a04628a73a7888c85c9d8fb5f957838
