@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.27 OS disk
-version: 1.27.2-6.6.1-1.20231211
+version: 1.27.2-6.8.1-1.20240119
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.27 appliance OS disk.
@@ -20,11 +20,11 @@ opennebula_version: >-
   6.2, 6.3, 6.4, 6.6, 6.8
 images:
 - name: oneke_os
-  url: https://d24fmfybwxpuhu.cloudfront.net/service_OneKE-6.6.1-1.20231211.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/service_OneKE-6.8.1-1.20240119.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 21474836480
+  size: 26843545600
   checksum:
-    md5: b4835ac32093b89d05993da9ecac5e59
-    sha256: de0d711208abea309aca6d7901d51af1a47e5f81943ba16f27e2f079f6496de3
+    md5: 1c47e4fc03544e46e54599b198f10428
+    sha256: b37007a13dab5a818bcdb818507ee109e81257e0fece8ecbd29cea0c25561139
