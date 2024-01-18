@@ -38,81 +38,133 @@ roles:
   master: "OneKE 1.27a"
   worker: "OneKE 1.27a"
   storage: "OneKE 1.27a Storage"
-opennebula_template: '{
-  "name": "OneKE 1.27",
-  "deployment": "straight",
-  "description": "",
-  "roles": [
-    {
-      "name": "vnf",
-      "cardinality": 1,
-      "min_vms": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Public\"]\nNIC=[NAME=\"NIC1\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_VNF_NAT4_ENABLED=\"$ONEAPP_VNF_NAT4_ENABLED\"\nONEAPP_VNF_NAT4_INTERFACES_OUT=\"$ONEAPP_VNF_NAT4_INTERFACES_OUT\"\nONEAPP_VNF_ROUTER4_ENABLED=\"$ONEAPP_VNF_ROUTER4_ENABLED\"\nONEAPP_VNF_ROUTER4_INTERFACES=\"$ONEAPP_VNF_ROUTER4_INTERFACES\"\nONEAPP_VNF_HAPROXY_INTERFACES=\"$ONEAPP_VNF_HAPROXY_INTERFACES\"\nONEAPP_VNF_HAPROXY_REFRESH_RATE=\"$ONEAPP_VNF_HAPROXY_REFRESH_RATE\"\nONEAPP_VNF_HAPROXY_CONFIG=\"$ONEAPP_VNF_HAPROXY_CONFIG\"\nONEAPP_VNF_HAPROXY_LB0_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB0_PORT=\"9345\"\nONEAPP_VNF_HAPROXY_LB1_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB1_PORT=\"6443\"\nONEAPP_VNF_HAPROXY_LB2_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB2_PORT=\"$ONEAPP_VNF_HAPROXY_LB2_PORT\"\nONEAPP_VNF_HAPROXY_LB3_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB3_PORT=\"$ONEAPP_VNF_HAPROXY_LB3_PORT\"\nONEAPP_VNF_KEEPALIVED_VRID=\"$ONEAPP_VNF_KEEPALIVED_VRID\"\n",
-      "cooldown": 120,
-      "elasticity_policies": [],
-      "scheduled_policies": []
-    },
-    {
-      "name": "master",
-      "parents": ["vnf"],
-      "cardinality": 1,
-      "min_vms": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_K8S_EXTRA_SANS=\"$ONEAPP_K8S_EXTRA_SANS\"\nONEAPP_K8S_MULTUS_ENABLED=\"$ONEAPP_K8S_MULTUS_ENABLED\"\nONEAPP_K8S_MULTUS_CONFIG=\"$ONEAPP_K8S_MULTUS_CONFIG\"\nONEAPP_K8S_CNI_PLUGIN=\"$ONEAPP_K8S_CNI_PLUGIN\"\nONEAPP_K8S_CNI_CONFIG=\"$ONEAPP_K8S_CNI_CONFIG\"\nONEAPP_K8S_CILIUM_RANGE=\"$ONEAPP_K8S_CILIUM_RANGE\"\nONEAPP_K8S_LONGHORN_ENABLED=\"$ONEAPP_K8S_LONGHORN_ENABLED\"\nONEAPP_K8S_METALLB_ENABLED=\"$ONEAPP_K8S_METALLB_ENABLED\"\nONEAPP_K8S_METALLB_CONFIG=\"$ONEAPP_K8S_METALLB_CONFIG\"\nONEAPP_K8S_METALLB_RANGE=\"$ONEAPP_K8S_METALLB_RANGE\"\nONEAPP_K8S_TRAEFIK_ENABLED=\"$ONEAPP_K8S_TRAEFIK_ENABLED\"\n",
-      "cooldown": 120,
-      "elasticity_policies": [],
-      "scheduled_policies": []
-    },
-    {
-      "name": "worker",
-      "parents": ["vnf"],
-      "cardinality": 1,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_K8S_MULTUS_ENABLED=\"$ONEAPP_K8S_MULTUS_ENABLED\"\nONEAPP_K8S_CNI_PLUGIN=\"$ONEAPP_K8S_CNI_PLUGIN\"\nONEAPP_K8S_LONGHORN_ENABLED=\"$ONEAPP_K8S_LONGHORN_ENABLED\"\nONEAPP_K8S_METALLB_ENABLED=\"$ONEAPP_K8S_METALLB_ENABLED\"\nONEAPP_K8S_TRAEFIK_ENABLED=\"$ONEAPP_K8S_TRAEFIK_ENABLED\"\nONEAPP_VNF_HAPROXY_LB2_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB2_PORT=\"$ONEAPP_VNF_HAPROXY_LB2_PORT\"\nONEAPP_VNF_HAPROXY_LB3_IP=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VNF_HAPROXY_LB3_PORT=\"$ONEAPP_VNF_HAPROXY_LB3_PORT\"\n",
-      "cooldown": 120,
-      "elasticity_policies": [],
-      "scheduled_policies": []
-    },
-    {
-      "name": "storage",
-      "parents": ["vnf"],
-      "cardinality": 0,
-      "vm_template_contents": "NIC=[NAME=\"NIC0\",NETWORK_ID=\"$Private\"]\nONEAPP_VROUTER_ETH0_VIP0=\"$ONEAPP_VROUTER_ETH0_VIP0\"\nONEAPP_VROUTER_ETH1_VIP0=\"$ONEAPP_VROUTER_ETH1_VIP0\"\nONEAPP_K8S_MULTUS_ENABLED=\"$ONEAPP_K8S_MULTUS_ENABLED\"\nONEAPP_K8S_CNI_PLUGIN=\"$ONEAPP_K8S_CNI_PLUGIN\"\nONEAPP_K8S_LONGHORN_ENABLED=\"$ONEAPP_K8S_LONGHORN_ENABLED\"\nONEAPP_STORAGE_DEVICE=\"$ONEAPP_STORAGE_DEVICE\"\nONEAPP_STORAGE_FILESYSTEM=\"$ONEAPP_STORAGE_FILESYSTEM\"\n",
-      "cooldown": 120,
-      "elasticity_policies": [],
-      "scheduled_policies": []
-    }
-  ],
-  "networks": {
-    "Public": "M|network|Public||id:",
-    "Private": "M|network|Private||id:"
-  },
-  "custom_attrs": {
-    "ONEAPP_VROUTER_ETH0_VIP0": "M|text|Control Plane Endpoint VIP (IPv4)||",
-    "ONEAPP_VROUTER_ETH1_VIP0": "O|text|Default Gateway VIP (IPv4)||",
-    "ONEAPP_K8S_EXTRA_SANS": "O|text|ApiServer extra certificate SANs||localhost,127.0.0.1",
-    "ONEAPP_K8S_MULTUS_ENABLED": "O|boolean|Enable Multus||NO",
-    "ONEAPP_K8S_MULTUS_CONFIG": "O|text64|Multus custom config (default none)||",
-    "ONEAPP_K8S_CNI_PLUGIN": "O|list|CNI plugin supported by RKE2|canal,calico,cilium|cilium",
-    "ONEAPP_K8S_CNI_CONFIG": "O|text64|CNI custom config (default none)||",
-    "ONEAPP_K8S_CILIUM_RANGE": "O|text|Cilium LB IP CIDR (default none)||",
-    "ONEAPP_K8S_METALLB_ENABLED": "O|boolean|Enable MetalLB||NO",
-    "ONEAPP_K8S_METALLB_RANGE": "O|text|MetalLB IP range (default none)||",
-    "ONEAPP_K8S_METALLB_CONFIG": "O|text64|MetalLB custom config (default none)||",
-    "ONEAPP_K8S_LONGHORN_ENABLED": "O|boolean|Enable Longhorn||NO",
-    "ONEAPP_STORAGE_DEVICE": "O|text|Storage device path||/dev/vdb",
-    "ONEAPP_STORAGE_FILESYSTEM": "O|text|Storage device filesystem||xfs",
-    "ONEAPP_K8S_TRAEFIK_ENABLED": "O|boolean|Enable Traefik||NO",
-    "ONEAPP_VNF_HAPROXY_INTERFACES": "O|text|Interfaces to run Haproxy on||eth0",
-    "ONEAPP_VNF_HAPROXY_REFRESH_RATE": "O|number|Haproxy refresh rate||30",
-    "ONEAPP_VNF_HAPROXY_CONFIG": "O|text|Custom Haproxy config (default none)||",
-    "ONEAPP_VNF_HAPROXY_LB2_PORT": "O|number|HTTPS ingress port||443",
-    "ONEAPP_VNF_HAPROXY_LB3_PORT": "O|number|HTTP ingress port||80",
-    "ONEAPP_VNF_NAT4_ENABLED": "O|boolean|Enable NAT||YES",
-    "ONEAPP_VNF_NAT4_INTERFACES_OUT": "O|text|NAT - Outgoing Interfaces||eth0",
-    "ONEAPP_VNF_ROUTER4_ENABLED": "O|boolean|Enable Router||YES",
-    "ONEAPP_VNF_ROUTER4_INTERFACES": "O|text|Router - Interfaces||eth0,eth1",
-    "ONEAPP_VNF_KEEPALIVED_VRID": "O|number|Global vrouter id (1-255)||1"
-  },
-  "ready_status_gate": true
-}'
+opennebula_template:
+  name: OneKE 1.27
+  deployment: straight
+  description: ''
+  roles:
+    - name: vnf
+      cardinality: 1
+      min_vms: 1
+      vm_template_contents: |
+        NIC = [
+          NAME = "NIC0",
+          NETWORK_ID = "$Public" ]
+        NIC = [
+          NAME = "NIC1",
+          NETWORK_ID = "$Private" ]
+        ONEAPP_VROUTER_ETH0_VIP0 = "$ONEAPP_VROUTER_ETH0_VIP0"
+        ONEAPP_VROUTER_ETH1_VIP0 = "$ONEAPP_VROUTER_ETH1_VIP0"
+        ONEAPP_VNF_NAT4_ENABLED = "$ONEAPP_VNF_NAT4_ENABLED"
+        ONEAPP_VNF_NAT4_INTERFACES_OUT = "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
+        ONEAPP_VNF_ROUTER4_ENABLED = "$ONEAPP_VNF_ROUTER4_ENABLED"
+        ONEAPP_VNF_ROUTER4_INTERFACES = "$ONEAPP_VNF_ROUTER4_INTERFACES"
+        ONEAPP_VNF_HAPROXY_INTERFACES = "$ONEAPP_VNF_HAPROXY_INTERFACES"
+        ONEAPP_VNF_HAPROXY_REFRESH_RATE = "$ONEAPP_VNF_HAPROXY_REFRESH_RATE"
+        ONEAPP_VNF_HAPROXY_CONFIG = "$ONEAPP_VNF_HAPROXY_CONFIG"
+        ONEAPP_VNF_HAPROXY_LB0_IP = "$ONEAPP_VROUTER_ETH0_VIP0"
+        ONEAPP_VNF_HAPROXY_LB0_PORT = "9345"
+        ONEAPP_VNF_HAPROXY_LB1_IP = "$ONEAPP_VROUTER_ETH0_VIP0"
+        ONEAPP_VNF_HAPROXY_LB1_PORT = "6443"
+        ONEAPP_VNF_HAPROXY_LB2_IP = "$ONEAPP_VROUTER_ETH0_VIP0"
+        ONEAPP_VNF_HAPROXY_LB2_PORT = "$ONEAPP_VNF_HAPROXY_LB2_PORT"
+        ONEAPP_VNF_HAPROXY_LB3_IP = "$ONEAPP_VROUTER_ETH0_VIP0"
+        ONEAPP_VNF_HAPROXY_LB3_PORT = "$ONEAPP_VNF_HAPROXY_LB3_PORT"
+        ONEAPP_VNF_KEEPALIVED_VRID = "$ONEAPP_VNF_KEEPALIVED_VRID"
+      cooldown: 120
+      elasticity_policies: []
+      scheduled_policies: []
+    - name: master
+      parents: [vnf]
+      cardinality: 1
+      min_vms: 1
+      vm_template_contents: |
+        NIC = [
+          NAME = "NIC0",
+          NETWORK_ID = "$Private" ]
+        ONEAPP_VROUTER_ETH0_VIP0 = "$ONEAPP_VROUTER_ETH0_VIP0"
+        ONEAPP_VROUTER_ETH1_VIP0 = "$ONEAPP_VROUTER_ETH1_VIP0"
+        ONEAPP_K8S_EXTRA_SANS = "$ONEAPP_K8S_EXTRA_SANS"
+        ONEAPP_K8S_MULTUS_ENABLED = "$ONEAPP_K8S_MULTUS_ENABLED"
+        ONEAPP_K8S_MULTUS_CONFIG = "$ONEAPP_K8S_MULTUS_CONFIG"
+        ONEAPP_K8S_CNI_PLUGIN = "$ONEAPP_K8S_CNI_PLUGIN"
+        ONEAPP_K8S_CNI_CONFIG = "$ONEAPP_K8S_CNI_CONFIG"
+        ONEAPP_K8S_CILIUM_RANGE = "$ONEAPP_K8S_CILIUM_RANGE"
+        ONEAPP_K8S_LONGHORN_ENABLED = "$ONEAPP_K8S_LONGHORN_ENABLED"
+        ONEAPP_K8S_METALLB_ENABLED = "$ONEAPP_K8S_METALLB_ENABLED"
+        ONEAPP_K8S_METALLB_CONFIG = "$ONEAPP_K8S_METALLB_CONFIG"
+        ONEAPP_K8S_METALLB_RANGE = "$ONEAPP_K8S_METALLB_RANGE"
+        ONEAPP_K8S_TRAEFIK_ENABLED = "$ONEAPP_K8S_TRAEFIK_ENABLED"
+      cooldown: 120
+      elasticity_policies: []
+      scheduled_policies: []
+    - name: worker
+      parents: [vnf]
+      cardinality: 1,
+      vm_template_contents: |
+        NIC = [
+          NAME = "NIC0",
+          NETWORK_ID = "$Private" ]
+        ONEAPP_VROUTER_ETH0_VIP0 = "$ONEAPP_VROUTER_ETH0_VIP0"
+        ONEAPP_VROUTER_ETH1_VIP0 = "$ONEAPP_VROUTER_ETH1_VIP0"
+        ONEAPP_K8S_MULTUS_ENABLED = "$ONEAPP_K8S_MULTUS_ENABLED"
+        ONEAPP_K8S_CNI_PLUGIN = "$ONEAPP_K8S_CNI_PLUGIN"
+        ONEAPP_K8S_LONGHORN_ENABLED = "$ONEAPP_K8S_LONGHORN_ENABLED"
+        ONEAPP_K8S_METALLB_ENABLED = "$ONEAPP_K8S_METALLB_ENABLED"
+        ONEAPP_K8S_TRAEFIK_ENABLED = "$ONEAPP_K8S_TRAEFIK_ENABLED"
+        ONEAPP_VNF_HAPROXY_LB2_IP = "$ONEAPP_VROUTER_ETH0_VIP0"
+        ONEAPP_VNF_HAPROXY_LB2_PORT = "$ONEAPP_VNF_HAPROXY_LB2_PORT"
+        ONEAPP_VNF_HAPROXY_LB3_IP = "$ONEAPP_VROUTER_ETH0_VIP0"
+        ONEAPP_VNF_HAPROXY_LB3_PORT = "$ONEAPP_VNF_HAPROXY_LB3_PORT"
+      cooldown: 120,
+      elasticity_policies: []
+      scheduled_policies: []
+    - name: storage
+      parents: [vnf]
+      cardinality: 0
+      vm_template_contents: |
+        NIC = [
+          NAME = "NIC0",
+          NETWORK_ID = "$Private" ]
+        ONEAPP_VROUTER_ETH0_VIP0 = "$ONEAPP_VROUTER_ETH0_VIP0"
+        ONEAPP_VROUTER_ETH1_VIP0 = "$ONEAPP_VROUTER_ETH1_VIP0"
+        ONEAPP_K8S_MULTUS_ENABLED = "$ONEAPP_K8S_MULTUS_ENABLED"
+        ONEAPP_K8S_CNI_PLUGIN = "$ONEAPP_K8S_CNI_PLUGIN"
+        ONEAPP_K8S_LONGHORN_ENABLED = "$ONEAPP_K8S_LONGHORN_ENABLED"
+        ONEAPP_STORAGE_DEVICE = "$ONEAPP_STORAGE_DEVICE"
+        ONEAPP_STORAGE_FILESYSTEM = "$ONEAPP_STORAGE_FILESYSTEM"
+      cooldown: 120
+      elasticity_policies: []
+      scheduled_policies: []
+  networks:
+    Public: "M|network|Public||id:"
+    Private: "M|network|Private||id:"
+  custom_attrs:
+    ONEAPP_VROUTER_ETH0_VIP0: "M|text|Control Plane Endpoint VIP (IPv4)||"
+    ONEAPP_VROUTER_ETH1_VIP0: "O|text|Default Gateway VIP (IPv4)||"
+    ONEAPP_K8S_EXTRA_SANS: "O|text|ApiServer extra certificate SANs||localhost,127.0.0.1"
+    ONEAPP_K8S_MULTUS_ENABLED: "O|boolean|Enable Multus||NO"
+    ONEAPP_K8S_MULTUS_CONFIG: "O|text64|Multus custom config (default none)||"
+    ONEAPP_K8S_CNI_PLUGIN: "O|list|CNI plugin supported by RKE2|canal,calico,cilium|cilium"
+    ONEAPP_K8S_CNI_CONFIG: "O|text64|CNI custom config (default none)||"
+    ONEAPP_K8S_CILIUM_RANGE: "O|text|Cilium LB IP CIDR (default none)||"
+    ONEAPP_K8S_METALLB_ENABLED: "O|boolean|Enable MetalLB||NO"
+    ONEAPP_K8S_METALLB_RANGE: "O|text|MetalLB IP range (default none)||"
+    ONEAPP_K8S_METALLB_CONFIG: "O|text64|MetalLB custom config (default none)||"
+    ONEAPP_K8S_LONGHORN_ENABLED: "O|boolean|Enable Longhorn||NO"
+    ONEAPP_STORAGE_DEVICE: "O|text|Storage device path||/dev/vdb"
+    ONEAPP_STORAGE_FILESYSTEM: "O|text|Storage device filesystem||xfs"
+    ONEAPP_K8S_TRAEFIK_ENABLED: "O|boolean|Enable Traefik||NO"
+    ONEAPP_VNF_HAPROXY_INTERFACES: "O|text|Interfaces to run Haproxy on||eth0"
+    ONEAPP_VNF_HAPROXY_REFRESH_RATE: "O|number|Haproxy refresh rate||30"
+    ONEAPP_VNF_HAPROXY_CONFIG: "O|text|Custom Haproxy config (default none)||"
+    ONEAPP_VNF_HAPROXY_LB2_PORT: "O|number|HTTPS ingress port||443"
+    ONEAPP_VNF_HAPROXY_LB3_PORT: "O|number|HTTP ingress port||80"
+    ONEAPP_VNF_NAT4_ENABLED: "O|boolean|Enable NAT||YES"
+    ONEAPP_VNF_NAT4_INTERFACES_OUT: "O|text|NAT - Outgoing Interfaces||eth0"
+    ONEAPP_VNF_ROUTER4_ENABLED: "O|boolean|Enable Router||YES"
+    ONEAPP_VNF_ROUTER4_INTERFACES: "O|text|Router - Interfaces||eth0,eth1"
+    ONEAPP_VNF_KEEPALIVED_VRID: "O|number|Global vrouter id (1-255)||1"
+  ready_status_gate: true
 logo: kubernetes.png
 images: []
