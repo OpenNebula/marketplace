@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.27 VNF
-version: 1.27.2-6.6.1-1.20231211
+version: 1.27.2-6.8.1-1.20240119
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS, DHCP)
@@ -23,35 +23,32 @@ opennebula_version: >-
   6.2, 6.3, 6.4, 6.6, 6.8
 opennebula_template:
   context:
-    network: "YES"
-    oneapp_vrouter_eth0_vip0: "$ONEAPP_VROUTER_ETH0_VIP0"
-    oneapp_vrouter_eth1_vip0: "$ONEAPP_VROUTER_ETH1_VIP0"
-    oneapp_vnf_dhcp4_enabled: "NO"
-    oneapp_vnf_dns_enabled: "NO"
-    oneapp_vnf_keepalived_enabled: "YES"
-    oneapp_vnf_keepalived_vrid: "$ONEAPP_VNF_KEEPALIVED_VRID"
-    oneapp_vnf_lb_enabled: "NO"
-    oneapp_vnf_lb_onegate_enabled: "NO"
-    oneapp_vnf_nat4_enabled: "$ONEAPP_VNF_NAT4_ENABLED"
-    oneapp_vnf_nat4_interfaces_out: "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
-    oneapp_vnf_router4_enabled: "$ONEAPP_VNF_ROUTER4_ENABLED"
-    oneapp_vnf_router4_interfaces: "$ONEAPP_VNF_ROUTER4_INTERFACES"
-    oneapp_vnf_haproxy_enabled: "YES"
-    oneapp_vnf_haproxy_onegate_enabled: "YES"
-    oneapp_vnf_haproxy_interfaces: "$ONEAPP_VNF_HAPROXY_INTERFACES"
-    oneapp_vnf_haproxy_refresh_rate: "$ONEAPP_VNF_HAPROXY_REFRESH_RATE"
-    oneapp_vnf_haproxy_config: "$ONEAPP_VNF_HAPROXY_CONFIG"
-    oneapp_vnf_haproxy_lb0_ip: "$ONEAPP_VNF_HAPROXY_LB0_IP"
-    oneapp_vnf_haproxy_lb0_port: "$ONEAPP_VNF_HAPROXY_LB0_PORT"
-    oneapp_vnf_haproxy_lb1_ip: "$ONEAPP_VNF_HAPROXY_LB1_IP"
-    oneapp_vnf_haproxy_lb1_port: "$ONEAPP_VNF_HAPROXY_LB1_PORT"
-    oneapp_vnf_haproxy_lb2_ip: "$ONEAPP_VNF_HAPROXY_LB2_IP"
-    oneapp_vnf_haproxy_lb2_port: "$ONEAPP_VNF_HAPROXY_LB2_PORT"
-    oneapp_vnf_haproxy_lb3_ip: "$ONEAPP_VNF_HAPROXY_LB3_IP"
-    oneapp_vnf_haproxy_lb3_port: "$ONEAPP_VNF_HAPROXY_LB3_PORT"
-    report_ready: "YES"
-    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
-    token: "YES"
+    ONEAPP_VNF_KEEPALIVED_ETH0_SKIP: "YES" # do *NOT* use eth0 for VRRP traffic
+    NETWORK: "YES"
+    TOKEN: "YES"
+    REPORT_READY: "YES"
+    SSH_PUBLIC_KEY: "$USER[SSH_PUBLIC_KEY]"
+    ONE_SERVICE_AIRGAPPED: "NO"
+    ONEAPP_VROUTER_ETH0_VIP0: "$ONEAPP_VROUTER_ETH0_VIP0"
+    ONEAPP_VROUTER_ETH1_VIP0: "$ONEAPP_VROUTER_ETH1_VIP0"
+    ONEAPP_VNF_HAPROXY_ENABLED: "YES"
+    ONEAPP_VNF_HAPROXY_ONEGATE_ENABLED: "YES"
+    ONEAPP_VNF_HAPROXY_INTERFACES: "$ONEAPP_VNF_HAPROXY_INTERFACES"
+    ONEAPP_VNF_HAPROXY_REFRESH_RATE: "$ONEAPP_VNF_HAPROXY_REFRESH_RATE"
+    ONEAPP_VNF_HAPROXY_LB0_IP: "$ONEAPP_VNF_HAPROXY_LB0_IP"
+    ONEAPP_VNF_HAPROXY_LB0_PORT: "$ONEAPP_VNF_HAPROXY_LB0_PORT"
+    ONEAPP_VNF_HAPROXY_LB1_IP: "$ONEAPP_VNF_HAPROXY_LB1_IP"
+    ONEAPP_VNF_HAPROXY_LB1_PORT: "$ONEAPP_VNF_HAPROXY_LB1_PORT"
+    ONEAPP_VNF_HAPROXY_LB2_IP: "$ONEAPP_VNF_HAPROXY_LB2_IP"
+    ONEAPP_VNF_HAPROXY_LB2_PORT: "$ONEAPP_VNF_HAPROXY_LB2_PORT"
+    ONEAPP_VNF_HAPROXY_LB3_IP: "$ONEAPP_VNF_HAPROXY_LB3_IP"
+    ONEAPP_VNF_HAPROXY_LB3_PORT: "$ONEAPP_VNF_HAPROXY_LB3_PORT"
+    ONEAPP_VNF_DNS_ENABLED: "$ONEAPP_VNF_DNS_ENABLED"
+    ONEAPP_VNF_DNS_INTERFACES: "$ONEAPP_VNF_DNS_INTERFACES"
+    ONEAPP_VNF_NAT4_ENABLED: "$ONEAPP_VNF_NAT4_ENABLED"
+    ONEAPP_VNF_NAT4_INTERFACES_OUT: "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
+    ONEAPP_VNF_ROUTER4_ENABLED: "$ONEAPP_VNF_ROUTER4_ENABLED"
+    ONEAPP_VNF_ROUTER4_INTERFACES: "$ONEAPP_VNF_ROUTER4_INTERFACES"
   cpu: "1"
   graphics:
     listen: "0.0.0.0"
@@ -67,11 +64,11 @@ opennebula_template:
 logo: router.png
 images:
 - name: oneke_vnf
-  url: https://d24fmfybwxpuhu.cloudfront.net/service_vnf-6.6.1-1.20230607.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.8.1-1.20240119.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: d3044cba08d935b70d4f732c313362c9
-    sha256: d9af26e9424933c9a3b0b81f0d8b265ab777bdb33984b840d2ec061ab3758bcc
+    md5: acefac8236f18332e081894e899c6961
+    sha256: 7de8346a457504ab3974bdbd955e3d896f5d8799f5596f31fe7b3eb0c57ad6fa
