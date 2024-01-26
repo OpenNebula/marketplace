@@ -1,6 +1,6 @@
 ---
 name: Service OneKE 1.27a
-version: 1.27.2-6.8.1-1.20240119
+version: 1.27.2-6.8.1-1.20240126
 publisher: OpenNebula Systems
 description: |-
   [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.27a cluster (**airgapped install**) for KVM and vCenter hosts,
@@ -82,6 +82,8 @@ opennebula_template:
         NIC = [
           NAME = "NIC0",
           NETWORK_ID = "$Private" ]
+        FALLBACK_GW = "${vnf.TEMPLATE.CONTEXT.ETH1_IP}"
+        FALLBACK_DNS = "${vnf.TEMPLATE.CONTEXT.ETH1_IP}"
         ONEAPP_VROUTER_ETH0_VIP0 = "$ONEAPP_VROUTER_ETH0_VIP0"
         ONEAPP_VROUTER_ETH1_VIP0 = "$ONEAPP_VROUTER_ETH1_VIP0"
         ONEAPP_RKE2_SUPERVISOR_EP = "$ONEAPP_RKE2_SUPERVISOR_EP"
@@ -112,6 +114,8 @@ opennebula_template:
         NIC = [
           NAME = "NIC0",
           NETWORK_ID = "$Private" ]
+        FALLBACK_GW = "${vnf.TEMPLATE.CONTEXT.ETH1_IP}"
+        FALLBACK_DNS = "${vnf.TEMPLATE.CONTEXT.ETH1_IP}"
         ONEAPP_VROUTER_ETH0_VIP0 = "$ONEAPP_VROUTER_ETH0_VIP0"
         ONEAPP_VROUTER_ETH1_VIP0 = "$ONEAPP_VROUTER_ETH1_VIP0"
         ONEAPP_RKE2_SUPERVISOR_EP = "$ONEAPP_RKE2_SUPERVISOR_EP"
@@ -138,6 +142,8 @@ opennebula_template:
         NIC = [
           NAME = "NIC0",
           NETWORK_ID = "$Private" ]
+        FALLBACK_GW = "${vnf.TEMPLATE.CONTEXT.ETH1_IP}"
+        FALLBACK_DNS = "${vnf.TEMPLATE.CONTEXT.ETH1_IP}"
         ONEAPP_VROUTER_ETH0_VIP0 = "$ONEAPP_VROUTER_ETH0_VIP0"
         ONEAPP_VROUTER_ETH1_VIP0 = "$ONEAPP_VROUTER_ETH1_VIP0"
         ONEAPP_RKE2_SUPERVISOR_EP = "$ONEAPP_RKE2_SUPERVISOR_EP"

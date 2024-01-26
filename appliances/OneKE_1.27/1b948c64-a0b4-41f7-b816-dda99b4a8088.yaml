@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.27 Storage disk
-version: 1.27.2-6.8.1-1.20240119
+version: 1.27.2-6.8.1-1.20240126
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.27 appliance Storage disk (empty).
