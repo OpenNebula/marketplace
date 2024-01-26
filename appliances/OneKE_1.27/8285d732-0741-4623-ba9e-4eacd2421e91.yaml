@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.27 VNF
-version: 1.27.2-6.8.1-1.20240119
+version: 1.27.2-6.8.1-1.20240126
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS, DHCP)
@@ -23,6 +23,7 @@ opennebula_version: >-
   6.2, 6.3, 6.4, 6.6, 6.8
 opennebula_template:
   context:
+    SERVICE_ID: "$SERVICE_ID"
     ONEAPP_VNF_KEEPALIVED_ETH0_SKIP: "YES" # do *NOT* use eth0 for VRRP traffic
     NETWORK: "YES"
     TOKEN: "YES"
@@ -64,11 +65,11 @@ opennebula_template:
 logo: router.png
 images:
 - name: oneke_vnf
-  url: https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.8.1-1.20240119.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.8.1-1.20240126.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: acefac8236f18332e081894e899c6961
-    sha256: 7de8346a457504ab3974bdbd955e3d896f5d8799f5596f31fe7b3eb0c57ad6fa
+    md5: f714b66470f1ed05024b8cb90d098358
+    sha256: aac2d83d64a8d5ca1cc46192bbf7cdde58f5330bd58460b75d5018e98160092e

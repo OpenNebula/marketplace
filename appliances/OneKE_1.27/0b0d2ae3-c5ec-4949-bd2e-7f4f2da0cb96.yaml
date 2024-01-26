@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.27
-version: 1.27.2-6.8.1-1.20240119
+version: 1.27.2-6.8.1-1.20240126
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.27 VM template for Master and Worker VMs.
@@ -22,6 +22,9 @@ opennebula_version: >-
   6.2, 6.3, 6.4, 6.6, 6.8
 opennebula_template:
   context:
+    SERVICE_ID: "$SERVICE_ID"
+    FALLBACK_GW: "$FALLBACK_GW"
+    FALLBACK_DNS: "$FALLBACK_DNS"
     GROW_FS: "/"
     NETWORK: "YES"
     TOKEN: "YES"
