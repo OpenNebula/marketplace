@@ -1,6 +1,6 @@
 ---
 name: Service OneKE 1.27a
-version: 1.27.2-6.8.1-1.20240126
+version: 1.27.2-6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.27a cluster (**airgapped install**) for KVM and vCenter hosts,
