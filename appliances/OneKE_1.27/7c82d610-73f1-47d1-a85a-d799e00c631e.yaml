@@ -1,6 +1,6 @@
 ---
 name: Service OneKE 1.27
-version: 1.27.2-6.8.1-1.20240126
+version: 1.27.2-6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.27 cluster for KVM and vCenter hosts,
@@ -25,7 +25,7 @@ tags:
 - oneflow
 - service
 - ubuntu
-creation_time: 1683810523
+creation_time: 1706711624
 os-id: Ubuntu
 os-release: "22.04 LTS"
 os-arch: x86_64
