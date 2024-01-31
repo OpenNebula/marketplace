@@ -1,6 +1,6 @@
 ---
 name: ALT Linux p9
-version: 6.6.1-1.20230607
+version: 6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   ALT Linux p9 image ready for your OpenNebula deployment.
@@ -37,11 +37,11 @@ opennebula_template:
 logo: alt.png
 images:
 - name: alt9
-  url: https://d24fmfybwxpuhu.cloudfront.net/alt9-6.6.1-1.20230607.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alt9-6.8.1-1-20240131.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 1653604352
+  size: 1654652928
   checksum:
     md5: a827beacf305b492a2acbcef86ad97d5
-    sha256: 9b6d26386994159d319b2e237e9a6a570373b471c5ee1b4c4f9dbabecbff4256
+    sha256: 57f78ab2a927d3026337b553dc63516b2db385d28f9fef46e7f98d96b4343e7f

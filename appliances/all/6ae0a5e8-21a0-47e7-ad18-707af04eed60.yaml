@@ -1,6 +1,6 @@
 ---
 name: AlmaLinux 8
-version: 6.6.1-1.20230607
+version: 6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   AlmaLinux 8 image ready for your OpenNebula deployment.
@@ -37,11 +37,11 @@ opennebula_template:
 logo: alma.png
 images:
 - name: alma8
-  url: https://d24fmfybwxpuhu.cloudfront.net/alma8-6.6.1-1.20230607.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alma8-6.8.1-1-20240131.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 4294967296
+  size: 10737418240
   checksum:
     md5: a76e926d73b69d1d459ad2df9c87fd32
-    sha256: ec36458a234ac1e89f4f94932b29cff5bba81d7fa7206d179766747c6a5f3674
+    sha256: 74c5f6005b38dfa0e0592f184ae6edbeba811f2763e929eb883ed7953db8d533

@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 20.04
-version: 6.6.1-1.20230607
+version: 6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 20.04 image ready for your OpenNebula deployment.
@@ -39,11 +39,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2004
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004-6.6.1-1.20230607.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004-6.8.1-1-20240131.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
     md5: 7eeb230894d6a421af6d487ace222f25
-    sha256: 9208d8a4dc4b96c0e24e8555c98d1d45f4a5de4aa3f4eac33a88c05c6ba6b417
+    sha256: c50ac385da90711e048c58e00dbfb646a7beabbb899a5545a29d944814efa8d1
