@@ -1,11 +1,11 @@
 ---
 name: Ubuntu Minimal 22.04
-version: 6.6.1-1.20230607
+version: 6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   Ubuntu Minimal 22.04 image ready for your OpenNebula deployment.
 
-  This image is based on the Ubuntu Minimal 22.04 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Ubuntu Minimal 22.04 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -43,11 +43,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2204min
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2204min-6.6.1-1.20230607.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2204min-6.8.1-1-20240131.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
     md5: 96b92a3682e488237c315cc3b16d5dcd
-    sha256: b937ded7b54b3156c77b1a9378b56934ba502f0e55091dd6e96979ecf48bbf8f
+    sha256: a8889bf0366c3bc6e1eea441c7407eb99cbbf357fe359c82e5b68b419b4b58ec

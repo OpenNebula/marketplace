@@ -1,11 +1,11 @@
 ---
 name: Rocky Linux 9
-version: 6.6.1-2.20230607
+version: 6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   Rocky Linux 9 image ready for your OpenNebula deployment.
 
-  This image is based on the Rocky Linux 9 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Rocky Linux 9 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -39,11 +39,11 @@ opennebula_template:
 logo: rocky.png
 images:
 - name: rocky9
-  url: https://d24fmfybwxpuhu.cloudfront.net/rocky9-6.6.1-1.20230607.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/rocky9-6.8.1-1-20240131.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
     md5: cbee904165aafe4bb898c530ed1716f9
-    sha256: 60e732e9104309892b7b4ca2f083bc032c52021a7d282400ced639603ffa8f16
+    sha256: c22ad66cddc57e7140d40582444485c5816a8e17c2fa104ca8704df7d05a703f

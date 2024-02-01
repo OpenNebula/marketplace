@@ -1,11 +1,11 @@
 ---
 name: Debian 11
-version: 6.6.1-1.20230607
+version: 6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   Debian 11 image ready for your OpenNebula deployment.
 
-  This image is based on the Debian 11 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Debian 11 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -38,11 +38,11 @@ opennebula_template:
 logo: debian.png
 images:
 - name: debian11
-  url: https://d24fmfybwxpuhu.cloudfront.net/debian11-6.6.1-1.20230607.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/debian11-6.8.1-1-20240131.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
     md5: 400f4f626a8ebf9c3d82add63d9961e4
-    sha256: 67886517708812a4985cff81656d1669ebcb5351f1fe34cfe8766cff62795a93
+    sha256: 31f18259018013102e23b66e5321a177e050bc70e302a2caf22f4ea846e29146

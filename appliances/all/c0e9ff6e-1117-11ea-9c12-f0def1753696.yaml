@@ -1,11 +1,11 @@
 ---
 name: openSUSE 15
-version: 6.6.1-1.20230607
+version: 6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   openSUSE 15 image ready for your OpenNebula deployment.
 
-  This image is based on the openSUSE 15 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the openSUSE 15 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -39,11 +39,11 @@ logo: opensuse.png
 images:
 - name: opensuse15
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/opensuse15-6.6.1-1.20230607.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/opensuse15-6.8.1-1-20240131.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 3221225472
+  size: 4294967296
   checksum:
     md5: 1385a9b160099ee2af31e09f789e2108
-    sha256: b9621b5e509884d42818b85f02566b70b7c270de898222db63d9b7b8e63efb99
+    sha256: 543666713fcf2771e4250f86a3b5fc16e114dfcf81d118d772e0d1da28e090bf

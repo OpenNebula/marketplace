@@ -1,11 +1,11 @@
 ---
 name: Oracle Linux 9
-version: 6.6.1-2.20230607
+version: 6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   Oracle Linux 9 image ready for your OpenNebula deployment.
 
-  This image is based on the Oracle Linux 9 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Oracle Linux 9 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -40,11 +40,11 @@ opennebula_template:
 logo: ol.png
 images:
 - name: ol9
-  url: https://d24fmfybwxpuhu.cloudfront.net/ol9-6.6.1-1.20230607.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/ol9-6.8.1-1-20240131.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 39728447488
   checksum:
     md5: fbc75e9e8961e899a609e7fd87c1fb57
-    sha256: fef177a05fd8fd81c9c1709d8daf2cdf35f5778adb3e8ef3d0cc1d51eb2a2f67
+    sha256: 3c20146b562949f51ea45be06cb6ce31ed7052845912745bc9da21f0ad11d9f0

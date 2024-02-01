@@ -1,75 +1,76 @@
 ---
 name: OneKE 1.27 VNF
-version: 1.27.2-6.8.1-1.20240126
+version: 1.27.2-6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS, DHCP)
   to run as regular VM.
 
   See the dedicated [documentation](https://docs.opennebula.io/stable/marketplace/appliances/vnf.html).
-short_description: Appliance with several Virtual Network Functions to run as VM
+short_description: Appliance with several Virtual Network Functions to run
+  as VM
 tags:
 - alpine
 - kubernetes
 - service
 - vnf
 format: qcow2
-creation_time: 1683810523
+creation_time: 1706711624
 os-id: Alpine
-os-release: "3.14"
+os-release: '3.18'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: >-
-  6.2, 6.3, 6.4, 6.6, 6.8
+opennebula_version: 6.2, 6.3, 6.4, 6.6, 6.8
 opennebula_template:
   context:
-    SERVICE_ID: "$SERVICE_ID"
-    ONEAPP_VNF_KEEPALIVED_ETH0_SKIP: "YES" # do *NOT* use eth0 for VRRP traffic
-    NETWORK: "YES"
-    TOKEN: "YES"
-    REPORT_READY: "YES"
-    SSH_PUBLIC_KEY: "$USER[SSH_PUBLIC_KEY]"
-    ONE_SERVICE_AIRGAPPED: "NO"
-    ONEAPP_VROUTER_ETH0_VIP0: "$ONEAPP_VROUTER_ETH0_VIP0"
-    ONEAPP_VROUTER_ETH1_VIP0: "$ONEAPP_VROUTER_ETH1_VIP0"
-    ONEAPP_VNF_HAPROXY_ENABLED: "YES"
-    ONEAPP_VNF_HAPROXY_ONEGATE_ENABLED: "YES"
-    ONEAPP_VNF_HAPROXY_INTERFACES: "$ONEAPP_VNF_HAPROXY_INTERFACES"
-    ONEAPP_VNF_HAPROXY_REFRESH_RATE: "$ONEAPP_VNF_HAPROXY_REFRESH_RATE"
-    ONEAPP_VNF_HAPROXY_LB0_IP: "$ONEAPP_VNF_HAPROXY_LB0_IP"
-    ONEAPP_VNF_HAPROXY_LB0_PORT: "$ONEAPP_VNF_HAPROXY_LB0_PORT"
-    ONEAPP_VNF_HAPROXY_LB1_IP: "$ONEAPP_VNF_HAPROXY_LB1_IP"
-    ONEAPP_VNF_HAPROXY_LB1_PORT: "$ONEAPP_VNF_HAPROXY_LB1_PORT"
-    ONEAPP_VNF_HAPROXY_LB2_IP: "$ONEAPP_VNF_HAPROXY_LB2_IP"
-    ONEAPP_VNF_HAPROXY_LB2_PORT: "$ONEAPP_VNF_HAPROXY_LB2_PORT"
-    ONEAPP_VNF_HAPROXY_LB3_IP: "$ONEAPP_VNF_HAPROXY_LB3_IP"
-    ONEAPP_VNF_HAPROXY_LB3_PORT: "$ONEAPP_VNF_HAPROXY_LB3_PORT"
-    ONEAPP_VNF_DNS_ENABLED: "$ONEAPP_VNF_DNS_ENABLED"
-    ONEAPP_VNF_DNS_INTERFACES: "$ONEAPP_VNF_DNS_INTERFACES"
-    ONEAPP_VNF_NAT4_ENABLED: "$ONEAPP_VNF_NAT4_ENABLED"
-    ONEAPP_VNF_NAT4_INTERFACES_OUT: "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
-    ONEAPP_VNF_ROUTER4_ENABLED: "$ONEAPP_VNF_ROUTER4_ENABLED"
-    ONEAPP_VNF_ROUTER4_INTERFACES: "$ONEAPP_VNF_ROUTER4_INTERFACES"
-  cpu: "1"
+    service_id: "$SERVICE_ID"
+    oneapp_vnf_keepalived_eth0_skip: 'YES'
+    network: 'YES'
+    token: 'YES'
+    report_ready: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    one_service_airgapped: 'NO'
+    oneapp_vrouter_eth0_vip0: "$ONEAPP_VROUTER_ETH0_VIP0"
+    oneapp_vrouter_eth1_vip0: "$ONEAPP_VROUTER_ETH1_VIP0"
+    oneapp_vnf_haproxy_enabled: 'YES'
+    oneapp_vnf_haproxy_onegate_enabled: 'YES'
+    oneapp_vnf_haproxy_interfaces: "$ONEAPP_VNF_HAPROXY_INTERFACES"
+    oneapp_vnf_haproxy_refresh_rate: "$ONEAPP_VNF_HAPROXY_REFRESH_RATE"
+    oneapp_vnf_haproxy_lb0_ip: "$ONEAPP_VNF_HAPROXY_LB0_IP"
+    oneapp_vnf_haproxy_lb0_port: "$ONEAPP_VNF_HAPROXY_LB0_PORT"
+    oneapp_vnf_haproxy_lb1_ip: "$ONEAPP_VNF_HAPROXY_LB1_IP"
+    oneapp_vnf_haproxy_lb1_port: "$ONEAPP_VNF_HAPROXY_LB1_PORT"
+    oneapp_vnf_haproxy_lb2_ip: "$ONEAPP_VNF_HAPROXY_LB2_IP"
+    oneapp_vnf_haproxy_lb2_port: "$ONEAPP_VNF_HAPROXY_LB2_PORT"
+    oneapp_vnf_haproxy_lb3_ip: "$ONEAPP_VNF_HAPROXY_LB3_IP"
+    oneapp_vnf_haproxy_lb3_port: "$ONEAPP_VNF_HAPROXY_LB3_PORT"
+    oneapp_vnf_dns_enabled: "$ONEAPP_VNF_DNS_ENABLED"
+    oneapp_vnf_dns_interfaces: "$ONEAPP_VNF_DNS_INTERFACES"
+    oneapp_vnf_nat4_enabled: "$ONEAPP_VNF_NAT4_ENABLED"
+    oneapp_vnf_nat4_interfaces_out: "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
+    oneapp_vnf_router4_enabled: "$ONEAPP_VNF_ROUTER4_ENABLED"
+    oneapp_vnf_router4_interfaces: "$ONEAPP_VNF_ROUTER4_INTERFACES"
+  cpu: '1'
   graphics:
-    listen: "0.0.0.0"
+    listen: 0.0.0.0
     type: vnc
-  inputs_order: ""
-  memory: "512"
+  inputs_order: ''
+  memory: '512'
   nic_default:
     model: virtio
-  lxd_security_privileged: "true"
+  lxd_security_privileged: 'true'
   os:
     arch: x86_64
   user_inputs: {}
 logo: router.png
 images:
 - name: oneke_vnf
-  url: https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.8.1-1.20240126.qcow2
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.8.1-1-20240131.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: f714b66470f1ed05024b8cb90d098358
-    sha256: aac2d83d64a8d5ca1cc46192bbf7cdde58f5330bd58460b75d5018e98160092e
+    md5: aaec08c5d33e81bd12dde55dad22609c
+    sha256: 66403685a2134ef3440ecb2cb3ecabf57aebcd703abb3c00e67fca555f21440e

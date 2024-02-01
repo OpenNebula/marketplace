@@ -1,16 +1,16 @@
 ---
 name: Service OneKE 1.27a
-version: 1.27.2-6.8.1-1.20240126
+version: 1.27.2-6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.27a cluster (**airgapped install**) for KVM and vCenter hosts,
   orchestrated by
-  [OneFlow](https://docs.opennebula.io/6.6/management_and_operations/multivm_service_management/appflow_elasticity.html).
+  [OneFlow](https://docs.opennebula.io/stable/management_and_operations/multivm_service_management/appflow_elasticity.html).
 
   Requires
-  [OneFlow](https://docs.opennebula.io/6.6/management_and_operations/multivm_service_management/overview.html)
+  [OneFlow](https://docs.opennebula.io/stable/management_and_operations/multivm_service_management/overview.html)
   and
-  [OneGate](https://docs.opennebula.io/6.6/management_and_operations/multivm_service_management/onegate_usage.html)
+  [OneGate](https://docs.opennebula.io/stable/management_and_operations/multivm_service_management/onegate_usage.html)
   OpenNebula components.
 
   See the dedicated [documentation](https://docs.opennebula.io/stable/marketplace/appliances/oneke.html).

@@ -1,11 +1,11 @@
 ---
 name: Fedora 37
-version: 6.6.1-1.20230607
+version: 6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   Fedora 37 image ready for your OpenNebula deployment.
 
-  This image is based on the Fedora 37 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.6/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Fedora 37 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
@@ -36,11 +36,11 @@ opennebula_template:
 logo: fedora.png
 images:
 - name: fedora37
-  url: https://d24fmfybwxpuhu.cloudfront.net/fedora37-6.6.1-1.20230607.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/fedora37-6.8.1-1-20240131.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 21474836480
+  size: 5368709120
   checksum:
     md5: 5deba2abca227aae9ce2988aa1a7fb1e
-    sha256: 68f65d4529e57b957dbc8f02d702b63857443ed1f900c7dec74bf3cc2b1c33ec
+    sha256: fea61ebeb1f5243db5d7f461c6c910cadce3edd79fd915d332891bfdb8e26bfd

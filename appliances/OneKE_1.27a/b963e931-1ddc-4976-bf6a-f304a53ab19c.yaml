@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.27a Storage
-version: 1.27.2-6.8.1-1.20240126
+version: 1.27.2-6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.27a VM template for Storage VMs (**airgapped install**).

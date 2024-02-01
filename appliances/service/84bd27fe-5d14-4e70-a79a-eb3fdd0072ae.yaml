@@ -1,6 +1,6 @@
 ---
 name: Service WordPress - KVM
-version: 6.6.1-1.20230607
+version: 6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled WordPress. Run, get WordPress setup web wizard
@@ -30,11 +30,11 @@ short_description: Appliance with preinstalled WordPress for KVM hosts
 tags:
 - wordpress
 - service
-- centos
+- almalinux
 format: qcow2
-creation_time: 1686581516
-os-id: CentOS
-os-release: '7.9'
+creation_time: 1706649528
+os-id: AlmaLinux
+os-release: '8.7'
 os-arch: x86_64
 hypervisor: KVM
 opennebula_version: >-
@@ -73,13 +73,13 @@ opennebula_template:
     oneapp_ssl_privkey: O|text64|SSL private key
 logo: wordpress.png
 images:
-- name: service_wordpress
+- name: service_Wordpress
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_wordpress-6.6.1-1.20230607.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_Wordpress-6.8.1-1-20240131.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 5368709120
+  size: 10737418240
   checksum:
-    md5: 6e67aeeeb04eac74f80537c41c3c7a50
-    sha256: 780aabfb436a635d36cd75eec7ebb1a90de1ded815968fe88ea4d530cd67ff57
+    md5: 740d612846a7c9ecb8b11234b3cf3338
+    sha256: a369070718113c76695fcb3f2af3b44de395feca692a0127b7a47be84cd02ad4
