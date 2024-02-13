@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.27 VNF
-version: 1.27.2-6.8.1-1-20240131
+version: 1.27.2-6.8.1-1-20240213
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS, DHCP)
@@ -46,6 +46,8 @@ opennebula_template:
     oneapp_vnf_haproxy_lb3_port: "$ONEAPP_VNF_HAPROXY_LB3_PORT"
     oneapp_vnf_dns_enabled: "$ONEAPP_VNF_DNS_ENABLED"
     oneapp_vnf_dns_interfaces: "$ONEAPP_VNF_DNS_INTERFACES"
+    oneapp_vnf_dns_nameservers: "$ONEAPP_VNF_DNS_NAMESERVERS"
+    oneapp_vnf_dns_use_rootservers: 'NO'
     oneapp_vnf_nat4_enabled: "$ONEAPP_VNF_NAT4_ENABLED"
     oneapp_vnf_nat4_interfaces_out: "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
     oneapp_vnf_router4_enabled: "$ONEAPP_VNF_ROUTER4_ENABLED"
@@ -66,11 +68,11 @@ logo: router.png
 images:
 - name: oneke_vnf
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.8.1-1-20240131.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.8.1-1-20240213.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: aaec08c5d33e81bd12dde55dad22609c
-    sha256: 66403685a2134ef3440ecb2cb3ecabf57aebcd703abb3c00e67fca555f21440e
+    md5: a052c7adc1185ab59a346430aa0d997d
+    sha256: 1f1d25cca546c1f8e3caca5cd1cc5fbb3f09aa6e71d172a2854cbc0e0cc6fc8d
