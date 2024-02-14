@@ -14,7 +14,7 @@ short_description: CentOS 7 image for KVM, LXD and vCenter.
 tags:
 - centos
 format: qcow2
-creation_time: 1686581516
+creation_time: 1706780706
 os-id: CentOS
 os-release: '7.9'
 os-arch: x86_64
