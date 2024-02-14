@@ -14,7 +14,7 @@ short_description: Fedora 37 image for KVM, LXD, and vCenter
 tags:
 - fedora
 format: qcow2
-creation_time: 1686581516
+creation_time: 1706780706
 os-id: Fedora
 os-release: '37'
 os-arch: x86_64
