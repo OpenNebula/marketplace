@@ -1,19 +1,19 @@
 ---
-name: OneKE 1.27a
+name: OneKE 1.27 Airgapped
 version: 1.27.2-6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
-  OneKE 1.27a VM template for Master and Worker VMs (**airgapped install**).
+  OneKE 1.27 Airgapped VM template for Master and Worker VMs.
 
   See the dedicated [documentation](https://docs.opennebula.io/stable/marketplace/appliances/oneke.html).
-short_description: OneKE 1.27a VM template for Master and Worker VMs
+short_description: OneKE 1.27 Airgapped VM template for Master and Worker VMs
 tags:
 - kubernetes
 - service
 - ubuntu
 type: VMTEMPLATE
 format: qcow2
-creation_time: 1702323038
+creation_time: 1708626170
 os-id: Ubuntu
 os-release: "22.04 LTS"
 os-arch: x86_64
@@ -67,4 +67,4 @@ opennebula_template:
   user_inputs: {}
 logo: kubernetes.png
 disks:
-- "OneKE 1.27a OS disk"
+- "OneKE 1.27 Airgapped OS disk"

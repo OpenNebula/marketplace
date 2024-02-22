@@ -1,18 +1,18 @@
 ---
-name: OneKE 1.27a OS disk
+name: OneKE 1.27 Airgapped OS disk
 version: 1.27.2-6.8.1-1-20240131
 publisher: OpenNebula Systems
 description: |-
-  OneKE 1.27a appliance OS disk (**airgapped install**).
+  OneKE 1.27 Airgapped appliance OS disk.
 
   See the dedicated [documentation](https://docs.opennebula.io/stable/marketplace/appliances/oneke.html).
-short_description: OneKE 1.27a appliance OS disk
+short_description: OneKE 1.27 Airgapped appliance OS disk
 tags:
 - disk
 - kubernetes
 - service
 format: qcow2
-creation_time: 1702323038
+creation_time: 1708626170
 os-id: none
 os-arch: all
 hypervisor: ALL
