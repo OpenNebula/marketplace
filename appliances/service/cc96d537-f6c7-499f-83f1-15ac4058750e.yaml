@@ -1,6 +1,6 @@
 ---
 name: Service Virtual Router
-version: 6.8.1-1-20240215
+version: 6.8.1-1-20240222
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS,
