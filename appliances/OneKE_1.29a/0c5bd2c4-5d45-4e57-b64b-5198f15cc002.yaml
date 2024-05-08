@@ -1,9 +1,9 @@
 ---
-name: Service OneKE 1.27
-version: 1.27.2-6.8.1-1-20240213
+name: Service OneKE 1.29 Airgapped
+version: 1.29.4-6.10.0-1-20240510
 publisher: OpenNebula Systems
 description: |-
-  [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.27 cluster for KVM and vCenter hosts,
+  [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.29 Airgapped cluster for KVM and vCenter hosts,
   orchestrated by
   [OneFlow](https://docs.opennebula.io/stable/management_and_operations/multivm_service_management/appflow_elasticity.html).
 
@@ -16,16 +16,16 @@ description: |-
   See the dedicated [documentation](https://docs.opennebula.io/stable/marketplace/appliances/oneke.html).
 
   Based on VM templates
-  - [OneKE 1.27](/appliance/0b0d2ae3-c5ec-4949-bd2e-7f4f2da0cb96)
-  - [OneKE 1.27 VNF](/appliance/8285d732-0741-4623-ba9e-4eacd2421e91)
-  - [OneKE 1.27 Storage](/appliance/c76926e6-4c0a-499f-848f-716b3164bf31)
-short_description: Multi-master Kubernetes 1.27 cluster for KVM and vCenter hosts, orchestrated by OneFlow
+  - [OneKE 1.29 Airgapped](/appliance/2b7b85bb-ef57-43e3-9852-a97ab6087c7e)
+  - [OneKE 1.29 VNF](/appliance/883d974f-f30e-4fc8-aa06-e1af2a020e49)
+  - [OneKE 1.29 Airgapped Storage](/appliance/bcd5a3bc-1bcb-4158-acea-7e74c9950bd5)
+short_description: Multi-master Kubernetes 1.29 Airgapped cluster for KVM and vCenter hosts, orchestrated by OneFlow
 tags:
 - kubernetes
 - oneflow
 - service
 - ubuntu
-creation_time: 1707792240
+creation_time: 1715358765
 os-id: Ubuntu
 os-release: "22.04 LTS"
 os-arch: x86_64
@@ -34,12 +34,12 @@ type: SERVICE_TEMPLATE
 opennebula_version: >-
   6.2, 6.3, 6.4, 6.6, 6.8, 6.10
 roles:
-  vnf: "OneKE 1.27 VNF"
-  master: "OneKE 1.27"
-  worker: "OneKE 1.27"
-  storage: "OneKE 1.27 Storage"
+  vnf: "OneKE 1.29 VNF"
+  master: "OneKE 1.29 Airgapped"
+  worker: "OneKE 1.29 Airgapped"
+  storage: "OneKE 1.29 Airgapped Storage"
 opennebula_template:
-  name: OneKE 1.27
+  name: OneKE 1.29
   deployment: straight
   description: ''
   roles:

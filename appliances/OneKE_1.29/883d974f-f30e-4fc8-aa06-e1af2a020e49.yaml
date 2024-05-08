@@ -1,6 +1,6 @@
 ---
-name: OneKE 1.27 VNF
-version: 1.27.2-6.8.1-1-20240222
+name: OneKE 1.29 VNF
+version: 1.29.2-6.10.0-1-20240510
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS, DHCP)
@@ -15,7 +15,7 @@ tags:
 - service
 - vnf
 format: qcow2
-creation_time: 1708620173
+creation_time: 1715358765
 os-id: Alpine
 os-release: '3.18'
 os-arch: x86_64
@@ -68,11 +68,11 @@ logo: router.png
 images:
 - name: oneke_vnf
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.8.1-1-20240222.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.10.0-1-20240510.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: 72e3bfc97c6f8caa9b522edfc30ea803
-    sha256: c43abc19b7364dd2ede01c6e85bfeb4a7b7629f365ce76400274f7315113e434
+    md5: 30db882543f8a06d38824b7b20ed4c66
+    sha256: c72b41bfdc3c0051636de52b3b3885d8284744c862120f016069224887a942d1
