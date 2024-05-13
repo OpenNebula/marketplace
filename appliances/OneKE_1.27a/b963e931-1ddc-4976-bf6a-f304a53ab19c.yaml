@@ -19,7 +19,7 @@ os-release: "22.04 LTS"
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
-  6.2, 6.3, 6.4, 6.6, 6.8
+  6.2, 6.3, 6.4, 6.6, 6.8, 6.10
 opennebula_template:
   context:
     SERVICE_ID: "$SERVICE_ID"

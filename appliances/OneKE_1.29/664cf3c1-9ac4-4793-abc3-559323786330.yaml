@@ -1,19 +1,19 @@
 ---
-name: OneKE 1.27 Storage
-version: 1.27.2-6.8.1-1-20240131
+name: OneKE 1.29 Storage
+version: 1.29.2-6.10.0-1-20240510
 publisher: OpenNebula Systems
 description: |-
-  OneKE 1.27 VM template for Storage VMs.
+  OneKE 1.29 VM template for Storage VMs.
 
   See the dedicated [documentation](https://docs.opennebula.io/stable/marketplace/appliances/oneke.html).
-short_description: OneKE 1.27 VM template for Storage VMs
+short_description: OneKE 1.29 VM template for Storage VMs
 tags:
 - kubernetes
 - service
 - ubuntu
 type: VMTEMPLATE
 format: qcow2
-creation_time: 1683810523
+creation_time: 1715358765
 os-id: Ubuntu
 os-release: "22.04 LTS"
 os-arch: x86_64
@@ -56,5 +56,5 @@ opennebula_template:
   user_inputs: {}
 logo: kubernetes.png
 disks:
-- "OneKE 1.27 OS disk"
-- "OneKE 1.27 Storage disk"
+- "OneKE 1.29 OS disk"
+- "OneKE 1.29 Storage disk"
