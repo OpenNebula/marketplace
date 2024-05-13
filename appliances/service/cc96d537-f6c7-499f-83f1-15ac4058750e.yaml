@@ -5,7 +5,7 @@ publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS,
   DHCP, LoadBalancer) to be used over OpenNebula **Virtual Router** interface. See the dedicated
-  [documentation](https://docs.opennebula.io/stable/marketplace/appliances/vnf.html).
+  [documentation](https://github.com/OpenNebula/one-apps/wiki).
 short_description: Appliance with several Virtual Network Functions to run
   as VR
 tags:
