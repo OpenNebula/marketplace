@@ -5,7 +5,7 @@ publisher: OpenNebula Systems
 description: |-
   OneKE 1.29 Airgapped VM template for Storage VMs.
 
-  See the dedicated [documentation](https://docs.opennebula.io/stable/marketplace/appliances/oneke.html).
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki).
 short_description: OneKE 1.29 Airgapped VM template for Storage VMs
 tags:
 - kubernetes

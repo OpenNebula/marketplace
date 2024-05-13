@@ -13,7 +13,7 @@ description: |-
   [OneGate](https://docs.opennebula.io/stable/management_and_operations/multivm_service_management/onegate_usage.html)
   OpenNebula components.
 
-  See the dedicated [documentation](https://docs.opennebula.io/stable/marketplace/appliances/oneke.html).
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki).
 
   Based on VM templates
   - [OneKE 1.27](/appliance/0b0d2ae3-c5ec-4949-bd2e-7f4f2da0cb96)
