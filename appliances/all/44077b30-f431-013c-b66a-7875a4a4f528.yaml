@@ -1,0 +1,51 @@
+---
+name: Ubuntu Minimal 24.04
+version: 6.10.0-1-20240514
+publisher: OpenNebula Systems
+description: |-
+  Ubuntu Minimal 24.04 image ready for your OpenNebula deployment.
+
+  This image is based on the Ubuntu Minimal 24.04 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+
+  **WARNING: Learn more about [Minimal Ubuntu](https://wiki.ubuntu.com/Minimal) images before using them! They focus on minimal image size and fast boot times and are suitable for short-living environments. They don't come with virtual console support and any boot problems are hard to troubleshoot over VNC. For common use check regular Ubuntu images.**
+short_description: Ubuntu Minimal 24.04 image for KVM and vCenter
+tags:
+- ubuntu
+format: qcow2
+creation_time: 1715685461
+os-id: Ubuntu
+os-release: '24.04'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.1, 6.2, 6.3, 6.4, 6.6, 6.8
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  nic_default:
+    model: virtio
+  os:
+    arch: x86_64
+  logo: images/logos/ubuntu.png
+  lxd_security_privileged: 'true'
+logo: ubuntu.png
+images:
+- name: ubuntu2404min
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2404min-6.10.0-1-20240514.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 3758096384
+  checksum:
+    md5: d1834300d269a9d8d2c115dcb6eb852a
+    sha256: 0b2886de46e9b3114dc128944f1274434fc829f4fdc7ced4b76f3bb5fd4e08ef
