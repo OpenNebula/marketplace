@@ -1,6 +1,6 @@
 ---
 name: Devuan 4
-version: 6.8.1-1-20240131
+version: 6.10.0-1-20240514
 publisher: OpenNebula Systems
 description: |-
   Devuan 4 image ready for your OpenNebula deployment.
@@ -38,11 +38,11 @@ opennebula_template:
 logo: devuan.png
 images:
 - name: devuan4
-  url: https://d24fmfybwxpuhu.cloudfront.net/devuan4-6.8.1-1-20240131.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/devuan4-6.10.0-1-20240514.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
     md5: c1a987da3051964ac3779b406bb77f60
-    sha256: 771a7773ee6c430fd5bb5d4bfc27c3c5c4c84adae3bab742dcc67aec11b9ae6c
+    sha256: 62fcaae881d6e5a2610afdeee7806b7a08356d763afb0829f9b9816b54275ad8

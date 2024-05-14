@@ -1,6 +1,6 @@
 ---
 name: Alpine Linux 3.17
-version: 6.8.1-1-20240131
+version: 6.10.0-1-20240514
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.17 image ready for your OpenNebula deployment.
@@ -40,11 +40,12 @@ opennebula_template:
 logo: alpine.png
 images:
 - name: alpine317
-  url: https://d24fmfybwxpuhu.cloudfront.net/alpine317-6.8.1-1-20240131.qcow2
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/alpine317-6.10.0-1-20240514.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 268435456
   checksum:
     md5: 62d87f43c85ef0c23118125c59a1e20c
-    sha256: 8cd3ae6ee3658699f88491312911d82cb80aa814442606cf42666d7c173aed6b
+    sha256: 99da8e006e4f5e40c1189a0becfe9ec64e8fb1b62cc4d6def035ebafcd3c9c69
