@@ -1,0 +1,59 @@
+---
+name: Service Harbor
+version: 6.10.0-1-20240514
+publisher: OpenNebula Systems
+description: |-
+  Appliance with preinstalled [Harbor](https://github.com/goharbor/harbor).
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/harbor_quick).
+short_description: Appliance with preinstalled Harbor for KVM hosts
+tags:
+- harbor
+- service
+- ubuntu
+format: qcow2
+creation_time: 1715677835
+os-id: Ubuntu
+os-release: "22.04 LTS"
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: >-
+  6.2, 6.3, 6.4, 6.6, 6.8, 6.10
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_harbor_admin_password: "$ONEAPP_HARBOR_ADMIN_PASSWORD"
+    oneapp_harbor_db_password: "$ONEAPP_HARBOR_DB_PASSWORD"
+    oneapp_harbor_hostname: "$ONEAPP_HARBOR_HOSTNAME"
+    oneapp_harbor_registry_dev: "$ONEAPP_HARBOR_PERSISTENT_DEV"
+    oneapp_harbor_ssl_cert: "$ONEAPP_HARBOR_SSL_CERT"
+    oneapp_harbor_ssl_key: "$ONEAPP_HARBOR_SSL_KEY"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '2'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONEAPP_HARBOR_ADMIN_PASSWORD,ONEAPP_HARBOR_DB_PASSWORD,ONEAPP_HARBOR_HOSTNAME,ONEAPP_HARBOR_REGISTRY_DEV,ONEAPP_HARBOR_SSL_CERT,ONEAPP_HARBOR_SSL_KEY
+  memory: '4096'
+  os:
+    arch: x86_64
+  user_inputs:
+    oneapp_harbor_admin_password: "O|password|Password for the admin Harbor user (defaults to Harbor12345)"
+    oneapp_harbor_db_password: "O|password|Password for the internal Harbor database (defaults to random)"
+    oneapp_harbor_hostname: "O|text|Harbor hostname/IP exposing the service (certificate CN)||"
+    oneapp_harbor_registry_dev: "O|text|Harbor registry disk device name (e.g. sdb, vdb, etc.)||"
+    oneapp_harbor_ssl_cert: "O|text64|SSL certificate||"
+    oneapp_harbor_ssl_key: "O|text64|SSL key||"
+logo: harbor.png
+images:
+- name: service_Harbor
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_Harbor-6.10.0-1-20240514.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 21474836480
+  checksum:
+    md5: b56cd8aed79499f478229859579128d9
+    sha256: 188b3445fa9a650da7c3294c2c05a9040a4bbd56fddb96f2eb7512d11a7a58f8
