@@ -14,7 +14,7 @@ tags:
 - service
 - alpine
 format: qcow2
-creation_time: 1715685461
+creation_time: 1715784892
 os-id: Alpine
 os-release: '3.18'
 os-arch: x86_64
@@ -78,11 +78,11 @@ logo: router.png
 images:
 - name: service_vnf
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.10.0-1-20240514.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.10.0-1-20240515.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: dc5c7f68fd4d8ec8a2493b502ce33d64
-    sha256: d578c237c79baac69bb01aed859e01d886a39334426e320fb9400789091fc767
+    md5: b97e2488992abf7d633d94c3043b1888
+    sha256: 1ac6f8310da672a17b0a0a530041a40da952527be11c94937225045195834293
