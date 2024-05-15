@@ -15,7 +15,7 @@ tags:
 - oracle
 - oraclelinux
 format: qcow2
-creation_time: 1706780706
+creation_time: 1715685461
 os-id: Oracle Linux
 os-release: '8.9'
 os-arch: x86_64
