@@ -1,27 +1,25 @@
 ---
-name: Alpine Linux 3.18
+name: Alpine Linux 3.19
 version: 6.10.0-1-20240514
 publisher: OpenNebula Systems
 description: |-
-  Alpine Linux 3.18 image ready for your OpenNebula deployment.
+  Alpine Linux 3.19 image ready for your OpenNebula deployment.
 
-  This image is based on the Alpine Linux 3.18 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Alpine Linux 3.19 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Alpine Linux 3.18 image for KVM, LXD and vCenter
+short_description: Alpine Linux 3.19 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1706780706
+creation_time: 1715685461
 os-id: Alpine Linux
-os-release: '3.18'
+os-release: '3.19'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: >-
-  4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4, 6.6, 6.8
+opennebula_version: 6.0, 6.1, 6.2, 6.3, 6.4, 6.6, 6.8
 opennebula_template:
   context:
     network: 'YES'
@@ -39,13 +37,13 @@ opennebula_template:
   lxd_security_privileged: 'true'
 logo: alpine.png
 images:
-- name: alpine318
+- name: alpine319
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/alpine318-6.10.0-1-20240514.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/alpine319-6.10.0-1-20240514.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 268435456
   checksum:
-    md5: 4b6c04ba822174e2a508fbabd3435344
-    sha256: 0347dac47cb0e0344f418c331a55850ebf268c23666ab6af8a93efe11f765dc8
+    md5: 41a390574f1587ad7d200c8e758e82c9
+    sha256: d69c4c37eb68a05e76854505b7ca341b3eaa397eb07f30342af180dcb480800b

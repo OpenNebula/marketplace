@@ -1,6 +1,6 @@
 ---
 name: AlmaLinux 9
-version: 6.8.1-1-20240131
+version: 6.10.0-1-20240514
 publisher: OpenNebula Systems
 description: |-
   AlmaLinux 9 image ready for your OpenNebula deployment.
@@ -16,7 +16,7 @@ tags:
 format: qcow2
 creation_time: 1706780706
 os-id: AlmaLinux
-os-release: '9.1'
+os-release: '9.4'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
@@ -39,11 +39,11 @@ opennebula_template:
 logo: alma.png
 images:
 - name: alma9
-  url: https://d24fmfybwxpuhu.cloudfront.net/alma9-6.8.1-1-20240131.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alma9-6.10.0-1-20240514.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
     md5: 964d13f1fcff5fce11fbf9e83d72a4cc
-    sha256: 07a1e765197163f3f4048509c08b75b40c6933cd91d011530b5e839994afd449
+    sha256: 84642ba53a6be5a551e252bf9c9c48b01d068ab3e5210f78f460da1a3d67af1f

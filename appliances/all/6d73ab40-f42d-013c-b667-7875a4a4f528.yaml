@@ -1,27 +1,25 @@
 ---
-name: FreeBSD 13
+name: FreeBSD 14
 version: 6.10.0-1-20240514
 publisher: OpenNebula Systems
 description: |-
-  FreeBSD 13 image ready for your OpenNebula deployment.
+  FreeBSD 14 image ready for your OpenNebula deployment.
 
-  This image is based on the FreeBSD 13 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the FreeBSD 14 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/6.0/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: FreeBSD 13 image for KVM and vCenter hosts
+short_description: FreeBSD 14 image for KVM and vCenter hosts
 tags:
 - freebsd
 format: qcow2
-creation_time: 1706780706
+creation_time: 1715685461
 os-id: FreeBSD
-os-release: '13.2'
+os-release: '14.1'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: >-
-  4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4, 6.6, 6.8
+opennebula_version: 6.0, 6.1, 6.2, 6.3, 6.4, 6.6, 6.8
 opennebula_template:
   context:
     network: 'YES'
@@ -35,7 +33,7 @@ opennebula_template:
     arch: x86_64
 logo: freebsd.png
 images:
-- name: freebsd13
+- name: freebsd14
   url: >-
     https://d24fmfybwxpuhu.cloudfront.net/freebsd13-6.10.0-1-20240514.qcow2
   type: OS
@@ -43,5 +41,5 @@ images:
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 0d9414df3cb3d17813cb9b20c6917671
+    md5: 194ef6324366ac239868be76cde7275f
     sha256: 79fecce1f3ca0f907750700cef3eeca7113f584051f5ac02da983c141d114ec2

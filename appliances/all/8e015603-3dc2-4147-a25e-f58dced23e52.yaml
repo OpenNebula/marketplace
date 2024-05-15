@@ -1,6 +1,6 @@
 ---
 name: Debian 11
-version: 6.8.1-1-20240131
+version: 6.10.0-1-20240514
 publisher: OpenNebula Systems
 description: |-
   Debian 11 image ready for your OpenNebula deployment.
@@ -16,7 +16,7 @@ tags:
 format: qcow2
 creation_time: 1706780706
 os-id: Debian
-os-release: '11.6'
+os-release: '11.9'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
@@ -38,11 +38,11 @@ opennebula_template:
 logo: debian.png
 images:
 - name: debian11
-  url: https://d24fmfybwxpuhu.cloudfront.net/debian11-6.8.1-1-20240131.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/debian11-6.10.0-1-20240514.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
     md5: 400f4f626a8ebf9c3d82add63d9961e4
-    sha256: 31f18259018013102e23b66e5321a177e050bc70e302a2caf22f4ea846e29146
+    sha256: 42fd8b51f1fb8e9dfcd2fd97818c20bb7f7397eb83688f3538dcd80f71869fb1
