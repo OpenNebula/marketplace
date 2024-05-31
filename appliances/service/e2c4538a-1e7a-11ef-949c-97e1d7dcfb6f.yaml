@@ -1,0 +1,59 @@
+---
+name: Service MinIO
+version: 6.10.0-1-20240531
+publisher: OpenNebula Systems
+description: |-
+  Appliance with preinstalled [MinIO](https://min.io/docs/minio/linux/index.html).
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/minio_quick).
+short_description: Appliance with preinstalled MinIO server for KVM hosts
+tags:
+- minio
+- storage
+- ubuntu
+- service
+format: qcow2
+creation_time: 1717151321
+os-id: Ubuntu
+os-release: '22.04 LTS'
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: >-
+ 6.2, 6.3, 6.4, 6.6, 6.8, 6.10
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_minio_hostname: "$ONEAPP_MINIO_HOSTNAME"
+    oneapp_minio_opts: "$ONEAPP_MINIO_OPTS"
+    oneapp_minio_root_password: "$ONEAPP_MINIO_ROOT_PASSWORD"
+    oneapp_minio_root_user: "$ONEAPP_MINIO_ROOT_USER"
+    oneapp_minio_tls_cert: "$ONEAPP_MINIO_TLS_CERT"
+    oneapp_minio_tls_key: "$ONEAPP_MINIO_TLS_KEY"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '2048'
+  os:
+    arch: x86_64
+  logo: images/logos/minio.png
+  user_inputs:
+    oneapp_minio_hostname: "O|text|MinIO hostname for TLS certificate| |localhost,minio-*.example.net"
+    oneapp_minio_opts: "O|text|Additional commandline options for MinIO server| |--console-address :9001"
+    oneapp_minio_root_password: "O|password|MinIO root user password for MinIO server"
+    oneapp_minio_root_user: "O|text|MinIO root user for MinIO server| |myminioadmin"
+    oneapp_minio_tls_cert: "O|text64|MinIO TLS certificate (.crt)| |"
+    oneapp_minio_tls_key: "O|text64|MinIO TLS key (.key)| |"
+logo: minio.png
+images:
+- name: service_MinIO
+  url: >-
+    http://s3.amazonaws.com/opennebula-marketplace/service_MinIO.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 475849728
+  checksum:
+    md5: 2bd76f1bb99bca7f17f4c20135ef89d1
+    sha256: 0f5d3373d0062a5d5960e0b76eb60e5b611f9b7a0b0ab276ef72fb05c769c958
