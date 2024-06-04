@@ -49,7 +49,7 @@ logo: minio.png
 images:
 - name: service_MinIO
   url: >-
-    http://s3.amazonaws.com/opennebula-marketplace/service_MinIO.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_MinIO-6.10.0-1-20240531.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
