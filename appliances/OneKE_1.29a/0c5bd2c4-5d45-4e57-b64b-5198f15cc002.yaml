@@ -110,7 +110,7 @@ opennebula_template:
       scheduled_policies: []
     - name: worker
       parents: [vnf]
-      cardinality: 1,
+      cardinality: 1
       vm_template_contents: |
         NIC = [
           NAME = "NIC0",
@@ -133,7 +133,7 @@ opennebula_template:
         ONEAPP_VNF_HAPROXY_LB3_IP = "<ETH0_EP0>"
         ONEAPP_VNF_HAPROXY_LB3_PORT = "$ONEAPP_VNF_HAPROXY_LB3_PORT"
         ONEAPP_VNF_DNS_ENABLED = "$ONEAPP_VNF_DNS_ENABLED"
-      cooldown: 120,
+      cooldown: 120
       elasticity_policies: []
       scheduled_policies: []
     - name: storage
