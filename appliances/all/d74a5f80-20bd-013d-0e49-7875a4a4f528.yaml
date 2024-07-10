@@ -1,0 +1,49 @@
+---
+name: Alpine Linux 3.20
+version: 6.10.0-2-20240710
+publisher: OpenNebula Systems
+description: |-
+  Alpine Linux 3.20 image ready for your OpenNebula deployment.
+
+  This image is based on the Alpine Linux 3.20 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Alpine Linux 3.20 image for KVM, LXD and vCenter
+tags:
+- alpine
+format: qcow2
+creation_time: 1715685461
+os-id: Alpine Linux
+os-release: '3.20'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.1, 6.2, 6.3, 6.4, 6.6, 6.8
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '128'
+  nic_default:
+    model: virtio
+  os:
+    arch: x86_64
+  logo: images/logos/linux.png
+  lxd_security_privileged: 'true'
+logo: alpine.png
+images:
+- name: alpine320
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/alpine320-6.10.0-2-20240710.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 268435456
+  checksum:
+    md5: 668c416f6be5036c52604f20d98fd61c
+    sha256: d09b9276224dfe80f4ba3fc797628e1c0c4f58ead2e3bbd2763fefce413e8069
