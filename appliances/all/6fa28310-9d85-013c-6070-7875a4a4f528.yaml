@@ -1,6 +1,6 @@
 ---
 name: Debian 12
-version: 6.10.0-1-20240514
+version: 6.10.0-2-20240710
 publisher: OpenNebula Systems
 description: |-
   Debian 12 image ready for your OpenNebula deployment.
@@ -38,11 +38,11 @@ opennebula_template:
 logo: debian.png
 images:
 - name: debian12
-  url: https://d24fmfybwxpuhu.cloudfront.net/debian12-6.10.0-1-20240514.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/debian12-6.10.0-2-20240710.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
     md5: b3fdf8a37dbda9b74d31176cbd889cfb
-    sha256: cca9f05f48c05b3c7ae2929da1a99848a3f8b385f82f6d8d8344c64660025390
+    sha256: 30bad4141eca614978a85e7463f04569e2a4b1d5ba14c740bf25b7f57fa825f4

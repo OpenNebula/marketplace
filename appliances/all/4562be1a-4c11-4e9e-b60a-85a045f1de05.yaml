@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 22.04
-version: 6.10.0-1-20240514
+version: 6.10.0-2-20240710
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 22.04 image ready for your OpenNebula deployment.
@@ -39,11 +39,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2204
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2204-6.10.0-1-20240514.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2204-6.10.0-2-20240710.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
     md5: fe641fc78f38cd05c955e7e2976b92c9
-    sha256: 0ae3249d5721f3c348414a83d281305bcc7e6a8cc85c931e3b7af85e297e5ae6
+    sha256: f645ce6748c23ffb47fc1ef3808344b069eb993375cd4839543755df9656d785

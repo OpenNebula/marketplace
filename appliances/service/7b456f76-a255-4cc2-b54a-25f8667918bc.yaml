@@ -1,6 +1,6 @@
 ---
 name: Service Harbor
-version: 6.10.0-1-20240514
+version: 6.10.0-2-20240710
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [Harbor](https://github.com/goharbor/harbor).
@@ -14,11 +14,10 @@ tags:
 format: qcow2
 creation_time: 1715677835
 os-id: Ubuntu
-os-release: "22.04 LTS"
+os-release: 22.04 LTS
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: >-
-  6.2, 6.3, 6.4, 6.6, 6.8, 6.10
+opennebula_version: 6.2, 6.3, 6.4, 6.6, 6.8, 6.10
 opennebula_template:
   context:
     network: 'YES'
@@ -39,21 +38,26 @@ opennebula_template:
   os:
     arch: x86_64
   user_inputs:
-    oneapp_harbor_admin_password: "O|password|Password for the admin Harbor user (defaults to Harbor12345)"
-    oneapp_harbor_db_password: "O|password|Password for the internal Harbor database (defaults to random)"
-    oneapp_harbor_hostname: "O|text|Harbor hostname/IP exposing the service (certificate CN)||"
-    oneapp_harbor_registry_dev: "O|text|Harbor registry disk device name (e.g. sdb, vdb, etc.)||"
-    oneapp_harbor_ssl_cert: "O|text64|SSL certificate||"
-    oneapp_harbor_ssl_key: "O|text64|SSL key||"
+    oneapp_harbor_admin_password: >-
+      O|password|Password for the admin Harbor user (defaults to Harbor12345)
+    oneapp_harbor_db_password: >-
+      O|password|Password for the internal Harbor database (defaults to
+      random)
+    oneapp_harbor_hostname: O|text|Harbor hostname/IP exposing the service
+      (certificate CN)||
+    oneapp_harbor_registry_dev: O|text|Harbor registry disk device name
+      (e.g. sdb, vdb, etc.)||
+    oneapp_harbor_ssl_cert: O|text64|SSL certificate||
+    oneapp_harbor_ssl_key: O|text64|SSL key||
 logo: harbor.png
 images:
 - name: service_Harbor
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_Harbor-6.10.0-1-20240514.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_Harbor-6.10.0-2-20240710.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
     md5: b56cd8aed79499f478229859579128d9
-    sha256: 188b3445fa9a650da7c3294c2c05a9040a4bbd56fddb96f2eb7512d11a7a58f8
+    sha256: e4d145865cf14d8a66df7cd84bb29be4e82a18cfa8e843b9abbbe842a9051234
