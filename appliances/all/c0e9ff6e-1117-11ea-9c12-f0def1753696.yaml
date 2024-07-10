@@ -1,6 +1,6 @@
 ---
 name: openSUSE 15
-version: 6.10.0-1-20240514
+version: 6.10.0-2-20240710
 publisher: OpenNebula Systems
 description: |-
   openSUSE 15 image ready for your OpenNebula deployment.
@@ -39,11 +39,11 @@ logo: opensuse.png
 images:
 - name: opensuse15
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/opensuse15-6.10.0-1-20240514.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/opensuse15-6.10.0-2-20240710.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
     md5: 1385a9b160099ee2af31e09f789e2108
-    sha256: 8c8643ff70ad283176d3473c0d9171bbedb29396e67746e4d368691acec711f1
+    sha256: a3b6ffbf52859309b7f6fb3a6d0a4ddd02befd04f8fd3b8aa6855e7491cdf25b

@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 24.04
-version: 6.10.0-1-20240514
+version: 6.10.0-2-20240710
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 24.04 image ready for your OpenNebula deployment.
@@ -37,11 +37,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2404
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2404-6.10.0-1-20240514.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2404-6.10.0-2-20240710.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 3758096384
   checksum:
     md5: 4f069f1614b5e0f5a5fbae0c9f3a1e76
-    sha256: 3a6cb459ae7c0c76cb675dde7878014221f93c63d83faa28ca83d46d32c11987
+    sha256: 9826e16ad4466b31b676460f63b14882c74fe3c7d69f2567ea8fa1a875e33ca8

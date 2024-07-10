@@ -1,25 +1,25 @@
 ---
-name: Amazon Linux 2
+name: Amazon Linux 2023
 version: 6.10.0-2-20240710
 publisher: OpenNebula Systems
 description: |-
-  [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/) image ready for the OpenNebula deployment with [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html) installed. The use of this software is governed by the terms of the AWS Customer Agreement (https://aws.amazon.com/agreement/) or other agreement with AWS governing the use of AWS services.
+  [Amazon Linux 2023](https://aws.amazon.com/linux/amazon-linux-2023/) image ready for the OpenNebula deployment with [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html) installed. The use of this software is governed by the terms of the AWS Customer Agreement (https://aws.amazon.com/agreement/) or other agreement with AWS governing the use of AWS services.
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Amazon Linux 2 image for KVM, LXD and vCenter.
+short_description: Amazon Linux 2023 image for KVM, LXD and vCenter.
 tags:
 - amazon
 format: qcow2
 creation_time: 1715685461
 os-id: Amazon Linux
-os-release: '2'
+os-release: '2023'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: >-
   4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4, 6.6, 6.8
+  6.1, 6.2, 6.3, 6.4, 6.6, 6.8, 6.10
 opennebula_template:
   context:
     network: 'YES'
@@ -35,12 +35,13 @@ opennebula_template:
   lxd_security_privileged: 'true'
 logo: amazon.png
 images:
-- name: amazon2
-  url: https://d24fmfybwxpuhu.cloudfront.net/amazon2-6.10.0-2-20240710.qcow2
+- name: amazon2023
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/amazon2023-6.10.0-2-20240710.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 26843545600
   checksum:
-    md5: 93246cf30d5762b8fd0230edca43d273
-    sha256: caeb20a7cf4f6091b846202dc22ec66d54741c638a6193f5180f4b3f22c4f569
+    md5: 28af65ea5fed957ee52a02d9c248acdb
+    sha256: 50c14e7046bb4e6d8fe76b4c761ddb018504efe755accb0de7d1d56626236e1e

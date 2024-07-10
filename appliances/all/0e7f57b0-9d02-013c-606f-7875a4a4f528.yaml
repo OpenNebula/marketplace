@@ -1,6 +1,6 @@
 ---
 name: Alpine Linux 3.18
-version: 6.10.0-1-20240514
+version: 6.10.0-2-20240710
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.18 image ready for your OpenNebula deployment.
@@ -41,11 +41,11 @@ logo: alpine.png
 images:
 - name: alpine318
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/alpine318-6.10.0-1-20240514.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/alpine318-6.10.0-2-20240710.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 268435456
   checksum:
     md5: 4b6c04ba822174e2a508fbabd3435344
-    sha256: 0347dac47cb0e0344f418c331a55850ebf268c23666ab6af8a93efe11f765dc8
+    sha256: 1c6b79872a2fd006f4de8ce8a4e8277e9fdc6f79148ce40b978ea5dcb6688650

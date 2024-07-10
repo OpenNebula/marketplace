@@ -1,6 +1,6 @@
 ---
 name: Ubuntu Minimal 22.04
-version: 6.10.0-1-20240514
+version: 6.10.0-2-20240710
 publisher: OpenNebula Systems
 description: |-
   Ubuntu Minimal 22.04 image ready for your OpenNebula deployment.
@@ -43,11 +43,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2204min
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2204min-6.10.0-1-20240514.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2204min-6.10.0-2-20240710.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
     md5: 96b92a3682e488237c315cc3b16d5dcd
-    sha256: c9c738219b94503d42d1cd1552ad7cef8378acc65c31c5fb3332b8d618c5418a
+    sha256: 7da75e8bc59748e06f0b873ed7b3737152708f66b14f6adcfd08a2b6532dde8a

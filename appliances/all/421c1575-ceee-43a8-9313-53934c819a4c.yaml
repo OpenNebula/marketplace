@@ -1,6 +1,6 @@
 ---
 name: Rocky Linux 8
-version: 6.10.0-1-20240514
+version: 6.10.0-2-20240710
 publisher: OpenNebula Systems
 description: |-
   Rocky Linux 8 image ready for your OpenNebula deployment.
@@ -37,11 +37,11 @@ opennebula_template:
 logo: rocky.png
 images:
 - name: rocky8
-  url: https://d24fmfybwxpuhu.cloudfront.net/rocky8-6.10.0-1-20240514.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/rocky8-6.10.0-2-20240710.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
     md5: 077cc22ff0e73d38ac132a9ce22be33d
-    sha256: dfa77c85814819897614ad310a1be1b97116612e09fdf25d98187fcd560868a2
+    sha256: aa4e78ef7abc75e21e1e8722bc715c9854e86350df9d97c51c9806d950ca9d4c
