@@ -1,6 +1,6 @@
 ---
 name: Service MinIO
-version: 6.10.0-1-20240531
+version: 6.10.0-2-20240715
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [MinIO](https://min.io/docs/minio/linux/index.html).
@@ -49,11 +49,11 @@ logo: minio.png
 images:
 - name: service_MinIO
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_MinIO-6.10.0-1-20240531.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_MinIO-6.10.0-2-20240715.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 475849728
+  size: 2361393152
   checksum:
-    md5: 2bd76f1bb99bca7f17f4c20135ef89d1
-    sha256: 0f5d3373d0062a5d5960e0b76eb60e5b611f9b7a0b0ab276ef72fb05c769c958
+    md5: 663d378fcc8f14fa6ce8beb1a8a64dc1
+    sha256: d97e47ed7bcd97ea9b75a3240835152a4253be2f34bce26791490d6acbbc3a8e
