@@ -19,9 +19,7 @@ os-id: AlmaLinux
 os-release: '9.4'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: >-
-  4.8, 4.10, 4.12, 4.14, 5.0, 5.2, 5.4, 5.6, 5.8, 5.10, 5.12, 5.13, 6.0,
-  6.1, 6.2, 6.3, 6.4, 6.6, 6.8
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
 opennebula_template:
   context:
     network: 'YES'
