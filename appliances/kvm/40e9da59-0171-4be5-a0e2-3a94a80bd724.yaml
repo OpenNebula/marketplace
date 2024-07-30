@@ -2,7 +2,7 @@
 name: Custom via netboot.xyz
 version: 2.0.32-1
 publisher: OpenNebula Systems
-description: |
+description: |-
   Empty disk for custom installation via [netboot.xyz](https://netboot.xyz).
   Boots iPXE bootloader from the attached CD-ROM, downloads the installation
   options from the Internet and lets user choose the action. Fallbacks to
@@ -16,17 +16,12 @@ tags:
 - empty
 - cdrom
 - netboot.xyz
-type: 'VMTEMPLATE'
+format: qcow2
 creation_time: 1635328783
-hypervisor: KVM
 os-id: none
 os-arch: x86_64
-format: qcow2
-opennebula_version: 5.12, 6.0, 6.2, 6.4, 6.6, 6.8
-disks:
-  - 'Empty disk'
-  - 'netboot.xyz'
-logo: netbootxyz.png
+hypervisor: KVM
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
 opennebula_template:
   context:
     network: 'YES'
@@ -38,9 +33,13 @@ opennebula_template:
   memory: '768'
   os:
     arch: x86_64
-    boot: 'disk0,disk1'
+    boot: disk0,disk1
   info: >-
     Please do not use this VM Template for vCenter VMs. Refer to the documentation
     https://bit.ly/37NcJ0Y
   sched_requirements: HYPERVISOR!=\"vcenter\"
-images: []
+logo: netbootxyz.png
+type: VMTEMPLATE
+disks:
+- Empty disk
+- netboot.xyz

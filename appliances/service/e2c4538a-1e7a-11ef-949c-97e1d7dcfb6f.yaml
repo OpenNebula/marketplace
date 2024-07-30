@@ -15,11 +15,10 @@ tags:
 format: qcow2
 creation_time: 1717151321
 os-id: Ubuntu
-os-release: '22.04 LTS'
+os-release: 22.04 LTS
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: >-
- 6.2, 6.3, 6.4, 6.6, 6.8, 6.10
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
 opennebula_template:
   context:
     network: 'YES'
@@ -39,12 +38,16 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/minio.png
   user_inputs:
-    oneapp_minio_hostname: "O|text|MinIO hostname for TLS certificate| |localhost,minio-*.example.net"
-    oneapp_minio_opts: "O|text|Additional commandline options for MinIO server| |--console-address :9001"
-    oneapp_minio_root_password: "O|password|MinIO root user password for MinIO server"
-    oneapp_minio_root_user: "O|text|MinIO root user for MinIO server| |myminioadmin"
-    oneapp_minio_tls_cert: "O|text64|MinIO TLS certificate (.crt)| |"
-    oneapp_minio_tls_key: "O|text64|MinIO TLS key (.key)| |"
+    oneapp_minio_hostname: >-
+      O|text|MinIO hostname for TLS certificate| |localhost,minio-*.example.net
+    oneapp_minio_opts: >-
+      O|text|Additional commandline options for MinIO server| |--console-address
+      :9001
+    oneapp_minio_root_password: O|password|MinIO root user password for
+      MinIO server
+    oneapp_minio_root_user: O|text|MinIO root user for MinIO server| |myminioadmin
+    oneapp_minio_tls_cert: O|text64|MinIO TLS certificate (.crt)| |
+    oneapp_minio_tls_key: O|text64|MinIO TLS key (.key)| |
 logo: minio.png
 images:
 - name: service_MinIO
