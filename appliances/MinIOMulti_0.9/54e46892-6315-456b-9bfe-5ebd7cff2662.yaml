@@ -1,0 +1,68 @@
+---
+name: Service MinIO Multi-Node
+version: 0.9-6.10.0-1-20241009
+publisher: OpenNebula Systems
+description: |-
+  MinIO Multi-Node deployment orchestrated by
+  [OneFlow](https://docs.opennebula.io/stable/management_and_operations/multivm_service_management/appflow_elasticity.html)
+
+  Requires
+  [OneFlow](https://docs.opennebula.io/stable/management_and_operations/multivm_service_management/overview.html)
+  and
+  [OneGate](https://docs.opennebula.io/stable/management_and_operations/multivm_service_management/onegate_usage.html)
+  OpenNebula components.
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/minio_quick).
+
+  Based on VM templates
+  - [MinIO Multi-Node](/appliance/b699a394-65dc-462d-9f01-9bfa9e6ce7b5)
+  - [MinIO Virtual Router](/appliance/27e0285d-f214-4746-862e-9b7ad505c700)
+short_description: Multi-Node MinIO deployment for KVM hosts, orchestrated by OneFlow
+tags:
+- minio
+- storage
+- ubuntu
+- service
+# Time in epoch format and UTC. You can get it executing "date +%s"
+creation_time: 1728486612
+os-id: Ubuntu
+os-release: '22.04 LTS'
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 6.8, 6.10
+type: 'SERVICE_TEMPLATE'
+roles:
+  minio: 'MinIO Multi-Node'
+  vr: 'MinIO Virtual Router'
+opennebula_template: '{
+  "name": "minio",
+  "deployment": "straight",
+  "description": "",
+  "roles": [
+    {
+      "cardinality": 4,
+      "name": "MinIO",
+      "vm_template": 0,
+      "vm_template_contents": "NIC = [\n  NAME = \"_NIC0\",\n  NETWORK_ID = \"$private\" ]\n"
+    },
+    {
+      "name": "vr",
+      "cardinality": 1,
+      "parents": [
+        "minio"
+      ],
+      "vm_template": 1,
+      "vm_template_contents": "NIC = [\n  NAME = \"_NIC0\",\n  NETWORK_ID = \"$public\" ]\nNIC = [\n  NAME = \"_NIC1\",\n  NETWORK_ID = \"$private\" ]\n"
+    }
+  ],
+  "ready_status_gate": false,
+  "automatic_deletion": false,
+  "networks": {
+    "public": "M|network|| |id:",
+    "private": "M|network|| |id:"
+  },
+  "registration_time": 1726065631,
+  "vmshutdown": "Terminate"
+}'
+logo: minio.png
+images: []
