@@ -1,6 +1,6 @@
 ---
 name: Service MinIO Multi-Node
-version: 0.9-6.10.0-1-20241009
+version: 6.10.0-3-20241002
 publisher: OpenNebula Systems
 description: |-
   MinIO Multi-Node deployment orchestrated by
@@ -12,7 +12,7 @@ description: |-
   [OneGate](https://docs.opennebula.io/stable/management_and_operations/multivm_service_management/onegate_usage.html)
   OpenNebula components.
 
-  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/minio_quick).
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/minio_multinode).
 
   Based on VM templates
   - [MinIO Multi-Node](/appliance/b699a394-65dc-462d-9f01-9bfa9e6ce7b5)
@@ -23,8 +23,7 @@ tags:
 - storage
 - ubuntu
 - service
-# Time in epoch format and UTC. You can get it executing "date +%s"
-creation_time: 1728486612
+creation_time: 1728651992
 os-id: Ubuntu
 os-release: '22.04 LTS'
 os-arch: x86_64

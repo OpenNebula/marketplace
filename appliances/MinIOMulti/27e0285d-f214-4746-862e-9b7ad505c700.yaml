@@ -1,6 +1,6 @@
 ---
 name: MinIO Virtual Router
-version: 0.9.0-6.10.0-1-20240515
+version: 6.10.0-3-20241002
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS, DHCP)
@@ -18,7 +18,7 @@ tags:
 - alpine
 type: VMTEMPLATE
 format: qcow2
-creation_time: 1728486612
+creation_time: 1728651992
 os-id: Alpine
 os-release: '3.18'
 os-arch: x86_64
@@ -40,7 +40,9 @@ opennebula_template:
     oneapp_vnf_haproxy_enabled: 'YES'
     oneapp_vnf_haproxy_onegate_enabled: 'YES'
     oneapp_vnf_haproxy_lb0_ip: "<ETH0_EP0>"
-    oneapp_vnf_haproxy_lb0_port: "443"
+    oneapp_vnf_haproxy_lb0_port: "$ONEAPP_VNF_HAPROXY_LB0_PORT"
+    oneapp_vnf_haproxy_lb1_ip: "<ETH0_EP0>"
+    oneapp_vnf_haproxy_lb1_port: "$ONEAPP_VNF_HAPROXY_LB1_PORT"
     oneapp_vnf_haproxy_interfaces: "$ONEAPP_VNF_HAPROXY_INTERFACES"
     oneapp_vnf_lb_enabled: "$ONEAPP_VNF_LB_ENABLED"
     oneapp_vnf_lb_interfaces: "$ONEAPP_VNF_LB_INTERFACES"
@@ -54,7 +56,7 @@ opennebula_template:
   graphics:
     listen: 0.0.0.0
     type: vnc
-  inputs_order: 'ONEAPP_VNF_HAPROXY_LB0_PORT'
+  inputs_order: 'ONEAPP_VNF_HAPROXY_LB0_PORT,ONEAPP_VNF_HAPROXY_LB1_PORT'
   memory: '512'
   nic_default:
     model: virtio
@@ -62,7 +64,8 @@ opennebula_template:
   os:
     arch: x86_64
   user_inputs:
-    oneapp_vnf_haproxy_lb0_port: "M|text|ONEAPP_VNF_HAPROXY_LB0_PORT| |443"
+    oneapp_vnf_haproxy_lb0_port: "M|text|LB port for MinIO Console| |443"
+    oneapp_vnf_haproxy_lb1_port: "M|text|LB port for MinIO API| |9000"
 logo: router.png
 disks:
 - "Service Virtual Router"
