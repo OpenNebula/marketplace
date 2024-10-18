@@ -1,6 +1,6 @@
 ---
 name: Service MinIO
-version: 6.10.0-3-20241018
+version: 6.10.0-2-20241018
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [MinIO](https://min.io/docs/minio/linux/index.html).

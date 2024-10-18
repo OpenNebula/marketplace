@@ -1,6 +1,6 @@
 ---
 name: Service MinIO Multi-Node
-version: 6.10.0-3-20241002
+version: 6.10.0-2-20241018
 publisher: OpenNebula Systems
 description: |-
   MinIO Multi-Node deployment orchestrated by
