@@ -26,6 +26,7 @@ opennebula_template:
     oneapp_minio_opts: "$ONEAPP_MINIO_OPTS"
     oneapp_minio_root_password: "$ONEAPP_MINIO_ROOT_PASSWORD"
     oneapp_minio_root_user: "$ONEAPP_MINIO_ROOT_USER"
+    oneapp_minio_tls_enabled: "$ONEAPP_MINIO_TLS_ENABLED"
     oneapp_minio_tls_cert: "$ONEAPP_MINIO_TLS_CERT"
     oneapp_minio_tls_key: "$ONEAPP_MINIO_TLS_KEY"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
@@ -33,6 +34,8 @@ opennebula_template:
   graphics:
     listen: 0.0.0.0
     type: vnc
+  inputs_order: >-
+    ONEAPP_MINIO_HOSTNAME,ONEAPP_MINIO_ROOT_USER,ONEAPP_MINIO_ROOT_PASSWORD,ONEAPP_MINIO_OPTS,ONEAPP_MINIO_TLS_ENABLED,ONEAPP_MINIO_TLS_CERT,ONEAPP_MINIO_TLS_KEY
   memory: '2048'
   os:
     arch: x86_64
@@ -46,6 +49,7 @@ opennebula_template:
     oneapp_minio_root_password: O|password|MinIO root user password for
       MinIO server
     oneapp_minio_root_user: O|text|MinIO root user for MinIO server| |myminioadmin
+    oneapp_minio_tls_enabled: "M|boolean|Enable TLS configuration| |YES"
     oneapp_minio_tls_cert: O|text64|MinIO TLS certificate (.crt)| |
     oneapp_minio_tls_key: O|text64|MinIO TLS key (.key)| |
 logo: minio.png
