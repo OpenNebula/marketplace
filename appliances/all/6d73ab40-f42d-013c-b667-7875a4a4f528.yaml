@@ -1,6 +1,6 @@
 ---
 name: FreeBSD 14
-version: 6.10.0-2-20240710
+version: 6.10.0-2-20241026
 publisher: OpenNebula Systems
 description: |-
   FreeBSD 14 image ready for your OpenNebula deployment.
@@ -35,11 +35,11 @@ logo: freebsd.png
 images:
 - name: freebsd14
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/freebsd14-6.10.0-2-20240710.qcow2
+    https://d1u3t3vit86qcd.cloudfront.net/freebsd14-6.10.0-2-20241026.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
     md5: 194ef6324366ac239868be76cde7275f
-    sha256: 1121c76be7e8ab14352951544b6427a7cedb94b017bab66b5a289f3b4b4972a4
+    sha256: ea7a6427e281126540121750855755e02db64aad7eef421fc3ebb0f9ecf2bcaf

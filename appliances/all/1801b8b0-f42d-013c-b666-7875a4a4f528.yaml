@@ -1,6 +1,6 @@
 ---
 name: Fedora 40
-version: 6.10.0-2-20240710
+version: 6.10.0-2-20241026
 publisher: OpenNebula Systems
 description: |-
   Fedora 40 image ready for your OpenNebula deployment.
@@ -36,11 +36,11 @@ opennebula_template:
 logo: fedora.png
 images:
 - name: fedora40
-  url: https://d24fmfybwxpuhu.cloudfront.net/fedora40-6.10.0-2-20240710.qcow2
+  url: https://d1u3t3vit86qcd.cloudfront.net/fedora40-6.10.0-2-20241026.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 5368709120
   checksum:
     md5: 7f270a4f546057ae344dc512bcb78a73
-    sha256: cebc2ebcdf62efe6194a19040d7e68b5cae4582cd2867b0dc9918aa6bb8e6b94
+    sha256: cc9f0619a412c5d92a3e5aae3d19a6af13833476720f18a66fae5f7fd43bd8f0

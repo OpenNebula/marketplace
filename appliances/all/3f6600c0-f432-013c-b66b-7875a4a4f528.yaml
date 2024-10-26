@@ -1,6 +1,6 @@
 ---
 name: Fedora 39
-version: 6.10.0-2-20240710
+version: 6.10.0-2-20241026
 publisher: OpenNebula Systems
 description: |-
   Fedora 39 image ready for your OpenNebula deployment.
@@ -36,11 +36,11 @@ opennebula_template:
 logo: fedora.png
 images:
 - name: fedora39
-  url: https://d24fmfybwxpuhu.cloudfront.net/fedora39-6.10.0-2-20240710.qcow2
+  url: https://d1u3t3vit86qcd.cloudfront.net/fedora39-6.10.0-2-20241026.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 5368709120
   checksum:
     md5: 59d705141232a214e6be9540be25a835
-    sha256: 94820dfdedf855a062c2ea9d3e4ab320e4c37cb3366c1a886786327a01564d88
+    sha256: 7497b628ce02e8cd070e688cee57f9b7dad143efd69e2da3bca3d94e45ec1385

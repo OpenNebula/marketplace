@@ -1,6 +1,6 @@
 ---
 name: Ubuntu Minimal 20.04
-version: 6.10.0-2-20240710
+version: 6.10.0-2-20241026
 publisher: OpenNebula Systems
 description: |-
   Ubuntu Minimal 20.04 image ready for your OpenNebula deployment.
@@ -41,11 +41,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2004min
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004min-6.10.0-2-20240710.qcow2
+    https://d1u3t3vit86qcd.cloudfront.net/ubuntu2004min-6.10.0-2-20241026.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
     md5: 97b6d387d91eef99f22c77fd88c9fdef
-    sha256: 4f31b5d760163ce5d6828bb73ae342098a80331840c6ad3cc53a038d1296f995
+    sha256: 3fd1c7564e551c58c2bb2d2350d4e20a18a00a6a091cfa4708dd4a538ba40d40

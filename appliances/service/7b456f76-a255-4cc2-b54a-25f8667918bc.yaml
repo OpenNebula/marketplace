@@ -1,6 +1,6 @@
 ---
 name: Service Harbor
-version: 6.10.0-2-20240710
+version: 6.10.0-2-20241026
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [Harbor](https://github.com/goharbor/harbor).
@@ -53,11 +53,11 @@ logo: harbor.png
 images:
 - name: service_Harbor
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_Harbor-6.10.0-2-20240710.qcow2
+    https://d1u3t3vit86qcd.cloudfront.net/service_Harbor-6.10.0-2-20241026.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
     md5: b56cd8aed79499f478229859579128d9
-    sha256: e4d145865cf14d8a66df7cd84bb29be4e82a18cfa8e843b9abbbe842a9051234
+    sha256: 81d8114f64d1053ab8bb69c43e2de3fbdee307973ada77f9a9e04cd620c5b813

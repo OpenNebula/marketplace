@@ -1,6 +1,6 @@
 ---
 name: Amazon Linux 2
-version: 6.10.0-2-20240710
+version: 6.10.0-2-20241026
 publisher: OpenNebula Systems
 description: |-
   [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/) image ready for the OpenNebula deployment with [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html) installed. The use of this software is governed by the terms of the AWS Customer Agreement (https://aws.amazon.com/agreement/) or other agreement with AWS governing the use of AWS services.
@@ -34,11 +34,11 @@ opennebula_template:
 logo: amazon.png
 images:
 - name: amazon2
-  url: https://d24fmfybwxpuhu.cloudfront.net/amazon2-6.10.0-2-20240710.qcow2
+  url: https://d1u3t3vit86qcd.cloudfront.net/amazon2-6.10.0-2-20241026.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 26843545600
   checksum:
     md5: 93246cf30d5762b8fd0230edca43d273
-    sha256: caeb20a7cf4f6091b846202dc22ec66d54741c638a6193f5180f4b3f22c4f569
+    sha256: 648ed932ee646b3d4eee21f4814809620c9df07412f4039f166576708a1d8fc6
