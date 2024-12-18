@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.31 Airgapped OS disk
-version: 1.31.4-6.10.0-1-20240510 #TODO 1.29.4-6.10.0-1-20240510
+version: 1.31.3-6.10.0-2-20241219
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.31 Airgapped appliance OS disk.

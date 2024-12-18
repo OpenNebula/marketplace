@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.31 Storage
-version: 1.31.2-6.10.1-1-20241205
+version: 1.31.3-6.10.0-2-20241219
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.31 VM template for Storage VMs.

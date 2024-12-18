@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.31 OS disk
-version: 1.31.2-6.10.1-1-20241205
+version: 1.31.3-6.10.0-2-20241219
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.31 appliance OS disk.
@@ -19,7 +19,7 @@ hypervisor: ALL
 opennebula_version: 6.2, 6.3, 6.4, 6.6, 6.8, 6.10
 images:
 - name: oneke_os
-  url: http://services:9999/images/service_OneKE.qcow2
+  url: http://192.168.150.1:8080/service_OneKE.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
