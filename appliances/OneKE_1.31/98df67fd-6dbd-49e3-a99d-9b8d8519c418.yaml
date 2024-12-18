@@ -1,0 +1,64 @@
+---
+name: OneKE 1.31 Storage
+version: 1.31.2-6.10.1-1-20241205
+publisher: OpenNebula Systems
+description: |-
+  OneKE 1.31 VM template for Storage VMs.
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki).
+short_description: OneKE 1.31 VM template for Storage VMs
+tags:
+- kubernetes
+- service
+- ubuntu
+type: VMTEMPLATE
+format: qcow2
+creation_time: 1715358765
+os-id: Ubuntu
+os-release: "22.04 LTS"
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: >-
+  6.2, 6.3, 6.4, 6.6, 6.8, 6.10
+opennebula_template:
+  context:
+    SERVICE_ID: "$SERVICE_ID"
+    FALLBACK_GW: "$FALLBACK_GW"
+    FALLBACK_DNS: "$FALLBACK_DNS"
+    GROW_FS: "/ /var/lib/longhorn"
+    NETWORK: "YES"
+    TOKEN: "YES"
+    REPORT_READY: "YES"
+    SSH_PUBLIC_KEY: "$USER[SSH_PUBLIC_KEY]"
+    ONE_SERVICE_AIRGAPPED: "NO"
+    ONEAPP_VROUTER_ETH0_VIP0: "$ONEAPP_VROUTER_ETH0_VIP0"
+    ONEAPP_VROUTER_ETH1_VIP0: "$ONEAPP_VROUTER_ETH1_VIP0"
+    ONEAPP_RKE2_SUPERVISOR_EP: "$ONEAPP_RKE2_SUPERVISOR_EP"
+    ONEAPP_K8S_CONTROL_PLANE_EP: "$ONEAPP_K8S_CONTROL_PLANE_EP"
+    ONEAPP_K8S_MULTUS_ENABLED: "$ONEAPP_K8S_MULTUS_ENABLED"
+    ONEAPP_K8S_CNI_PLUGIN: "$ONEAPP_K8S_CNI_PLUGIN"
+    ONEAPP_K8S_ENABLE_CLOUD_CONTROLLER: "$ONEAPP_K8S_ENABLE_CLOUD_CONTROLLER"
+    ONEAPP_K8S_HTTP_PROXY: "$ONEAPP_K8S_HTTP_PROXY"
+    ONEAPP_K8S_HTTPS_PROXY: "$ONEAPP_K8S_HTTPS_PROXY"
+    ONEAPP_K8S_NO_PROXY: "$ONEAPP_K8S_NO_PROXY"
+    ONEAPP_K8S_LONGHORN_ENABLED: "$ONEAPP_K8S_LONGHORN_ENABLED"
+    ONEAPP_STORAGE_DEVICE: "$ONEAPP_STORAGE_DEVICE"
+    ONEAPP_STORAGE_FILESYSTEM: "$ONEAPP_STORAGE_FILESYSTEM"
+    ONEAPP_STORAGE_MOUNTPOINT: "/var/lib/longhorn"
+    ONEAPP_VNF_HAPROXY_LB0_PORT: "$ONEAPP_VNF_HAPROXY_LB0_PORT"
+    ONEAPP_VNF_HAPROXY_LB1_PORT: "$ONEAPP_VNF_HAPROXY_LB1_PORT"
+    ONEAPP_VNF_DNS_ENABLED: "$ONEAPP_VNF_DNS_ENABLED"
+  cpu: "2"
+  vcpu: "2"
+  graphics:
+    listen: "0.0.0.0"
+    type: vnc
+  inputs_order: ""
+  memory: "3072"
+  os:
+    arch: x86_64
+  user_inputs: {}
+logo: kubernetes.png
+disks:
+- "OneKE 1.31 OS disk"
+- "OneKE 1.31 Storage disk"

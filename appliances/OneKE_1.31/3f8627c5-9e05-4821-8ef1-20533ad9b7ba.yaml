@@ -1,0 +1,29 @@
+---
+name: OneKE 1.31 OS disk
+version: 1.31.2-6.10.1-1-20241205
+publisher: OpenNebula Systems
+description: |-
+  OneKE 1.31 appliance OS disk.
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki).
+short_description: OneKE 1.31 appliance OS disk
+tags:
+- disk
+- kubernetes
+- service
+format: qcow2
+creation_time: 1715358765
+os-id: none
+os-arch: all
+hypervisor: ALL
+opennebula_version: 6.2, 6.3, 6.4, 6.6, 6.8, 6.10
+images:
+- name: oneke_os
+  url: http://services:9999/images/service_OneKE.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 6843545600
+  checksum:
+    md5: 930437e8efaa66462ed8a3e0ebf5d693
+    sha256: d8975de1a60ce13c74e04c41d3d5142eaecd58b13df1a633c27461ea401f0aff
