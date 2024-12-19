@@ -13,7 +13,7 @@ tags:
 - ubuntu
 type: VMTEMPLATE
 format: qcow2
-creation_time: 1715358765
+creation_time: 1734611659
 os-id: Ubuntu
 os-release: "22.04 LTS"
 os-arch: x86_64

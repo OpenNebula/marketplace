@@ -12,14 +12,14 @@ tags:
 - kubernetes
 - service
 format: qcow2
-creation_time: 1715358765
+creation_time: 1734611659
 os-id: none
 os-arch: all
 hypervisor: ALL
 opennebula_version: 6.2, 6.3, 6.4, 6.6, 6.8, 6.10
 images:
 - name: oneke_storage
-  url: https://d24fmfybwxpuhu.cloudfront.net/service_OneKE_storage-6.10.0-1-20240508.qcow2 #TODO: Replace it by the new version
+  url: "https://d24fmfybwxpuhu.cloudfront.net/service_OneKE_storage-6.10.0-2-20241219.qcow2"
   type: OS
   dev_prefix: vd
   driver: qcow2

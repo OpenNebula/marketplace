@@ -14,7 +14,7 @@ tags:
 - service
 - vnf
 format: qcow2
-creation_time: 1715784892
+creation_time: 1734611659
 os-id: Alpine
 os-release: '3.18'
 os-arch: x86_64
@@ -66,11 +66,11 @@ opennebula_template:
 logo: router.png
 images:
 - name: oneke_vnf
-  url: http://192.168.150.1:8080/service_VRouter.qcow2
+  url: "https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.10.0-2-20241203.qcow2"
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: b97e2488992abf7d633d94c3043b1888
-    sha256: 1ac6f8310da672a17b0a0a530041a40da952527be11c94937225045195834293
+    md5: 7d4b1edb38cdfa6db7fb69ca9285be8e
+    sha256: 03cfac21780ff46ba9f7b2ab3f73d6c0d9e6ce3ad59e6bf94c21edd9de985436

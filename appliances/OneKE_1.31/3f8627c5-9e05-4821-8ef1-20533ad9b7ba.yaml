@@ -12,18 +12,18 @@ tags:
 - kubernetes
 - service
 format: qcow2
-creation_time: 1715358765
+creation_time: 1734611659
 os-id: none
 os-arch: all
 hypervisor: ALL
 opennebula_version: 6.2, 6.3, 6.4, 6.6, 6.8, 6.10
 images:
 - name: oneke_os
-  url: http://192.168.150.1:8080/service_OneKE.qcow2
+  url: "https://d24fmfybwxpuhu.cloudfront.net/service_OneKE-6.10.0-2-20241219.qcow2"
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 6843545600
+  size: 26843545600
   checksum:
-    md5: 930437e8efaa66462ed8a3e0ebf5d693
-    sha256: d8975de1a60ce13c74e04c41d3d5142eaecd58b13df1a633c27461ea401f0aff
+    md5: f89b6b162d794b0c14663b17c05ef761
+    sha256: d47fd6ba95337163173c6d6bbed7469c2767dca756600415b907e18037a6785a
