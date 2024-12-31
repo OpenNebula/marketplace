@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.31 OS disk
-version: 1.31.3-6.10.0-2-20241219
+version: 1.31.3-6.10.0-2-20241231
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.31 appliance OS disk.
@@ -12,18 +12,18 @@ tags:
 - kubernetes
 - service
 format: qcow2
-creation_time: 1734611659
+creation_time: 1735662515
 os-id: none
 os-arch: all
 hypervisor: ALL
 opennebula_version: 6.2, 6.3, 6.4, 6.6, 6.8, 6.10
 images:
 - name: oneke_os
-  url: "https://d24fmfybwxpuhu.cloudfront.net/service_OneKE-6.10.0-2-20241219.qcow2"
+  url: "https://d24fmfybwxpuhu.cloudfront.net/service_OneKE-6.10.0-2-20241231.qcow2"
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 26843545600
   checksum:
-    md5: f89b6b162d794b0c14663b17c05ef761
-    sha256: d47fd6ba95337163173c6d6bbed7469c2767dca756600415b907e18037a6785a
+    md5: bdb4a8b987bf5d3277caf371458a05cd
+    sha256: 84ebbb695158bca6e493b28a383ab90569af3c00d52adf6c3ec9e0f1696ca816
