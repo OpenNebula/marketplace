@@ -1,0 +1,65 @@
+---
+name: Service Ray AI
+version: 6.10.0-2-20240710
+publisher: OpenNebula Systems
+description: |-
+  This appliance provides a base installation of the [Ray AI compute engine](http://ray.io), leveraging the Ray Serve library to deploy inference APIs and streamline the creation of AI applications using pre-trained Hugging Face models.
+
+  [Documentation](https://github.com/OpenNebula/one-apps/wiki/ray_intro).
+short_description: Appliance with Ray AI compute engine pre-installed
+tags:
+- service
+- ubuntu
+- AI
+format: qcow2
+creation_time: 1715784892
+os-id: Ubuntu
+os-release: '22.04'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_ray_api_port: "$ONEAPP_RAY_API_PORT"
+    oneapp_ray_api_route: "$ONEAPP_RAY_API_ROUTE"
+    oneapp_ray_application_file64: "$ONEAPP_RAY_MODEL_FILE64"
+    oneapp_ray_application_url: "$ONEAPP_RAY_MODEL_URL"
+    oneapp_ray_chatbot_cpus: "$VCPU"
+    oneapp_ray_model_id: "$ONEAPP_RAY_MODEL_ID"
+    oneapp_ray_model_temperature: "$ONEAPP_RAY_MODEL_TEMPERATURE"
+    oneapp_ray_model_token: "$ONEAPP_RAY_MODEL_TOKEN"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    token: 'YES'
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONEAPP_RAY_API_PORT,ONEAPP_RAY_API_ROUTE,ONEAPP_RAY_APPLICATION_URL,ONEAPP_RAY_APPLICATION_FILE64,ONEAPP_RAY_MODEL_ID,ONEAPP_RAY_MODEL_TEMPERATURE,ONEAPP_RAY_MODEL_TOKEN
+  memory: '8192'
+  nic_default:
+    model: virtio
+  os:
+    arch: x86_64
+  user_inputs:
+    oneapp_ray_api_port: O|number|Port number for the API endpoint.| |8000
+    oneapp_ray_api_route: O|text|Route path for the REST API exposed by the application.| |/chat
+    oneapp_ray_application_file64: O|text64|Ray Serve Python application (base64).| |
+    oneapp_ray_application_url: O|text|URL to download the Ray Serve Python application.| |
+    oneapp_ray_model_id: M|list-multiple|Determines the AI model(s) to use for inference.|meta-llama/Llama-3.2-1B-Instruct,Qwen/Qwen2.5-1.5B-Instruct|
+    oneapp_ray_model_temperature: M|number-float|Temperature for model outputs, controlling the randomness of generated text.| |0.1
+    oneapp_ray_model_token: M|text|Authentication token to access the specified AI model. | |
+
+logo: ray.png
+images:
+- name: service_ray
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.10.0-2-20240710.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 2147483648
+  checksum:
+    md5: fd9f4dac9fa8bb256d027836bc03e3db
+    sha256: a3d71e13d5d96b9225baae9dcc029249a1d99975820371346f7956f4a9c5e93d
