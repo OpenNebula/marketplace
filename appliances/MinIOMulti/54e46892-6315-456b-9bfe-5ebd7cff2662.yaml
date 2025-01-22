@@ -33,35 +33,67 @@ type: 'SERVICE_TEMPLATE'
 roles:
   minio: 'MinIO Multi-Node'
   vr: 'MinIO Virtual Router'
-opennebula_template: '{
-  "name": "minio",
-  "deployment": "straight",
-  "description": "",
-  "roles": [
-    {
-      "cardinality": 4,
-      "name": "MinIO",
-      "vm_template": 0,
-      "vm_template_contents": "NIC = [\n  NAME = \"_NIC0\",\n  NETWORK_ID = \"$private\" ]\n"
-    },
-    {
-      "name": "vr",
-      "cardinality": 1,
-      "parents": [
-        "minio"
-      ],
-      "vm_template": 1,
-      "vm_template_contents": "NIC = [\n  NAME = \"_NIC0\",\n  NETWORK_ID = \"$public\" ]\nNIC = [\n  NAME = \"_NIC1\",\n  NETWORK_ID = \"$private\" ]\n"
-    }
-  ],
-  "ready_status_gate": false,
-  "automatic_deletion": false,
-  "networks": {
-    "public": "M|network|| |id:",
-    "private": "M|network|| |id:"
-  },
-  "registration_time": 1726065631,
-  "vmshutdown": "Terminate"
-}'
+opennebula_template:
+  name: Service MinIO
+  deployment: straight
+  description: ''
+  roles:
+  - name: minio
+    cardinality: 4
+    vm_template_contents: |
+      NIC = [
+        NAME = "NIC0"
+        NETWORK_ID = "$private"
+      ]
+      FALLBACK_GW = "${vr.TEMPLATE.CONTEXT.ETH1_IP}"
+      FALLBACK_DNS = "${vr.TEMPLATE.CONTEXT.ETH1_IP}"
+    cooldown: 120
+    elasticity_policies: []
+    scheduled_policies: []
+  - name: vr
+    cardinality: 1
+    min_vms: 1
+    vm_template_contents: |
+      NIC = [
+        NAME = "NIC0"
+        NETWORK_ID = "$public"
+      ]
+      NIC = [
+        NAME = "NIC1"
+        NETWORK_ID = "$private"
+      ]
+      ONEAPP_VNF_DNS_ENABLED = "$ONEAPP_VNF_DNS_ENABLED"
+      ONEAPP_VNF_DNS_INTERFACES = "$ONEAPP_VNF_DNS_INTERFACES"
+      ONEAPP_VNF_DNS_NAMESERVERS = "$ONEAPP_VNF_DNS_NAMESERVERS"
+      ONEAPP_VNF_NAT4_ENABLED = "$ONEAPP_VNF_NAT4_ENABLED"
+      ONEAPP_VNF_NAT4_INTERFACES_OUT = "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
+      ONEAPP_VNF_ROUTER4_ENABLED = "$ONEAPP_VNF_ROUTER4_ENABLED"
+      ONEAPP_VNF_ROUTER4_INTERFACES = "$ONEAPP_VNF_ROUTER4_INTERFACES""
+    cooldown: 120
+    elasticity_policies: []
+    scheduled_policies: []
+  networks:
+    Public: 'M|network|Public| |id::'
+    Private: 'M|network|Private| |id::'
+  custom_attrs:
+    ONEAPP_MINIO_HOSTNAME: 'M|text|MinIO hostname for TLS certificate| |localhost,minio-*.example.net'
+    ONEAPP_MINIO_LB0_PORT: 'M|text|Internal LB port for MinIO Console| |443'
+    ONEAPP_MINIO_LB1_PORT: 'M|text|Internal LB port for MinIO API| |9000'
+    ONEAPP_MINIO_OPTS: 'O|text|Additional commandline options for MinIO server| |--console-address :9001'
+    ONEAPP_MINIO_ROOT_PASSWORD: 'M|password|MinIO root user password for MinIO server| |'
+    ONEAPP_MINIO_ROOT_USER: 'M|text|MinIO root user for MinIO server| |myminioadmin'
+    ONEAPP_MINIO_TLS_CERT: 'O|text64|MinIO TLS certificate (.crt)| |'
+    ONEAPP_MINIO_TLS_ENABLED: 'M|boolean|Enable TLS configuration| |YES'
+    ONEAPP_MINIO_TLS_KEY: 'O|text64|MinIO TLS key (.key)| |'
+    ONEAPP_VNF_HAPROXY_LB0_PORT: 'M|text|External LB port for MinIO Console| |443'
+    ONEAPP_VNF_HAPROXY_LB1_PORT: 'M|text|External LB port for MinIO API| |9000'
+    ONEAPP_VNF_DNS_ENABLED: '0|boolean|Enable DNS recursor||YES'
+    ONEAPP_VNF_DNS_INTERFACES: '0|text|DNS - Interfaces||eth1'
+    ONEAPP_VNF_DNS_NAMESERVERS: '0|text|DNS - Nameservers||1.1.1.1,8.8.8.8'
+    ONEAPP_VNF_NAT4_ENABLED: '0|boolean|Enable NAT||YES'
+    ONEAPP_VNF_NAT4_INTERFACES_OUT: '0|text|NAT - Outgoing Interfaces||eth0'
+    ONEAPP_VNF_ROUTER4_ENABLED: '0|boolean|Enable Router||YES'
+    ONEAPP_VNF_ROUTER4_INTERFACES: '0|text|Router - Interfaces||eth0,eth1'
+  ready_status_gate: true
 logo: minio.png
 images: []
