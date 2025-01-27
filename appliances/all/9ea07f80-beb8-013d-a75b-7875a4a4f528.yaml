@@ -1,0 +1,49 @@
+---
+name: Alpine Linux 3.21
+version: 6.10.0-3-21250127
+publisher: OpenNebula Systems
+description: |-
+  Alpine Linux 3.21 image ready for your OpenNebula deployment.
+
+  This image is based on the Alpine Linux 3.21 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Alpine Linux 3.21 image for KVM, LXD and vCenter
+tags:
+- alpine
+format: qcow2
+creation_time: 1715685461
+os-id: Alpine Linux
+os-release: '3.21'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '128'
+  nic_default:
+    model: virtio
+  os:
+    arch: x86_64
+  logo: images/logos/linux.png
+  lxd_security_privileged: 'true'
+logo: alpine.png
+images:
+- name: alpine321
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/alpine321-6.10.0-3-20250127.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 536870912
+  checksum:
+    md5: 38a0dae16c1d6a60d8d6c15307ba91c4
+    sha256: 404b9b21e88f3b88fdb0d0c9682b86cdb715dded747718a08db46dc257ec721a
