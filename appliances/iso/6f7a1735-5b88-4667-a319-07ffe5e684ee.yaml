@@ -1,6 +1,6 @@
 ---
 name: Contextualization Packages
-version: 6.10.0-1
+version: 6.10.0-3-20250127
 publisher: OpenNebula Systems
 description: CD-ROM image with contextualization packages for Linux and
   Windows.
@@ -14,11 +14,12 @@ hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
 images:
 - name: one-context
-  url: https://d24fmfybwxpuhu.cloudfront.net/one-context-6.10.0-1.iso
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/one-context-6.10.0-3-20250127.iso
   type: CDROM
   dev_prefix: hd
   driver: raw
-  size: 1032192
+  size: 1292288
   checksum:
     md5: 9c157fb0ab055f802163fa79606b08de
-    sha256: 37cc431566559f9ad83ad543f98967282cabacdfd22e43702f58ca9b70aa64ec
+    sha256: 8ed111781c1e1ef041a0cdc1cbe2317f1577b7982dcc4a9429c8715218cd02aa
