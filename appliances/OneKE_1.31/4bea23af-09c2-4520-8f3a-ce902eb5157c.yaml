@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.31 VNF
-version: 1.31.3-6.10.0-2-20241219
+version: 1.31.3-6.10.0-2-20241231
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS, DHCP)
@@ -14,7 +14,7 @@ tags:
 - service
 - vnf
 format: qcow2
-creation_time: 1734611659
+creation_time: 1735662515
 os-id: Alpine
 os-release: '3.18'
 os-arch: x86_64
