@@ -28,7 +28,7 @@ opennebula_template:
   graphics:
     listen: 0.0.0.0
     type: vnc
-  memory: '128'
+  memory: '256'
   nic_default:
     model: virtio
   os:
