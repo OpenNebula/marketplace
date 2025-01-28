@@ -1,6 +1,6 @@
 ---
 name: Service MinIO
-version: 6.10.0-2-20241018
+version: 6.10.0-3-20250127
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [MinIO](https://min.io/docs/minio/linux/index.html).
@@ -49,18 +49,18 @@ opennebula_template:
     oneapp_minio_root_password: O|password|MinIO root user password for
       MinIO server
     oneapp_minio_root_user: O|text|MinIO root user for MinIO server| |myminioadmin
-    oneapp_minio_tls_enabled: "M|boolean|Enable TLS configuration| |YES"
+    oneapp_minio_tls_enabled: M|boolean|Enable TLS configuration| |YES
     oneapp_minio_tls_cert: O|text64|MinIO TLS certificate (.crt)| |
     oneapp_minio_tls_key: O|text64|MinIO TLS key (.key)| |
 logo: minio.png
 images:
 - name: service_MinIO
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_MinIO-6.10.0-3-20241018.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_MinIO-6.10.0-3-20250127.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
     md5: 300fc063bc34bebe682acd9267db5354
-    sha256: ab9434a7fe55cb7255f450b8e5b754978f5e747859de2e67713eb89b34c0f2fb
+    sha256: cc677ba32dd974d3cd3e2736d927a71b7cb5fce8b3ae90448bc6d6d7b34ca848

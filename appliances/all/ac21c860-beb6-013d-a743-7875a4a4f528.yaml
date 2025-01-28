@@ -1,24 +1,23 @@
 ---
-name: Oracle Linux 8
-version: 6.10.0-3-20250127
+name: AlmaLinux 8 (aarch64)
+version: 6.10.0-3-20250124
 publisher: OpenNebula Systems
 description: |-
-  Oracle Linux 8 image ready for your OpenNebula deployment.
+  AlmaLinux 8 image ready for your OpenNebula deployment.
 
-  This image is based on the Oracle Linux 8 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the AlmaLinux 8 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Oracle Linux 8 image for KVM, LXD and vCenter.
+short_description: AlmaLinux 8 image for KVM, LXD and vCenter.
 tags:
-- oracle
-- oraclelinux
+- almalinux
 format: qcow2
 creation_time: 1715685461
-os-id: Oracle Linux
+os-id: AlmaLinux
 os-release: '8.9'
-os-arch: x86_64
+os-arch: aarch64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
 opennebula_template:
@@ -31,16 +30,17 @@ opennebula_template:
     type: vnc
   memory: '768'
   os:
-    arch: x86_64
+    arch: aarch64
   lxd_security_privileged: 'true'
-logo: ol.png
+logo: alma.png
 images:
-- name: ol8
-  url: https://d24fmfybwxpuhu.cloudfront.net/ol8-6.10.0-3-20250127.qcow2
+- name: alma8
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/alma8-6.10.0-3-20250124.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 39728447488
+  size: 10737418240
   checksum:
-    md5: c9188a4d83acf973fb4bb94e22e1e13e
-    sha256: 2fccaa0458a59e3c463a6f9e7e8254fd92823696b6431268df57ec6e6fb9a72c
+    md5: 334bd3142fa5bd30674d77b5879f5308
+    sha256: 437b8078298f7d5b49fbf5ebb36be2c05cb6e01f90c0bcf2f52856ca6b325084

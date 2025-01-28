@@ -1,23 +1,23 @@
 ---
-name: Devuan 5
-version: 6.10.0-3-20250127
+name: openSUSE 15 (aarch64)
+version: 6.10.0-3-20250124
 publisher: OpenNebula Systems
 description: |-
-  Devuan 5 image ready for your OpenNebula deployment.
+  openSUSE 15 image ready for your OpenNebula deployment.
 
-  This image is based on the Devuan 5 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the openSUSE 15 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Devuan 5 image for KVM, LXD and vCenter
+short_description: openSUSE 15 image for KVM, LXD and vCenter
 tags:
-- devuan
+- opensuse
 format: qcow2
 creation_time: 1715685461
-os-id: Devuan
-os-release: '5'
-os-arch: x86_64
+os-id: openSUSE
+os-release: '15.6'
+os-arch: aarch64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
 opennebula_template:
@@ -30,17 +30,18 @@ opennebula_template:
     type: vnc
   memory: '768'
   os:
-    arch: x86_64
+    arch: aarch64
   logo: images/logos/linux.png
   lxd_security_privileged: 'true'
-logo: devuan.png
+logo: opensuse.png
 images:
-- name: devuan5
-  url: https://d24fmfybwxpuhu.cloudfront.net/devuan5-6.10.0-3-20250127.qcow2
+- name: opensuse15
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/opensuse15-6.10.0-3-20250124.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: c1a987da3051964ac3779b406bb77f60
-    sha256: 1c675cd734f6e22057a9d4ffc637059d5bd75848935e84933db8a2a98ab2ae4a
+    md5: f38e266f29dff00d139a50d58147d9b4
+    sha256: 71aef602e6609ea956d8018433a8a816335ce5a80faa223a596e2490a1ee9487

@@ -1,6 +1,6 @@
 ---
-name: Alpine Linux 3.20
-version: 6.10.0-3-20250127
+name: Alpine Linux 3.20 (aarch64)
+version: 6.10.0-3-20250124
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.20 image ready for your OpenNebula deployment.
@@ -17,7 +17,7 @@ format: qcow2
 creation_time: 1715685461
 os-id: Alpine Linux
 os-release: '3.20'
-os-arch: x86_64
+os-arch: aarch64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
 opennebula_template:
@@ -32,18 +32,18 @@ opennebula_template:
   nic_default:
     model: virtio
   os:
-    arch: x86_64
+    arch: aarch64
   logo: images/logos/linux.png
   lxd_security_privileged: 'true'
 logo: alpine.png
 images:
 - name: alpine320
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/alpine320-6.10.0-3-20250127.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/alpine320-6.10.0-3-20250124.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 536870912
   checksum:
-    md5: 668c416f6be5036c52604f20d98fd61c
-    sha256: ea74d11684e45fbdee4064dff93fe124ff8dd21100411f72a9f7c552860dce3c
+    md5: 4a95fe0dbf2aa18bfd6fb3b27189af49
+    sha256: a37538798f3754d6a511cf1510ac7fc2c3d21db98b2f8d0deea79b9a1ee4de8a

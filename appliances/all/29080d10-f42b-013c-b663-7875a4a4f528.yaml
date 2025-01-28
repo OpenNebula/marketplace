@@ -1,6 +1,6 @@
 ---
 name: Alpine Linux 3.19
-version: 6.10.0-2-20240710
+version: 6.10.0-3-20250127
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.19 image ready for your OpenNebula deployment.
@@ -39,11 +39,11 @@ logo: alpine.png
 images:
 - name: alpine319
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/alpine319-6.10.0-2-20240710.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/alpine319-6.10.0-3-20250127.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 268435456
+  size: 536870912
   checksum:
     md5: 41a390574f1587ad7d200c8e758e82c9
-    sha256: 42b532144eb07b307e344af7c84d6c2dfa23316ba99c269cdf6733fb55dc086f
+    sha256: 95c5c1fde14d1c9d2929c62fe18a5de8a67f347e3391c4b8d8fc154f05b378f4
