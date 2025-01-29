@@ -12,7 +12,7 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1715677835
+creation_time: 1737885730
 os-id: Ubuntu
 os-release: 22.04 LTS
 os-arch: x86_64

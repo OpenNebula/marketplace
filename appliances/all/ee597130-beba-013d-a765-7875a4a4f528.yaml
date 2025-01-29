@@ -14,7 +14,7 @@ short_description: Ubuntu 24.04 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1715685461
+creation_time: 1737885730
 os-id: Ubuntu
 os-release: '24.04'
 os-arch: aarch64
