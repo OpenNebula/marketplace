@@ -16,7 +16,7 @@ short_description: Ubuntu Minimal 22.04 image for KVM and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1715685461
+creation_time: 1737885730
 os-id: Ubuntu
 os-release: '22.04'
 os-arch: x86_64

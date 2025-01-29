@@ -14,7 +14,7 @@ short_description: openSUSE 15 image for KVM, LXD and vCenter
 tags:
 - opensuse
 format: qcow2
-creation_time: 1715685461
+creation_time: 1737885730
 os-id: openSUSE
 os-release: '15.6'
 os-arch: aarch64
