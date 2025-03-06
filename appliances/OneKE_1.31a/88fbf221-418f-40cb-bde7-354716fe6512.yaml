@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.31 Airgapped
-version: 1.31.3-6.10.0-2-20241231
+version: 1.31.3-6.10.0-2-20250311
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.31 Airgapped VM template for Master and Worker VMs.
@@ -13,7 +13,7 @@ tags:
 - ubuntu
 type: VMTEMPLATE
 format: qcow2
-creation_time: 1735662515
+creation_time: 1741248349
 os-id: Ubuntu
 os-release: "22.04 LTS"
 os-arch: x86_64
