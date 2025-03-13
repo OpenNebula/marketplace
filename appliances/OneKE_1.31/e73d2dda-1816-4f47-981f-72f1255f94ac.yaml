@@ -75,8 +75,7 @@ opennebula_template:
     elasticity_policies: []
     scheduled_policies: []
   - name: master
-    parents:
-    - vnf
+    parents: [vnf]
     cardinality: 1
     min_vms: 1
     vm_template_contents: |
@@ -90,10 +89,12 @@ opennebula_template:
       ONEAPP_RKE2_SUPERVISOR_EP = "$ONEAPP_RKE2_SUPERVISOR_EP"
       ONEAPP_K8S_CONTROL_PLANE_EP = "$ONEAPP_K8S_CONTROL_PLANE_EP"
       ONEAPP_K8S_EXTRA_SANS = "$ONEAPP_K8S_EXTRA_SANS"
-      ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED = "$ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED"
+      ONEAPP_K8S_CLUSTER_CIDR = "$ONEAPP_K8S_CLUSTER_CIDR"
+      ONEAPP_K8S_SERVICE_CIDR = "$ONEAPP_K8S_SERVICE_CIDR"
       ONEAPP_K8S_HTTP_PROXY = "$ONEAPP_K8S_HTTP_PROXY"
       ONEAPP_K8S_HTTPS_PROXY = "$ONEAPP_K8S_HTTPS_PROXY"
       ONEAPP_K8S_NO_PROXY = "$ONEAPP_K8S_NO_PROXY"
+      ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED = "$ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED"
       ONEAPP_K8S_MULTUS_ENABLED = "$ONEAPP_K8S_MULTUS_ENABLED"
       ONEAPP_K8S_MULTUS_CONFIG = "$ONEAPP_K8S_MULTUS_CONFIG"
       ONEAPP_K8S_CNI_PLUGIN = "$ONEAPP_K8S_CNI_PLUGIN"
@@ -115,8 +116,7 @@ opennebula_template:
     elasticity_policies: []
     scheduled_policies: []
   - name: worker
-    parents:
-    - vnf
+    parents: [vnf]
     cardinality: 1
     vm_template_contents: |
       NIC = [
@@ -128,10 +128,12 @@ opennebula_template:
       ONEAPP_VROUTER_ETH1_VIP0 = "$ONEAPP_VROUTER_ETH1_VIP0"
       ONEAPP_RKE2_SUPERVISOR_EP = "$ONEAPP_RKE2_SUPERVISOR_EP"
       ONEAPP_K8S_CONTROL_PLANE_EP = "$ONEAPP_K8S_CONTROL_PLANE_EP"
-      ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED = "$ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED"
+      ONEAPP_K8S_CLUSTER_CIDR = "$ONEAPP_K8S_CLUSTER_CIDR"
+      ONEAPP_K8S_SERVICE_CIDR = "$ONEAPP_K8S_SERVICE_CIDR"
       ONEAPP_K8S_HTTP_PROXY = "$ONEAPP_K8S_HTTP_PROXY"
       ONEAPP_K8S_HTTPS_PROXY = "$ONEAPP_K8S_HTTPS_PROXY"
       ONEAPP_K8S_NO_PROXY = "$ONEAPP_K8S_NO_PROXY"
+      ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED = "$ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED"
       ONEAPP_K8S_MULTUS_ENABLED = "$ONEAPP_K8S_MULTUS_ENABLED"
       ONEAPP_K8S_CNI_PLUGIN = "$ONEAPP_K8S_CNI_PLUGIN"
       ONEAPP_K8S_LONGHORN_ENABLED = "$ONEAPP_K8S_LONGHORN_ENABLED"
@@ -148,8 +150,7 @@ opennebula_template:
     elasticity_policies: []
     scheduled_policies: []
   - name: storage
-    parents:
-    - vnf
+    parents: [vnf]
     cardinality: 0
     vm_template_contents: |
       NIC = [
@@ -161,6 +162,8 @@ opennebula_template:
       ONEAPP_VROUTER_ETH1_VIP0 = "$ONEAPP_VROUTER_ETH1_VIP0"
       ONEAPP_RKE2_SUPERVISOR_EP = "$ONEAPP_RKE2_SUPERVISOR_EP"
       ONEAPP_K8S_CONTROL_PLANE_EP = "$ONEAPP_K8S_CONTROL_PLANE_EP"
+      ONEAPP_K8S_CLUSTER_CIDR = "$ONEAPP_K8S_CLUSTER_CIDR"
+      ONEAPP_K8S_SERVICE_CIDR = "$ONEAPP_K8S_SERVICE_CIDR"
       ONEAPP_K8S_HTTP_PROXY = "$ONEAPP_K8S_HTTP_PROXY"
       ONEAPP_K8S_HTTPS_PROXY = "$ONEAPP_K8S_HTTPS_PROXY"
       ONEAPP_K8S_NO_PROXY = "$ONEAPP_K8S_NO_PROXY"
@@ -176,46 +179,47 @@ opennebula_template:
     elasticity_policies: []
     scheduled_policies: []
   networks:
-    Public: 'M|network|Public||id:'
-    Private: 'M|network|Private||id:'
+    Public: "M|network|Public||id:"
+    Private: "M|network|Private||id:"
   custom_attrs:
-    ONEAPP_VROUTER_ETH0_VIP0: O|text|Control Plane Endpoint VIP (IPv4)||
-    ONEAPP_VROUTER_ETH1_VIP0: O|text|Default Gateway VIP (IPv4)||
-    ONEAPP_RKE2_SUPERVISOR_EP: O|text|RKE2 Supervisor endpoint||ep0.eth0.vr:9345
-    ONEAPP_K8S_CONTROL_PLANE_EP: O|text|Control Plane endpoint||ep0.eth0.vr:6443
-    ONEAPP_K8S_EXTRA_SANS: O|text|ApiServer extra certificate SANs||localhost,127.0.0.1,ep0.eth0.vr,${vnf.TEMPLATE.CONTEXT.ETH0_IP}
-    ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED: O|boolean|Enables default RKE2 cloud controller||YES
-    ONEAPP_K8S_HTTP_PROXY: O|text|Defines HTTP Proxy for cluster traffic (default none)||
-    ONEAPP_K8S_HTTPS_PROXY: O|text|Defines HTTPS Proxy for cluster traffic (default none)||
-    ONEAPP_K8S_NO_PROXY: O|text|Defines non-proxied exceptions for cluster traffic
-      (only effective if http proxy is enabled)||
-    ONEAPP_K8S_MULTUS_ENABLED: O|boolean|Enable Multus||NO
-    ONEAPP_K8S_MULTUS_CONFIG: O|text64|Multus custom config (default none)||
-    ONEAPP_K8S_CNI_PLUGIN: O|list|CNI plugin supported by RKE2|canal,calico,cilium|cilium
-    ONEAPP_K8S_CNI_CONFIG: O|text64|CNI custom config (default none)||
-    ONEAPP_K8S_CILIUM_BGP_ENABLED: O|boolean|Enable BGP control plane for Cilium. It could conflict with other Service LB Controllers.||
-    ONEAPP_K8S_CILIUM_RANGE: O|text|Cilium LB IP CIDR. Only effective if `ONEAPP_K8S_CILIUM_BGP_ENABLED` is set to `YES` or undefined. (default none)||
-    ONEAPP_K8S_METALLB_ENABLED: O|boolean|Enable MetalLB||NO
-    ONEAPP_K8S_METALLB_CLASS: O|text|MetalLB Load Balancer Class name||metallb
-    ONEAPP_K8S_METALLB_RANGE: O|text|MetalLB IP range (default none)||
-    ONEAPP_K8S_METALLB_CONFIG: O|text64|MetalLB custom config (default none)||
-    ONEAPP_K8S_LONGHORN_ENABLED: O|boolean|Enable Longhorn||NO
-    ONEAPP_STORAGE_DEVICE: O|text|Storage device path||/dev/vdb
-    ONEAPP_STORAGE_FILESYSTEM: O|text|Storage device filesystem||xfs
-    ONEAPP_K8S_TRAEFIK_ENABLED: O|boolean|Enable Traefik||NO
-    ONEAPP_VNF_HAPROXY_INTERFACES: O|text|Interfaces to run Haproxy on||eth0
-    ONEAPP_VNF_HAPROXY_REFRESH_RATE: O|number|Haproxy refresh rate||30
-    ONEAPP_VNF_HAPROXY_LB0_PORT: O|number|HTTPS RKE2 Supervisor port||9345
-    ONEAPP_VNF_HAPROXY_LB1_PORT: O|number|HTTPS API Server port||6443
-    ONEAPP_VNF_HAPROXY_LB2_PORT: O|number|HTTPS ingress port||443
-    ONEAPP_VNF_HAPROXY_LB3_PORT: O|number|HTTP ingress port||80
-    ONEAPP_VNF_DNS_ENABLED: O|boolean|Enable DNS recursor||YES
-    ONEAPP_VNF_DNS_INTERFACES: O|text|DNS - Interfaces||eth1
-    ONEAPP_VNF_DNS_NAMESERVERS: O|text|DNS - Nameservers||1.1.1.1,8.8.8.8
-    ONEAPP_VNF_NAT4_ENABLED: O|boolean|Enable NAT||YES
-    ONEAPP_VNF_NAT4_INTERFACES_OUT: O|text|NAT - Outgoing Interfaces||eth0
-    ONEAPP_VNF_ROUTER4_ENABLED: O|boolean|Enable Router||YES
-    ONEAPP_VNF_ROUTER4_INTERFACES: O|text|Router - Interfaces||eth0,eth1
+    ONEAPP_VROUTER_ETH0_VIP0: "O|text|Control Plane Endpoint VIP (IPv4)||"
+    ONEAPP_VROUTER_ETH1_VIP0: "O|text|Default Gateway VIP (IPv4)||"
+    ONEAPP_RKE2_SUPERVISOR_EP: "O|text|RKE2 Supervisor endpoint||ep0.eth0.vr:9345"
+    ONEAPP_K8S_CONTROL_PLANE_EP: "O|text|Control Plane endpoint||ep0.eth0.vr:6443"
+    ONEAPP_K8S_EXTRA_SANS: "O|text|ApiServer extra certificate SANs||localhost,127.0.0.1,ep0.eth0.vr,${vnf.TEMPLATE.CONTEXT.ETH0_IP}"
+    ONEAPP_K8S_CLUSTER_CIDR: "O|text|Cluster subnet CIDR||10.42.0.0/16"
+    ONEAPP_K8S_SERVICE_CIDR: "O|text|Service subnet CIDR||10.43.0.0/16"
+    ONEAPP_K8S_HTTP_PROXY: "O|text|HTTP Proxy for cluster traffic (default none)||"
+    ONEAPP_K8S_HTTPS_PROXY: "O|text|HTTPS Proxy for cluster traffic (default none)||"
+    ONEAPP_K8S_NO_PROXY: "O|text|Non-proxied exceptions for cluster traffic (only effective if http proxy is enabled)||"
+    ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED: "O|boolean|Enables default RKE2 cloud controller||YES"
+    ONEAPP_K8S_MULTUS_ENABLED: "O|boolean|Enable Multus||NO"
+    ONEAPP_K8S_MULTUS_CONFIG: "O|text64|Multus custom config (default none)||"
+    ONEAPP_K8S_CNI_PLUGIN: "O|list|CNI plugin supported by RKE2|canal,calico,cilium|cilium"
+    ONEAPP_K8S_CNI_CONFIG: "O|text64|CNI custom config (default none)||"
+    ONEAPP_K8S_CILIUM_BGP_ENABLED: "O|boolean|Enable BGP control plane for Cilium. It could conflict with other Service LB Controllers.||"
+    ONEAPP_K8S_CILIUM_RANGE: "O|text|Cilium LB IP CIDR. Only effective if `ONEAPP_K8S_CILIUM_BGP_ENABLED` is set to `YES` or undefined. (default none)||"
+    ONEAPP_K8S_METALLB_ENABLED: "O|boolean|Enable MetalLB||NO"
+    ONEAPP_K8S_METALLB_CLASS: "O|text|MetalLB Load Balancer Class name||metallb"
+    ONEAPP_K8S_METALLB_RANGE: "O|text|MetalLB IP range (default none)||"
+    ONEAPP_K8S_METALLB_CONFIG: "O|text64|MetalLB custom config (default none)||"
+    ONEAPP_K8S_LONGHORN_ENABLED: "O|boolean|Enable Longhorn||NO"
+    ONEAPP_STORAGE_DEVICE: "O|text|Storage device path||/dev/vdb"
+    ONEAPP_STORAGE_FILESYSTEM: "O|text|Storage device filesystem||xfs"
+    ONEAPP_K8S_TRAEFIK_ENABLED: "O|boolean|Enable Traefik||NO"
+    ONEAPP_VNF_HAPROXY_INTERFACES: "O|text|Interfaces to run Haproxy on||eth0"
+    ONEAPP_VNF_HAPROXY_REFRESH_RATE: "O|number|Haproxy refresh rate||30"
+    ONEAPP_VNF_HAPROXY_LB0_PORT: "O|number|HTTPS RKE2 Supervisor port||9345"
+    ONEAPP_VNF_HAPROXY_LB1_PORT: "O|number|HTTPS API Server port||6443"
+    ONEAPP_VNF_HAPROXY_LB2_PORT: "O|number|HTTPS ingress port||443"
+    ONEAPP_VNF_HAPROXY_LB3_PORT: "O|number|HTTP ingress port||80"
+    ONEAPP_VNF_DNS_ENABLED: "O|boolean|Enable DNS recursor||YES"
+    ONEAPP_VNF_DNS_INTERFACES: "O|text|DNS - Interfaces||eth1"
+    ONEAPP_VNF_DNS_NAMESERVERS: "O|text|DNS - Nameservers||1.1.1.1,8.8.8.8"
+    ONEAPP_VNF_NAT4_ENABLED: "O|boolean|Enable NAT||YES"
+    ONEAPP_VNF_NAT4_INTERFACES_OUT: "O|text|NAT - Outgoing Interfaces||eth0"
+    ONEAPP_VNF_ROUTER4_ENABLED: "O|boolean|Enable Router||YES"
+    ONEAPP_VNF_ROUTER4_INTERFACES: "O|text|Router - Interfaces||eth0,eth1"
   ready_status_gate: true
 logo: kubernetes.png
 images: []
