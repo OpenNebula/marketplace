@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.31 Storage
-version: 1.31.3-6.10.0-2-20250311
+version: 1.31.3-6.10.0-3-20250314
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.31 VM template for Storage VMs.
@@ -13,7 +13,7 @@ tags:
 - ubuntu
 type: VMTEMPLATE
 format: qcow2
-creation_time: 1741248349
+creation_time: 1741989310
 os-id: Ubuntu
 os-release: "22.04 LTS"
 os-arch: x86_64
