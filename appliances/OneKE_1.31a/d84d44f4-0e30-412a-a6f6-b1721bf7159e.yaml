@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.31 Airgapped Storage
-version: 1.31.3-6.10.0-2-20241231
+version: 1.31.3-6.10.0-3-20250314
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.31 Airgapped VM template for Storage VMs.
@@ -13,7 +13,7 @@ tags:
 - ubuntu
 type: VMTEMPLATE
 format: qcow2
-creation_time: 1735662515
+creation_time: 1741989310
 os-id: Ubuntu
 os-release: "22.04 LTS"
 os-arch: x86_64
@@ -35,6 +35,8 @@ opennebula_template:
     ONEAPP_VROUTER_ETH1_VIP0: "$ONEAPP_VROUTER_ETH1_VIP0"
     ONEAPP_RKE2_SUPERVISOR_EP: "$ONEAPP_RKE2_SUPERVISOR_EP"
     ONEAPP_K8S_CONTROL_PLANE_EP: "$ONEAPP_K8S_CONTROL_PLANE_EP"
+    ONEAPP_K8S_CLUSTER_CIDR: "$ONEAPP_K8S_CLUSTER_CIDR"
+    ONEAPP_K8S_SERVICE_CIDR: "$ONEAPP_K8S_SERVICE_CIDR"
     ONEAPP_K8S_MULTUS_ENABLED: "$ONEAPP_K8S_MULTUS_ENABLED"
     ONEAPP_K8S_CNI_PLUGIN: "$ONEAPP_K8S_CNI_PLUGIN"
     ONEAPP_K8S_HTTP_PROXY: "$ONEAPP_K8S_HTTP_PROXY"

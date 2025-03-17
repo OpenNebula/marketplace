@@ -1,6 +1,6 @@
 ---
 name: OneKE 1.31 Airgapped OS disk
-version: 1.31.3-6.10.0-2-20241231
+version: 1.31.3-6.10.0-3-20250314
 publisher: OpenNebula Systems
 description: |-
   OneKE 1.31 Airgapped appliance OS disk.
@@ -12,7 +12,7 @@ tags:
 - kubernetes
 - service
 format: qcow2
-creation_time: 1735662515
+creation_time: 1741989310
 os-id: none
 os-arch: all
 hypervisor: ALL
@@ -20,11 +20,11 @@ opennebula_version: >-
   6.2, 6.3, 6.4, 6.6, 6.8, 6.10
 images:
 - name: oneke_os
-  url: "https://d24fmfybwxpuhu.cloudfront.net/service_OneKEa-6.10.0-2-20241231.qcow2"
+  url: "https://d24fmfybwxpuhu.cloudfront.net/service_OneKEa-6.10.0-3-20250314.qcow2"
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 26843545600
   checksum:
-    md5: c285e268b97b0a08d489bc0a975baa79
-    sha256: a98d5657889c8f3f468c06ea7bed9c39546ebee1e070ea4ecc6f575afbe42720
+    md5: 05e1206b16de6f2fd09ba80c682d428f
+    sha256: 21d92cb0b177bdb8b6e3db24d348b4dd756768a74d78357ab0870e0701d6af51
