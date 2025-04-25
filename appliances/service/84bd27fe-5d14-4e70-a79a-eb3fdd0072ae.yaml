@@ -41,34 +41,66 @@ opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
 opennebula_template:
   context:
     network: 'YES'
-    oneapp_admin_email: "$ONEAPP_ADMIN_EMAIL"
-    oneapp_admin_password: "$ONEAPP_ADMIN_PASSWORD"
-    oneapp_admin_username: "$ONEAPP_ADMIN_USERNAME"
-    oneapp_site_title: "$ONEAPP_SITE_TITLE"
-    oneapp_ssl_cert: "$ONEAPP_SSL_CERT"
-    oneapp_ssl_chain: "$ONEAPP_SSL_CHAIN"
-    oneapp_ssl_privkey: "$ONEAPP_SSL_PRIVKEY"
+    oneapp_site_hostname: "$ONEAPP_SITE_GENERAL_HOSTNAME"
+    oneapp_site_title: "$ONEAPP_SITE_GENERAL_TITLE"
+    oneapp_admin_email: "$ONEAPP_SITE_GENERAL_EMAIL"
+    oneapp_admin_password: "$ONEAPP_SITE_GENERAL_PASSWORD"
+    oneapp_admin_username: "$ONEAPP_SITE_GENERAL_USERNAME"
+    oneapp_ssl_enabled: "$ONEAPP_SITE_SSL_ENABLED"
+    oneapp_ssl_cert: "$ONEAPP_SITE_SSL_CERT"
+    oneapp_ssl_chain: "$ONEAPP_SITE_SSL_CHAIN"
+    oneapp_ssl_privkey: "$ONEAPP_SITE_SSL_PRIVKEY"
+    oneapp_db_name: "$ONEAPP_DATABASE_CONFIGURATION_NAME"
+    oneapp_db_user: "$ONEAPP_DATABASE_CONFIGURATION_USER"
+    oneapp_db_password: "$ONEAPP_DATABASE_CONFIGURATION_PASSWORD"
+    oneapp_db_root_password: "$ONEAPP_DATABASE_CONFIGURATION_ROOT_PASSWORD"
+    oneapp_db_password_length: "$ONEAPP_DATABASE_CONFIGURATION_PASSWORD_LENGTH"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
   cpu: '1'
   graphics:
     listen: 0.0.0.0
     type: vnc
   inputs_order: >-
-    ONEAPP_SSL_CERT,ONEAPP_SSL_PRIVKEY,ONEAPP_SSL_CHAIN,ONEAPP_SITE_TITLE,ONEAPP_ADMIN_USERNAME,ONEAPP_ADMIN_EMAIL,ONEAPP_ADMIN_PASSWORD
+    ONEAPP_DATABASE_CONFIGURATION_NAME, ONEAPP_DATABASE_CONFIGURATION_ROOT_PASSWORD, ONEAPP_DATABASE_CONFIGURATION_USER, ONEAPP_DATABASE_CONFIGURATION_PASSWORD, ONEAPP_DATABASE_CONFIGURATION_PASSWORD_LENGTH, ONEAPP_SITE_GENERAL_TITLE, ONEAPP_SITE_GENERAL_USERNAME, ONEAPP_SITE_GENERAL_PASSWORD, ONEAPP_SITE_GENERAL_EMAIL, ONEAPP_SITE_GENERAL_HOSTNAME, ONEAPP_SITE_SSL_ENABLED, ONEAPP_SITE_SSL_CERT, ONEAPP_SITE_SSL_PRIVKEY, ONEAPP_SITE_SSL_CHAIN  
   memory: '768'
   os:
     arch: x86_64
   user_inputs:
-    oneapp_admin_email: O|text|** Site Administrator E-mail (set all or
-      none)
-    oneapp_admin_password: O|password|** Site Administrator Password (set
-      all or none)
-    oneapp_admin_username: O|text|** Site Administrator Login (set all or
-      none)
-    oneapp_site_title: O|text|** Site Title (set all or none)
-    oneapp_ssl_cert: O|text64|SSL certificate
-    oneapp_ssl_chain: O|text64|SSL CA chain
-    oneapp_ssl_privkey: O|text64|SSL private key
+    # ─── DATABASE ───
+    oneapp_database_configuration_name: "O|text|Database name| |wordpress"
+    oneapp_database_configuration_user: "O|text|Database user| |wordpress"
+    oneapp_database_configuration_password: "O|password|Database user password"
+    oneapp_database_configuration_root_password: "O|password|Database root password"
+    oneapp_database_configuration_password_length: "O|range|User/Root auto-generated password length|8..64|16"
+    # ─── SITE ───
+    oneapp_site_general_hostname: "O|text|Site FQDN or IP (e.g. example.com)"
+    oneapp_site_general_title: "O|text|Site title (set all or none)"
+    oneapp_site_general_username: "O|text|Site Administrator username (set all or none)"
+    oneapp_site_general_password: "O|password|Site Administrator password (set all or none)"
+    oneapp_site_general_email: "O|text|Site Administrator email (set all or none)"
+    oneapp_site_ssl_enabled: "O|boolean|Enable SSL| |NO"
+    oneapp_site_ssl_cert: "O|text64|SSL certificate| |"
+    oneapp_site_ssl_privkey: "O|text64|SSL private key| |"
+    oneapp_site_ssl_chain: "O|text64|SSL CA chain| |"
+  user_inputs_metadata:
+    # ─── APP ───
+    - NAME:        SITE
+      TITLE:       Site
+      TYPE:        APP
+      DESCRIPTION: "All 'set all or none' parameters must be set, or none will be used."
+    - NAME:        DATABASE
+      TITLE:       Database
+      TYPE:        APP
+      DESCRIPTION: "This tab includes all parameters required to configure your WordPress database."
+    # ─── GROUP ───
+    - NAME:        GENERAL
+      TITLE:       Site settings
+      TYPE:        GROUP
+      DESCRIPTION: "WordPress site settings."
+    - NAME:        SSL
+      TITLE:       SSL Certificates
+      TYPE:        GROUP
+      DESCRIPTION: "SSL certificates for WordPress site."
 logo: wordpress.png
 images:
 - name: service_Wordpress

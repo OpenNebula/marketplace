@@ -22,10 +22,10 @@ opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
 opennebula_template:
   context:
     network: 'YES'
-    oneapp_minio_hostname: "$ONEAPP_MINIO_HOSTNAME"
-    oneapp_minio_opts: "$ONEAPP_MINIO_OPTS"
-    oneapp_minio_root_password: "$ONEAPP_MINIO_ROOT_PASSWORD"
-    oneapp_minio_root_user: "$ONEAPP_MINIO_ROOT_USER"
+    oneapp_minio_hostname: "$ONEAPP_MINIO_GENERAL_HOSTNAME"
+    oneapp_minio_opts: "$ONEAPP_MINIO_GENERAL_OPTS"
+    oneapp_minio_root_password: "$ONEAPP_MINIO_GENERAL_ROOT_PASSWORD"
+    oneapp_minio_root_user: "$ONEAPP_MINIO_GENERAL_ROOT_USER"
     oneapp_minio_tls_enabled: "$ONEAPP_MINIO_TLS_ENABLED"
     oneapp_minio_tls_cert: "$ONEAPP_MINIO_TLS_CERT"
     oneapp_minio_tls_key: "$ONEAPP_MINIO_TLS_KEY"
@@ -35,23 +35,32 @@ opennebula_template:
     listen: 0.0.0.0
     type: vnc
   inputs_order: >-
-    ONEAPP_MINIO_HOSTNAME,ONEAPP_MINIO_ROOT_USER,ONEAPP_MINIO_ROOT_PASSWORD,ONEAPP_MINIO_OPTS,ONEAPP_MINIO_TLS_ENABLED,ONEAPP_MINIO_TLS_CERT,ONEAPP_MINIO_TLS_KEY
+    ONEAPP_MINIO_GENERAL_HOSTNAME, ONEAPP_MINIO_GENERAL_OPTS, ONEAPP_MINIO_GENERAL_ROOT_USER, ONEAPP_MINIO_GENERAL_ROOT_PASSWORD, ONEAPP_MINIO_TLS_ENABLED, ONEAPP_MINIO_TLS_CERT, ONEAPP_MINIO_TLS_KEY
   memory: '2048'
   os:
     arch: x86_64
   logo: images/logos/minio.png
   user_inputs:
-    oneapp_minio_hostname: >-
-      O|text|MinIO hostname for TLS certificate| |localhost,minio-*.example.net
-    oneapp_minio_opts: >-
-      O|text|Additional commandline options for MinIO server| |--console-address
-      :9001
-    oneapp_minio_root_password: O|password|MinIO root user password for
-      MinIO server
-    oneapp_minio_root_user: O|text|MinIO root user for MinIO server| |myminioadmin
-    oneapp_minio_tls_enabled: M|boolean|Enable TLS configuration| |YES
-    oneapp_minio_tls_cert: O|text64|MinIO TLS certificate (.crt)| |
-    oneapp_minio_tls_key: O|text64|MinIO TLS key (.key)| |
+    # ─── GENERAL ───
+    ONEAPP_MINIO_GENERAL_ROOT_USER: "O|text|MinIO root user for MinIO server| |myminioadmin"
+    ONEAPP_MINIO_GENERAL_ROOT_PASSWORD: "O|password|MinIO root user password for MinIO server"
+    ONEAPP_MINIO_GENERAL_OPTS: "O|text|Additional command‐line options for MinIO server| |--console-address :9001"
+    ONEAPP_MINIO_GENERAL_HOSTNAME: "O|text|MinIO hostname for TLS certificate| |localhost,minio-*.example.net"
+    # ─── TLS ───
+    ONEAPP_MINIO_TLS_ENABLED: "M|boolean|Enable TLS configuration| |YES"
+    ONEAPP_MINIO_TLS_CERT: "O|text64|MinIO TLS certificate (.crt)| |"
+    ONEAPP_MINIO_TLS_KEY: "O|text64|MinIO TLS key (.key)| |"
+  user_inputs_metadata:
+    # ─── APP ───
+    - NAME:        MINIO
+      TITLE:       MinIO
+      TYPE:        APP
+      DESCRIPTION: "This tab includes all parameters required to configure MinIO."
+    # ─── GROUP ───
+    - NAME:        TLS
+      TITLE:       TLS
+      TYPE:        GROUP
+      DESCRIPTION: "TLS certificates for MinIO."
 logo: minio.png
 images:
 - name: service_MinIO

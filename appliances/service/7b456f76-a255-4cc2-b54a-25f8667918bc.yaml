@@ -21,34 +21,43 @@ opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
 opennebula_template:
   context:
     network: 'YES'
-    oneapp_harbor_admin_password: "$ONEAPP_HARBOR_ADMIN_PASSWORD"
-    oneapp_harbor_db_password: "$ONEAPP_HARBOR_DB_PASSWORD"
-    oneapp_harbor_hostname: "$ONEAPP_HARBOR_HOSTNAME"
-    oneapp_harbor_registry_dev: "$ONEAPP_HARBOR_PERSISTENT_DEV"
-    oneapp_harbor_ssl_cert: "$ONEAPP_HARBOR_SSL_CERT"
-    oneapp_harbor_ssl_key: "$ONEAPP_HARBOR_SSL_KEY"
+    oneapp_harbor_admin_password: "$ONEAPP_HARBOR_GENERAL_ADMIN_PASSWORD"
+    oneapp_harbor_db_password: "$ONEAPP_HARBOR_GENERAL_DB_PASSWORD"
+    oneapp_harbor_hostname: "$ONEAPP_HARBOR_GENERAL_HOSTNAME"
+    oneapp_harbor_registry_dev: "$ONEAPP_HARBOR_GENERAL_REGISTRY_DEV"
+    oneapp_harbor_ssl_cert: "$ONEAPP_HARBOR_TLS_CERT"
+    oneapp_harbor_ssl_key: "$ONEAPP_HARBOR_TLS_KEY"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
   cpu: '2'
   graphics:
     listen: 0.0.0.0
     type: vnc
   inputs_order: >-
-    ONEAPP_HARBOR_ADMIN_PASSWORD,ONEAPP_HARBOR_DB_PASSWORD,ONEAPP_HARBOR_HOSTNAME,ONEAPP_HARBOR_REGISTRY_DEV,ONEAPP_HARBOR_SSL_CERT,ONEAPP_HARBOR_SSL_KEY
+    ONEAPP_HARBOR_GENERAL_ADMIN_PASSWORD, ONEAPP_HARBOR_GENERAL_DB_PASSWORD, ONEAPP_HARBOR_GENERAL_HOSTNAME, ONEAPP_HARBOR_GENERAL_REGISTRY_DEV, ONEAPP_HARBOR_TLS_ENABLED, ONEAPP_HARBOR_TLS_CERT, ONEAPP_HARBOR_TLS_KEY
   memory: '4096'
   os:
     arch: x86_64
   user_inputs:
-    oneapp_harbor_admin_password: >-
-      O|password|Password for the admin Harbor user (defaults to Harbor12345)
-    oneapp_harbor_db_password: >-
-      O|password|Password for the internal Harbor database (defaults to
-      random)
-    oneapp_harbor_hostname: O|text|Harbor hostname/IP exposing the service
-      (certificate CN)||
-    oneapp_harbor_registry_dev: O|text|Harbor registry disk device name
-      (e.g. sdb, vdb, etc.)||
-    oneapp_harbor_ssl_cert: O|text64|SSL certificate||
-    oneapp_harbor_ssl_key: O|text64|SSL key||
+    # ─── GENERAL ───
+    ONEAPP_HARBOR_GENERAL_ADMIN_PASSWORD: "O|password|Password for the admin Harbor user (defaults to Harbor12345)"
+    ONEAPP_HARBOR_GENERAL_DB_PASSWORD: "O|password|Password for the internal Harbor database (defaults to random)"
+    ONEAPP_HARBOR_GENERAL_HOSTNAME: "O|text|Harbor hostname/IP exposing the service (certificate CN)"
+    ONEAPP_HARBOR_GENERAL_REGISTRY_DEV: "O|text|Harbor registry disk device name (e.g. sdb, vdb, etc.)"
+    # ─── TLS ───
+    ONEAPP_HARBOR_TLS_ENABLED: "O|boolean|Enable TLS configuration| |NO"
+    ONEAPP_HARBOR_TLS_CERT: "O|text64|SSL certificate for Harbor| |"
+    ONEAPP_HARBOR_TLS_KEY: "O|text64|SSL key for Harbor| |"
+  user_inputs_metadata:
+    # ─── APP ───
+    - NAME:        HARBOR
+      TITLE:       Harbor
+      TYPE:        APP
+      DESCRIPTION: "This tab includes all parameters required to configure Harbor."
+    # ─── GROUP ───
+    - NAME:        TLS
+      TITLE:       TLS
+      TYPE:        GROUP
+      DESCRIPTION: "TLS certificates for Harbor."
 logo: harbor.png
 images:
 - name: service_Harbor
