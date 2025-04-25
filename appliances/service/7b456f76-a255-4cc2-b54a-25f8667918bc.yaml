@@ -49,14 +49,14 @@ opennebula_template:
     ONEAPP_HARBOR_TLS_KEY: "O|text64|SSL key for Harbor| |"
   user_inputs_metadata:
     # ─── APP ───
-    - NAME:        HARBOR
-      TITLE:       Harbor
-      TYPE:        APP
+    - NAME: HARBOR
+      TITLE: Harbor
+      TYPE: APP
       DESCRIPTION: "This tab includes all parameters required to configure Harbor."
     # ─── GROUP ───
-    - NAME:        TLS
-      TITLE:       TLS
-      TYPE:        GROUP
+    - NAME: TLS
+      TITLE: TLS
+      TYPE: GROUP
       DESCRIPTION: "TLS certificates for Harbor."
 logo: harbor.png
 images:

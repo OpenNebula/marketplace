@@ -52,14 +52,14 @@ opennebula_template:
     ONEAPP_MINIO_TLS_KEY: "O|text64|MinIO TLS key (.key)| |"
   user_inputs_metadata:
     # ─── APP ───
-    - NAME:        MINIO
-      TITLE:       MinIO
-      TYPE:        APP
+    - NAME: MINIO
+      TITLE: MinIO
+      TYPE: APP
       DESCRIPTION: "This tab includes all parameters required to configure MinIO."
     # ─── GROUP ───
-    - NAME:        TLS
-      TITLE:       TLS
-      TYPE:        GROUP
+    - NAME: TLS
+      TITLE: TLS
+      TYPE: GROUP
       DESCRIPTION: "TLS certificates for MinIO."
 logo: minio.png
 images:

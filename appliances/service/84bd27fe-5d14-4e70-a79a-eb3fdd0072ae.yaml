@@ -61,7 +61,7 @@ opennebula_template:
     listen: 0.0.0.0
     type: vnc
   inputs_order: >-
-    ONEAPP_DATABASE_CONFIGURATION_NAME, ONEAPP_DATABASE_CONFIGURATION_ROOT_PASSWORD, ONEAPP_DATABASE_CONFIGURATION_USER, ONEAPP_DATABASE_CONFIGURATION_PASSWORD, ONEAPP_DATABASE_CONFIGURATION_PASSWORD_LENGTH, ONEAPP_SITE_GENERAL_TITLE, ONEAPP_SITE_GENERAL_USERNAME, ONEAPP_SITE_GENERAL_PASSWORD, ONEAPP_SITE_GENERAL_EMAIL, ONEAPP_SITE_GENERAL_HOSTNAME, ONEAPP_SITE_SSL_ENABLED, ONEAPP_SITE_SSL_CERT, ONEAPP_SITE_SSL_PRIVKEY, ONEAPP_SITE_SSL_CHAIN  
+    ONEAPP_DATABASE_CONFIGURATION_NAME, ONEAPP_DATABASE_CONFIGURATION_ROOT_PASSWORD, ONEAPP_DATABASE_CONFIGURATION_USER, ONEAPP_DATABASE_CONFIGURATION_PASSWORD, ONEAPP_DATABASE_CONFIGURATION_PASSWORD_LENGTH, ONEAPP_SITE_GENERAL_TITLE, ONEAPP_SITE_GENERAL_USERNAME, ONEAPP_SITE_GENERAL_PASSWORD, ONEAPP_SITE_GENERAL_EMAIL, ONEAPP_SITE_GENERAL_HOSTNAME, ONEAPP_SITE_SSL_ENABLED, ONEAPP_SITE_SSL_CERT, ONEAPP_SITE_SSL_PRIVKEY, ONEAPP_SITE_SSL_CHAIN
   memory: '768'
   os:
     arch: x86_64
@@ -84,22 +84,22 @@ opennebula_template:
     oneapp_site_ssl_chain: "O|text64|SSL CA chain| |"
   user_inputs_metadata:
     # ─── APP ───
-    - NAME:        SITE
-      TITLE:       Site
-      TYPE:        APP
+    - NAME: SITE
+      TITLE: Site
+      TYPE: APP
       DESCRIPTION: "All 'set all or none' parameters must be set, or none will be used."
-    - NAME:        DATABASE
-      TITLE:       Database
-      TYPE:        APP
+    - NAME: DATABASE
+      TITLE: Database
+      TYPE: APP
       DESCRIPTION: "This tab includes all parameters required to configure your WordPress database."
     # ─── GROUP ───
-    - NAME:        GENERAL
-      TITLE:       Site settings
-      TYPE:        GROUP
+    - NAME: GENERAL
+      TITLE: Site settings
+      TYPE: GROUP
       DESCRIPTION: "WordPress site settings."
-    - NAME:        SSL
-      TITLE:       SSL Certificates
-      TYPE:        GROUP
+    - NAME: SSL
+      TITLE: SSL Certificates
+      TYPE: GROUP
       DESCRIPTION: "SSL certificates for WordPress site."
 logo: wordpress.png
 images:
