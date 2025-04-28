@@ -34,7 +34,6 @@ opennebula_template:
   memory: '768'
   os:
     arch: x86_64
-  lxd_security_privileged: 'true'
 logo: ol.png
 images:
 - name: ol9

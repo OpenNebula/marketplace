@@ -32,7 +32,6 @@ opennebula_template:
   os:
     arch: x86_64
   logo: images/logos/centos.png
-  lxd_security_privileged: 'true'
 logo: centos-5.5.png
 images:
 - name: centos7

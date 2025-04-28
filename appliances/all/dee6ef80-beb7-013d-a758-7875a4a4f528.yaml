@@ -34,7 +34,6 @@ opennebula_template:
   os:
     arch: aarch64
   logo: images/logos/linux.png
-  lxd_security_privileged: 'true'
 logo: alpine.png
 images:
 - name: alpine318

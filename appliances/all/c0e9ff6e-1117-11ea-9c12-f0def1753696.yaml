@@ -32,7 +32,6 @@ opennebula_template:
   os:
     arch: x86_64
   logo: images/logos/linux.png
-  lxd_security_privileged: 'true'
 logo: opensuse.png
 images:
 - name: opensuse15

@@ -32,7 +32,6 @@ opennebula_template:
   os:
     arch: x86_64
   logo: images/logos/debian.png
-  lxd_security_privileged: 'true'
 logo: debian.png
 images:
 - name: debian12

@@ -59,7 +59,6 @@ opennebula_template:
   memory: '512'
   nic_default:
     model: virtio
-  lxd_security_privileged: 'true'
   os:
     arch: x86_64
   user_inputs: {}

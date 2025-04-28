@@ -32,7 +32,6 @@ opennebula_template:
   os:
     arch: x86_64
   logo: images/logos/ubuntu.png
-  lxd_security_privileged: 'true'
 logo: ubuntu.png
 images:
 - name: ubuntu1804

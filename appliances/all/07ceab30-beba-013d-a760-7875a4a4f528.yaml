@@ -32,7 +32,6 @@ opennebula_template:
   os:
     arch: aarch64
   logo: images/logos/fedora.png
-  lxd_security_privileged: 'true'
 logo: fedora.png
 images:
 - name: fedora40

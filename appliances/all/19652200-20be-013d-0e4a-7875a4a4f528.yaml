@@ -30,7 +30,6 @@ opennebula_template:
   os:
     arch: x86_64
   logo: images/logos/linux.png
-  lxd_security_privileged: 'true'
 logo: amazon.png
 images:
 - name: amazon2023
