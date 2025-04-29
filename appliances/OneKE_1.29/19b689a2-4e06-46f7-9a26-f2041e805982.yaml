@@ -15,7 +15,7 @@ format: qcow2
 creation_time: 1715358765
 os-id: none
 os-arch: all
-hypervisor: ALL
+hypervisor: KVM
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
 images:
 - name: oneke_storage

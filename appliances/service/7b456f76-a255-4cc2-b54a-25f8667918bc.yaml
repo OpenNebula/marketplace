@@ -37,6 +37,7 @@ opennebula_template:
   memory: '4096'
   os:
     arch: x86_64
+  sched_requirements: 'HYPERVISOR=kvm & ARCH=x86_64'
   user_inputs:
     oneapp_harbor_admin_password: >-
       O|password|Password for the admin Harbor user (defaults to Harbor12345)

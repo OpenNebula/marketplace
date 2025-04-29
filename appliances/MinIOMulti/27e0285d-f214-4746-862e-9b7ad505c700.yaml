@@ -22,7 +22,7 @@ creation_time: 1728651992
 os-id: Alpine
 os-release: '3.18'
 os-arch: x86_64
-hypervisor: ALL
+hypervisor: KVM
 opennebula_version: 6.8, 6.10
 opennebula_template:
   context:
@@ -62,6 +62,7 @@ opennebula_template:
     model: virtio
   os:
     arch: x86_64
+  sched_requirements: 'HYPERVISOR=kvm & ARCH=x86_64'
   user_inputs:
     oneapp_vnf_haproxy_lb0_port: "M|text|LB port for MinIO Console| |443"
     oneapp_vnf_haproxy_lb1_port: "M|text|LB port for MinIO API| |9000"

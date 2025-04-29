@@ -58,6 +58,7 @@ opennebula_template:
   memory: '768'
   os:
     arch: x86_64
+  sched_requirements: 'HYPERVISOR=kvm & ARCH=x86_64'
   user_inputs:
     oneapp_admin_email: O|text|** Site Administrator E-mail (set all or
       none)

@@ -38,9 +38,9 @@ opennebula_template:
   memory: '768'
   os:
     arch: x86_64
-    boot: 'disk0,disk1'
+  sched_requirements: 'HYPERVISOR=kvm & ARCH=x86_64'
+  boot: 'disk0,disk1'
   info: >-
     Please do not use this VM Template for vCenter VMs. Refer to the documentation
     https://bit.ly/37NcJ0Y
-  sched_requirements: HYPERVISOR!=\"vcenter\"
 images: []

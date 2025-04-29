@@ -38,6 +38,7 @@ opennebula_template:
   memory: '8192'
   os:
     arch: x86_64
+  sched_requirements: 'HYPERVISOR=kvm & ARCH=x86_64'
   logo: images/logos/ray.png
   user_inputs:
     oneapp_ray_api_port: O|number|Port number for the API endpoint.| |8000

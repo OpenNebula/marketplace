@@ -45,6 +45,7 @@ opennebula_template:
   memory: '2048'
   os:
     arch: x86_64
+  sched_requirements: 'HYPERVISOR=kvm & ARCH=x86_64'
   logo: images/logos/minio.png
   user_inputs:
     oneapp_minio_hostname: "M|text|MinIO hostname for TLS certificate| |localhost,minio-*.example.net"

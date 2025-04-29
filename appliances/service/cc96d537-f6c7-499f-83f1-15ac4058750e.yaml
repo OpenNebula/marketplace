@@ -18,7 +18,7 @@ creation_time: 1737885730
 os-id: Alpine
 os-release: '3.20'
 os-arch: x86_64
-hypervisor: ALL
+hypervisor: KVM
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
 opennebula_template:
   context:
@@ -53,6 +53,7 @@ opennebula_template:
     model: virtio
   os:
     arch: x86_64
+  sched_requirements: 'HYPERVISOR=kvm & ARCH=x86_64'
   user_inputs:
     oneapp_vnf_dhcp4_enabled: O|boolean|Enable DHCPv4| |NO
     oneapp_vnf_dhcp4_interfaces: O|text|DHCP4 - Listening Interfaces

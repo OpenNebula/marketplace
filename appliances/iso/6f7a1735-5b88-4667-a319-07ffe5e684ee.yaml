@@ -10,7 +10,7 @@ tags:
 - context
 format: raw
 creation_time: 1737885730
-hypervisor: ALL
+hypervisor: KVM
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
 images:
 - name: one-context

@@ -77,6 +77,7 @@ opennebula_template:
   memory: '768'
   os:
     arch: x86_64
+  sched_requirements: 'HYPERVISOR=kvm & ARCH=x86_64'
   logo: images/logos/debian.png
 
 # Logo to display in the web interface. You can check the available logos in
@@ -248,6 +249,7 @@ opennebula_template:
   memory: '768'
   os:
     arch: x86_64
+  sched_requirements: 'HYPERVISOR=kvm & ARCH=x86_64'
   logo: images/logos/debian.png
 
 # Logo to display in the web interface. You can check the available logos in
