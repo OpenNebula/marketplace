@@ -19,7 +19,7 @@ os-id: Alpine
 os-release: '3.20'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
 opennebula_template:
   context:
     network: 'YES'
@@ -71,6 +71,11 @@ opennebula_template:
     oneapp_vnf_nat4_interfaces_out: O|text|NAT - Outgoing Interfaces
     oneapp_vnf_sdnat4_enabled: O|boolean|Enable SDNAT| |NO
     oneapp_vnf_sdnat4_interfaces: O|text|SDNAT - Mapped Interfaces
+  user_inputs_metadata:
+    - NAME: "VNF"
+      TITLE: "Virtual Router"
+      TYPE: APP
+      DESCRIPTION: "This tab includes all parameters required to configure the Virtual Router."
   vrouter: 'YES'
 logo: router.png
 images:
