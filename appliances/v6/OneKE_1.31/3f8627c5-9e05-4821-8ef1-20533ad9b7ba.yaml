@@ -16,7 +16,7 @@ creation_time: 1741989310
 os-id: none
 os-arch: all
 hypervisor: ALL
-opennebula_version: 6.2, 6.3, 6.4, 6.6, 6.8, 6.10
+opennebula_version: 6.2, 6.3, 6.4, 6.6, 6.8, 6.10, 7.0
 images:
 - name: oneke_os
   url: "https://d24fmfybwxpuhu.cloudfront.net/service_OneKE-6.10.0-3-20250314.qcow2"

@@ -31,7 +31,7 @@ os-release: "22.04 LTS"
 os-arch: x86_64
 hypervisor: ALL
 type: SERVICE_TEMPLATE
-opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
 roles:
   vnf: "OneKE 1.27 VNF"
   master: "OneKE 1.27 Airgapped"

@@ -28,7 +28,7 @@ os-id: Ubuntu
 os-release: '22.04 LTS'
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 6.8, 6.10
+opennebula_version: 6.8, 6.10, 7.0
 type: 'SERVICE_TEMPLATE'
 roles:
   minio: 'MinIO Multi-Node'

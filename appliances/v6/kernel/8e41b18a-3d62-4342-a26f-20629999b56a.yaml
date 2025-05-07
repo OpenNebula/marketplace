@@ -12,7 +12,7 @@ tags:
 format: raw
 creation_time: 1635328783
 hypervisor: KVM
-opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
 images:
 - name: vmlinuz-5.4.43-pvh.x86_64
   url: >-
