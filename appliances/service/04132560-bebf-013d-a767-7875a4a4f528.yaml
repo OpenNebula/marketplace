@@ -44,7 +44,7 @@ opennebula_template:
     oneapp_ray_api_route: O|text|Route path for the REST API exposed by the RAY application.| |/chat
     oneapp_ray_application_file64: O|text64|Python application to be deployed in the RAY framework (base64).| |
     oneapp_ray_application_url: O|text|URL to download the Python application for the RAY framework.| |
-    oneapp_ray_model_id: M|list-multiple|Determines the AI model(s) to use for inference.|meta-llama/Llama-3.2-3B-Instruct,Qwen/Qwen2.5-3B-Instruct,utter-project/EuroLLM-1.7B-Instruct|
+    oneapp_ray_model_id: M|list-multiple|Determines the AI model(s) to use for inference.|meta-llama/Llama-3.2-3B-Instruct,Qwen/Qwen2.5-3B-Instruct,utter-project/EuroLLM-1.7B-Instruct| |
     oneapp_ray_model_prompt: O|text|Starting directive for model responses. | |You are a helpful assisstant. Answer the question.
     oneapp_ray_model_temperature: M|number-float|Temperature parameter for model outputs, controlling the randomness of generated text.| |0.1
     oneapp_ray_model_token: M|password|Provides the authentication token required to access the specified AI model. | |
