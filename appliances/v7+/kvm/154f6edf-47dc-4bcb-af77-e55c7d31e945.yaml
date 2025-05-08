@@ -1,0 +1,47 @@
+---
+name: Ttylinux - KVM
+version: 1.0-1.20190513
+publisher: OpenNebula Systems
+description: |-
+  TTYLinux is a very small Linux distribution that
+  is mainly used for testing purposes.
+
+  The login information for this image is:
+
+  * **login**: root
+  * **password**: password
+
+  **NOTE:** The contextualization of this image is really simple. You can not set the network mask or the gateway. It's always a C class and gateway is x.y.z.1.
+short_description: "This is a very small image that works with OpenNebula.
+  It's already contextualized. The purpose of this image is to test OpenNebula
+  deployments, without wasting network bandwith thanks to the tiny footprint
+  of this image\r\n(23MB)."
+tags:
+- linux
+- ttylinux
+format: qcow2
+os-id: ttylinux
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '0.1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '128'
+  logo: images/logos/linux.png
+logo: Ttylinux-8.0.png
+images:
+- name: ttylinux-vd
+  url: http://opennebula-marketplace.s3.amazonaws.com/ttyvd-context.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 209715200
+  checksum:
+    md5: b8ccdc63fb9d72ed12547fb1499c8b73
+    sha256: d2a219cbfb795109a1271cc239880dd922148382f92287198e05c17ff13bc72d

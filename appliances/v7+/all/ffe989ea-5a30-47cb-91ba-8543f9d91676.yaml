@@ -1,0 +1,46 @@
+---
+name: Oracle Linux 7
+version: 6.6.1-1.20230607
+publisher: OpenNebula Systems
+description: |-
+  Oracle Linux 7 image ready for your OpenNebula deployment.
+
+  This image is based on the Oracle Linux 7 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Oracle Linux 7 image for KVM and vCenter hosts
+tags:
+- oracle
+- oraclelinux
+format: qcow2
+creation_time: 1686581516
+os-id: Oracle Linux
+os-release: '7.9'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  lxd_security_privileged: 'true'
+logo: ol.png
+images:
+- name: ol7
+  url: https://d24fmfybwxpuhu.cloudfront.net/ol7-6.6.1-1.20230607.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 39728447488
+  checksum:
+    md5: 4fd8d4e7c2ae7f9cbe300cf9d90fa21b
+    sha256: a5d4ce997a30a1d9626c0b12c2e638cd0460cdc2efbf7c35654c3300d95bc1a1

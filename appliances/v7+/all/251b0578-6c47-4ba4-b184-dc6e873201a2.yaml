@@ -1,0 +1,24 @@
+---
+name: Empty disk
+version: '1'
+publisher: OpenNebula Systems
+description: Image with empty disk for custom installation
+short_description: Image with empty disk for custom installation
+tags:
+- disk
+format: qcow
+creation_time: 1613055037
+os-id: none
+os-arch: all
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
+images:
+- name: empty5g
+  url: https://d24fmfybwxpuhu.cloudfront.net/empty5g.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 5368709120
+  checksum:
+    md5: 6a2ae047837c3190e821caf49d0312f0
+    sha256: ff4c0c563834c10d9ac30097697d95a7ddd172f800be9a1bc575e629ed1287a8

@@ -1,0 +1,46 @@
+---
+name: Debian 10
+version: 6.8.1-1-20240131
+publisher: OpenNebula Systems
+description: |-
+  Debian 10 image ready for your OpenNebula deployment.
+
+  This image is based on the Debian 10 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Debian 10 image for KVM, LXD and vCenter
+tags:
+- debian
+format: qcow2
+creation_time: 1706780706
+os-id: Debian
+os-release: '10.13'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/debian.png
+  lxd_security_privileged: 'true'
+logo: debian.png
+images:
+- name: debian10
+  url: https://d24fmfybwxpuhu.cloudfront.net/debian10-6.8.1-1-20240131.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 2147483648
+  checksum:
+    md5: 8fef3466af774869da7ccc9248c8c154
+    sha256: 645ff49f5b23f48996e1dbfb8d4e5e346bb1d03d794a3740ac0714b95b45ca8e

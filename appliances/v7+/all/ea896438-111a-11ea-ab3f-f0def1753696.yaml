@@ -1,0 +1,47 @@
+---
+name: Ubuntu 18.04
+version: 6.6.0-1.20230126
+publisher: OpenNebula Systems
+description: |-
+  Ubuntu 18.04 image ready for your OpenNebula deployment.
+
+  This image is based on the Ubuntu 18.04 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Ubuntu 18.04 image for KVM, LXD and vCenter
+tags:
+- ubuntu
+format: qcow2
+creation_time: 1652088478
+os-id: Ubuntu
+os-release: '18.04'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/ubuntu.png
+  lxd_security_privileged: 'true'
+logo: ubuntu.png
+images:
+- name: ubuntu1804
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu1804-6.6.0-1.20230126.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 2361393152
+  checksum:
+    md5: e2c281fb7bc61604282a912ef11037b4
+    sha256: fe167d3017a812687f5fd7af725e83553665cf6ec2317c89a54f3e1a08404d4c

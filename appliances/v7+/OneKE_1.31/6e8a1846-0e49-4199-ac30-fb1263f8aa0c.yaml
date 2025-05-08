@@ -1,0 +1,278 @@
+---
+name: Service OneKE 1.31
+version: 1.31.3-6.10.0-3-20250314
+publisher: OpenNebula Systems
+description: |-
+  [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.31 cluster for KVM hosts,
+  orchestrated by
+  [OneFlow](https://docs.opennebula.io/stable/management_and_operations/multivm_service_management/appflow_elasticity.html).
+
+  Requires
+  [OneFlow](https://docs.opennebula.io/stable/management_and_operations/multivm_service_management/overview.html)
+  and
+  [OneGate](https://docs.opennebula.io/stable/management_and_operations/multivm_service_management/onegate_usage.html)
+  OpenNebula components.
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki).
+
+  Based on VM templates
+  - [OneKE 1.31](/appliance/2a902664-98ed-4e78-80b6-af97dfd75371)
+  - [OneKE 1.31 VNF](/appliance/4bea23af-09c2-4520-8f3a-ce902eb5157c)
+  - [OneKE 1.31 Storage](/appliance/98df67fd-6dbd-49e3-a99d-9b8d8519c418)
+short_description: Multi-master Kubernetes 1.31 cluster for KVM hosts, orchestrated by OneFlow
+tags:
+- kubernetes
+- oneflow
+- service
+- ubuntu
+creation_time: 1741989310
+os-id: Ubuntu
+os-release: 22.04 LTS
+os-arch: x86_64
+hypervisor: ALL
+type: SERVICE_TEMPLATE
+opennebula_version: 7.0
+roles:
+  vnf: OneKE 1.31 VNF
+  master: OneKE 1.31
+  worker: OneKE 1.31
+  storage: OneKE 1.31 Storage
+opennebula_template:
+  name: OneKE 1.31
+  deployment: straight
+  description: ''
+  roles:
+  - name: vnf
+    cardinality: 1
+    min_vms: 1
+    vm_template_contents: |
+      NIC = [
+        NAME = "NIC0",
+        NETWORK_ID = "$Public" ]
+      NIC = [
+        NAME = "NIC1",
+        NETWORK_ID = "$Private" ]
+      ONEAPP_VROUTER_ETH0_VIP0 = "$ONEAPP_VROUTER_ETH0_VIP0"
+      ONEAPP_VROUTER_ETH1_VIP0 = "$ONEAPP_VROUTER_ETH1_VIP0"
+      ONEAPP_VNF_HAPROXY_INTERFACES = "$ONEAPP_VNF_HAPROXY_INTERFACES"
+      ONEAPP_VNF_HAPROXY_REFRESH_RATE = "$ONEAPP_VNF_HAPROXY_REFRESH_RATE"
+      ONEAPP_VNF_HAPROXY_LB0_IP = "<ETH0_EP0>"
+      ONEAPP_VNF_HAPROXY_LB0_PORT = "$ONEAPP_VNF_HAPROXY_LB0_PORT"
+      ONEAPP_VNF_HAPROXY_LB1_IP = "<ETH0_EP0>"
+      ONEAPP_VNF_HAPROXY_LB1_PORT = "$ONEAPP_VNF_HAPROXY_LB1_PORT"
+      ONEAPP_VNF_HAPROXY_LB2_IP = "<ETH0_EP0>"
+      ONEAPP_VNF_HAPROXY_LB2_PORT = "$ONEAPP_VNF_HAPROXY_LB2_PORT"
+      ONEAPP_VNF_HAPROXY_LB3_IP = "<ETH0_EP0>"
+      ONEAPP_VNF_HAPROXY_LB3_PORT = "$ONEAPP_VNF_HAPROXY_LB3_PORT"
+      ONEAPP_VNF_DNS_ENABLED = "$ONEAPP_VNF_DNS_ENABLED"
+      ONEAPP_VNF_DNS_INTERFACES = "$ONEAPP_VNF_DNS_INTERFACES"
+      ONEAPP_VNF_DNS_NAMESERVERS = "$ONEAPP_VNF_DNS_NAMESERVERS"
+      ONEAPP_VNF_NAT4_ENABLED = "$ONEAPP_VNF_NAT4_ENABLED"
+      ONEAPP_VNF_NAT4_INTERFACES_OUT = "$ONEAPP_VNF_NAT4_INTERFACES_OUT"
+      ONEAPP_VNF_ROUTER4_ENABLED = "$ONEAPP_VNF_ROUTER4_ENABLED"
+      ONEAPP_VNF_ROUTER4_INTERFACES = "$ONEAPP_VNF_ROUTER4_INTERFACES"
+    cooldown: 120
+    elasticity_policies: []
+    scheduled_policies: []
+  - name: master
+    parents: [vnf]
+    cardinality: 1
+    min_vms: 1
+    vm_template_contents: |
+      NIC = [
+        NAME = "NIC0",
+        NETWORK_ID = "$Private" ]
+      FALLBACK_GW = "${vnf.TEMPLATE.CONTEXT.ETH1_IP}"
+      FALLBACK_DNS = "${vnf.TEMPLATE.CONTEXT.ETH1_IP}"
+      ONEAPP_VROUTER_ETH0_VIP0 = "$ONEAPP_VROUTER_ETH0_VIP0"
+      ONEAPP_VROUTER_ETH1_VIP0 = "$ONEAPP_VROUTER_ETH1_VIP0"
+      ONEAPP_RKE2_SUPERVISOR_EP = "$ONEAPP_RKE2_SUPERVISOR_EP"
+      ONEAPP_K8S_CONTROL_PLANE_EP = "$ONEAPP_K8S_CONTROL_PLANE_EP"
+      ONEAPP_K8S_EXTRA_SANS = "$ONEAPP_K8S_EXTRA_SANS"
+      ONEAPP_K8S_CLUSTER_CIDR = "$ONEAPP_K8S_CLUSTER_CIDR"
+      ONEAPP_K8S_SERVICE_CIDR = "$ONEAPP_K8S_SERVICE_CIDR"
+      ONEAPP_K8S_HTTP_PROXY = "$ONEAPP_K8S_HTTP_PROXY"
+      ONEAPP_K8S_HTTPS_PROXY = "$ONEAPP_K8S_HTTPS_PROXY"
+      ONEAPP_K8S_NO_PROXY = "$ONEAPP_K8S_NO_PROXY"
+      ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED = "$ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED"
+      ONEAPP_K8S_MULTUS_ENABLED = "$ONEAPP_K8S_MULTUS_ENABLED"
+      ONEAPP_K8S_MULTUS_CONFIG = "$ONEAPP_K8S_MULTUS_CONFIG"
+      ONEAPP_K8S_CNI_PLUGIN = "$ONEAPP_K8S_CNI_PLUGIN"
+      ONEAPP_K8S_CNI_CONFIG = "$ONEAPP_K8S_CNI_CONFIG"
+      ONEAPP_K8S_CILIUM_BGP_ENABLED = "$ONEAPP_K8S_CILIUM_BGP_ENABLED"
+      ONEAPP_K8S_CILIUM_RANGE = "$ONEAPP_K8S_CILIUM_RANGE"
+      ONEAPP_K8S_LONGHORN_ENABLED = "$ONEAPP_K8S_LONGHORN_ENABLED"
+      ONEAPP_K8S_METALLB_ENABLED = "$ONEAPP_K8S_METALLB_ENABLED"
+      ONEAPP_K8S_METALLB_CLASS = "$ONEAPP_K8S_METALLB_CLASS"
+      ONEAPP_K8S_METALLB_CONFIG = "$ONEAPP_K8S_METALLB_CONFIG"
+      ONEAPP_K8S_METALLB_RANGE = "$ONEAPP_K8S_METALLB_RANGE"
+      ONEAPP_K8S_TRAEFIK_ENABLED = "$ONEAPP_K8S_TRAEFIK_ENABLED"
+      ONEAPP_VNF_HAPROXY_LB0_IP = "<ETH0_EP0>"
+      ONEAPP_VNF_HAPROXY_LB0_PORT = "$ONEAPP_VNF_HAPROXY_LB0_PORT"
+      ONEAPP_VNF_HAPROXY_LB1_IP = "<ETH0_EP0>"
+      ONEAPP_VNF_HAPROXY_LB1_PORT = "$ONEAPP_VNF_HAPROXY_LB1_PORT"
+      ONEAPP_VNF_DNS_ENABLED = "$ONEAPP_VNF_DNS_ENABLED"
+    cooldown: 120
+    elasticity_policies: []
+    scheduled_policies: []
+  - name: worker
+    parents: [vnf]
+    cardinality: 1
+    vm_template_contents: |
+      NIC = [
+        NAME = "NIC0",
+        NETWORK_ID = "$Private" ]
+      FALLBACK_GW = "${vnf.TEMPLATE.CONTEXT.ETH1_IP}"
+      FALLBACK_DNS = "${vnf.TEMPLATE.CONTEXT.ETH1_IP}"
+      ONEAPP_VROUTER_ETH0_VIP0 = "$ONEAPP_VROUTER_ETH0_VIP0"
+      ONEAPP_VROUTER_ETH1_VIP0 = "$ONEAPP_VROUTER_ETH1_VIP0"
+      ONEAPP_RKE2_SUPERVISOR_EP = "$ONEAPP_RKE2_SUPERVISOR_EP"
+      ONEAPP_K8S_CONTROL_PLANE_EP = "$ONEAPP_K8S_CONTROL_PLANE_EP"
+      ONEAPP_K8S_CLUSTER_CIDR = "$ONEAPP_K8S_CLUSTER_CIDR"
+      ONEAPP_K8S_SERVICE_CIDR = "$ONEAPP_K8S_SERVICE_CIDR"
+      ONEAPP_K8S_HTTP_PROXY = "$ONEAPP_K8S_HTTP_PROXY"
+      ONEAPP_K8S_HTTPS_PROXY = "$ONEAPP_K8S_HTTPS_PROXY"
+      ONEAPP_K8S_NO_PROXY = "$ONEAPP_K8S_NO_PROXY"
+      ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED = "$ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED"
+      ONEAPP_K8S_MULTUS_ENABLED = "$ONEAPP_K8S_MULTUS_ENABLED"
+      ONEAPP_K8S_CNI_PLUGIN = "$ONEAPP_K8S_CNI_PLUGIN"
+      ONEAPP_K8S_LONGHORN_ENABLED = "$ONEAPP_K8S_LONGHORN_ENABLED"
+      ONEAPP_K8S_METALLB_ENABLED = "$ONEAPP_K8S_METALLB_ENABLED"
+      ONEAPP_K8S_TRAEFIK_ENABLED = "$ONEAPP_K8S_TRAEFIK_ENABLED"
+      ONEAPP_VNF_HAPROXY_LB0_PORT = "$ONEAPP_VNF_HAPROXY_LB0_PORT"
+      ONEAPP_VNF_HAPROXY_LB1_PORT = "$ONEAPP_VNF_HAPROXY_LB1_PORT"
+      ONEAPP_VNF_HAPROXY_LB2_IP = "<ETH0_EP0>"
+      ONEAPP_VNF_HAPROXY_LB2_PORT = "$ONEAPP_VNF_HAPROXY_LB2_PORT"
+      ONEAPP_VNF_HAPROXY_LB3_IP = "<ETH0_EP0>"
+      ONEAPP_VNF_HAPROXY_LB3_PORT = "$ONEAPP_VNF_HAPROXY_LB3_PORT"
+      ONEAPP_VNF_DNS_ENABLED = "$ONEAPP_VNF_DNS_ENABLED"
+    cooldown: 120
+    elasticity_policies: []
+    scheduled_policies: []
+  - name: storage
+    parents: [vnf]
+    cardinality: 0
+    vm_template_contents: |
+      NIC = [
+        NAME = "NIC0",
+        NETWORK_ID = "$Private" ]
+      FALLBACK_GW = "${vnf.TEMPLATE.CONTEXT.ETH1_IP}"
+      FALLBACK_DNS = "${vnf.TEMPLATE.CONTEXT.ETH1_IP}"
+      ONEAPP_VROUTER_ETH0_VIP0 = "$ONEAPP_VROUTER_ETH0_VIP0"
+      ONEAPP_VROUTER_ETH1_VIP0 = "$ONEAPP_VROUTER_ETH1_VIP0"
+      ONEAPP_RKE2_SUPERVISOR_EP = "$ONEAPP_RKE2_SUPERVISOR_EP"
+      ONEAPP_K8S_CONTROL_PLANE_EP = "$ONEAPP_K8S_CONTROL_PLANE_EP"
+      ONEAPP_K8S_CLUSTER_CIDR = "$ONEAPP_K8S_CLUSTER_CIDR"
+      ONEAPP_K8S_SERVICE_CIDR = "$ONEAPP_K8S_SERVICE_CIDR"
+      ONEAPP_K8S_HTTP_PROXY = "$ONEAPP_K8S_HTTP_PROXY"
+      ONEAPP_K8S_HTTPS_PROXY = "$ONEAPP_K8S_HTTPS_PROXY"
+      ONEAPP_K8S_NO_PROXY = "$ONEAPP_K8S_NO_PROXY"
+      ONEAPP_K8S_MULTUS_ENABLED = "$ONEAPP_K8S_MULTUS_ENABLED"
+      ONEAPP_K8S_CNI_PLUGIN = "$ONEAPP_K8S_CNI_PLUGIN"
+      ONEAPP_K8S_LONGHORN_ENABLED = "$ONEAPP_K8S_LONGHORN_ENABLED"
+      ONEAPP_K8S_STORAGE_DEVICE = "$ONEAPP_K8S_STORAGE_DEVICE"
+      ONEAPP_K8S_STORAGE_FILESYSTEM = "$ONEAPP_K8S_STORAGE_FILESYSTEM"
+      ONEAPP_VNF_HAPROXY_LB0_PORT = "$ONEAPP_VNF_HAPROXY_LB0_PORT"
+      ONEAPP_VNF_HAPROXY_LB1_PORT = "$ONEAPP_VNF_HAPROXY_LB1_PORT"
+      ONEAPP_VNF_DNS_ENABLED = "$ONEAPP_VNF_DNS_ENABLED"
+    cooldown: 120
+    elasticity_policies: []
+    scheduled_policies: []
+  networks:
+    Public: "M|network|Public||id:"
+    Private: "M|network|Private||id:"
+  user_inputs:
+    ONEAPP_VROUTER_ETH0_VIP0: "O|text|Control Plane Endpoint VIP (IPv4)||"
+    ONEAPP_VROUTER_ETH1_VIP0: "O|text|Default Gateway VIP (IPv4)||"
+    ONEAPP_RKE2_SUPERVISOR_EP: "O|text|RKE2 Supervisor endpoint||ep0.eth0.vr:9345"
+    ONEAPP_K8S_CONTROL_PLANE_EP: "O|text|Control Plane endpoint||ep0.eth0.vr:6443"
+    ONEAPP_K8S_EXTRA_SANS: "O|text|ApiServer extra certificate SANs||localhost,127.0.0.1,ep0.eth0.vr,${vnf.TEMPLATE.CONTEXT.ETH0_IP}"
+    ONEAPP_K8S_CLUSTER_CIDR: "O|text|Cluster subnet CIDR||10.42.0.0/16"
+    ONEAPP_K8S_SERVICE_CIDR: "O|text|Service subnet CIDR||10.43.0.0/16"
+    ONEAPP_K8S_HTTP_PROXY: "O|text|HTTP Proxy for cluster traffic (default none)||"
+    ONEAPP_K8S_HTTPS_PROXY: "O|text|HTTPS Proxy for cluster traffic (default none)||"
+    ONEAPP_K8S_NO_PROXY: "O|text|Non-proxied exceptions for cluster traffic (only effective if http proxy is enabled)||"
+    ONEAPP_RKE2_CLOUD_CONTROLLER_ENABLED: "O|boolean|Enables default RKE2 cloud controller||YES"
+    ONEAPP_K8S_MULTUS_ENABLED: "O|boolean|Enable Multus||NO"
+    ONEAPP_K8S_MULTUS_CONFIG: "O|text64|Multus custom config (default none)||"
+    ONEAPP_K8S_CNI_PLUGIN: "O|list|CNI plugin supported by RKE2|canal,calico,cilium|cilium"
+    ONEAPP_K8S_CNI_CONFIG: "O|text64|CNI custom config (default none)||"
+    ONEAPP_K8S_CILIUM_BGP_ENABLED: "O|boolean|Enable BGP control plane for Cilium. It could conflict with other Service LB Controllers.||NO"
+    ONEAPP_K8S_CILIUM_RANGE: "O|text|Cilium LB IP CIDR. Only effective if `ONEAPP_K8S_CILIUM_BGP_ENABLED` is set to `YES` or undefined. (default none)||"
+    ONEAPP_K8S_METALLB_ENABLED: "O|boolean|Enable MetalLB||NO"
+    ONEAPP_K8S_METALLB_CLASS: "O|text|MetalLB Load Balancer Class name||metallb"
+    ONEAPP_K8S_METALLB_RANGE: "O|text|MetalLB IP range (default none)||"
+    ONEAPP_K8S_METALLB_CONFIG: "O|text64|MetalLB custom config (default none)||"
+    ONEAPP_K8S_LONGHORN_ENABLED: "O|boolean|Enable Longhorn||NO"
+    ONEAPP_K8S_STORAGE_DEVICE: "O|text|Storage device path||/dev/vdb"
+    ONEAPP_K8S_STORAGE_FILESYSTEM: "O|text|Storage device filesystem||xfs"
+    ONEAPP_K8S_TRAEFIK_ENABLED: "O|boolean|Enable Traefik||NO"
+    ONEAPP_VNF_HAPROXY_INTERFACES: "O|text|Interfaces to run Haproxy on||eth0"
+    ONEAPP_VNF_HAPROXY_REFRESH_RATE: "O|number|Haproxy refresh rate||30"
+    ONEAPP_VNF_HAPROXY_LB0_PORT: "O|number|HTTPS RKE2 Supervisor port||9345"
+    ONEAPP_VNF_HAPROXY_LB1_PORT: "O|number|HTTPS API Server port||6443"
+    ONEAPP_VNF_HAPROXY_LB2_PORT: "O|number|HTTPS ingress port||443"
+    ONEAPP_VNF_HAPROXY_LB3_PORT: "O|number|HTTP ingress port||80"
+    ONEAPP_VNF_DNS_ENABLED: "O|boolean|Enable DNS recursor||YES"
+    ONEAPP_VNF_DNS_INTERFACES: "O|text|DNS - Interfaces||eth1"
+    ONEAPP_VNF_DNS_NAMESERVERS: "O|text|DNS - Nameservers||1.1.1.1,8.8.8.8"
+    ONEAPP_VNF_NAT4_ENABLED: "O|boolean|Enable NAT||YES"
+    ONEAPP_VNF_NAT4_INTERFACES_OUT: "O|text|NAT - Outgoing Interfaces||eth0"
+    ONEAPP_VNF_ROUTER4_ENABLED: "O|boolean|Enable Router||YES"
+    ONEAPP_VNF_ROUTER4_INTERFACES: "O|text|Router - Interfaces||eth0,eth1"
+  user_inputs_metadata:
+    - NAME: "VROUTER"
+      TITLE: "Virtual IPs"
+      TYPE: APP
+      DESCRIPTION: "This tab includes all parameters required to configure the VIPS."
+    - NAME: "VNF"
+      TITLE: "Virtual Network Functions"
+      TYPE: APP
+      DESCRIPTION: "This tab includes all parameters required to configure the Virtual Network Functions."
+    - NAME: "K8S"
+      TITLE: "Kubernetes Cluster"
+      TYPE: APP
+      DESCRIPTION: "This tab includes all parameters required to configure the Kubernetes cluster."
+    - NAME: "RKE2"
+      TITLE: "RKE2"
+      TYPE: APP
+      DESCRIPTION: "This tab includes all parameters required to configure the RKE2 integration."
+    - NAME: "ETH0"
+      TITLE: "Control Plane"
+      TYPE: GROUP
+    - NAME: "ETH1"
+      TITLE: "Gateway"
+      TYPE: GROUP
+    - NAME: "CNI"
+      TITLE: "Container Network Interface"
+      TYPE: GROUP
+    - NAME: "CLOUD"
+      TITLE: "Cloud Controller"
+      TYPE: GROUP
+    - NAME: "SUPERVISOR"
+      TITLE: "Supervisor"
+      TYPE: GROUP
+    - NAME: "CONTROL"
+      TITLE: "Control Plane"
+      TYPE: GROUP
+    - NAME: "EXTRA"
+      TITLE: "API Server"
+      TYPE: GROUP
+    - NAME: "CLUSTER"
+      TITLE: "Cluster CIDR"
+      TYPE: GROUP
+    - NAME: "SERVICE"
+      TITLE: "Services CIDR"
+      TYPE: GROUP
+    - NAME: "HTTP"
+      TITLE: "HTTP Proxy"
+      TYPE: GROUP
+    - NAME: "HTTPS"
+      TITLE: "HTTPs Proxy"
+      TYPE: GROUP
+    - NAME: "NO"
+      TITLE: "Proxy exceptions"
+      TYPE: GROUP
+  ready_status_gate: true
+logo: kubernetes.png
+images: []
