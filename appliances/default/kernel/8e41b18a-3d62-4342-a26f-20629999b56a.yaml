@@ -1,0 +1,24 @@
+---
+name: Kernel 5.4 x86_64 - KVM
+version: 5.4.43
+publisher: OpenNebula Systems
+description: |-
+  Kernel 5.4 for x86_64 platforms to use with VMs running on [KVM](http://docs.opennebula.io/5.11/advanced_components/marketplace/container_images_usage.html) hypervisor.
+
+  Built based on following [configuration](https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/config-5.4.43-pvh.x86_64).
+short_description: Kernel 5.4 x86_64 for KVM
+tags:
+- kernel
+format: raw
+creation_time: 1635328783
+hypervisor: KVM
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
+images:
+- name: vmlinuz-5.4.43-pvh.x86_64
+  url: >-
+    https://s3-eu-west-1.amazonaws.com/opennebula-marketplace/vmlinuz-5.4.43-pvh.x86_64
+  type: KERNEL
+  size: 58506752
+  checksum:
+    md5: ed6ac036eed7ee44ec0664585166ce17
+    sha256: f3f77fd1c5f2c2e7a272c7a5f83d80b726e5846dd3aaf82ce00cd36e66521586

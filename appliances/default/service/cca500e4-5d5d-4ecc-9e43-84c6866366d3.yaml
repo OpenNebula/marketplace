@@ -1,0 +1,115 @@
+---
+name: Service WordPress - KVM
+version: 6.10.0-3-20250127
+publisher: OpenNebula Systems
+description: |-
+  Appliance with preinstalled WordPress. Run, get WordPress setup web wizard
+  and manually bootstrap the service, or use contextualization variables
+  to automate the bootstrap. For more information about credentials,
+  connections, and site URL check `/etc/appliance/config` on your running
+  appliance. See the dedicated [documentation](http://marketplace.opennebula.systems/docs/service/wordpress.html).
+
+  Initial configuration can be customized via parameters:
+
+  * `ONEAPP_SITE_HOSTNAME` - Fully qualified domain name or IP
+  * `ONEAPP_SSL_CERT` - SSL certificate
+  * `ONEAPP_SSL_PRIVKEY` - SSL private key
+  * `ONEAPP_SSL_CHAIN` - SSL CA chain
+
+  And, optionally bootstrapped with (**ALL MUST BE SET**):
+
+  * `ONEAPP_SITE_TITLE` - Site Title
+  * `ONEAPP_ADMIN_USERNAME` - Site Administrator Login
+  * `ONEAPP_ADMIN_PASSWORD` -  Site Administrator Password
+  * `ONEAPP_ADMIN_EMAIL` - Site Administrator E-mail
+
+  **WARNING: Do not use localhost or loopback for `ONEAPP_SITE_HOSTNAME`, it
+  breaks the WordPress bootstrap. It's necessary to provide routable name
+  or IP.**
+short_description: Appliance with preinstalled WordPress for KVM hosts
+tags:
+- wordpress
+- service
+- almalinux
+format: qcow2
+creation_time: 1737885730
+os-id: AlmaLinux
+os-release: '8.9'
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 7.0
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_site_hostname: "$ONEAPP_SITE_GENERAL_HOSTNAME"
+    oneapp_site_title: "$ONEAPP_SITE_GENERAL_TITLE"
+    oneapp_admin_email: "$ONEAPP_SITE_GENERAL_EMAIL"
+    oneapp_admin_password: "$ONEAPP_SITE_GENERAL_PASSWORD"
+    oneapp_admin_username: "$ONEAPP_SITE_GENERAL_USERNAME"
+    oneapp_ssl_enabled: "$ONEAPP_SITE_SSL_ENABLED"
+    oneapp_ssl_cert: "$ONEAPP_SITE_SSL_CERT"
+    oneapp_ssl_chain: "$ONEAPP_SITE_SSL_CHAIN"
+    oneapp_ssl_privkey: "$ONEAPP_SITE_SSL_PRIVKEY"
+    oneapp_db_name: "$ONEAPP_DATABASE_CONFIGURATION_NAME"
+    oneapp_db_user: "$ONEAPP_DATABASE_CONFIGURATION_USER"
+    oneapp_db_password: "$ONEAPP_DATABASE_CONFIGURATION_PASSWORD"
+    oneapp_db_root_password: "$ONEAPP_DATABASE_CONFIGURATION_ROOT_PASSWORD"
+    oneapp_db_password_length: "$ONEAPP_DATABASE_CONFIGURATION_PASSWORD_LENGTH"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONEAPP_DATABASE_CONFIGURATION_NAME,ONEAPP_DATABASE_CONFIGURATION_ROOT_PASSWORD,ONEAPP_DATABASE_CONFIGURATION_USER,ONEAPP_DATABASE_CONFIGURATION_PASSWORD,ONEAPP_DATABASE_CONFIGURATION_PASSWORD_LENGTH,ONEAPP_SITE_GENERAL_TITLE,ONEAPP_SITE_GENERAL_USERNAME,ONEAPP_SITE_GENERAL_PASSWORD,ONEAPP_SITE_GENERAL_EMAIL,ONEAPP_SITE_GENERAL_HOSTNAME,ONEAPP_SITE_SSL_ENABLED,ONEAPP_SITE_SSL_CERT,ONEAPP_SITE_SSL_PRIVKEY,ONEAPP_SITE_SSL_CHAIN
+  memory: '768'
+  os:
+    arch: x86_64
+  user_inputs:
+    # ─── DATABASE ───
+    oneapp_database_configuration_name: "O|text|Database name| |wordpress"
+    oneapp_database_configuration_user: "O|text|Database user| |wordpress"
+    oneapp_database_configuration_password: "O|password|Database user password"
+    oneapp_database_configuration_root_password: "O|password|Database root password"
+    oneapp_database_configuration_password_length: "O|range|User/Root auto-generated password length|8..64|16"
+    # ─── SITE ───
+    oneapp_site_general_hostname: "O|text|Site FQDN or IP (e.g. example.com)"
+    oneapp_site_general_title: "O|text|Site title (set all or none)"
+    oneapp_site_general_username: "O|text|Site Administrator username (set all or none)"
+    oneapp_site_general_password: "O|password|Site Administrator password (set all or none)"
+    oneapp_site_general_email: "O|text|Site Administrator email (set all or none)"
+    oneapp_site_ssl_enabled: "O|boolean|Enable SSL| |NO"
+    oneapp_site_ssl_cert: "O|text64|SSL certificate| |"
+    oneapp_site_ssl_privkey: "O|text64|SSL private key| |"
+    oneapp_site_ssl_chain: "O|text64|SSL CA chain| |"
+  user_inputs_metadata:
+    # ─── APP ───
+    - NAME: SITE
+      TITLE: Site
+      TYPE: APP
+      DESCRIPTION: "All 'set all or none' parameters must be set, or none will be used."
+    - NAME: DATABASE
+      TITLE: Database
+      TYPE: APP
+      DESCRIPTION: "This tab includes all parameters required to configure your WordPress database."
+    # ─── GROUP ───
+    - NAME: GENERAL
+      TITLE: Site settings
+      TYPE: GROUP
+      DESCRIPTION: "WordPress site settings."
+    - NAME: SSL
+      TITLE: SSL Certificates
+      TYPE: GROUP
+      DESCRIPTION: "SSL certificates for WordPress site."
+logo: wordpress.png
+images:
+- name: service_Wordpress
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_Wordpress-6.10.0-3-20250127.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 10737418240
+  checksum:
+    md5: 740d612846a7c9ecb8b11234b3cf3338
+    sha256: af37117785e327d99d9885b34763e91961916d2c9f2cf544623f3b0f37b4913d

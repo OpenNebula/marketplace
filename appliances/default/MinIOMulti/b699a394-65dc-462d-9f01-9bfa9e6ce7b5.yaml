@@ -1,0 +1,61 @@
+---
+name: MinIO Multi-Node
+version: 6.10.0-2-20241018
+publisher: OpenNebula Systems
+description: |-
+  Appliance with preinstalled [MinIO](https://min.io/docs/minio/linux/index.html).
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/minio_quick).
+short_description: Appliance with preinstalled MinIO server for KVM hosts
+tags:
+- minio
+- storage
+- ubuntu
+- service
+type: VMTEMPLATE
+format: qcow2
+creation_time: 1728651992
+os-id: Ubuntu
+os-release: '22.04 LTS'
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 6.8, 6.10, 7.0
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_minio_hostname: "$ONEAPP_MINIO_HOSTNAME"
+    oneapp_minio_lb0_port: "$ONEAPP_MINIO_LB0_PORT"
+    oneapp_minio_lb1_port: "$ONEAPP_MINIO_LB1_PORT"
+    oneapp_minio_root_user: "$ONEAPP_MINIO_ROOT_USER"
+    oneapp_minio_root_password: "$ONEAPP_MINIO_ROOT_PASSWORD"
+    oneapp_minio_opts: "$ONEAPP_MINIO_OPTS"
+    oneapp_minio_tls_enabled: "$ONEAPP_MINIO_TLS_ENABLED"
+    oneapp_minio_tls_cert: "$ONEAPP_MINIO_TLS_CERT"
+    oneapp_minio_tls_key: "$ONEAPP_MINIO_TLS_KEY"
+    oneapp_minio_multi: 'YES'
+    start_script_base64: "b25lZ2F0ZSB2bSB1cGRhdGUgLS1kYXRhICJPTkVHQVRFX0hBUFJPWFlfTEIwX0lQPVwiPEVUSDBfRVAwPlwiIgpvbmVnYXRlIHZtIHVwZGF0ZSAtLWRhdGEgIk9ORUdBVEVfSEFQUk9YWV9MQjBfUE9SVD1cIiRPTkVBUFBfTUlOSU9fTEIwX1BPUlRcIiIKb25lZ2F0ZSB2bSB1cGRhdGUgLS1kYXRhICJPTkVHQVRFX0hBUFJPWFlfTEIwX1NFUlZFUl9IT1NUPVwiJEVUSDBfSVBcIiIKb25lZ2F0ZSB2bSB1cGRhdGUgLS1kYXRhICJPTkVHQVRFX0hBUFJPWFlfTEIwX1NFUlZFUl9QT1JUPVwiOTAwMVwiIgpvbmVnYXRlIHZtIHVwZGF0ZSAtLWRhdGEgIk9ORUdBVEVfSEFQUk9YWV9MQjFfSVA9XCI8RVRIMF9FUDA+XCIiCm9uZWdhdGUgdm0gdXBkYXRlIC0tZGF0YSAiT05FR0FURV9IQVBST1hZX0xCMV9QT1JUPVwiJE9ORUFQUF9NSU5JT19MQjFfUE9SVFwiIgpvbmVnYXRlIHZtIHVwZGF0ZSAtLWRhdGEgIk9ORUdBVEVfSEFQUk9YWV9MQjFfU0VSVkVSX0hPU1Q9XCIkRVRIMF9JUFwiIgpvbmVnYXRlIHZtIHVwZGF0ZSAtLWRhdGEgIk9ORUdBVEVfSEFQUk9YWV9MQjFfU0VSVkVSX1BPUlQ9XCI5MDAwXCIi"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    token: 'YES'
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONEAPP_MINIO_HOSTNAME,ONEAPP_MINIO_ROOT_USER,ONEAPP_MINIO_ROOT_PASSWORD,ONEAPP_MINIO_OPTS,ONEAPP_MINIO_TLS_ENABLED,ONEAPP_MINIO_TLS_CERT,ONEAPP_MINIO_TLS_KEY,ONEAPP_MINIO_LB0_PORT,ONEAPP_MINIO_LB1_PORT
+  memory: '2048'
+  os:
+    arch: x86_64
+  logo: images/logos/minio.png
+  user_inputs:
+    oneapp_minio_hostname: "M|text|MinIO hostname for TLS certificate| |localhost,minio-*.example.net"
+    oneapp_minio_lb0_port: "M|text|LB port for MinIO Console| |443"
+    oneapp_minio_lb1_port: "M|text|LB port for MinIO API| |9000"
+    oneapp_minio_root_user: "M|text|MinIO root user for MinIO server| |myminioadmin"
+    oneapp_minio_root_password: "M|password|MinIO root user password for MinIO server"
+    oneapp_minio_opts: "O|text|Additional commandline options for MinIO server| |--console-address :9001"
+    oneapp_minio_tls_enabled: "M|boolean|Enable TLS configuration| |YES"
+    oneapp_minio_tls_cert: "O|text64|MinIO TLS certificate (.crt)| |"
+    oneapp_minio_tls_key: "O|text64|MinIO TLS key (.key)| |"
+logo: minio.png
+disks:
+- "Service MinIO"

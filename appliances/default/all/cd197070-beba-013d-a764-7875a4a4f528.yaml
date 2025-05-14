@@ -1,0 +1,47 @@
+---
+name: Ubuntu 22.04 (aarch64)
+version: 6.10.0-3-20250124
+publisher: OpenNebula Systems
+description: |-
+  Ubuntu 22.04 image ready for your OpenNebula deployment.
+
+  This image is based on the Ubuntu 22.04 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Ubuntu 22.04 image for KVM, LXD and vCenter
+tags:
+- ubuntu
+format: qcow2
+creation_time: 1737885730
+os-id: Ubuntu
+os-release: '22.04'
+os-arch: aarch64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: aarch64
+  logo: images/logos/ubuntu.png
+  lxd_security_privileged: 'true'
+logo: ubuntu.png
+images:
+- name: ubuntu2204
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2204-6.10.0-3-20250124.aarch64.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 2361393152
+  checksum:
+    md5: d7a2a8c52173f999f8242f5dcc70e5ba
+    sha256: d5eaba0d61595a0c3ee259e77885e8d934b8d9f04a1325a3e194ac8ca08293da
