@@ -21,6 +21,7 @@ opennebula_template:
   context:
     network: 'YES'
     oneapp_dynamo_api_port: "$ONEAPP_DYNAMO_API_PORT"
+    oneapp_dynamo_api_web: "$ONEAPP_DYNAMO_API_WEB"
     oneapp_dynamo_engine_name: "$ONEAPP_DYNAMO_ENGINE_NAME"
     oneapp_dynamo_engine_extra_args_json: "$ONEAPP_DYNAMO_ENGINE_EXTRA_ARGS_JSON"
     oneapp_dynamo_engine_extra_args_json_base64: "$ONEAPP_DYNAMO_ENGINE_EXTRA_ARGS_JSON_BASE64"
@@ -32,13 +33,14 @@ opennebula_template:
     listen: 0.0.0.0
     type: vnc
   inputs_order: >-
-    ONE_APP_DYNAMO_API_PORT,ONEAPP_DYNAMO_MODEL_ID,ONEAPP_DYNAMO_MODEL_TOKEN,ONEAPP_DYNAMO_ENGINE_NAME,ONEAPP_DYNAMO_ENGINE_EXTRA_ARGS_JSON,ONEAPP_DYNAMO_ENGINE_EXTRA_ARGS_JSON_BASE64
+    ONE_APP_DYNAMO_API_PORT,ONE_APP_DYNAMO_API_WEB,ONEAPP_DYNAMO_MODEL_ID,ONEAPP_DYNAMO_MODEL_TOKEN,ONEAPP_DYNAMO_ENGINE_NAME,ONEAPP_DYNAMO_ENGINE_EXTRA_ARGS_JSON,ONEAPP_DYNAMO_ENGINE_EXTRA_ARGS_JSON_BASE64
   memory: '8192'
   os:
     arch: x86_64
   logo: images/logos/dynamo.png
   user_inputs:
     oneapp_dynamo_api_port: O|number|Port number for the API endpoint.| |8000
+    oneapp_dynamo_api_web: O|boolean|Deploy a web application to interact with the model.| |YES
     oneapp_dynamo_model_id: M|text|Determines the AI model to use for inference.| |Qwen/Qwen2.5-1.5B-Instruct
     oneapp_dynamo_model_token: O|password|Authentication token to access the specified AI model.| |
     oneapp_dynamo_engine_name: O|text|Engine for using with dynamo.| |vllm
