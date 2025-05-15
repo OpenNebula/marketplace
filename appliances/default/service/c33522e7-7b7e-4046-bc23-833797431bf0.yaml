@@ -1,0 +1,81 @@
+---
+name: Service Capi
+version: 6.10.0-3-20250515
+publisher: OpenNebula Systems
+description: |-
+  Appliance providing a Rancher integration that enables users to manage
+  OpenNebula CAPI RKE2 clusters directly from the Rancher web interface.
+  [documentation](https://github.com/OpenNebula/one-apps/wiki/capi_quick).
+short_description: Appliance providing a Rancher integration that enables
+  users to manage OpenNebula CAPI RKE2 clusters.
+tags:
+- capi
+- service
+- ubuntu
+format: qcow2
+creation_time: 1747293770
+os-id: Ubuntu
+os-release: '22.04 LTS'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: '6.10, 7.0'
+opennebula_template:
+  context:
+    oneapp_capi_capone_version: "$ONEAPP_CAPI_CAPONE_VERSION"
+    oneapp_capi_cert_manager_version: "$ONEAPP_CAPI_CERT_MANAGER_VERSION"
+    oneapp_capi_k3s_version: "$ONEAPP_CAPI_K3S_VERSION"
+    oneapp_capi_rancher_hostname: "$ONEAPP_CAPI_RANCHER_HOSTNAME"
+    oneapp_capi_rancher_password: "$ONEAPP_CAPI_RANCHER_PASSWORD"
+    oneapp_capi_rancher_version: "$ONEAPP_CAPI_RANCHER_VERSION"
+    oneapp_capi_turtles_version: "$ONEAPP_CAPI_TURTLES_VERSION"
+    network: 'YES'
+    set_hostname: "$NAME"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '2'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONEAPP_CAPI_CAPONE_VERSION,ONEAPP_CAPI_CERT_MANAGER_VERSION,ONEAPP_CAPI_K3S_VERSION,ONEAPP_CAPI_RANCHER_HOSTNAME,ONEAPP_CAPI_RANCHER_PASSWORD,ONEAPP_CAPI_RANCHER_VERSION,ONEAPP_CAPI_TURTLES_VERSION
+  lxd_security_privileged: 'true'
+  memory: '8192'
+  os:
+    arch: x86_64
+    firmware_secure: 'YES'
+  vcpu: '4'
+  user_inputs:
+    oneapp_capi_capone_version: O|text|Capone Version
+    oneapp_capi_cert_manager_version: O|text|Cert Manager Chart Version
+    oneapp_capi_k3s_version: O|text|K3s Version
+    oneapp_capi_rancher_hostname: O|text|Rancher Hostname
+    oneapp_capi_rancher_password: O|text|Rancher Password
+    oneapp_capi_rancher_version: O|text|Rancher Chart Version
+    oneapp_capi_turtles_version: O|text|Turtles Chart Version
+  user_inputs_metadata:
+    - NAME: "CERT"
+      TITLE: "Certificate Manager"
+      TYPE: GROUP
+    - NAME: "CAPONE"
+      TITLE: "Capone"
+      TYPE: GROUP
+    - NAME: "RANCHER"
+      TITLE: "Rancher"
+      TYPE: GROUP
+    - NAME: "TURTLES"
+      TITLE: "Turtles"
+      TYPE: GROUP
+    - NAME: "K3S"
+      TITLE: "K3s cluster"
+      TYPE: GROUP
+logo: rancher.png
+images:
+- name: service_Capi
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_Capi-6.10.0-3-20250515.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 21474836480
+  checksum:
+    md5: 536d791f778beb01074563b5da9e0ae2
+    sha256: 60a157a75657ff6bbef2f5a9d43e32d30d5d0e21f2a90f583716b0011c2c8f7d
