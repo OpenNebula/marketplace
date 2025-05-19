@@ -1,0 +1,60 @@
+---
+name: Service Dynamo
+version: 6.10.0-3-20250519
+publisher: OpenNebula Systems
+description: |-
+  Appliance with preinstalled [Dynamo](https://github.com/ai-dynamo/dynamo) framework for distributed computing and machine learning workloads.
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/dynamo_intro).
+short_description: Appliance with preinstalled Dynamo framework
+tags:
+- dynamo
+- service
+format: qcow2
+creation_time: 1747650194
+os-id: Ubuntu
+os-release: 24.04 LTS
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_dynamo_api_port: "$ONEAPP_DYNAMO_API_PORT"
+    oneapp_dynamo_api_web: "$ONEAPP_DYNAMO_API_WEB"
+    oneapp_dynamo_engine_name: "$ONEAPP_DYNAMO_ENGINE_NAME"
+    oneapp_dynamo_engine_extra_args_json: "$ONEAPP_DYNAMO_ENGINE_EXTRA_ARGS_JSON"
+    oneapp_dynamo_engine_extra_args_json_base64: "$ONEAPP_DYNAMO_ENGINE_EXTRA_ARGS_JSON_BASE64"
+    oneapp_dynamo_model_id: "$ONEAPP_DYNAMO_MODEL_ID"
+    oneapp_dynamo_model_token: "$ONEAPP_DYNAMO_MODEL_TOKEN"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONE_APP_DYNAMO_API_PORT,ONE_APP_DYNAMO_API_WEB,ONEAPP_DYNAMO_MODEL_ID,ONEAPP_DYNAMO_MODEL_TOKEN,ONEAPP_DYNAMO_ENGINE_NAME,ONEAPP_DYNAMO_ENGINE_EXTRA_ARGS_JSON,ONEAPP_DYNAMO_ENGINE_EXTRA_ARGS_JSON_BASE64
+  memory: '8192'
+  os:
+    arch: x86_64
+  logo: images/logos/dynamo.png
+  user_inputs:
+    oneapp_dynamo_api_port: O|number|Port number for the API endpoint.| |8000
+    oneapp_dynamo_api_web: O|boolean|Deploy a web application to interact with the model.| |YES
+    oneapp_dynamo_model_id: M|text|Determines the AI model to use for inference.| |Qwen/Qwen2.5-1.5B-Instruct
+    oneapp_dynamo_model_token: O|password|Authentication token to access the specified AI model.| |
+    oneapp_dynamo_engine_name: O|text|Engine for using with dynamo.| |vllm
+    oneapp_dynamo_engine_extra_args_json: O|text|JSON string with parameters for the selected dynamo engine.| |
+    oneapp_dynamo_engine_extra_args_json_base64: O|text|Base-64 JSON string with parameters for the selected dynamo engine.| |
+logo: dynamo.png
+images:
+- name: service_Dynamo
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_Dynamo-6.10.0-3-20250519.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 26843545600
+  checksum:
+    md5: ce9bd28d65f8b42a508b5a45053d93b2
+    sha256: acdf0ae742ebc32220ea0429c6e7d659bbb1947c9ff81f11b998821199b9334c
