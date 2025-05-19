@@ -71,6 +71,11 @@ opennebula_template:
     oneapp_vnf_nat4_interfaces_out: O|text|NAT - Outgoing Interfaces
     oneapp_vnf_sdnat4_enabled: O|boolean|Enable SDNAT| |NO
     oneapp_vnf_sdnat4_interfaces: O|text|SDNAT - Mapped Interfaces
+  user_inputs_metadata:
+    - NAME: "VNF"
+      TITLE: "Virtual Router"
+      TYPE: APP
+      DESCRIPTION: "This tab includes all parameters required to configure the Virtual Router."
   vrouter: 'YES'
 logo: router.png
 images:
