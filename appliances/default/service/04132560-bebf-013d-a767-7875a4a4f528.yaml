@@ -1,0 +1,72 @@
+---
+name: Service Ray
+version: 6.10.0-3-20250519
+publisher: OpenNebula Systems
+description: |-
+  Appliance with preinstalled [Ray](https://www.ray.io/) framework for distributed computing and machine learning workloads.
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/ray_intro).
+short_description: Appliance with preinstalled Ray framework
+tags:
+- ray
+- service
+format: qcow2
+creation_time: 1747650194
+os-id: Ubuntu
+os-release: 24.04 LTS
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_ray_ai_framework: "$ONEAPP_RAY_AI_FRAMEWORK"
+    oneapp_ray_api_openai: "$ONEAPP_RAY_API_OPENAI"
+    oneapp_ray_api_port: "$ONEAPP_RAY_API_PORT"
+    oneapp_ray_api_web: "$ONEAPP_RAY_API_WEB"
+    oneapp_ray_model_max_new_tokens: "$ONEAPP_RAY_MODEL_MAX_NEW_TOKENS"
+    oneapp_ray_model_id: "$ONEAPP_RAY_MODEL_ID"
+    oneapp_ray_model_prompt: "$ONEAPP_RAY_MODEL_PROMPT"
+    oneapp_ray_model_quantization: "$ONEAPP_RAY_MODEL_QUANTIZATION"
+    oneapp_ray_model_temperature: "$ONEAPP_RAY_MODEL_TEMPERATURE"
+    oneapp_ray_model_token: "$ONEAPP_RAY_MODEL_TOKEN"
+    oneapp_ray_config_file64: "$ONEAPP_RAY_CONFIG_FILE64"
+    oneapp_ray_application_file64: "$ONEAPP_RAY_APPLICATION_FILE64"
+    oneapp_ray_application_url: "$ONEAPP_RAY_APPLICATION_URL"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONEAPP_RAY_AI_FRAMEWORK,ONEAPP_RAY_API_OPENAI,ONEAPP_RAY_API_PORT,ONEAPP_RAY_API_WEB,ONEAPP_RAY_MODEL_MAX_NEW_TOKENS,ONEAPP_RAY_MODEL_ID,ONEAPP_RAY_MODEL_PROMPT,ONEAPP_RAY_MODEL_QUANTIZATION,ONEAPP_RAY_MODEL_TEMPERATURE,ONEAPP_RAY_MODEL_TOKEN,ONEAPP_RAY_CONFIG_FILE64,ONEAPP_RAY_APPLICATION_FILE64,ONEAPP_RAY_APPLICATION_URL
+  memory: '8192'
+  os:
+    arch: x86_64
+  logo: images/logos/ray.png
+  user_inputs:
+    oneapp_ray_ai_framework: O|list|Selects the framework to serve the LLM model (RAY or VLLM).|RAY,VLLM|RAY
+    oneapp_ray_api_openai: O|boolean|Expose the LLM model through an OpenAI-compatible API.| |NO
+    oneapp_ray_api_port: O|number|Port number for the API endpoint.| |8000
+    oneapp_ray_api_web: O|boolean|Deploy a web application to interact with the model.| |YES
+    oneapp_ray_model_max_new_tokens: O|number|Maximum number of tokens (input + output) allowed per inference request.| |1024
+    oneapp_ray_model_id: O|list|Determines the LLM model to use for inference.|meta-llama/Llama-3.2-3B-Instruct,Qwen/Qwen2.5-3B-Instruct,utter-project/EuroLLM-1.7B-Instruct|meta-llama/Llama-3.2-3B-Instruct
+    oneapp_ray_model_prompt: O|text|Starting directive for model responses (ignored when using OpenAI API). | |You are a helpful assisstant. Answer the question.
+    oneapp_ray_model_quantization: O|list|Reduce memory usage and improve inference speed by compressing LLM weights (0, 4, 8).|0,4,8|0
+    oneapp_ray_model_temperature: M|number-float|Temperature parameter for model outputs, controlling the randomness of generated text.| |0.1
+    oneapp_ray_model_token: O|password|Provides the authentication token required to access the specified AI model. | |
+    oneapp_ray_config_file64: O|text64|Base64-encoded configuration file for the Serve application.| |
+    oneapp_ray_application_file64: O|text64|Base64-encoded application to deploy in Ray.| |
+    oneapp_ray_application_url: O|text|URL of the application to deploy in Ray.| |
+logo: ray.png
+images:
+- name: service_Ray
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_Ray-6.10.0-3-20250519.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 107374182400
+  checksum:
+    md5: 990cc971e28785720779b2a4dd6cf6db
+    sha256: da6606dc8919373db2446ddd50978a656b412c82f3ae7db6724c21d4658356f4
