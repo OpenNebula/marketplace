@@ -1,6 +1,6 @@
 ---
-name: Service Ray
-version: 6.10.0-3-20250519
+name: Service Ray (aarch64)
+version: 6.10.0-3-20250520
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [Ray](https://www.ray.io/) framework for distributed computing and machine learning workloads.
@@ -11,10 +11,10 @@ tags:
 - ray
 - service
 format: qcow2
-creation_time: 1747650194
+creation_time: 1747819709
 os-id: Ubuntu
 os-release: 24.04 LTS
-os-arch: x86_64
+os-arch: aarch64
 hypervisor: KVM
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
 opennebula_template:
@@ -42,7 +42,7 @@ opennebula_template:
     ONEAPP_RAY_AI_FRAMEWORK,ONEAPP_RAY_API_OPENAI,ONEAPP_RAY_API_PORT,ONEAPP_RAY_API_WEB,ONEAPP_RAY_MODEL_MAX_NEW_TOKENS,ONEAPP_RAY_MODEL_ID,ONEAPP_RAY_MODEL_PROMPT,ONEAPP_RAY_MODEL_QUANTIZATION,ONEAPP_RAY_MODEL_TEMPERATURE,ONEAPP_RAY_MODEL_TOKEN,ONEAPP_RAY_CONFIG_FILE64,ONEAPP_RAY_APPLICATION_FILE64,ONEAPP_RAY_APPLICATION_URL
   memory: '8192'
   os:
-    arch: x86_64
+    arch: aarch64
   logo: images/logos/ray.png
   user_inputs:
     oneapp_ray_ai_framework: O|list|Selects the framework to serve the LLM model (RAY or VLLM).|RAY,VLLM|RAY
@@ -62,11 +62,11 @@ logo: ray.png
 images:
 - name: service_Ray
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_Ray-6.10.0-3-20250519.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_Ray-6.10.0-3-20250520.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 107374182400
   checksum:
-    md5: 990cc971e28785720779b2a4dd6cf6db
-    sha256: da6606dc8919373db2446ddd50978a656b412c82f3ae7db6724c21d4658356f4
+    md5: 638f9006591d28d9c066cc817a68eb3e
+    sha256: d7cf1f1fc3479e9ec00da6d95c28b932f0adf52927024eac344e4471893285e6
