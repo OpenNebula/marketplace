@@ -1,6 +1,6 @@
 ---
 name: Service Dynamo
-version: 6.10.0-3-20250519
+version: 7.0.0-0-20250528
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [Dynamo](https://github.com/ai-dynamo/dynamo) framework for distributed computing and machine learning workloads.
@@ -11,7 +11,7 @@ tags:
 - dynamo
 - service
 format: qcow2
-creation_time: 1747650194
+creation_time: 1748337876
 os-id: Ubuntu
 os-release: 24.04 LTS
 os-arch: x86_64
@@ -50,11 +50,11 @@ logo: dynamo.png
 images:
 - name: service_Dynamo
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_Dynamo-6.10.0-3-20250519.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_Dynamo-7.0.0-0-20250528.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 26843545600
   checksum:
-    md5: ce9bd28d65f8b42a508b5a45053d93b2
-    sha256: acdf0ae742ebc32220ea0429c6e7d659bbb1947c9ff81f11b998821199b9334c
+    md5: cd476180d61ec44efbe959961bd770fb
+    sha256: d53de2bd232db404222e3ca61167ec9a00cc1705f9f5c2d2863307bafac878b2

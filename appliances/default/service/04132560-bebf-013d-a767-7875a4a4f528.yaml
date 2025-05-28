@@ -1,6 +1,6 @@
 ---
 name: Service Ray
-version: 6.10.0-3-20250519
+version: 7.0.0-0-20250528
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [Ray](https://www.ray.io/) framework for distributed computing and machine learning workloads.
@@ -11,7 +11,7 @@ tags:
 - ray
 - service
 format: qcow2
-creation_time: 1747650194
+creation_time: 1748337876
 os-id: Ubuntu
 os-release: 24.04 LTS
 os-arch: x86_64
@@ -62,11 +62,11 @@ logo: ray.png
 images:
 - name: service_Ray
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_Ray-6.10.0-3-20250519.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_Ray-7.0.0-0-20250528.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 107374182400
   checksum:
-    md5: 990cc971e28785720779b2a4dd6cf6db
-    sha256: da6606dc8919373db2446ddd50978a656b412c82f3ae7db6724c21d4658356f4
+    md5: d88629e06447c955050ffeb3aae5e02f
+    sha256: fbaac884752b191136525948664e2643ba62dba82683239c22064f8bc7599be4

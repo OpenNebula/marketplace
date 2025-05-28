@@ -1,6 +1,6 @@
 ---
 name: Fedora 39 (aarch64)
-version: 6.10.0-3-20250124
+version: 7.0.0-0-20250528
 publisher: OpenNebula Systems
 description: |-
   Fedora 39 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Fedora 39 image for KVM, LXD, and vCenter
 tags:
 - fedora
 format: qcow2
-creation_time: 1737885730
+creation_time: 1748425214
 os-id: Fedora
 os-release: '39'
 os-arch: aarch64
@@ -37,11 +37,11 @@ logo: fedora.png
 images:
 - name: fedora39
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/fedora39-6.10.0-3-20250124.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/fedora39-7.0.0-0-20250528.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 5368709120
   checksum:
-    md5: 1a1f4c8c4a4ff93c95897b9d3a01b134
-    sha256: 3c480c908f7ef8ea8d06dfb7cda7775d080cd9ad7dbf4bcd4bcb0c1a09e01f62
+    md5: 3cbe01357161b74311799df2690ceae1
+    sha256: 6b34f218da5cd7dbf42a0bde4a945b1ab7ba86da33a2cb540569382caa3d1bc7

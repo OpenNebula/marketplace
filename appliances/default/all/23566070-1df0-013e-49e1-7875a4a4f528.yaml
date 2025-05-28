@@ -1,22 +1,22 @@
 ---
-name: AlmaLinux 9
+name: Fedora 42
 version: 7.0.0-0-20250528
 publisher: OpenNebula Systems
 description: |-
-  AlmaLinux 9 image ready for your OpenNebula deployment.
+  Fedora 42 image ready for your OpenNebula deployment.
 
-  This image is based on the AlmaLinux 9 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Fedora 42 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: AlmaLinux 9 image for KVM, LXD and vCenter.
+short_description: Fedora 42 image for KVM, LXD, and vCenter
 tags:
-- almalinux
+- fedora
 format: qcow2
 creation_time: 1748337876
-os-id: AlmaLinux
-os-release: '9.6'
+os-id: Fedora
+os-release: '42'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
@@ -25,23 +25,22 @@ opennebula_template:
     network: 'YES'
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
   cpu: '1'
-  cpu_model:
-    model: host-passthrough
   graphics:
     listen: 0.0.0.0
     type: vnc
   memory: '768'
   os:
     arch: x86_64
+  logo: images/logos/fedora.png
   lxd_security_privileged: 'true'
-logo: alma.png
+logo: fedora.png
 images:
-- name: alma9
-  url: https://d24fmfybwxpuhu.cloudfront.net/alma9-7.0.0-0-20250528.qcow2
+- name: fedora42
+  url: https://d24fmfybwxpuhu.cloudfront.net/fedora42-7.0.0-0-20250528.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 10737418240
+  size: 5368709120
   checksum:
-    md5: 83ba7e67f70891a7af95b04fb01ca835
-    sha256: 4b06d547a7ed83fbec3e1b8d0e49a8f077e6f6452ca6bc1eaafd4efdad7b4413
+    md5: 99e4b8052494ccd4e37668a74a61f977
+    sha256: 2a57f70004c1dd1a4e2d3fd748902cbdd536a33b72e9d78420ffde1a40a4ad62

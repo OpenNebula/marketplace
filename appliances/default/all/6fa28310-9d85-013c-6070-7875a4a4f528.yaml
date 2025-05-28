@@ -1,6 +1,6 @@
 ---
 name: Debian 12
-version: 6.10.0-3-20250127
+version: 7.0.0-0-20250528
 publisher: OpenNebula Systems
 description: |-
   Debian 12 image ready for your OpenNebula deployment.
@@ -14,9 +14,9 @@ short_description: Debian 12 image for KVM and vCenter
 tags:
 - debian
 format: qcow2
-creation_time: 1737885730
+creation_time: 1748337876
 os-id: Debian
-os-release: '12.5'
+os-release: '12.11'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
@@ -36,11 +36,11 @@ opennebula_template:
 logo: debian.png
 images:
 - name: debian12
-  url: https://d24fmfybwxpuhu.cloudfront.net/debian12-6.10.0-3-20250127.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/debian12-7.0.0-0-20250528.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 3221225472
   checksum:
-    md5: b3fdf8a37dbda9b74d31176cbd889cfb
-    sha256: 8e71c0f74052ad85c247b8dcc109ff0d9d8304711bf7a28e9da0f6ad73668374
+    md5: a1b92f36ad520302edd16f087e82c926
+    sha256: fe6e25875e1d7b27830d8091186a5cea73c4431730f5de08cc6309e19468bf89

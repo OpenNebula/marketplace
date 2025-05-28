@@ -1,6 +1,6 @@
 ---
 name: Alpine Linux 3.18
-version: 6.10.0-3-20250127
+version: 7.0.0-0-20250528
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.18 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Alpine Linux 3.18 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1737885730
+creation_time: 1748337876
 os-id: Alpine Linux
 os-release: '3.18'
 os-arch: x86_64
@@ -38,12 +38,11 @@ opennebula_template:
 logo: alpine.png
 images:
 - name: alpine318
-  url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/alpine318-6.10.0-3-20250127.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alpine318-7.0.0-0-20250528.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 536870912
   checksum:
-    md5: 4b6c04ba822174e2a508fbabd3435344
-    sha256: 06c1c3f2de693ddb8c47f99fa767ed957e9a86ba704905421b1b63f98b594557
+    md5: 85fe49b426b72f5be9a78a0525c53e90
+    sha256: d2e7461d6adacc0a7351210b0d522a78b4f7608f0c626f820cd45f24c608ea17
