@@ -16,7 +16,7 @@ tags:
 format: qcow2
 creation_time: 1748425214
 os-id: Debian
-os-release: '12.5'
+os-release: '12.11'
 os-arch: aarch64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
