@@ -1,6 +1,6 @@
 ---
 name: Ubuntu 22.04 (aarch64)
-version: 6.10.0-3-20250124
+version: 7.0.0-0-20250528
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 22.04 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Ubuntu 22.04 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1737885730
+creation_time: 1748425214
 os-id: Ubuntu
 os-release: '22.04'
 os-arch: aarch64
@@ -37,11 +37,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2204
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2204-6.10.0-3-20250124.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2204-7.0.0-0-20250528.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
     md5: d7a2a8c52173f999f8242f5dcc70e5ba
-    sha256: d5eaba0d61595a0c3ee259e77885e8d934b8d9f04a1325a3e194ac8ca08293da
+    sha256: e2867b12264244e64b43a9035912dd2737c3e906c5ce4fe4dcab233bc76a4c16
