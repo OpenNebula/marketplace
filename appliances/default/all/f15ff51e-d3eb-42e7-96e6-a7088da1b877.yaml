@@ -1,6 +1,6 @@
 ---
 name: Ubuntu Minimal 20.04
-version: 6.10.0-3-20250127
+version: 7.0.0-0-20250528
 publisher: OpenNebula Systems
 description: |-
   Ubuntu Minimal 20.04 image ready for your OpenNebula deployment.
@@ -16,7 +16,7 @@ short_description: Ubuntu Minimal 20.04 image for KVM and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1737885730
+creation_time: 1748337876
 os-id: Ubuntu
 os-release: '20.04'
 os-arch: x86_64
@@ -41,11 +41,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2004min
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004min-6.10.0-3-20250127.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2004min-7.0.0-0-20250528.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
     md5: 97b6d387d91eef99f22c77fd88c9fdef
-    sha256: 49eddab93d0a195296ebbc1491fa24e0dc68338f6d564d25216a79a9ec33f151
+    sha256: 05d5aa6d634633ef0724b7686b2e6625f81aaf4fa1e60a89e1e8e72a44749986
