@@ -1,6 +1,6 @@
 ---
 name: Service Virtual Router
-version: 6.10.0-3-20250127
+version: 7.0.0-0-20250528
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS,
@@ -14,7 +14,7 @@ tags:
 - service
 - alpine
 format: qcow2
-creation_time: 1737885730
+creation_time: 1748337876
 os-id: Alpine
 os-release: '3.20'
 os-arch: x86_64
@@ -72,20 +72,22 @@ opennebula_template:
     oneapp_vnf_sdnat4_enabled: O|boolean|Enable SDNAT| |NO
     oneapp_vnf_sdnat4_interfaces: O|text|SDNAT - Mapped Interfaces
   user_inputs_metadata:
-    - NAME: "VNF"
-      TITLE: "Virtual Router"
-      TYPE: APP
-      DESCRIPTION: "This tab includes all parameters required to configure the Virtual Router."
+  - NAME: VNF
+    TITLE: Virtual Router
+    TYPE: APP
+    DESCRIPTION: >-
+      This tab includes all parameters required to configure the Virtual
+      Router.
   vrouter: 'YES'
 logo: router.png
 images:
 - name: service_vnf
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-6.10.0-3-20250424.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-7.0.0-0-20250528.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: 8afcb9ed1bd49e5d034f20927e0e929b
-    sha256: ab25e6397f2724c183205a8bc1187c9aab56df1db00b83b6cc018fda338b2867
+    md5: a7413849cf1b6f6f0ddededc49c7d19d
+    sha256: eeeaa1bf899fd5fdb0c422c3bac94fa77ea7614fe821be50acdf86aa46295cb2
