@@ -72,5 +72,5 @@ images:
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: 45d10d2d6ba943f8bd953813d19db5a9
-    sha256: c3124dd9221473afea3d3f21bde8045d4f6593a8958121a21eda05b2ca8d2c72
+    md5: a7413849cf1b6f6f0ddededc49c7d19d
+    sha256: eeeaa1bf899fd5fdb0c422c3bac94fa77ea7614fe821be50acdf86aa46295cb2
