@@ -1,6 +1,6 @@
 ---
 name: Service OneKE 1.31
-version: 1.31.3-6.10.0-3-20250314
+version: 1.31.3-7.0.0-0-20250528
 publisher: OpenNebula Systems
 description: |-
   [RKE2](https://docs.rke2.io/) based multi-master Kubernetes 1.31 cluster for KVM hosts,
@@ -25,7 +25,7 @@ tags:
 - oneflow
 - service
 - ubuntu
-creation_time: 1741989310
+creation_time: 1748337876
 os-id: Ubuntu
 os-release: 22.04 LTS
 os-arch: x86_64
