@@ -5,7 +5,7 @@ publisher: OpenNebula Systems
 description: |-
   Ubuntu 20.04 image ready for your OpenNebula deployment.
 
-  This image is based on the Ubuntu 20.04 cloud image with the OpenNebula [contextualization package](http://docs.opennebula.io/stable/management_and_operations/references/kvm_contextualization.html).
+  This image is based on the Ubuntu 20.04 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
