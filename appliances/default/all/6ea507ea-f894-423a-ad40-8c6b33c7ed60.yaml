@@ -43,6 +43,9 @@ opennebula_template:
   os:
     arch: x86_64
     machine: 'q35'
+  input:
+    type: 'tablet'
+    bus: 'usb'
   features:
     ACPI: 'Yes'
     apic: 'Yes'
