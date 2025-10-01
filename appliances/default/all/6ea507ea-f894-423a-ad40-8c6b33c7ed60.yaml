@@ -53,6 +53,7 @@ opennebula_template:
     virtio_blk_queues: 'auto'
     virtio_scsi_queues: 'auto'
   raw:
+    type: 'kvm'
     data: |-
       <features>
         <hyperv>
