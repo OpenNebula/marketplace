@@ -71,11 +71,11 @@ opennebula_template:
           <vpindex state='on'/>
         </hyperv>
       </features>
-        <clock offset='utc'>
-          <timer name='hpet' present='no'/>
-          <timer name='hypervclock' present='yes'/>
-          <timer name='pit' tickpolicy='delay'/>
-          <timer name='rtc' tickpolicy='catchup'/>
-        </clock>
+      <clock offset='utc'>
+        <timer name='hpet' present='no'/>
+        <timer name='hypervclock' present='yes'/>
+        <timer name='pit' tickpolicy='delay'/>
+        <timer name='rtc' tickpolicy='catchup'/>
+      </clock>
     validate: 'Yes'
 images: []
