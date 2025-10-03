@@ -27,7 +27,7 @@ format: qcow2
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
 disks:
   - 'Empty disk'
-  - 'Windows VirtIO Drivers'
+  - 'Windows VirtIO Drivers - v0.1.285'
   - 'Contextualization Packages'
 opennebula_template:
   context:
@@ -43,6 +43,8 @@ opennebula_template:
   os:
     arch: x86_64
     machine: 'q35'
+    firmware: 'UEFI'
+    firmware_secure: 'Yes'
   input:
     type: 'tablet'
     bus: 'usb'
