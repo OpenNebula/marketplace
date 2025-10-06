@@ -4,17 +4,19 @@ version: 7.0.0-0-20250926
 publisher: OpenNebula Systems
 description: |-
   Windows VM Template skeleton with a set of the following files and recommended settings for Windows VM:
-    - empty disk (to be used either for Windows installation or to be replaced with already pre-installed Windows OS if you already has such one,
+    - empty disk (to be used either for Windows installation or to be replaced with already pre-installed Windows OS if you already has such one),
     - virtio-win.iso (an image file containing paravirtualized drivers required for optimal performance of Windows VMs on virtualization platforms such as KVM and some other hypervisors),
-    - one-context.iso (an image file containing OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+    - one-context.iso (an image file containing OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/)).
 
   This VM template should be imported into your OpenNebula cloud. After that depending on your requirements
   1) a Windows Installation ISO image needs to be added to that template to be used for Windows installation on the empty image or
-  2) the empty disk has to be replace with already pre-installed Windows OS disk.
+  2) the empty disk has to be replaced with one which already has pre-installed Windows OS.
 
   That VM template also contains optimal settings for Windows VMs.
 
   **Note**: Remember to update the template in order to add a network after importing it.
+
+  **Warning**: Some additional changes related to FIRMWARE attribute are required to be done after importing that VM template into your OpenNebula installation if you are using OpenNebula version 6.10.
 short_description: Windows VM template with a set of files and optimal settings.
 tags:
 - windows
