@@ -20,5 +20,5 @@ images:
   driver: raw
   size: 789645312
   checksum:
-    md5: 9e650d0e7c6e017a91ca299c8f7ed766 
-    sha256: e14cf2b94492c3e925f0070ba7fdfedeb2048c91eea9c5a5afb30232a3976331  
+    md5: 9e650d0e7c6e017a91ca299c8f7ed766
+    sha256: e14cf2b94492c3e925f0070ba7fdfedeb2048c91eea9c5a5afb30232a3976331
