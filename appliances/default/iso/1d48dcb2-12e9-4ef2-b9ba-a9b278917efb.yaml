@@ -1,5 +1,5 @@
 ---
-name: Windows VirtIO Drivers
+name: Windows VirtIO Drivers - v0.1.285
 version: 0.1.285
 publisher: OpenNebula Systems
 description: CD-ROM image with stable VirtIO drivers for Windows.
