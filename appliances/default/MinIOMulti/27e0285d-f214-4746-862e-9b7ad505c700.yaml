@@ -29,6 +29,7 @@ opennebula_template:
     service_id: "$SERVICE_ID"
     network: 'YES'
     token: 'YES'
+    report_ready: 'YES'
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
     oneapp_vnf_dhcp4_enabled: "$ONEAPP_VNF_DHCP4_ENABLED"
     oneapp_vnf_dhcp4_interfaces: "$ONEAPP_VNF_DHCP4_INTERFACES"

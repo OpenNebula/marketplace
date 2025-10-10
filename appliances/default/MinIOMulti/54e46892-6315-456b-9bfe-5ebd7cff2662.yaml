@@ -40,6 +40,7 @@ opennebula_template:
   roles:
   - name: minio
     cardinality: 4
+    parents: [vr]
     vm_template_contents: |
       NIC = [
         NAME = "NIC0",
