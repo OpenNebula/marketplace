@@ -3,8 +3,8 @@ name: Service Fabric Manager
 version: 7.0.0-0-20251030
 publisher: OpenNebula Systems
 description: |-
-  Appliance with preinstalled components required for managing NVSwitch-enabled systems. 
-  It includes the NVIDIA drivers, the NVIDIA Fabric Manager service (and development package), 
+  Appliance with preinstalled components required for managing NVSwitch-enabled systems.
+  It includes the NVIDIA drivers, the NVIDIA Fabric Manager service (and development package),
   and a custom **nv-partitioner** tool built on top of the NVIDIA Fabric Manager SDK for NVSwitch topology management.
 
   See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/) for usage and configuration details.
@@ -31,8 +31,8 @@ opennebula_template:
   memory: '4096'
   os:
     arch: x86_64
-  user_inputs:
-  user_inputs_metadata:
+  user_inputs: {}
+  user_inputs_metadata: {}
 logo: nvidia.png
 images:
 - name: service_FabricManager
