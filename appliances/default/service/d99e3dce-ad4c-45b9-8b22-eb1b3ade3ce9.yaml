@@ -1,0 +1,64 @@
+---
+name: service_Vllm
+version: 7.0.0-0-20251111
+publisher: OpenNebula Systems
+description: |-
+  Appliance with preinstalled [vLLM](https://docs.vllm.ai/) engine for LLM inference and serving.
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/vllm_intro).
+short_description: Appliance with preinstalled vLLM engine
+tags:
+- vllm
+- service
+format: qcow2
+creation_time: 1762876140
+os-id: Ubuntu
+os-release: 24.04 LTS
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_vllm_api_port: "$ONEAPP_VLLM_API_PORT"
+    oneapp_vllm_api_web: "$ONEAPP_VLLM_API_WEB"
+    oneapp_vllm_model_id: "$ONEAPP_VLLM_MODEL_ID"
+    oneapp_vllm_model_token: "$ONEAPP_VLLM_MODEL_TOKEN"
+    oneapp_vllm_model_quantization: "$ONEAPP_VLLM_MODEL_QUANTIZATION"
+    oneapp_vllm_model_max_length: "$ONEAPP_VLLM_MODEL_MAX_LENGTH"
+    oneapp_vllm_enforce_eager: "$ONEAPP_VLLM_ENFORCE_EAGER"
+    oneapp_vllm_sleep_mode: "$ONEAPP_VLLM_SLEEP_MODE"
+    oneapp_vllm_gpu_memory_utilization: "$ONEAPP_VLLM_GPU_MEMORY_UTILIZATION"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONEAPP_VLLM_API_PORT,ONEAPP_VLLM_API_WEB,ONEAPP_VLLM_MODEL_ID,ONEAPP_VLLM_MODEL_TOKEN,ONEAPP_VLLM_MODEL_QUANTIZATION,ONEAPP_VLLM_MODEL_MAX_LENGTH,ONEAPP_VLLM_ENFORCE_EAGER,ONEAPP_VLLM_SLEEP_MODE,ONEAPP_VLLM_GPU_MEMORY_UTILIZATION
+  memory: '8192'
+  os:
+    arch: x86_64
+  logo: images/logos/vllm.png
+  user_inputs:
+    oneapp_vllm_api_port: O|number|Port number for the API endpoint.| |8000
+    oneapp_vllm_api_web: O|boolean|Deploy a web application to interact with the model.| |YES
+    oneapp_vllm_model_id: M|text|Determines the AI model to use for inference.| |Qwen/Qwen2.5-1.5B-Instruct
+    oneapp_vllm_model_token: O|password|Authentication token to access the specified AI model.| |
+    oneapp_vllm_model_quantization: O|list|Use quantization for the LLM weights (0,4).|0,4|0
+    oneapp_vllm_model_max_length: O|number|Model context length for prompt and output.| |1024
+    oneapp_vllm_enforce_eager: O|boolean|Whether to always use eager-mode Pytorch in vllm.| |NO
+    oneapp_vllm_sleep_mode: O|boolean|Whether to enable sleep mode when GPU is used.| |NO
+    oneapp_vllm_gpu_memory_utilization: O|text|Fraction of GPU memory to use (0.0, 1.0].| |0.9
+logo: vllm.png
+images:
+- name: service_Vllm
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_Vllm-7.0.0-0-20251111.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 107374182400
+  checksum:
+    md5: db32850a411bf75dc699a0c0b645c10b
+    sha256: b6caabbd6f3e40fd10ce60ccb71eae49a56769d2157f72918ece646d38fdbabb
