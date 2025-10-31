@@ -1,0 +1,47 @@
+---
+name: Service Fabric Manager
+version: 7.0.0-0-20251030
+publisher: OpenNebula Systems
+description: |-
+  Appliance with preinstalled components required for managing NVSwitch-enabled systems.
+  It includes the NVIDIA drivers, the NVIDIA Fabric Manager service (and development package),
+  and a custom **nv-partitioner** tool built on top of the NVIDIA Fabric Manager SDK for NVSwitch topology management.
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/fabric_intro) for usage and configuration details.
+short_description: Appliance with preinstalled NVIDIA Fabric Manager for KVM hosts
+tags:
+- nvidia
+- service
+- ubuntu
+format: qcow2
+creation_time: 1761827655
+os-id: Ubuntu
+os-release: 22.04 LTS
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: '7.0'
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '2'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '4096'
+  os:
+    arch: x86_64
+  user_inputs: {}
+  user_inputs_metadata: {}
+logo: nvidia.png
+images:
+- name: service_FabricManager
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_FabricManager-7.0.0-0-20251030.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 21474836480
+  checksum:
+    md5: fd50a6d9caa9737950f5d73e96323054
+    sha256: d39d1afec11713d3f8e40ccb3f6ff8cf02a13d0aa59dd24feaa670c618c0ead9
