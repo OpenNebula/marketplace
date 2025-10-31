@@ -7,7 +7,7 @@ description: |-
   It includes the NVIDIA drivers, the NVIDIA Fabric Manager service (and development package),
   and a custom **nv-partitioner** tool built on top of the NVIDIA Fabric Manager SDK for NVSwitch topology management.
 
-  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/) for usage and configuration details.
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/fabric_intro) for usage and configuration details.
 short_description: Appliance with preinstalled NVIDIA Fabric Manager for KVM hosts
 tags:
 - nvidia
