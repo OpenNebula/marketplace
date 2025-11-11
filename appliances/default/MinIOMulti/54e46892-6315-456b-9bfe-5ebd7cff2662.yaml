@@ -41,10 +41,11 @@ opennebula_template:
   - name: minio
     parents: [vr]
     cardinality: 4
+    parents: [vr]
     vm_template_contents: |
       NIC = [
-        NAME = "NIC0"
-        NETWORK_ID = "$private"
+        NAME = "NIC0",
+        NETWORK_ID = "$Private"
       ]
       FALLBACK_GW = "${vr.TEMPLATE.CONTEXT.ETH1_IP}"
       FALLBACK_DNS = "${vr.TEMPLATE.CONTEXT.ETH1_IP}"
@@ -56,12 +57,12 @@ opennebula_template:
     min_vms: 1
     vm_template_contents: |
       NIC = [
-        NAME = "NIC0"
-        NETWORK_ID = "$public"
+        NAME = "NIC0",
+        NETWORK_ID = "$Public"
       ]
       NIC = [
-        NAME = "NIC1"
-        NETWORK_ID = "$private"
+        NAME = "NIC1",
+        NETWORK_ID = "$Private"
       ]
       ONEAPP_VNF_DNS_ENABLED = "$ONEAPP_VNF_DNS_ENABLED"
       ONEAPP_VNF_DNS_INTERFACES = "$ONEAPP_VNF_DNS_INTERFACES"
