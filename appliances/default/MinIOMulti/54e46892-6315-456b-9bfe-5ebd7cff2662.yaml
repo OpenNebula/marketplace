@@ -41,7 +41,6 @@ opennebula_template:
   - name: minio
     parents: [vr]
     cardinality: 4
-    parents: [vr]
     vm_template_contents: |
       NIC = [
         NAME = "NIC0",

@@ -27,7 +27,6 @@ opennebula_version: 6.8, 6.10, 7.0
 opennebula_template:
   context:
     service_id: "$SERVICE_ID"
-    report_ready: 'YES'
     network: 'YES'
     token: 'YES'
     report_ready: 'YES'
