@@ -30,7 +30,10 @@ opennebula_template:
     oneapp_vllm_sleep_mode: "$ONEAPP_VLLM_SLEEP_MODE"
     oneapp_vllm_gpu_memory_utilization: "$ONEAPP_VLLM_GPU_MEMORY_UTILIZATION"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    token: 'YES'
   cpu: '1'
+  cpu_model:
+    model: host-passthrough
   graphics:
     listen: 0.0.0.0
     type: vnc
@@ -39,6 +42,8 @@ opennebula_template:
   memory: '8192'
   os:
     arch: x86_64
+    machine: 'q35'
+    firmware: 'UEFI'
   logo: images/logos/vllm.png
   user_inputs:
     oneapp_vllm_api_port: O|number|Port number for the API endpoint.| |8000
