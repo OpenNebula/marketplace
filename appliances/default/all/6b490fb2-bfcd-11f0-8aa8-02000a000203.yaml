@@ -1,0 +1,48 @@
+---
+name: AlmaLinux 10 (aarch64)
+version: 7.0.0-0-20251112
+publisher: OpenNebula Systems
+description: |-
+  AlmaLinux 10 image ready for your OpenNebula deployment.
+
+  This image is based on the AlmaLinux 10 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: AlmaLinux 10 image for KVM, LXD and vCenter.
+tags:
+- almalinux
+format: qcow2
+creation_time: 1762953810
+os-id: AlmaLinux
+os-release: '10.1'
+os-arch: aarch64
+hypervisor: ALL
+opennebula_version: 6.8, 6.10, 7.0
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  cpu_model:
+    model: host-passthrough
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: aarch64
+  lxd_security_privileged: 'true'
+logo: alma.png
+images:
+- name: alma10
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/alma10-7.0.0-0-20251112.aarch64.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 10737418240
+  checksum:
+    md5: fd96ad541e935b09c4892a760055daf3
+    sha256: 7dd76c850c45b051060b2064bd108084dc0ef7630fba884c1258214137d4a540
