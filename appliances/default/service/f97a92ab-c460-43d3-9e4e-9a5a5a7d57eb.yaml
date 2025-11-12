@@ -1,6 +1,6 @@
 ---
 name: Service Fabric Manager
-version: 7.0.0-0-20251030
+version: 7.0.0-0-20251211
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled components required for managing NVSwitch-enabled systems.
@@ -42,7 +42,7 @@ logo: nvidia.png
 images:
 - name: service_FabricManager
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_FabricManager-7.0.0-0-20251211.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_FabricManager-7.0.0-20251211.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
