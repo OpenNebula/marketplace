@@ -1,0 +1,46 @@
+---
+name: Rocky Linux 10 (aarch64)
+version: 7.0.0-0-20251112
+publisher: OpenNebula Systems
+description: |-
+  Rocky Linux 10 image ready for your OpenNebula deployment.
+
+  This image is based on the Rocky Linux 10 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Rocky Linux 10 image for KVM, LXD and vCenter.
+tags:
+- rockylinux
+format: qcow2
+creation_time: 1762953810
+os-id: RockyLinux
+os-release: '10.1'
+os-arch: aarch64
+hypervisor: ALL
+opennebula_version: 6.8, 6.10, 7.0
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: aarch64
+  lxd_security_privileged: 'true'
+logo: rocky.png
+images:
+- name: rocky10
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/rocky10-7.0.0-0-20251112.aarch64.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 10737418240
+  checksum:
+    md5: b6d42c42b2d6fd64f37149e224e2338b
+    sha256: 3499c4b60b1f1a6cbef9b33452a17dd5a60f2296db6e35415121e475ec5a27c8
