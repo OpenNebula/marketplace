@@ -1,6 +1,6 @@
 ---
 name: Service Capi
-version: 7.0.0-0-20250528
+version: 7.0.0-0-20251112
 publisher: OpenNebula Systems
 description: |-
   Appliance providing a Rancher integration that enables users to manage
@@ -14,7 +14,7 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1748337876
+creation_time: 1762965253
 os-id: Ubuntu
 os-release: 22.04 LTS
 os-arch: x86_64
@@ -72,11 +72,11 @@ logo: rancher.png
 images:
 - name: service_Capi
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_Capi-7.0.0-0-20250528.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_Capi-7.0.0-0-20251112.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: e774b96d23b4796f02fe9cecdec8d584
-    sha256: 6dd470736829a22aafe2a8241713501b44e1fa929f78537afd8c8ff18130c26f
+    md5: 5c5a970cbd5ef2bf19e261fd80b195a2
+    sha256: 376a72fb004811f36163df73b8e05af833728b8e0e00f1946c4bc7eafcd8d84e
