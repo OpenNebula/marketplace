@@ -1,6 +1,6 @@
 ---
-name: service_Vllm
-version: 7.0.0-0-20260223
+name: service_Vllm (aarch64)
+version: 7.0.0-1-20260223
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [vLLM](https://docs.vllm.ai/) engine for LLM inference and serving.
@@ -11,10 +11,10 @@ tags:
 - vllm
 - service
 format: qcow2
-creation_time: 1771860412
+creation_time: 1771860239
 os-id: Ubuntu
 os-release: 24.04 LTS
-os-arch: x86_64
+os-arch: aarch64
 hypervisor: KVM
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
 opennebula_template:
@@ -41,8 +41,7 @@ opennebula_template:
     ONEAPP_VLLM_API_PORT,ONEAPP_VLLM_API_WEB,ONEAPP_VLLM_MODEL_ID,ONEAPP_VLLM_MODEL_TOKEN,ONEAPP_VLLM_MODEL_QUANTIZATION,ONEAPP_VLLM_MODEL_MAX_LENGTH,ONEAPP_VLLM_ENFORCE_EAGER,ONEAPP_VLLM_SLEEP_MODE,ONEAPP_VLLM_GPU_MEMORY_UTILIZATION
   memory: '8192'
   os:
-    arch: x86_64
-    machine: 'q35'
+    arch: aarch64
     firmware: 'UEFI'
   logo: images/logos/vllm.png
   user_inputs:
@@ -59,11 +58,11 @@ logo: vllm.png
 images:
 - name: service_Vllm
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_Vllm-7.0.0-0-20260223.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_Vllm-7.0.0-1-20260223.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 107374182400
   checksum:
-    md5: aaf6af26fe8fc3e3e9894999306d3263
-    sha256: b3d02844d2a80bae1ad8cddf7c4de4c0a215307253bc7a7540384d1f263b588e
+    md5: 6af0dc208acd5b5254dfecc2b05550dd
+    sha256: b2b65f048f614fa1b866511ebd1ed7ab3fea619071754daa16ce3fbfdb2c1403
