@@ -1,6 +1,6 @@
 ---
 name: Service Capi (aarch64)
-version: 7.0.0-0-20260223
+version: 7.0.0-1-20260223
 publisher: OpenNebula Systems
 description: |-
   Appliance providing a Rancher integration that enables users to manage
@@ -13,9 +13,9 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1771832412
+creation_time: 1771850141
 os-id: Ubuntu
-os-release: '22.04 LTS'
+os-release: '24.04 LTS'
 os-arch: aarch64
 hypervisor: ALL
 opennebula_version: '6.10, 7.0'
@@ -41,7 +41,6 @@ opennebula_template:
   memory: '8192'
   os:
     arch: aarch64
-    firmware_secure: 'YES'
   vcpu: '4'
   user_inputs:
     oneapp_capi_capone_version: O|text|Capone Version
@@ -71,11 +70,11 @@ logo: rancher.png
 images:
 - name: service_Capi
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_Capi-7.0.0-0-20260223.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_Capi-7.0.0-1-20260223.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: fd7c9802b2a8cb146a949189139f431f
-    sha256: 5dd196ef58828fb5f3fc3987fdf3b0b08aa04bfd746b0b2b5121d2d733bc7d8b
+    md5: b917fb69a5ffb95717e89af22f16396b
+    sha256: d587532abdac7fd87b7485fbd0334f4339824164235a808de55e613168d92e22
