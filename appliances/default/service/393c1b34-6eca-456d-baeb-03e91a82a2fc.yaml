@@ -4,7 +4,7 @@ version: 7.0.0-1-20260223
 publisher: OpenNebula Systems
 description: |-
   Appliance providing a Rancher integration that enables users to manage
-  OpenNebula CAPI RKE2 clusters directly from the Rancher web interface.
+  OpenNebula CAPI RKE2 clusters (v1.31.4+rke2r1) directly from the Rancher web interface.
   [documentation](https://github.com/OpenNebula/one-apps/wiki/capi_quick).
 short_description: Appliance providing a Rancher integration that enables
   users to manage OpenNebula CAPI RKE2 clusters.
