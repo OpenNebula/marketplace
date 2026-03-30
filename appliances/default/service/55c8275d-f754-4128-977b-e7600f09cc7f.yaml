@@ -1,6 +1,6 @@
 ---
 name: service_Vllm (aarch64)
-version: 7.0.0-1-20260223
+version: 7.0.0-2-20260324
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [vLLM](https://docs.vllm.ai/) engine for LLM inference and serving.
@@ -11,7 +11,7 @@ tags:
 - vllm
 - service
 format: qcow2
-creation_time: 1771860239
+creation_time: 1774364820
 os-id: Ubuntu
 os-release: 24.04 LTS
 os-arch: aarch64
@@ -58,11 +58,11 @@ logo: vllm.png
 images:
 - name: service_Vllm
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_Vllm-7.0.0-1-20260223.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_Vllm-7.0.0-2-20260324.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 107374182400
   checksum:
-    md5: 6af0dc208acd5b5254dfecc2b05550dd
-    sha256: b2b65f048f614fa1b866511ebd1ed7ab3fea619071754daa16ce3fbfdb2c1403
+    md5: 6b325e1fa14598175167e5af3c208af2
+    sha256: e8c462f027454baf55dfd1382d8a93a5b7b2c374bcee6d2a13af8e1c322a8f47
