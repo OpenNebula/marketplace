@@ -18,7 +18,7 @@ os-id: Ubuntu
 os-release: '24.04 LTS'
 os-arch: aarch64
 hypervisor: ALL
-opennebula_version: '6.10, 7.0'
+opennebula_version: '6.10, 7.0, 7.2'
 opennebula_template:
   context:
     oneapp_capi_capone_version: "$ONEAPP_CAPI_CAPONE_VERSION"

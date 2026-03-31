@@ -11,7 +11,7 @@ format: raw
 creation_time: 1758005613
 os-id: Windows
 hypervisor: KVM
-opennebula_version: 6.10, 7.0
+opennebula_version: 6.10, 7.0, 7.2
 images:
 - name: virtio-win
   url: https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.285-1/virtio-win-0.1.285.iso
