@@ -1,6 +1,6 @@
 ---
 name: Debian 13 (aarch64)
-version: 7.0.0-0-20251112
+version: 7.2.0-0-20260331
 publisher: OpenNebula Systems
 description: |-
   Debian 13 image ready for your OpenNebula deployment.
@@ -14,7 +14,7 @@ short_description: Debian 13 image for KVM and vCenter
 tags:
 - debian
 format: qcow2
-creation_time: 1762935909
+creation_time: 1774948626
 os-id: Debian
 os-release: '13.1'
 os-arch: aarch64
@@ -37,11 +37,11 @@ logo: debian.png
 images:
 - name: debian13
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/debian13-7.0.0-0-20251112.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/debian13-7.2.0-0-20260331.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 3221225472
   checksum:
-    md5: 4eef0e74d04bd903ec24dfef96239982
-    sha256: 7587395e22ccc5fb4bdccb4e37f5aa54fa80abebbacc369f25ff52841bf4a081
+    md5: c08f730ed04d11dbb4cb35d899bb267c
+    sha256: cffd25eba658efdb9184c40db68dfd950e3e578a6936f07328d399c6e098f2e8
