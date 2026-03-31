@@ -1,6 +1,6 @@
 ---
 name: Service MinIO
-version: 7.0.0-0-20250528
+version: 7.2.0-0-20260330
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [MinIO](https://min.io/docs/minio/linux/index.html).
@@ -13,12 +13,12 @@ tags:
 - ubuntu
 - service
 format: qcow2
-creation_time: 1737885730
+creation_time: 1774950151
 os-id: Ubuntu
 os-release: 22.04 LTS
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: '7.0'
+opennebula_version: '7.0, 7.2'
 opennebula_template:
   context:
     network: 'YES'
@@ -65,11 +65,11 @@ logo: minio.png
 images:
 - name: service_MinIO
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_MinIO-7.0.0-0-20250528.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_MinIO-7.2.0-0-20260330.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 2361393152
+  size: 4294967296
   checksum:
-    md5: 0e2ce6e3a8514c67f8f8523201efea79
-    sha256: 6faf5700e3f91aeced121e65cea6b14a1a2724f73119a7fcf536cb52c656b5f7
+    md5: a261d3c81c3236fab6587d1890e3fd50
+    sha256: 84edad3a585258d840e570773827b48bd29d278b8533ec9cafc720461ffae6ea

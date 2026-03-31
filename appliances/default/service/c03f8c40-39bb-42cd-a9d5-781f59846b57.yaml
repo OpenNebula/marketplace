@@ -20,7 +20,7 @@ os-id: Ubuntu
 os-release: 24.04 LTS
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: '6.4, 6.6, 6.8, 6.10, 7.0'
+opennebula_version: '6.4, 6.6, 6.8, 6.10, 7.0, 7.2'
 opennebula_template:
   context:
     oneapp_slurm_controller_ip: "$ONEAPP_SLURM_CONTROLLER_IP"

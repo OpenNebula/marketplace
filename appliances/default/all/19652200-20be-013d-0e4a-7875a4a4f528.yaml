@@ -1,6 +1,6 @@
 ---
 name: Amazon Linux 2023
-version: 7.0.0-0-20250528
+version: 7.2.0-0-20260330
 publisher: OpenNebula Systems
 description: |-
   [Amazon Linux 2023](https://aws.amazon.com/linux/amazon-linux-2023/) image ready for the OpenNebula deployment with [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/) installed. The use of this software is governed by the terms of the AWS Customer Agreement (https://aws.amazon.com/agreement/) or other agreement with AWS governing the use of AWS services.
@@ -12,12 +12,12 @@ short_description: Amazon Linux 2023 image for KVM, LXD and vCenter.
 tags:
 - amazon
 format: qcow2
-creation_time: 1748337876
+creation_time: 1774604403
 os-id: Amazon Linux
 os-release: '2023'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
 opennebula_template:
   context:
     network: 'YES'
@@ -35,11 +35,11 @@ logo: amazon.png
 images:
 - name: amazon2023
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/amazon2023-7.0.0-0-20250528.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/amazon2023-7.2.0-0-20260330.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 26843545600
   checksum:
-    md5: d10f80b3a4804277dd9237eba2c770a8
-    sha256: bdfaeb80ce808aff6cd60095ed3dc8a7104c5e6ce1886223683dd34cea4d4012
+    md5: ec0e810f9d62cd8a48b9348e634afc40
+    sha256: 6df516f772d32264f382f98a9866abc81248f69f1f88604ef5531dbbb401b2b6

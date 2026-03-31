@@ -32,7 +32,7 @@ os-arch: x86_64
 hypervisor: ALL
 type: SERVICE_TEMPLATE
 opennebula_version: >-
-  7.0
+  7.0, 7.2
 roles:
   vnf: OneKE 1.33 VNF
   master: OneKE 1.33 Airgapped
