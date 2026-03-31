@@ -1,6 +1,6 @@
 ---
 name: Service Harbor
-version: 7.0.0-0-20250528
+version: 7.2.0-0-20260330
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [Harbor](https://github.com/goharbor/harbor).
@@ -12,12 +12,12 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1737885730
+creation_time: 1774950373
 os-id: Ubuntu
 os-release: 22.04 LTS
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: '7.0'
+opennebula_version: '7.0, 7.2'
 opennebula_template:
   context:
     network: 'YES'
@@ -62,11 +62,11 @@ logo: harbor.png
 images:
 - name: service_Harbor
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_Harbor-7.0.0-0-20250528.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_Harbor-7.2.0-0-20260330.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: 30de602820823aa9f05fd2ae4788a895
-    sha256: db55288417192054cbdb6e894b3c1c521d98d3f54273b1feaa4d913264375e8f
+    md5: d905c7a6db55667fd83fcbf54649c2e1
+    sha256: 53cbb0b9f9ca3a398d0fc37c58f1900982053290b381e2c75e60b59417cd0be4
