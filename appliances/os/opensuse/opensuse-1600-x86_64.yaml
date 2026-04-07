@@ -1,0 +1,48 @@
+---
+id: '6c2f2cf6-551a-4f58-b2b0-0b81ef9b88f4'
+name: openSUSE 16
+version: 7.2.0-0-20260330
+publisher: OpenNebula Systems
+description: |-
+  openSUSE 16 image ready for your OpenNebula deployment.
+
+  This image is based on the openSUSE 16 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: openSUSE 16 image for KVM, LXD and vCenter
+tags:
+- opensuse
+format: qcow2
+creation_time: 1774882420
+os-id: openSUSE
+os-release: '16'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/linux.png
+  lxd_security_privileged: 'true'
+logo: opensuse.png
+images:
+- name: opensuse16
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/opensuse16-7.2.0-0-20260330.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 4294967296
+  checksum:
+    md5: 225594c8cff584c7331e99110e80dfdd
+    sha256: 3da960c1485a9d80c277584660791f727ed4f39554bba13c5d5fb493645fee1e

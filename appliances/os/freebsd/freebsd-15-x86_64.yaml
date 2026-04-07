@@ -1,0 +1,45 @@
+---
+id: '1e1db51b-1ba0-4bec-9d31-dae7afeee1a3'
+name: FreeBSD 15
+version: 7.2.0-0-20260330
+publisher: OpenNebula Systems
+description: |-
+  FreeBSD 15 image ready for your OpenNebula deployment.
+
+  This image is based on the FreeBSD 15 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: FreeBSD 15 image for KVM and vCenter hosts
+tags:
+- freebsd
+format: qcow2
+creation_time: 1774881795
+os-id: FreeBSD
+os-release: '15'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+logo: freebsd.png
+images:
+- name: freebsd15
+  url: https://d24fmfybwxpuhu.cloudfront.net/freebsd15-7.2.0-0-20260330.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 4294967296
+  checksum:
+    md5: 0b695a07359d753807f98472f0d2bc2f
+    sha256: d8466e12c53498df4c1171811f6615c15d4203efd817aaf7e379dadfd2cce193

@@ -1,0 +1,47 @@
+---
+id: '23566070-1df0-013e-49e1-7875a4a4f528'
+name: Fedora 42
+version: 7.2.0-0-20260330
+publisher: OpenNebula Systems
+description: |-
+  Fedora 42 image ready for your OpenNebula deployment.
+
+  This image is based on the Fedora 42 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Fedora 42 image for KVM, LXD, and vCenter
+tags:
+- fedora
+format: qcow2
+creation_time: 1774604403
+os-id: Fedora
+os-release: '42'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/fedora.png
+  lxd_security_privileged: 'true'
+logo: fedora.png
+images:
+- name: fedora42
+  url: https://d24fmfybwxpuhu.cloudfront.net/fedora42-7.2.0-0-20260330.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 5368709120
+  checksum:
+    md5: 84c4d8c5a8b91277ebcb31ee110b9a9d
+    sha256: 5d6eccfb108c9182cfe9cfd930b9d63b68244055f11c59b915b019325ac24bca

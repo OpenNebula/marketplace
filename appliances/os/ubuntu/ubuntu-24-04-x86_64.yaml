@@ -1,0 +1,48 @@
+---
+id: 'f4cc1890-f430-013c-b669-7875a4a4f528'
+name: Ubuntu 24.04
+version: 7.2.0-0-20260330
+publisher: OpenNebula Systems
+description: |-
+  Ubuntu 24.04 image ready for your OpenNebula deployment.
+
+  This image is based on the Ubuntu 24.04 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Ubuntu 24.04 image for KVM, LXD and vCenter
+tags:
+- ubuntu
+format: qcow2
+creation_time: 1774604403
+os-id: Ubuntu
+os-release: '24.04'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/ubuntu.png
+  lxd_security_privileged: 'true'
+logo: ubuntu.png
+images:
+- name: ubuntu2404
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2404-7.2.0-0-20260330.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 3758096384
+  checksum:
+    md5: 9d1d023f40be864ef9d9a2246c95ea9e
+    sha256: 7dca1f2b87aa38ad03fc76e3b34408001cea070772fd6af48a02d86bef85f7be

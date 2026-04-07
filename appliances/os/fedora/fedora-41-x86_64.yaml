@@ -1,0 +1,47 @@
+---
+id: '27deb9b0-beba-013d-a761-7875a4a4f528'
+name: Fedora 41
+version: 7.2.0-0-20260330
+publisher: OpenNebula Systems
+description: |-
+  Fedora 41 image ready for your OpenNebula deployment.
+
+  This image is based on the Fedora 41 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Fedora 41 image for KVM, LXD, and vCenter
+tags:
+- fedora
+format: qcow2
+creation_time: 1774604403
+os-id: Fedora
+os-release: '41'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/fedora.png
+  lxd_security_privileged: 'true'
+logo: fedora.png
+images:
+- name: fedora41
+  url: https://d24fmfybwxpuhu.cloudfront.net/fedora41-7.2.0-0-20260330.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 5368709120
+  checksum:
+    md5: 582a00e7398de398d919aba2378ffa3c
+    sha256: 036a86b8c1a899f1fb6e8458ba8b0af028350b906fd72765a9f3ca4d2da5cceb

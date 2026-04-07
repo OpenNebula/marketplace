@@ -1,0 +1,47 @@
+---
+id: 'a1e50040-1df9-013e-49e4-7875a4a4f528'
+name: Rocky Linux 9 (aarch64)
+version: 7.2.0-0-20260331
+publisher: OpenNebula Systems
+description: |-
+  Rocky Linux 9 image ready for your OpenNebula deployment.
+
+  This image is based on the Rocky Linux 9 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Rocky Linux 9 image for KVM, LXD and vCenter.
+tags:
+- rockylinux
+format: qcow2
+creation_time: 1774948626
+os-id: RockyLinux
+os-release: '9.5'
+os-arch: aarch64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: aarch64
+  lxd_security_privileged: 'true'
+logo: rocky.png
+images:
+- name: rocky9
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/rocky9-7.2.0-0-20260331.aarch64.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 10737418240
+  checksum:
+    md5: 4bfbd9e5943187616eb28ce8d3ca1fe5
+    sha256: 2c255b8af28df6b5bf1d7df73978fa54942edd7bfd6171142b9cae7255d133c4

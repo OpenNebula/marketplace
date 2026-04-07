@@ -1,0 +1,47 @@
+---
+id: '6fa28310-9d85-013c-6070-7875a4a4f528'
+name: Debian 12
+version: 7.2.0-0-20260330
+publisher: OpenNebula Systems
+description: |-
+  Debian 12 image ready for your OpenNebula deployment.
+
+  This image is based on the Debian 12 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Debian 12 image for KVM and vCenter
+tags:
+- debian
+format: qcow2
+creation_time: 1774604403
+os-id: Debian
+os-release: '12.11'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/debian.png
+  lxd_security_privileged: 'true'
+logo: debian.png
+images:
+- name: debian12
+  url: https://d24fmfybwxpuhu.cloudfront.net/debian12-7.2.0-0-20260330.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 3221225472
+  checksum:
+    md5: a86fac37a579326235988caf5e4d521e
+    sha256: e8c070760b6bdec5f74d472ad280668b2850f230dd9631c9ee19089ba33b4d9e
