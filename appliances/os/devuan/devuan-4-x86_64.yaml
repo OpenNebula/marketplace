@@ -1,0 +1,47 @@
+---
+id: 'ca0a75e0-7ae5-013b-d6ed-7875a4a4f528'
+name: Devuan 4
+version: 7.2.0-0-20260330
+publisher: OpenNebula Systems
+description: |-
+  Devuan 4 image ready for your OpenNebula deployment.
+
+  This image is based on the Devuan 4 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Devuan 4 image for KVM, LXD and vCenter
+tags:
+- devuan
+format: qcow2
+creation_time: 1774604403
+os-id: Devuan
+os-release: '4'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: x86_64
+  logo: images/logos/linux.png
+  lxd_security_privileged: 'true'
+logo: devuan.png
+images:
+- name: devuan4
+  url: https://d24fmfybwxpuhu.cloudfront.net/devuan4-7.2.0-0-20260330.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 4294967296
+  checksum:
+    md5: 75fa23c639143ce5e77fa5b984753822
+    sha256: 31bc8b946a3d15f04b9952e48d8e1249df8fe18f2d2119bd66297735588c510a

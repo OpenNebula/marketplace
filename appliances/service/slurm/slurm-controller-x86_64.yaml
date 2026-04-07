@@ -1,0 +1,50 @@
+---
+id: 'db17c081-969f-45e0-9c8b-e0f7236c15aa'
+name: Service Slurm Controller
+version: 7.0.0-0-20260223
+publisher: OpenNebula Systems
+description: |-
+  Appliance providing the Slurm Controller service to manage
+  and schedule workloads. It acts as the central orchestrator,
+  handling resources and job queues.
+  [documentation](https://github.com/OpenNebula/one-apps/wiki/slurm_intro).
+short_description: >-
+  Appliance providing the Slurm Controller service to manage and schedule
+  workloads in a Slurm cluster.
+tags:
+- slurm
+- controller
+- service
+- ubuntu
+format: qcow2
+creation_time: 1771831934
+os-id: Ubuntu
+os-release: 24.04 LTS
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: '6.4, 6.6, 6.8, 6.10, 7.0, 7.2'
+opennebula_template:
+  context:
+    network: 'YES'
+    set_hostname: "$NAME"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    token: 'YES'
+  cpu: '2'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '2048'
+  os:
+    arch: x86_64
+logo: slurm.png
+images:
+- name: service_SlurmController
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmController-7.0.0-0-20260223.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 10737418240
+  checksum:
+    md5: 6822dcde4e1b709ac34e49cd8fc67263
+    sha256: 3d3bad74cd37e66e9b7c3f6e31e7988a82bb727fed8d531763e8536f784858da

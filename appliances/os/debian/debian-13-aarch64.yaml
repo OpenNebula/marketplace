@@ -1,0 +1,48 @@
+---
+id: '9daef1e0-bf9d-11f0-bfa9-02000a000203'
+name: Debian 13 (aarch64)
+version: 7.2.0-0-20260331
+publisher: OpenNebula Systems
+description: |-
+  Debian 13 image ready for your OpenNebula deployment.
+
+  This image is based on the Debian 13 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+
+  There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
+
+  **Note**: Remember to update the template in order to add a network after importing it.
+short_description: Debian 13 image for KVM and vCenter
+tags:
+- debian
+format: qcow2
+creation_time: 1774948626
+os-id: Debian
+os-release: '13.1'
+os-arch: aarch64
+hypervisor: ALL
+opennebula_version: 6.8, 6.10, 7.0, 7.2
+opennebula_template:
+  context:
+    network: 'YES'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '768'
+  os:
+    arch: aarch64
+  logo: images/logos/debian.png
+  lxd_security_privileged: 'true'
+logo: debian.png
+images:
+- name: debian13
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/debian13-7.2.0-0-20260331.aarch64.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 3221225472
+  checksum:
+    md5: c08f730ed04d11dbb4cb35d899bb267c
+    sha256: cffd25eba658efdb9184c40db68dfd950e3e578a6936f07328d399c6e098f2e8

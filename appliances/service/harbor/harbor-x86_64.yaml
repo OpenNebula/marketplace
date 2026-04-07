@@ -1,0 +1,73 @@
+---
+id: 'c2fcd79f-fb2d-4ce0-8426-1210a12c1361'
+name: Service Harbor
+version: 7.2.0-0-20260330
+publisher: OpenNebula Systems
+description: |-
+  Appliance with preinstalled [Harbor](https://github.com/goharbor/harbor).
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/harbor_quick).
+short_description: Appliance with preinstalled Harbor for KVM hosts
+tags:
+- harbor
+- service
+- ubuntu
+format: qcow2
+creation_time: 1774950373
+os-id: Ubuntu
+os-release: 22.04 LTS
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: '7.0, 7.2'
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_harbor_admin_password: "$ONEAPP_HARBOR_GENERAL_ADMIN_PASSWORD"
+    oneapp_harbor_db_password: "$ONEAPP_HARBOR_GENERAL_DB_PASSWORD"
+    oneapp_harbor_hostname: "$ONEAPP_HARBOR_GENERAL_HOSTNAME"
+    oneapp_harbor_registry_dev: "$ONEAPP_HARBOR_GENERAL_REGISTRY_DEV"
+    oneapp_harbor_ssl_cert: "$ONEAPP_HARBOR_TLS_CERT"
+    oneapp_harbor_ssl_key: "$ONEAPP_HARBOR_TLS_KEY"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+  cpu: '2'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONEAPP_HARBOR_GENERAL_ADMIN_PASSWORD,ONEAPP_HARBOR_GENERAL_DB_PASSWORD,ONEAPP_HARBOR_GENERAL_HOSTNAME,ONEAPP_HARBOR_GENERAL_REGISTRY_DEV,ONEAPP_HARBOR_TLS_ENABLED,ONEAPP_HARBOR_TLS_CERT,ONEAPP_HARBOR_TLS_KEY
+  memory: '4096'
+  os:
+    arch: x86_64
+  user_inputs:
+    # ─── GENERAL ───
+    ONEAPP_HARBOR_GENERAL_ADMIN_PASSWORD: "O|password|Password for the admin Harbor user (defaults to Harbor12345)"
+    ONEAPP_HARBOR_GENERAL_DB_PASSWORD: "O|password|Password for the internal Harbor database (defaults to random)"
+    ONEAPP_HARBOR_GENERAL_HOSTNAME: "O|text|Harbor hostname/IP exposing the service (certificate CN)"
+    ONEAPP_HARBOR_GENERAL_REGISTRY_DEV: "O|text|Harbor registry disk device name (e.g. sdb, vdb, etc.)"
+    # ─── TLS ───
+    ONEAPP_HARBOR_TLS_ENABLED: "O|boolean|Enable TLS configuration| |NO"
+    ONEAPP_HARBOR_TLS_CERT: "O|text64|SSL certificate for Harbor| |"
+    ONEAPP_HARBOR_TLS_KEY: "O|text64|SSL key for Harbor| |"
+  user_inputs_metadata:
+    # ─── APP ───
+    - NAME: HARBOR
+      TITLE: Harbor
+      TYPE: APP
+      DESCRIPTION: "This tab includes all parameters required to configure Harbor."
+    # ─── GROUP ───
+    - NAME: TLS
+      TITLE: TLS
+      TYPE: GROUP
+      DESCRIPTION: "TLS certificates for Harbor."
+logo: harbor.png
+images:
+- name: service_Harbor
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_Harbor-7.2.0-0-20260330.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 21474836480
+  checksum:
+    md5: d905c7a6db55667fd83fcbf54649c2e1
+    sha256: 53cbb0b9f9ca3a398d0fc37c58f1900982053290b381e2c75e60b59417cd0be4
