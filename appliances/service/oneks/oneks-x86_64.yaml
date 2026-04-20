@@ -1,0 +1,57 @@
+---
+id: 'c3ecb387-e726-49fe-975d-fa39c6d40d05'
+name: OneKS
+version: 7.2.0-0-20260414
+publisher: OpenNebula Systems
+description: |-
+  Appliance for creating Cluster API Kubernetes clusters in Rancher,
+  using OpenNebula as the underlying infrastructure.
+short_description: >-
+  Appliance for creating Cluster API Kubernetes clusters in Rancher,
+  using OpenNebula as the underlying infrastructure.
+tags:
+- oneks
+- service
+- alpine
+format: qcow2
+creation_time: 1776163064
+os-id: Alpine
+os-release: '3.21'
+os-arch: x86_64
+hypervisor: ALL
+opennebula_version: '7.2'
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_oneks_cluster_name: "$ONEAPP_ONEKS_CLUSTER_NAME"
+    oneapp_oneks_cluster_spec: "$ONEAPP_ONEKS_CLUSTER_SPEC"
+    set_hostname: "$NAME"
+    report_ready: 'NO'
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    token: 'YES'
+  cpu: '1'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONEAPP_ONEKS_CLUSTER_NAME,ONEAPP_ONEKS_CLUSTER_SPEC
+  memory: '4096'
+  os:
+    arch: x86_64
+    firmware_secure: 'YES'
+  vcpu: '4'
+  user_inputs:
+    oneapp_oneks_cluster_name: O|text|Cluster Name
+    oneapp_oneks_cluster_spec: O|text|Cluster spec (base64-encoded)
+logo: kubernetes.png
+images:
+- name: service_OneKS
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_OneKS-7.2.0-0-20260414.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 4294967296
+  checksum:
+    md5: 62892fce643ff402459d08f666fc6eff
+    sha256: 13e11e6bbcd86b433ef0471b7f3a7030cdf23aa989e7722135fd5b901ca361b5
