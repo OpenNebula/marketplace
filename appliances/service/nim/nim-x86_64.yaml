@@ -1,0 +1,60 @@
+---
+id: '931645bf-233b-4de3-9841-cd7cabba35f7'
+name: NVIDIA NIM
+version: 7.2.0-0-20260414
+publisher: OpenNebula Systems
+description: |-
+  Appliance with preinstalled NVIDIA NIM container to self-host GPU-accelerated inferencing microservices for pretrained and customized AI models across clouds, data centers, and RTX AI PCs and workstations.
+
+  See the dedicated [documentation](https://developer.nvidia.com/nim?sortBy=developer_learning_library%2Fsort%2Ffeatured_in.nim%3Adesc%2Ctitle%3Aasc).
+short_description: Appliance with preinstalled NVIDIA NIM container
+tags:
+- nim
+- service
+format: qcow2
+creation_time: 1776151373
+os-id: Ubuntu
+os-release: 24.04 LTS
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: 7.2
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_nim_nvidia_registry: "$ONEAPP_NIM_NVIDIA_REGISTRY"
+    oneapp_nim_nvidia_registry_user: "$ONEAPP_NIM_NVIDIA_REGISTRY_USER"
+    oneapp_nim_nvidia_registry_key: "$ONEAPP_NIM_NVIDIA_REGISTRY_KEY"
+    oneapp_nim_nvidia_image_ref: "$ONEAPP_NIM_NVIDIA_IMAGE_REF"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    token: 'YES'
+  cpu: '4'
+  cpu_model:
+    model: host-passthrough
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONEAPP_NIM_NVIDIA_REGISTRY,ONEAPP_NIM_NVIDIA_REGISTRY_USER,ONEAPP_NIM_NVIDIA_REGISTRY_KEY,ONEAPP_NIM_NVIDIA_IMAGE_REF
+  memory: '131072'
+  os:
+    arch: x86_64
+    machine: 'q35'
+    firmware: 'UEFI'
+  logo: images/logos/nim.png
+  user_inputs:
+    oneapp_nim_nvidia_registry: M|text|NVIDIA registry for pulling NIM images.| |nvcr.io
+    oneapp_nim_nvidia_registry_user: O|text|NVIDIA registry user.| |$oauthtoken
+    oneapp_nim_nvidia_registry_key: M|text|NVIDIA registry key.| |
+    oneapp_nim_nvidia_image_ref: M|text|NVIDIA registry image reference.| |nvcr.io/nim/openai/gpt-oss-20b:latest
+logo: nim.png
+images:
+- name: service_Nim
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_Nim-7.2.0-0-20260414.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 21474836480
+  checksum:
+    md5: fe5fa59c9df4b01c23c70a44264de6c1
+    sha256: 745b271f348fe19f4a2dcf13bb53b04bd3014373be0319f66efb3afd51e386f9
