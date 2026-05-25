@@ -1,7 +1,7 @@
 ---
 id: 'cca500e4-5d5d-4ecc-9e43-84c6866366d3'
 name: Service WordPress - KVM
-version: 7.2.0-0-20260330
+version: 7.2.1-0-20260524
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled WordPress. Run, get WordPress setup web wizard
@@ -33,9 +33,9 @@ tags:
 - service
 - almalinux
 format: qcow2
-creation_time: 1774950598
+creation_time: 1779606807
 os-id: AlmaLinux
-os-release: '8.9'
+os-release: '8.10'
 os-arch: x86_64
 hypervisor: KVM
 opennebula_version: '7.0, 7.2'
@@ -85,32 +85,32 @@ opennebula_template:
     oneapp_site_ssl_chain: "O|text64|SSL CA chain| |"
   user_inputs_metadata:
     # ─── APP ───
-    - NAME: SITE
-      TITLE: Site
-      TYPE: APP
-      DESCRIPTION: "All 'set all or none' parameters must be set, or none will be used."
-    - NAME: DATABASE
-      TITLE: Database
-      TYPE: APP
-      DESCRIPTION: "This tab includes all parameters required to configure your WordPress database."
+  - NAME: SITE
+    TITLE: Site
+    TYPE: APP
+    DESCRIPTION: "All 'set all or none' parameters must be set, or none will be used."
+  - NAME: DATABASE
+    TITLE: Database
+    TYPE: APP
+    DESCRIPTION: "This tab includes all parameters required to configure your WordPress database."
     # ─── GROUP ───
-    - NAME: GENERAL
-      TITLE: Site settings
-      TYPE: GROUP
-      DESCRIPTION: "WordPress site settings."
-    - NAME: SSL
-      TITLE: SSL Certificates
-      TYPE: GROUP
-      DESCRIPTION: "SSL certificates for WordPress site."
+  - NAME: GENERAL
+    TITLE: Site settings
+    TYPE: GROUP
+    DESCRIPTION: "WordPress site settings."
+  - NAME: SSL
+    TITLE: SSL Certificates
+    TYPE: GROUP
+    DESCRIPTION: "SSL certificates for WordPress site."
 logo: wordpress.png
 images:
 - name: service_Wordpress
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_Wordpress-7.2.0-0-20260330.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_Wordpress-7.2.1-0-20260524.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 5a8c7b543c44d20400045f6b94a89230
-    sha256: 9fd2ca0f2bc7722d0ce40e801b53ab274de55e95165710acae5438fe9ff63f17
+    md5: 9a46b05e129e33fe720265e395a25f54
+    sha256: 769341becf78f62e2b9c5149d30f6eb0d369f0a1ab49e1f3c53323a4f17112b4

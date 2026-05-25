@@ -1,7 +1,7 @@
 ---
 id: 'c2fcd79f-fb2d-4ce0-8426-1210a12c1361'
 name: Service Harbor
-version: 7.2.0-0-20260330
+version: 7.2.1-0-20260524
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [Harbor](https://github.com/goharbor/harbor).
@@ -13,9 +13,9 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1774950373
+creation_time: 1779606906
 os-id: Ubuntu
-os-release: 22.04 LTS
+os-release: '22.04'
 os-arch: x86_64
 hypervisor: KVM
 opennebula_version: '7.0, 7.2'
@@ -50,24 +50,24 @@ opennebula_template:
     ONEAPP_HARBOR_TLS_KEY: "O|text64|SSL key for Harbor| |"
   user_inputs_metadata:
     # ─── APP ───
-    - NAME: HARBOR
-      TITLE: Harbor
-      TYPE: APP
-      DESCRIPTION: "This tab includes all parameters required to configure Harbor."
+  - NAME: HARBOR
+    TITLE: Harbor
+    TYPE: APP
+    DESCRIPTION: "This tab includes all parameters required to configure Harbor."
     # ─── GROUP ───
-    - NAME: TLS
-      TITLE: TLS
-      TYPE: GROUP
-      DESCRIPTION: "TLS certificates for Harbor."
+  - NAME: TLS
+    TITLE: TLS
+    TYPE: GROUP
+    DESCRIPTION: "TLS certificates for Harbor."
 logo: harbor.png
 images:
 - name: service_Harbor
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_Harbor-7.2.0-0-20260330.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_Harbor-7.2.1-0-20260524.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 21474836480
   checksum:
-    md5: d905c7a6db55667fd83fcbf54649c2e1
-    sha256: 53cbb0b9f9ca3a398d0fc37c58f1900982053290b381e2c75e60b59417cd0be4
+    md5: 8064f8836f984328b45d7efac66e232c
+    sha256: 3f97221da34e4cce963665dce6fa9c225ec6caa83e3ae2dd5ad45ba86b3f1f4a

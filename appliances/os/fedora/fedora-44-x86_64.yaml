@@ -1,23 +1,23 @@
 ---
-id: '1801b8b0-f42d-013c-b666-7875a4a4f528'
-name: Fedora 40
-version: 7.0.0-0-20250528
+id: '924a708e-580b-11f1-a3af-f875a4a4f528'
+name: Fedora 44
+version: 7.2.1-0-20260524
 publisher: OpenNebula Systems
 description: |-
-  Fedora 40 image ready for your OpenNebula deployment.
+  Fedora 44 image ready for your OpenNebula deployment.
 
-  This image is based on the Fedora 40 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+  This image is based on the Fedora 44 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Fedora 40 image for KVM, LXD, and vCenter
+short_description: Fedora 44 image for KVM, LXD, and vCenter
 tags:
 - fedora
 format: qcow2
-creation_time: 1748337876
-os-id: Fedora
-os-release: '40'
+creation_time: 1779604011
+os-id: Fedora Linux
+os-release: '44'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
@@ -36,12 +36,12 @@ opennebula_template:
   lxd_security_privileged: 'true'
 logo: fedora.png
 images:
-- name: fedora40
-  url: https://d24fmfybwxpuhu.cloudfront.net/fedora40-7.0.0-0-20250528.qcow2
+- name: fedora44
+  url: https://d24fmfybwxpuhu.cloudfront.net/fedora44-7.2.1-0-20260524.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 5368709120
   checksum:
-    md5: 8ccedf9fc3a3b6f0dfa39e72d2e474cc
-    sha256: 86a04f231b26e4f6acf270fc7d9d6dc9f596233e3a92514cab592d5205c0c414
+    md5: 92747c51443a1c39a56e3546f8329899
+    sha256: 7900aea27146bf94ea55daad34a3f5aec4bcc647daa8304247c83349cde91c11

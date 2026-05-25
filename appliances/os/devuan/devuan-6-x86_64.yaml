@@ -1,23 +1,23 @@
 ---
-id: '6c2f2cf6-551a-4f58-b2b0-0b81ef9b88f4'
-name: openSUSE 16
-version: 7.2.0-0-20260330
+id: 'ec31b324-580a-11f1-9435-f875a4a4f528'
+name: Devuan 6
+version: 7.2.1-0-20260524
 publisher: OpenNebula Systems
 description: |-
-  openSUSE 16 image ready for your OpenNebula deployment.
+  Devuan 6 image ready for your OpenNebula deployment.
 
-  This image is based on the openSUSE 16 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+  This image is based on the Devuan 6 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: openSUSE 16 image for KVM, LXD and vCenter
+short_description: Devuan 6 image for KVM, LXD and vCenter
 tags:
-- opensuse
+- devuan
 format: qcow2
-creation_time: 1774882420
-os-id: openSUSE
-os-release: '16'
+creation_time: 1779603539
+os-id: Devuan GNU/Linux
+os-release: '6'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
@@ -34,15 +34,14 @@ opennebula_template:
     arch: x86_64
   logo: images/logos/linux.png
   lxd_security_privileged: 'true'
-logo: opensuse.png
+logo: devuan.png
 images:
-- name: opensuse16
-  url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/opensuse16-7.2.0-0-20260330.qcow2
+- name: devuan6
+  url: https://d24fmfybwxpuhu.cloudfront.net/devuan6-7.2.1-0-20260524.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 225594c8cff584c7331e99110e80dfdd
-    sha256: 3da960c1485a9d80c277584660791f727ed4f39554bba13c5d5fb493645fee1e
+    md5: 8409d37a74a169a044b49b0430df9988
+    sha256: '476654f35fdd5442f4dce6cf10d202f2262d1c93542abd1521cd1a5a39f807ce'

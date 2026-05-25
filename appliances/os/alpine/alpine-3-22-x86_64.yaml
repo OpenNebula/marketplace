@@ -1,7 +1,7 @@
 ---
 id: '57add616-d45b-42d8-9fc9-66b41f2f0d2f'
 name: Alpine Linux 3.22
-version: 7.2.0-0-20260330
+version: 7.2.1-0-20260524
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.22 image ready for your OpenNebula deployment.
@@ -15,9 +15,9 @@ short_description: Alpine Linux 3.22 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1774880883
+creation_time: 1779602871
 os-id: Alpine Linux
-os-release: '3.22'
+os-release: '3.22.4'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
@@ -39,11 +39,11 @@ opennebula_template:
 logo: alpine.png
 images:
 - name: alpine322
-  url: https://d24fmfybwxpuhu.cloudfront.net/alpine322-7.2.0-0-20260330.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alpine322-7.2.1-0-20260524.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 536870912
   checksum:
-    md5: b69b4f0b527f51d20bbeb8320c460dce
-    sha256: 7793931fcbcd75958f90ad87187ab95b7522f11f9584fea2c6b7a1e122d4816e
+    md5: 5d75bef62e3a7c87cb6f8e4a90b98274
+    sha256: 061b256712b241aeaac7bedb570e072fc82b4de7b9df3b237097a089fe3533fe

@@ -1,7 +1,7 @@
 ---
 id: 'efd5f590-beb8-013d-a75c-7875a4a4f528'
 name: Alpine Linux 3.21 (aarch64)
-version: 7.2.0-0-20260331
+version: 7.2.1-0-20260525
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.21 image ready for your OpenNebula deployment.
@@ -15,9 +15,9 @@ short_description: Alpine Linux 3.21 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1774948626
+creation_time: 1779695002
 os-id: Alpine Linux
-os-release: '3.21'
+os-release: '3.21.7'
 os-arch: aarch64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
@@ -40,11 +40,11 @@ logo: alpine.png
 images:
 - name: alpine321
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/alpine321-7.2.0-0-20260331.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/alpine321-7.2.1-0-20260525.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 536870912
   checksum:
-    md5: cd78f30befdd36f39a72c6c273fbab75
-    sha256: 153e8ec889c15de8b715567e2afbebb4d6fd75333da567612fe60b31a5140c73
+    md5: 8de0df3207d0efe9b938afa34b48fc4c
+    sha256: c505406cdda073e1f14db23fb3b7d9a25deec0e35c5ef13b5bc40c0f1bd6c163

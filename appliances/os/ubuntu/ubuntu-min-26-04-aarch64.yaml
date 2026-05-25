@@ -1,26 +1,26 @@
 ---
-id: '9fc4becb-a667-40a0-ba92-b580999150b5'
-name: Ubuntu Minimal 22.04
-version: 7.2.1-0-20260524
+id: 'd1085922-581e-11f1-b429-02000a000203'
+name: Ubuntu Minimal 26.04 (aarch64)
+version: 7.2.1-0-20260525
 publisher: OpenNebula Systems
 description: |-
-  Ubuntu Minimal 22.04 image ready for your OpenNebula deployment.
+  Ubuntu Minimal 26.04 image ready for your OpenNebula deployment.
 
-  This image is based on the Ubuntu Minimal 22.04 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+  This image is based on the Ubuntu Minimal 26.04 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
 
   **WARNING: Learn more about [Minimal Ubuntu](https://wiki.ubuntu.com/Minimal) images before using them! They focus on minimal image size and fast boot times and are suitable for short-living environments. They don't come with virtual console support and any boot problems are hard to troubleshoot over VNC. For common use check regular Ubuntu images.**
-short_description: Ubuntu Minimal 22.04 image for KVM and vCenter
+short_description: Ubuntu Minimal 26.04 image for KVM and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1779606381
+creation_time: 1779700487
 os-id: Ubuntu
-os-release: '22.04'
-os-arch: x86_64
+os-release: '26.04'
+os-arch: aarch64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
 opennebula_template:
@@ -35,18 +35,18 @@ opennebula_template:
   nic_default:
     model: virtio
   os:
-    arch: x86_64
+    arch: aarch64
   logo: images/logos/ubuntu.png
   lxd_security_privileged: 'true'
 logo: ubuntu.png
 images:
-- name: ubuntu2204min
+- name: ubuntu2604min
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2204min-7.2.1-0-20260524.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2604min-7.2.1-0-20260525.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 2361393152
+  size: 3758096384
   checksum:
-    md5: 5e09a00f2f5d3c7b3ea6acfe92ff8ee8
-    sha256: 97bfa4767912eb9171df476180a4ca9f533338313770633aed6f4c98366bd6ca
+    md5: aae6e3a9d4f2b47139dceb225dd7818a
+    sha256: f93f73d37dede3067d8737eb07dbeff278cc963118d3a8b8ede9bb1179d8c960
