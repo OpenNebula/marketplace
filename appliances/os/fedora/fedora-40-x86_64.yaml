@@ -16,7 +16,7 @@ tags:
 - fedora
 format: qcow2
 creation_time: 1748337876
-os-id: Fedora
+os-id: Fedora Linux
 os-release: '40'
 os-arch: x86_64
 hypervisor: ALL

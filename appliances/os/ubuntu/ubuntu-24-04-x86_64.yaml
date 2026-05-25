@@ -1,7 +1,7 @@
 ---
 id: 'f4cc1890-f430-013c-b669-7875a4a4f528'
 name: Ubuntu 24.04
-version: 7.2.0-0-20260330
+version: 7.2.1-0-20260524
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 24.04 image ready for your OpenNebula deployment.
@@ -15,7 +15,7 @@ short_description: Ubuntu 24.04 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1774604403
+creation_time: 1779606253
 os-id: Ubuntu
 os-release: '24.04'
 os-arch: x86_64
@@ -38,11 +38,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2404
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2404-7.2.0-0-20260330.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2404-7.2.1-0-20260524.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
-  size: 3758096384
+  size: 4294967296
   checksum:
-    md5: 9d1d023f40be864ef9d9a2246c95ea9e
-    sha256: 7dca1f2b87aa38ad03fc76e3b34408001cea070772fd6af48a02d86bef85f7be
+    md5: fb094f2e6ff586f6f4bb626f15d0c396
+    sha256: 4a2bccc2a754518e469d112bbc210482c9bda801036eb10e073a617f90d3173c

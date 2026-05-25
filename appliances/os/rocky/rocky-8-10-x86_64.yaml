@@ -16,7 +16,7 @@ tags:
 - rockylinux
 format: qcow2
 creation_time: 1748337876
-os-id: RockyLinux
+os-id: Rocky Linux
 os-release: '8.10'
 os-arch: x86_64
 hypervisor: ALL
