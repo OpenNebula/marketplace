@@ -1,7 +1,7 @@
 ---
 id: 'c03f8c40-39bb-42cd-a9d5-781f59846b57'
 name: Service Slurm Worker
-version: 7.0.0-0-20260223
+version: 7.2.1-0-20260611
 publisher: OpenNebula Systems
 description: |-
   Appliance providing the Slurm Worker service to execute
@@ -16,9 +16,9 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1771831378
+creation_time: 1781183771
 os-id: Ubuntu
-os-release: 24.04 LTS
+os-release: 26.04 LTS
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: '6.4, 6.6, 6.8, 6.10, 7.0, 7.2'
@@ -50,11 +50,11 @@ logo: slurm.png
 images:
 - name: service_SlurmWorker
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmWorker-7.0.0-0-20260223.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmWorker-7.2.1-0-20260611.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 0d5c089aec7eaaf4d6d1561f8c49650a
-    sha256: 2595dcea7b0fa10c7d22f77e826563708a0660f3071acac3d1a80f1b114eb535
+    md5: 82877d4f2e0c814cd72c22811b13dae9
+    sha256: b39896d90f1494c44c76fbae8adc2f794fe9e37568af375135c9d488780a0890

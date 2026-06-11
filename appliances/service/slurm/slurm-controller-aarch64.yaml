@@ -1,7 +1,7 @@
 ---
 id: 'da342d53-578f-4511-a7b8-d328506ebb52'
 name: Service Slurm Controller (aarch64)
-version: 7.0.0-0-20260223
+version: 7.2.1-0-20260611
 publisher: OpenNebula Systems
 description: |-
   Appliance providing the Slurm Controller service to manage
@@ -17,9 +17,9 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1771831927
+creation_time: 1781183593
 os-id: Ubuntu
-os-release: 24.04 LTS
+os-release: 26.04 LTS
 os-arch: aarch64
 hypervisor: ALL
 opennebula_version: '6.4, 6.6, 6.8, 6.10, 7.0, 7.2'
@@ -40,11 +40,11 @@ logo: slurm.png
 images:
 - name: service_SlurmController
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmController-7.0.0-0-20260223.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmController-7.2.1-0-20260611.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: fe0bffaad2ec04859a316881c5fcc40b
-    sha256: 136d14a6fb43edfcc2abd9c513f7ce3004c4063c142c6850d182c3b753a3b047
+    md5: dca926c082fa2cf72a930f7d8b27f02f
+    sha256: 5a3c7d6c6444562b5fb2664f6c8027b8b7955193248741976bc4d118985cfe7c
