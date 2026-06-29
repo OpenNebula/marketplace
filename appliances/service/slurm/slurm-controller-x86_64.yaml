@@ -1,7 +1,7 @@
 ---
 id: 'db17c081-969f-45e0-9c8b-e0f7236c15aa'
 name: Service Slurm Controller
-version: 7.0.0-0-20260223
+version: 7.2.1-1-20260629
 publisher: OpenNebula Systems
 description: |-
   Appliance providing the Slurm Controller service to manage
@@ -17,14 +17,21 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1771831934
+creation_time: 1782738610
 os-id: Ubuntu
-os-release: 24.04 LTS
+os-release: 26.04 LTS
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: '6.4, 6.6, 6.8, 6.10, 7.0, 7.2'
 opennebula_template:
   context:
+    oneapp_ldap_admin_password: "$ONEAPP_LDAP_ADMIN_PASSWORD"
+    oneapp_ldap_admin_user: "$ONEAPP_LDAP_ADMIN_USER"
+    oneapp_ldap_bind_password: "$ONEAPP_LDAP_BIND_PASSWORD"
+    oneapp_ldap_bind_user: "$ONEAPP_LDAP_BIND_USER"
+    oneapp_ldap_domain: "$ONEAPP_LDAP_DOMAIN"
+    oneapp_ldap_enable: "$ONEAPP_LDAP_ENABLE"
+    oneapp_ldap_url: "$ONEAPP_LDAP_URL"
     network: 'YES'
     set_hostname: "$NAME"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
@@ -36,15 +43,30 @@ opennebula_template:
   memory: '2048'
   os:
     arch: x86_64
+  inputs_order: >-
+    ONEAPP_LDAP_ENABLE,ONEAPP_LDAP_DOMAIN,ONEAPP_LDAP_ADMIN_USER,ONEAPP_LDAP_ADMIN_PASSWORD,ONEAPP_LDAP_URL,ONEAPP_LDAP_BIND_USER,ONEAPP_LDAP_BIND_PASSWORD
+  user_inputs:
+    ONEAPP_LDAP_ENABLE: "O|boolean|Enable controller local LDAP server||NO"
+    ONEAPP_LDAP_DOMAIN: "O|text|LDAP domain (base DN derived from it)||slurm.local"
+    ONEAPP_LDAP_ADMIN_USER: "O|text|LDAP admin user||"
+    ONEAPP_LDAP_ADMIN_PASSWORD: "O|password|LDAP admin password||"
+    ONEAPP_LDAP_URL: "O|text|External LDAP URL (used only when local LDAP is disabled)||"
+    ONEAPP_LDAP_BIND_USER: "O|text|LDAP bind user (optional)||"
+    ONEAPP_LDAP_BIND_PASSWORD: "O|password|LDAP bind password (optional)||"
+  user_inputs_metadata:
+  - NAME: LDAP
+    TITLE: LDAP / Identity
+    TYPE: APP
+    DESCRIPTION: Controller LDAP server or external LDAP used by Slurm nodes for shared user identity.
 logo: slurm.png
 images:
 - name: service_SlurmController
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmController-7.0.0-0-20260223.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmController-7.2.1-1-20260629.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 6822dcde4e1b709ac34e49cd8fc67263
-    sha256: 3d3bad74cd37e66e9b7c3f6e31e7988a82bb727fed8d531763e8536f784858da
+    md5: 8ae5384761316406db4ef16280d005b5
+    sha256: 783f697292bdf707cdf51c7337986703243fa3e8b16a8b2c593f74fbb526f23a
