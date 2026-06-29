@@ -43,21 +43,8 @@ opennebula_template:
   memory: '2048'
   os:
     arch: x86_64
-  inputs_order: >-
-    ONEAPP_LDAP_ENABLE,ONEAPP_LDAP_DOMAIN,ONEAPP_LDAP_ADMIN_USER,ONEAPP_LDAP_ADMIN_PASSWORD,ONEAPP_LDAP_URL,ONEAPP_LDAP_BIND_USER,ONEAPP_LDAP_BIND_PASSWORD
-  user_inputs:
-    ONEAPP_LDAP_ENABLE: "O|boolean|Enable controller local LDAP server||NO"
-    ONEAPP_LDAP_DOMAIN: "O|text|LDAP domain (base DN derived from it)||slurm.local"
-    ONEAPP_LDAP_ADMIN_USER: "O|text|LDAP admin user||"
-    ONEAPP_LDAP_ADMIN_PASSWORD: "O|password|LDAP admin password||"
-    ONEAPP_LDAP_URL: "O|text|External LDAP URL (used only when local LDAP is disabled)||"
-    ONEAPP_LDAP_BIND_USER: "O|text|LDAP bind user (optional)||"
-    ONEAPP_LDAP_BIND_PASSWORD: "O|password|LDAP bind password (optional)||"
-  user_inputs_metadata:
-  - NAME: LDAP
-    TITLE: LDAP / Identity
-    TYPE: APP
-    DESCRIPTION: Controller LDAP server or external LDAP used by Slurm nodes for shared user identity.
+  inputs_order: ""
+  user_inputs: {}
 logo: slurm.png
 images:
 - name: service_SlurmController
