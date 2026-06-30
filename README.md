@@ -74,7 +74,7 @@ opennebula_template:
   graphics:
     listen: 0.0.0.0
     type: vnc
-  memory: '768'
+  memory: '1024'
   os:
     arch: x86_64
   logo: images/logos/debian.png
@@ -245,7 +245,7 @@ opennebula_template:
   graphics:
     listen: 0.0.0.0
     type: vnc
-  memory: '768'
+  memory: '1024'
   os:
     arch: x86_64
   logo: images/logos/debian.png
