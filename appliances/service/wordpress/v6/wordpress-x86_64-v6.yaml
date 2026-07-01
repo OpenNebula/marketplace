@@ -56,7 +56,7 @@ opennebula_template:
     type: vnc
   inputs_order: >-
     ONEAPP_SSL_CERT,ONEAPP_SSL_PRIVKEY,ONEAPP_SSL_CHAIN,ONEAPP_SITE_TITLE,ONEAPP_ADMIN_USERNAME,ONEAPP_ADMIN_EMAIL,ONEAPP_ADMIN_PASSWORD
-  memory: '768'
+  memory: '1024'
   os:
     arch: x86_64
   user_inputs:
