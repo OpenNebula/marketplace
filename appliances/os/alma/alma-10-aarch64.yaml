@@ -31,7 +31,7 @@ opennebula_template:
   graphics:
     listen: 0.0.0.0
     type: vnc
-  memory: '1024'
+  memory: '1536'
   os:
     arch: aarch64
   lxd_security_privileged: 'true'
