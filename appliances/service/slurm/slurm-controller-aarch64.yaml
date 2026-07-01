@@ -1,7 +1,7 @@
 ---
 id: 'da342d53-578f-4511-a7b8-d328506ebb52'
 name: Service Slurm Controller (aarch64)
-version: 7.0.0-0-20260223
+version: 7.2.1-1-20260629
 publisher: OpenNebula Systems
 description: |-
   Appliance providing the Slurm Controller service to manage
@@ -17,14 +17,21 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1771831927
+creation_time: 1782738619
 os-id: Ubuntu
-os-release: 24.04 LTS
+os-release: 26.04 LTS
 os-arch: aarch64
 hypervisor: ALL
 opennebula_version: '6.4, 6.6, 6.8, 6.10, 7.0, 7.2'
 opennebula_template:
   context:
+    oneapp_ldap_admin_password: "$ONEAPP_LDAP_ADMIN_PASSWORD"
+    oneapp_ldap_admin_user: "$ONEAPP_LDAP_ADMIN_USER"
+    oneapp_ldap_bind_password: "$ONEAPP_LDAP_BIND_PASSWORD"
+    oneapp_ldap_bind_user: "$ONEAPP_LDAP_BIND_USER"
+    oneapp_ldap_domain: "$ONEAPP_LDAP_DOMAIN"
+    oneapp_ldap_enable: "$ONEAPP_LDAP_ENABLE"
+    oneapp_ldap_url: "$ONEAPP_LDAP_URL"
     network: 'YES'
     set_hostname: "$NAME"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
@@ -36,15 +43,17 @@ opennebula_template:
   memory: '2048'
   os:
     arch: aarch64
+  inputs_order: ""
+  user_inputs: {}
 logo: slurm.png
 images:
 - name: service_SlurmController
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmController-7.0.0-0-20260223.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmController-7.2.1-1-20260629.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: fe0bffaad2ec04859a316881c5fcc40b
-    sha256: 136d14a6fb43edfcc2abd9c513f7ce3004c4063c142c6850d182c3b753a3b047
+    md5: 366b586350471469c0a9cad874925e90
+    sha256: dc2f190e516dd408048907c1e6bcc94e074a5e845eaa2d3deb147633319c7766

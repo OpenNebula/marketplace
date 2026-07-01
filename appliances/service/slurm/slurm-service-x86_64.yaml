@@ -1,0 +1,77 @@
+---
+id: '8ce164d5-3cce-42a7-b9a7-0e8133ef92c6'
+name: Service OneSlurm
+version: 7.2.1-1-20260629
+publisher: OpenNebula Systems
+description: |-
+  Slurm cluster orchestrated by
+  [OneFlow](https://docs.opennebula.io/7.2/product/virtual_machines_operation/multi-vm_workflows/appflow_elasticity/).
+
+  Requires
+  [OneFlow](https://docs.opennebula.io/7.2/product/virtual_machines_operation/multi-vm_workflows/appflow_use_cli/)
+  and
+  [OneGate](https://docs.opennebula.io/7.2/product/virtual_machines_operation/multi-vm_workflows/onegate_usage/)
+  OpenNebula components.
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/slurm_intro).
+
+  Based on VM templates
+  - [Service Slurm Controller](/appliance/db17c081-969f-45e0-9c8b-e0f7236c15aa)
+  - [Service Slurm Worker](/appliance/c03f8c40-39bb-42cd-a9d5-781f59846b57)
+short_description: Slurm cluster for KVM hosts, orchestrated by OneFlow
+tags:
+- slurm
+- oneflow
+- service
+- ubuntu
+creation_time: 1782738673
+os-id: Ubuntu
+os-release: 26.04 LTS
+os-arch: x86_64
+hypervisor: ALL
+type: SERVICE_TEMPLATE
+opennebula_version: >-
+  7.0, 7.2
+roles:
+  controller: Service Slurm Controller
+  worker: Service Slurm Worker
+opennebula_template:
+  name: OneSlurm
+  deployment: straight
+  description: ''
+  roles:
+  - name: controller
+    cardinality: 1
+    min_vms: 1
+    vm_template_contents: |
+      ONEAPP_LDAP_ENABLE = "$ONEAPP_LDAP_ENABLE"
+      ONEAPP_LDAP_DOMAIN = "$ONEAPP_LDAP_DOMAIN"
+      ONEAPP_LDAP_ADMIN_USER = "$ONEAPP_LDAP_ADMIN_USER"
+      ONEAPP_LDAP_ADMIN_PASSWORD = "$ONEAPP_LDAP_ADMIN_PASSWORD"
+      ONEAPP_LDAP_URL = "$ONEAPP_LDAP_URL"
+      ONEAPP_LDAP_BIND_USER = "$ONEAPP_LDAP_BIND_USER"
+      ONEAPP_LDAP_BIND_PASSWORD = "$ONEAPP_LDAP_BIND_PASSWORD"
+    elasticity_policies: []
+    scheduled_policies: []
+  - name: worker
+    parents: [controller]
+    cardinality: 1
+    cooldown: 30
+    elasticity_policies: []
+    scheduled_policies: []
+  user_inputs:
+    ONEAPP_LDAP_ENABLE: "O|boolean|Enable controller local LDAP server||NO"
+    ONEAPP_LDAP_DOMAIN: "O|text|LDAP domain (base DN derived from it)||slurm.local"
+    ONEAPP_LDAP_ADMIN_USER: "O|text|LDAP admin user||"
+    ONEAPP_LDAP_ADMIN_PASSWORD: "O|password|LDAP admin password||"
+    ONEAPP_LDAP_URL: "O|text|External LDAP URL (used only when local LDAP is disabled)||"
+    ONEAPP_LDAP_BIND_USER: "O|text|LDAP bind user (optional)||"
+    ONEAPP_LDAP_BIND_PASSWORD: "O|password|LDAP bind password (optional)||"
+  user_inputs_metadata:
+  - NAME: LDAP
+    TITLE: LDAP / Identity
+    TYPE: APP
+    DESCRIPTION: Controller LDAP server or external LDAP used by Slurm nodes for shared user identity.
+  ready_status_gate: true
+logo: slurm.png
+images: []

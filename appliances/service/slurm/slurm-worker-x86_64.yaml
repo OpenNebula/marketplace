@@ -1,7 +1,7 @@
 ---
 id: 'c03f8c40-39bb-42cd-a9d5-781f59846b57'
 name: Service Slurm Worker
-version: 7.0.0-0-20260223
+version: 7.2.1-1-20260629
 publisher: OpenNebula Systems
 description: |-
   Appliance providing the Slurm Worker service to execute
@@ -16,16 +16,14 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1771831378
+creation_time: 1782738691
 os-id: Ubuntu
-os-release: 24.04 LTS
+os-release: 26.04 LTS
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: '6.4, 6.6, 6.8, 6.10, 7.0, 7.2'
 opennebula_template:
   context:
-    oneapp_slurm_controller_ip: "$ONEAPP_SLURM_CONTROLLER_IP"
-    oneapp_munge_key_base64: "$ONEAPP_MUNGE_KEY_BASE64"
     network: 'YES'
     set_hostname: "$NAME"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
@@ -36,25 +34,20 @@ opennebula_template:
   graphics:
     listen: 0.0.0.0
     type: vnc
-  inputs_order: >-
-    ONEAPP_SLURM_CONTROLLER_IP,ONEAPP_MUNGE_KEY_BASE64
   memory: '1024'
   os:
     arch: x86_64
     machine: 'q35'
     firmware: 'UEFI'
-  user_inputs:
-    oneapp_slurm_controller_ip: O|text|Slurm Controller IP
-    oneapp_munge_key_base64: O|text|Slurm Controller Munge Key
 logo: slurm.png
 images:
 - name: service_SlurmWorker
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmWorker-7.0.0-0-20260223.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmWorker-7.2.1-1-20260629.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 0d5c089aec7eaaf4d6d1561f8c49650a
-    sha256: 2595dcea7b0fa10c7d22f77e826563708a0660f3071acac3d1a80f1b114eb535
+    md5: 53b6765136e75955980cb93262fc577a
+    sha256: 24d29d1b3d7cdb546d7b2e0d07c0a8fb46fec48bb93bd065f4b74d6fa10dd6c7
