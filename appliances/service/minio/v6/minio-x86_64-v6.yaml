@@ -1,7 +1,7 @@
 ---
 id: 'e2c4538a-1e7a-11ef-949c-97e1d7dcfb6f'
 name: Service MinIO
-version: 7.2.1-0-20260524
+version: 7.4.0-0-20260714
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled [MinIO](https://min.io/docs/minio/linux/index.html).
@@ -14,7 +14,7 @@ tags:
 - ubuntu
 - service
 format: qcow2
-creation_time: 1779606023
+creation_time: 1784026366
 os-id: Ubuntu
 os-release: '22.04'
 os-arch: x86_64
@@ -56,11 +56,11 @@ logo: minio.png
 images:
 - name: service_MinIO
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_MinIO-7.2.1-0-20260524.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_MinIO-7.4.0-0-20260714.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: b3d1ee0b628573b506810e30e1a40144
-    sha256: 5ac038aa32101630699ce020eb275e380dc0592990b6449b6d539201982c062f
+    md5: c1c4893a143944b138b4010823e5b298
+    sha256: 1e470a91f5a28f6a6123cbb4cbde74fbfe69ea17fa94bf20d0d5d8cd7ee1a68f

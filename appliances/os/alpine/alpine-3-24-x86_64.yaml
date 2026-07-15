@@ -1,23 +1,23 @@
 ---
-id: '57add616-d45b-42d8-9fc9-66b41f2f0d2f'
-name: Alpine Linux 3.22
-version: 7.4.0-0-20260714
+id: 'c6bc7fe8-805a-11f1-9326-02000a000203'
+name: Alpine Linux 3.24
+version: 7.4.0-0-20260715
 publisher: OpenNebula Systems
 description: |-
-  Alpine Linux 3.22 image ready for your OpenNebula deployment.
+  Alpine Linux 3.24 image ready for your OpenNebula deployment.
 
-  This image is based on the Alpine Linux 3.22 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+  This image is based on the Alpine Linux 3.24 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Alpine Linux 3.22 image for KVM, LXD and vCenter
+short_description: Alpine Linux 3.24 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1784023620
+creation_time: 1784117825
 os-id: Alpine Linux
-os-release: '3.22.5'
+os-release: '3.24.1'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
@@ -38,12 +38,12 @@ opennebula_template:
   lxd_security_privileged: 'true'
 logo: alpine.png
 images:
-- name: alpine322
-  url: https://d24fmfybwxpuhu.cloudfront.net/alpine322-7.4.0-0-20260714.qcow2
+- name: alpine324
+  url: https://d24fmfybwxpuhu.cloudfront.net/alpine324-7.4.0-0-20260715.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 536870912
   checksum:
-    md5: 7e3d89ae5f50288a6af89c78540e70a6
-    sha256: 8a365e32501e595b2791edf28de8645eb5181e133fe8f05ac15ab173e43bdf01
+    md5: 9c1f8b9a85aed32c6509056be1ae35f7
+    sha256: 16e7cf78b396c103315ee0f40b88d568c8cf6b7d62e0082f9dfeabe09ca6abbc

@@ -1,7 +1,7 @@
 ---
 id: '9fc4becb-a667-40a0-ba92-b580999150b5'
 name: Ubuntu Minimal 22.04
-version: 7.2.1-0-20260524
+version: 7.4.0-0-20260714
 publisher: OpenNebula Systems
 description: |-
   Ubuntu Minimal 22.04 image ready for your OpenNebula deployment.
@@ -17,12 +17,12 @@ short_description: Ubuntu Minimal 22.04 image for KVM and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1779606381
+creation_time: 1784026656
 os-id: Ubuntu
 os-release: '22.04'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
 opennebula_template:
   context:
     network: 'YES'
@@ -42,11 +42,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2204min
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2204min-7.2.1-0-20260524.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2204min-7.4.0-0-20260714.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2361393152
   checksum:
-    md5: 5e09a00f2f5d3c7b3ea6acfe92ff8ee8
-    sha256: 97bfa4767912eb9171df476180a4ca9f533338313770633aed6f4c98366bd6ca
+    md5: d81efc19ebb1fe0258bc609029b1c907
+    sha256: be9a47526c420783dbf846882a98a10fbf5ac7c577e3c202b702a06de2a9ba8a

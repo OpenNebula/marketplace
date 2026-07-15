@@ -1,7 +1,7 @@
 ---
 id: 'd56bfeb0-1df8-013e-49e2-7875a4a4f528'
 name: Fedora 42 (aarch64)
-version: 7.2.1-0-20260525
+version: 7.4.0-0-20260715
 publisher: OpenNebula Systems
 description: |-
   Fedora 42 image ready for your OpenNebula deployment.
@@ -15,12 +15,12 @@ short_description: Fedora 42 image for KVM, LXD, and vCenter
 tags:
 - fedora
 format: qcow2
-creation_time: 1779696859
+creation_time: 1784124988
 os-id: Fedora Linux
 os-release: '42'
 os-arch: aarch64
 hypervisor: ALL
-opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
 opennebula_template:
   context:
     network: 'YES'
@@ -38,11 +38,11 @@ logo: fedora.png
 images:
 - name: fedora42
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/fedora42-7.2.1-0-20260525.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/fedora42-7.4.0-0-20260715.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 5368709120
   checksum:
-    md5: 6d182261ade6d97f81a012169917a284
-    sha256: 965795daec4a441e9264c8d9d023955ba54d9a71787b33cce5b61234c1727d40
+    md5: 502462b23c9bb0bb96c7cc9920e97f11
+    sha256: 62c23cac9678204cfe48c03fc96f11ea2e84821a585d71739182efc175455cbc

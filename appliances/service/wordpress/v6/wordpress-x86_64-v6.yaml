@@ -1,7 +1,7 @@
 ---
 id: '84bd27fe-5d14-4e70-a79a-eb3fdd0072ae'
 name: Service WordPress - KVM
-version: 7.2.1-0-20260524
+version: 7.4.0-0-20260714
 publisher: OpenNebula Systems
 description: |-
   Appliance with preinstalled WordPress. Run, get WordPress setup web wizard
@@ -33,7 +33,7 @@ tags:
 - service
 - almalinux
 format: qcow2
-creation_time: 1779606807
+creation_time: 1784027105
 os-id: AlmaLinux
 os-release: '8.10'
 os-arch: x86_64
@@ -71,11 +71,11 @@ logo: wordpress.png
 images:
 - name: service_Wordpress
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_Wordpress-7.2.1-0-20260524.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_Wordpress-7.4.0-0-20260714.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 9a46b05e129e33fe720265e395a25f54
-    sha256: 769341becf78f62e2b9c5149d30f6eb0d369f0a1ab49e1f3c53323a4f17112b4
+    md5: a90af074e648a84cf52441b64bdf8ad1
+    sha256: db0381e2b862332b0e5524b7d7e4b38175d4dc0e4ec8e0adfc92fe969efa28e4
