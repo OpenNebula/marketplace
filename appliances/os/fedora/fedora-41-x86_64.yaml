@@ -1,7 +1,7 @@
 ---
 id: '27deb9b0-beba-013d-a761-7875a4a4f528'
 name: Fedora 41
-version: 7.2.1-0-20260524
+version: 7.4.0-0-20260714
 publisher: OpenNebula Systems
 description: |-
   Fedora 41 image ready for your OpenNebula deployment.
@@ -15,12 +15,12 @@ short_description: Fedora 41 image for KVM, LXD, and vCenter
 tags:
 - fedora
 format: qcow2
-creation_time: 1779603578
+creation_time: 1784024311
 os-id: Fedora Linux
 os-release: '41'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
 opennebula_template:
   context:
     network: 'YES'
@@ -37,11 +37,11 @@ opennebula_template:
 logo: fedora.png
 images:
 - name: fedora41
-  url: https://d24fmfybwxpuhu.cloudfront.net/fedora41-7.2.1-0-20260524.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/fedora41-7.4.0-0-20260714.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 5368709120
   checksum:
-    md5: 1423f88a7660327237ff9cb50978fa8d
-    sha256: 0ff2b60e59879986710bcbee927e8cca619c7fd106a810ddfdead6a465ec9f44
+    md5: cfc15ce1d4d9c3d7f46021688d4e51cb
+    sha256: f9efe643608802a8e3e2063ac349d2e3bb977e5f4c4bf2a1e737d1c8f48eb310

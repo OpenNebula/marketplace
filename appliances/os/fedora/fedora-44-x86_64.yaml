@@ -1,7 +1,7 @@
 ---
 id: '924a708e-580b-11f1-a3af-f875a4a4f528'
 name: Fedora 44
-version: 7.2.1-0-20260524
+version: 7.4.0-0-20260714
 publisher: OpenNebula Systems
 description: |-
   Fedora 44 image ready for your OpenNebula deployment.
@@ -15,12 +15,12 @@ short_description: Fedora 44 image for KVM, LXD, and vCenter
 tags:
 - fedora
 format: qcow2
-creation_time: 1779604011
+creation_time: 1784024817
 os-id: Fedora Linux
 os-release: '44'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
 opennebula_template:
   context:
     network: 'YES'
@@ -37,11 +37,11 @@ opennebula_template:
 logo: fedora.png
 images:
 - name: fedora44
-  url: https://d24fmfybwxpuhu.cloudfront.net/fedora44-7.2.1-0-20260524.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/fedora44-7.4.0-0-20260714.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 5368709120
   checksum:
-    md5: 92747c51443a1c39a56e3546f8329899
-    sha256: 7900aea27146bf94ea55daad34a3f5aec4bcc647daa8304247c83349cde91c11
+    md5: 0f69781cb4fa4fc8bca1f0b5fa90c017
+    sha256: a38ef00553f4284fb2eaee9a805fe6ba78072a1087932aa9de9ed3fe20c91d75

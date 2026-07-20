@@ -1,7 +1,7 @@
 ---
 id: '2397fa70-beb9-013d-a75d-7875a4a4f528'
 name: Debian 11 (aarch64)
-version: 7.2.1-0-20260525
+version: 7.4.0-0-20260715
 publisher: OpenNebula Systems
 description: |-
   Debian 11 image ready for your OpenNebula deployment.
@@ -15,12 +15,12 @@ short_description: Debian 11 image for KVM and vCenter
 tags:
 - debian
 format: qcow2
-creation_time: 1779695378
+creation_time: 1784124437
 os-id: Debian GNU/Linux
 os-release: '11'
 os-arch: aarch64
 hypervisor: ALL
-opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
 opennebula_template:
   context:
     network: 'YES'
@@ -38,11 +38,11 @@ logo: debian.png
 images:
 - name: debian11
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/debian11-7.2.1-0-20260525.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/debian11-7.4.0-0-20260715.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 3221225472
   checksum:
-    md5: 34a8ce1799ce4b98a27af0b3be2b0b48
-    sha256: 4412a2333f227fe4b1bd5151e12c804f4e05927c532cf854069935bfeac80081
+    md5: 56409d4c5df9e3b25cca5784a88957e5
+    sha256: 96d63e27d6a353c1bebe11094418d0d3246d8b30d359116244bbb4f1f9a8e448

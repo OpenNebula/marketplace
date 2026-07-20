@@ -1,7 +1,7 @@
 ---
 id: 'c0e9ff6e-1117-11ea-9c12-f0def1753696'
 name: openSUSE 15
-version: 7.2.1-0-20260524
+version: 7.4.0-0-20260714
 publisher: OpenNebula Systems
 description: |-
   openSUSE 15 image ready for your OpenNebula deployment.
@@ -15,12 +15,12 @@ short_description: openSUSE 15 image for KVM, LXD and vCenter
 tags:
 - opensuse
 format: qcow2
-creation_time: 1779604945
+creation_time: 1784025253
 os-id: openSUSE Leap
 os-release: '15.6'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
 opennebula_template:
   context:
     network: 'YES'
@@ -38,11 +38,11 @@ logo: opensuse.png
 images:
 - name: opensuse15
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/opensuse15-7.2.1-0-20260524.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/opensuse15-7.4.0-0-20260714.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: e82a0f316117a2385554f3df42d08f6b
-    sha256: e5d1bbdebb6acf95444423cdb9460d99f47e42bddf12c900169eeb5a9ae712c8
+    md5: dc78297456c747e7911f681783b1433f
+    sha256: 544b84618eba654db6fd2d30402005eef202840f19cf8e62675be36097b0d28f

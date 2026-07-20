@@ -1,7 +1,7 @@
 ---
 id: '9310bc80-7aea-013b-d6f1-7875a4a4f528'
 name: Rocky Linux 9
-version: 7.2.1-0-20260524
+version: 7.4.0-0-20260714
 publisher: OpenNebula Systems
 description: |-
   Rocky Linux 9 image ready for your OpenNebula deployment.
@@ -15,12 +15,12 @@ short_description: Rocky Linux 9 image for KVM, LXD and vCenter.
 tags:
 - rockylinux
 format: qcow2
-creation_time: 1779606095
+creation_time: 1784026374
 os-id: Rocky Linux
-os-release: '9.7'
+os-release: '9.8'
 os-arch: x86_64
 hypervisor: ALL
-opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2
+opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
 opennebula_template:
   context:
     network: 'YES'
@@ -38,11 +38,11 @@ opennebula_template:
 logo: rocky.png
 images:
 - name: rocky9
-  url: https://d24fmfybwxpuhu.cloudfront.net/rocky9-7.2.1-0-20260524.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/rocky9-7.4.0-0-20260714.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 7e3f2073391567b20bc26e3444fb429e
-    sha256: 59143a9f3599bd69bc308d7bbfd6cfc7134c0937732824213be859d1ff34e708
+    md5: 18500e5c3f6bffbaa5a654c68a8fd27f
+    sha256: c9851c33e17e823fbb7f322e5f2480967e9af173550968368452e11002f5dbab

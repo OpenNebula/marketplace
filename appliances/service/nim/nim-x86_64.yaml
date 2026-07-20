@@ -17,7 +17,7 @@ os-id: Ubuntu
 os-release: 24.04 LTS
 os-arch: x86_64
 hypervisor: KVM
-opennebula_version: 7.2
+opennebula_version: 7.2, 7.4
 opennebula_template:
   context:
     network: 'YES'

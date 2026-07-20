@@ -1,23 +1,23 @@
 ---
-id: '11c0fd6e-2ce3-11f1-b234-f875a4a4f528'
-name: Alpine Linux 3.22 (aarch64)
+id: 'ceceab3e-805a-11f1-b60c-02000a000203'
+name: Alpine Linux 3.24 (aarch64)
 version: 7.4.0-0-20260715
 publisher: OpenNebula Systems
 description: |-
-  Alpine Linux 3.22 image ready for your OpenNebula deployment.
+  Alpine Linux 3.24 image ready for your OpenNebula deployment.
 
-  This image is based on the Alpine Linux 3.22 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
+  This image is based on the Alpine Linux 3.24 cloud image with the OpenNebula [contextualization package](https://docs.opennebula.io/stable/product/virtual_machines_operation/guest_operating_systems/kvm_contextualization/).
 
   There is no password for the root account. To access the Virtual Machine, add an SSH public key to your user or the template and ssh to the root account.
 
   **Note**: Remember to update the template in order to add a network after importing it.
-short_description: Alpine Linux 3.22 image for KVM, LXD and vCenter
+short_description: Alpine Linux 3.24 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1784124031
+creation_time: 1784124136
 os-id: Alpine Linux
-os-release: '3.22.5'
+os-release: '3.24.1'
 os-arch: aarch64
 hypervisor: ALL
 opennebula_version: 6.8, 6.10, 7.0, 7.2, 7.4
@@ -38,13 +38,13 @@ opennebula_template:
   lxd_security_privileged: 'true'
 logo: alpine.png
 images:
-- name: alpine322
+- name: alpine324
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/alpine322-7.4.0-0-20260715.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/alpine324-7.4.0-0-20260715.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 536870912
   checksum:
-    md5: ba59c542bcc65823464c8cfcc4fe2b02
-    sha256: 491fbb36097d10b8d1ba0ed7a204c5fc7ee24376998c68802bbcedaf8df49b64
+    md5: b71f790c874a73f746101c7e0de280ee
+    sha256: '3bce15a7150498dd12b463580fe06c318d0e07691c4c163b0738d3e3e3d6c25e'

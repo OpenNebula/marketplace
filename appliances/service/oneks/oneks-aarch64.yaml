@@ -19,7 +19,7 @@ os-id: Alpine
 os-release: '3.21'
 os-arch: aarch64
 hypervisor: ALL
-opennebula_version: '7.2'
+opennebula_version: '7.2, 7.4'
 opennebula_template:
   context:
     network: 'YES'
