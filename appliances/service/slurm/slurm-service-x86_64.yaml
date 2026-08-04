@@ -44,6 +44,9 @@ opennebula_template:
     cardinality: 1
     min_vms: 1
     vm_template_contents: |
+      NIC = [
+        NAME = "NIC0",
+        NETWORK_ID = "$Service" ]
       ONEAPP_LDAP_ENABLE = "$ONEAPP_LDAP_ENABLE"
       ONEAPP_LDAP_DOMAIN = "$ONEAPP_LDAP_DOMAIN"
       ONEAPP_LDAP_ADMIN_USER = "$ONEAPP_LDAP_ADMIN_USER"
@@ -57,8 +60,14 @@ opennebula_template:
     parents: [controller]
     cardinality: 1
     cooldown: 30
+    vm_template_contents: |
+      NIC = [
+        NAME = "NIC0",
+        NETWORK_ID = "$Service" ]
     elasticity_policies: []
     scheduled_policies: []
+  networks:
+    Service: "M|network|Service||id:"
   user_inputs:
     ONEAPP_LDAP_ENABLE: "O|boolean|Enable controller local LDAP server||NO"
     ONEAPP_LDAP_DOMAIN: "O|text|LDAP domain (base DN derived from it)||slurm.local"

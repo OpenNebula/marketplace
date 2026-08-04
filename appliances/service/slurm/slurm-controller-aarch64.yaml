@@ -33,6 +33,7 @@ opennebula_template:
     oneapp_ldap_enable: "$ONEAPP_LDAP_ENABLE"
     oneapp_ldap_url: "$ONEAPP_LDAP_URL"
     network: 'YES'
+    report_ready: 'YES'
     set_hostname: "$NAME"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
     token: 'YES'
