@@ -25,6 +25,8 @@ opennebula_version: '6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4'
 opennebula_template:
   context:
     network: 'YES'
+    oneapp_slurm_infiniband_enable: "$ONEAPP_SLURM_INFINIBAND_ENABLE"
+    oneapp_slurm_ipoib_subnet: "$ONEAPP_SLURM_IPOIB_SUBNET"
     report_ready: 'YES'
     set_hostname: "$NAME"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
@@ -38,6 +40,9 @@ opennebula_template:
   memory: '1024'
   os:
     arch: aarch64
+  user_inputs:
+    ONEAPP_SLURM_INFINIBAND_ENABLE: "O|boolean|Enable InfiniBand on worker||NO"
+    ONEAPP_SLURM_IPOIB_SUBNET: "O|text|IPoIB subnet (required when InfiniBand is enabled, e.g. 10.20.0.0/24)||"
 logo: slurm.png
 images:
 - name: service_SlurmWorker

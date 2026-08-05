@@ -32,6 +32,7 @@ opennebula_template:
     oneapp_ldap_domain: "$ONEAPP_LDAP_DOMAIN"
     oneapp_ldap_enable: "$ONEAPP_LDAP_ENABLE"
     oneapp_ldap_url: "$ONEAPP_LDAP_URL"
+    oneapp_slurm_infiniband_enable: "$ONEAPP_SLURM_INFINIBAND_ENABLE"
     network: 'YES'
     report_ready: 'YES'
     set_hostname: "$NAME"
@@ -45,7 +46,8 @@ opennebula_template:
   os:
     arch: x86_64
   inputs_order: ""
-  user_inputs: {}
+  user_inputs:
+    ONEAPP_SLURM_INFINIBAND_ENABLE: "O|boolean|Enable InfiniBand Slurm/MPI defaults||NO"
 logo: slurm.png
 images:
 - name: service_SlurmController
