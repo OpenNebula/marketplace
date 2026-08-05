@@ -87,7 +87,7 @@ opennebula_template:
     TYPE: APP
     DESCRIPTION: Controller LDAP server or external LDAP used by Slurm nodes for shared user identity.
   - NAME: INFINIBAND
-    TITLE: InfiniBand 
+    TITLE: InfiniBand
     TYPE: APP
     DESCRIPTION: Optional IPoIB configuration for workers.
   ready_status_gate: true
