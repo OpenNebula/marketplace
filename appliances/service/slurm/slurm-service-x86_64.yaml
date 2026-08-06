@@ -1,16 +1,16 @@
 ---
 id: '8ce164d5-3cce-42a7-b9a7-0e8133ef92c6'
 name: Service OneSlurm
-version: 7.2.1-1-20260629
+version: 7.4.0-0-20260806
 publisher: OpenNebula Systems
 description: |-
   Slurm cluster orchestrated by
-  [OneFlow](https://docs.opennebula.io/7.2/product/virtual_machines_operation/multi-vm_workflows/appflow_elasticity/).
+  [OneFlow](https://docs.opennebula.io/7.4/product/virtual_machines_operation/multi-vm_workflows/appflow_elasticity/).
 
   Requires
-  [OneFlow](https://docs.opennebula.io/7.2/product/virtual_machines_operation/multi-vm_workflows/appflow_use_cli/)
+  [OneFlow](https://docs.opennebula.io/7.4/product/virtual_machines_operation/multi-vm_workflows/appflow_use_cli/)
   and
-  [OneGate](https://docs.opennebula.io/7.2/product/virtual_machines_operation/multi-vm_workflows/onegate_usage/)
+  [OneGate](https://docs.opennebula.io/7.4/product/virtual_machines_operation/multi-vm_workflows/onegate_usage/)
   OpenNebula components.
 
   See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/slurm_intro).
@@ -24,7 +24,7 @@ tags:
 - oneflow
 - service
 - ubuntu
-creation_time: 1782738673
+creation_time: 1786003606
 os-id: Ubuntu
 os-release: 26.04 LTS
 os-arch: x86_64
