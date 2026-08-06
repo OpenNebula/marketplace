@@ -1,7 +1,7 @@
 ---
 id: 'da342d53-578f-4511-a7b8-d328506ebb52'
 name: Service Slurm Controller (aarch64)
-version: 7.2.1-1-20260629
+version: 7.4.0-0-20260806
 publisher: OpenNebula Systems
 description: |-
   Appliance providing the Slurm Controller service to manage
@@ -17,7 +17,7 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1782738619
+creation_time: 1786003860
 os-id: Ubuntu
 os-release: 26.04 LTS
 os-arch: aarch64
@@ -32,6 +32,7 @@ opennebula_template:
     oneapp_ldap_domain: "$ONEAPP_LDAP_DOMAIN"
     oneapp_ldap_enable: "$ONEAPP_LDAP_ENABLE"
     oneapp_ldap_url: "$ONEAPP_LDAP_URL"
+    oneapp_slurm_infiniband_enable: "$ONEAPP_SLURM_INFINIBAND_ENABLE"
     network: 'YES'
     report_ready: 'YES'
     set_hostname: "$NAME"
@@ -45,16 +46,17 @@ opennebula_template:
   os:
     arch: aarch64
   inputs_order: ""
-  user_inputs: {}
+  user_inputs:
+    ONEAPP_SLURM_INFINIBAND_ENABLE: "O|boolean|Enable InfiniBand Slurm/MPI defaults||NO"
 logo: slurm.png
 images:
 - name: service_SlurmController
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmController-7.2.1-1-20260629.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmController-7.4.0-0-20260806.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 366b586350471469c0a9cad874925e90
-    sha256: dc2f190e516dd408048907c1e6bcc94e074a5e845eaa2d3deb147633319c7766
+    md5: 2985de80b8c98253bf28a9144483a593
+    sha256: 7fd3b528dae11da1b5573ae11d345eecffb29a87784b703c7eefd1fb4e450564

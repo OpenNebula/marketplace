@@ -1,16 +1,16 @@
 ---
 id: '0b1f00d5-1063-4593-bb2e-f1b4bd8451e8'
 name: Service OneSlurm (aarch64)
-version: 7.2.1-1-20260629
+version: 7.4.0-0-20260806
 publisher: OpenNebula Systems
 description: |-
   Slurm cluster orchestrated by
-  [OneFlow](https://docs.opennebula.io/7.2/product/virtual_machines_operation/multi-vm_workflows/appflow_elasticity/).
+  [OneFlow](https://docs.opennebula.io/7.4/product/virtual_machines_operation/multi-vm_workflows/appflow_elasticity/).
 
   Requires
-  [OneFlow](https://docs.opennebula.io/7.2/product/virtual_machines_operation/multi-vm_workflows/appflow_use_cli/)
+  [OneFlow](https://docs.opennebula.io/7.4/product/virtual_machines_operation/multi-vm_workflows/appflow_use_cli/)
   and
-  [OneGate](https://docs.opennebula.io/7.2/product/virtual_machines_operation/multi-vm_workflows/onegate_usage/)
+  [OneGate](https://docs.opennebula.io/7.4/product/virtual_machines_operation/multi-vm_workflows/onegate_usage/)
   OpenNebula components.
 
   See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/slurm_intro).
@@ -24,7 +24,7 @@ tags:
 - oneflow
 - service
 - ubuntu
-creation_time: 1782738664
+creation_time: 1786004409
 os-id: Ubuntu
 os-release: 26.04 LTS
 os-arch: aarch64
@@ -54,6 +54,7 @@ opennebula_template:
       ONEAPP_LDAP_URL = "$ONEAPP_LDAP_URL"
       ONEAPP_LDAP_BIND_USER = "$ONEAPP_LDAP_BIND_USER"
       ONEAPP_LDAP_BIND_PASSWORD = "$ONEAPP_LDAP_BIND_PASSWORD"
+      ONEAPP_SLURM_INFINIBAND_ENABLE = "$ONEAPP_SLURM_INFINIBAND_ENABLE"
     elasticity_policies: []
     scheduled_policies: []
   - name: worker
@@ -64,6 +65,8 @@ opennebula_template:
       NIC = [
         NAME = "NIC0",
         NETWORK_ID = "$Service" ]
+      ONEAPP_SLURM_INFINIBAND_ENABLE = "$ONEAPP_SLURM_INFINIBAND_ENABLE"
+      ONEAPP_SLURM_IPOIB_SUBNET = "$ONEAPP_SLURM_IPOIB_SUBNET"
     elasticity_policies: []
     scheduled_policies: []
   networks:
@@ -76,11 +79,17 @@ opennebula_template:
     ONEAPP_LDAP_URL: "O|text|External LDAP URL (used only when local LDAP is disabled)||"
     ONEAPP_LDAP_BIND_USER: "O|text|LDAP bind user (optional)||"
     ONEAPP_LDAP_BIND_PASSWORD: "O|password|LDAP bind password (optional)||"
+    ONEAPP_SLURM_INFINIBAND_ENABLE: "O|boolean|Enable InfiniBand on workers||NO"
+    ONEAPP_SLURM_IPOIB_SUBNET: "O|text|IPoIB subnet (required when InfiniBand is enabled, e.g. 10.20.0.0/24)||"
   user_inputs_metadata:
   - NAME: LDAP
     TITLE: LDAP / Identity
     TYPE: APP
     DESCRIPTION: Controller LDAP server or external LDAP used by Slurm nodes for shared user identity.
+  - NAME: INFINIBAND
+    TITLE: InfiniBand
+    TYPE: APP
+    DESCRIPTION: Optional IPoIB configuration for workers.
   ready_status_gate: true
 logo: slurm.png
 images: []
