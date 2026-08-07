@@ -33,6 +33,8 @@ opennebula_template:
     oneapp_ldap_enable: "$ONEAPP_LDAP_ENABLE"
     oneapp_ldap_url: "$ONEAPP_LDAP_URL"
     oneapp_slurm_infiniband_enable: "$ONEAPP_SLURM_INFINIBAND_ENABLE"
+    oneapp_slurm_nfs_home: "$ONEAPP_SLURM_NFS_HOME"
+    oneapp_slurm_nfs_scratch: "$ONEAPP_SLURM_NFS_SCRATCH"
     network: 'YES'
     report_ready: 'YES'
     set_hostname: "$NAME"
@@ -48,6 +50,8 @@ opennebula_template:
   inputs_order: ""
   user_inputs:
     ONEAPP_SLURM_INFINIBAND_ENABLE: "O|boolean|Enable InfiniBand Slurm/MPI defaults||NO"
+    ONEAPP_SLURM_NFS_HOME: "O|text|NFS export for /home (host:/export)||"
+    ONEAPP_SLURM_NFS_SCRATCH: "O|text|NFS export for /scratch (host:/export)||"
 logo: slurm.png
 images:
 - name: service_SlurmController
