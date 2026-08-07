@@ -1,7 +1,7 @@
 ---
 id: '0b1f00d5-1063-4593-bb2e-f1b4bd8451e8'
 name: Service OneSlurm (aarch64)
-version: 7.4.0-0-20260806
+version: 7.4.0-1-20260807
 publisher: OpenNebula Systems
 description: |-
   Slurm cluster orchestrated by
@@ -24,7 +24,7 @@ tags:
 - oneflow
 - service
 - ubuntu
-creation_time: 1786004409
+creation_time: 1786104136
 os-id: Ubuntu
 os-release: 26.04 LTS
 os-arch: aarch64
