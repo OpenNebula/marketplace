@@ -1,7 +1,7 @@
 ---
 id: '8ce164d5-3cce-42a7-b9a7-0e8133ef92c6'
 name: Service OneSlurm
-version: 7.4.0-0-20260806
+version: 7.4.0-1-20260807
 publisher: OpenNebula Systems
 description: |-
   Slurm cluster orchestrated by
@@ -24,7 +24,7 @@ tags:
 - oneflow
 - service
 - ubuntu
-creation_time: 1786003606
+creation_time: 1786103290
 os-id: Ubuntu
 os-release: 26.04 LTS
 os-arch: x86_64
@@ -55,6 +55,8 @@ opennebula_template:
       ONEAPP_LDAP_BIND_USER = "$ONEAPP_LDAP_BIND_USER"
       ONEAPP_LDAP_BIND_PASSWORD = "$ONEAPP_LDAP_BIND_PASSWORD"
       ONEAPP_SLURM_INFINIBAND_ENABLE = "$ONEAPP_SLURM_INFINIBAND_ENABLE"
+      ONEAPP_SLURM_NFS_HOME = "$ONEAPP_SLURM_NFS_HOME"
+      ONEAPP_SLURM_NFS_SCRATCH = "$ONEAPP_SLURM_NFS_SCRATCH"
     elasticity_policies: []
     scheduled_policies: []
   - name: worker
@@ -67,6 +69,8 @@ opennebula_template:
         NETWORK_ID = "$Service" ]
       ONEAPP_SLURM_INFINIBAND_ENABLE = "$ONEAPP_SLURM_INFINIBAND_ENABLE"
       ONEAPP_SLURM_IPOIB_SUBNET = "$ONEAPP_SLURM_IPOIB_SUBNET"
+      ONEAPP_SLURM_NFS_HOME = "$ONEAPP_SLURM_NFS_HOME"
+      ONEAPP_SLURM_NFS_SCRATCH = "$ONEAPP_SLURM_NFS_SCRATCH"
     elasticity_policies: []
     scheduled_policies: []
   networks:
@@ -81,6 +85,8 @@ opennebula_template:
     ONEAPP_LDAP_BIND_PASSWORD: "O|password|LDAP bind password (optional)||"
     ONEAPP_SLURM_INFINIBAND_ENABLE: "O|boolean|Enable InfiniBand on workers||NO"
     ONEAPP_SLURM_IPOIB_SUBNET: "O|text|IPoIB subnet (required when InfiniBand is enabled, e.g. 10.20.0.0/24)||"
+    ONEAPP_SLURM_NFS_HOME: "O|text|NFS export for /home (host:/export)||"
+    ONEAPP_SLURM_NFS_SCRATCH: "O|text|NFS export for /scratch (host:/export)||"
   user_inputs_metadata:
   - NAME: LDAP
     TITLE: LDAP / Identity
@@ -90,6 +96,10 @@ opennebula_template:
     TITLE: InfiniBand
     TYPE: APP
     DESCRIPTION: Optional IPoIB configuration for workers.
+  - NAME: NFS
+    TITLE: NFS Storage
+    TYPE: APP
+    DESCRIPTION: Optional in-guest NFS mounts for shared home and scratch directories.
   ready_status_gate: true
 logo: slurm.png
 images: []

@@ -1,7 +1,7 @@
 ---
 id: 'c03f8c40-39bb-42cd-a9d5-781f59846b57'
 name: Service Slurm Worker
-version: 7.4.0-0-20260806
+version: 7.4.0-1-20260807
 publisher: OpenNebula Systems
 description: |-
   Appliance providing the Slurm Worker service to execute
@@ -16,7 +16,7 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1786001327
+creation_time: 1786103038
 os-id: Ubuntu
 os-release: 26.04 LTS
 os-arch: x86_64
@@ -27,6 +27,8 @@ opennebula_template:
     network: 'YES'
     oneapp_slurm_infiniband_enable: "$ONEAPP_SLURM_INFINIBAND_ENABLE"
     oneapp_slurm_ipoib_subnet: "$ONEAPP_SLURM_IPOIB_SUBNET"
+    oneapp_slurm_nfs_home: "$ONEAPP_SLURM_NFS_HOME"
+    oneapp_slurm_nfs_scratch: "$ONEAPP_SLURM_NFS_SCRATCH"
     report_ready: 'YES'
     set_hostname: "$NAME"
     ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
@@ -45,15 +47,17 @@ opennebula_template:
   user_inputs:
     ONEAPP_SLURM_INFINIBAND_ENABLE: "O|boolean|Enable InfiniBand on worker||NO"
     ONEAPP_SLURM_IPOIB_SUBNET: "O|text|IPoIB subnet (required when InfiniBand is enabled, e.g. 10.20.0.0/24)||"
+    ONEAPP_SLURM_NFS_HOME: "O|text|NFS export for /home (host:/export)||"
+    ONEAPP_SLURM_NFS_SCRATCH: "O|text|NFS export for /scratch (host:/export)||"
 logo: slurm.png
 images:
 - name: service_SlurmWorker
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmWorker-7.4.0-0-20260806.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_SlurmWorker-7.4.0-1-20260807.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 447e472bba31b3235371487d942886ff
-    sha256: 45fd0e11c70910ec846f84f3d4663179faa391d40e40fb0676522ba34702d761
+    md5: bef3c24ea6b29f75f82521ed070c0fc8
+    sha256: 9735d793b2904fd17deae98015a353beb372511227e27df32ad1bfa16bf8fd58
