@@ -1,0 +1,129 @@
+---
+id: 'd3c8ea14-f6f0-455c-8a41-6129affa9a0e'
+name: Service Open OnDemand
+version: 7.4.0-0-20260929
+publisher: OpenNebula Systems
+description: |-
+  Appliance with the [Open OnDemand](https://openondemand.org/) web portal for the
+  Slurm clusters of the OneSlurm appliance. Users log in with their LDAP account and
+  manage files, submit and watch jobs and open a terminal on the clusters from a web
+  browser. The portal runs no Slurm of its own, it sends the Slurm commands of each
+  user to the controller of the cluster over SSH.
+
+  The clusters must use the same LDAP directory and the same NFS home as the portal.
+
+  See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/ood_intro).
+short_description: Appliance with the Open OnDemand web portal for OneSlurm clusters
+tags:
+- open-ondemand
+- slurm
+- hpc
+- service
+- ubuntu
+format: qcow2
+creation_time: 1790694983
+os-id: Ubuntu
+os-release: 26.04 LTS
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: '7.4'
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_home_nfs_export: "$ONEAPP_HOME_NFS_EXPORT"
+    oneapp_ldap_bind_password: "$ONEAPP_LDAP_BIND_PASSWORD"
+    oneapp_ldap_bind_user: "$ONEAPP_LDAP_BIND_USER"
+    oneapp_ldap_server_domain: "$ONEAPP_LDAP_SERVER_DOMAIN"
+    oneapp_ldap_server_url: "$ONEAPP_LDAP_SERVER_URL"
+    oneapp_portal_certificate_chain: "$ONEAPP_PORTAL_CERTIFICATE_CHAIN"
+    oneapp_portal_certificate_enabled: "$ONEAPP_PORTAL_CERTIFICATE_ENABLED"
+    oneapp_portal_certificate_key: "$ONEAPP_PORTAL_CERTIFICATE_KEY"
+    oneapp_portal_host_name: "$ONEAPP_PORTAL_HOST_NAME"
+    oneapp_portal_letsencrypt_enabled: "$ONEAPP_PORTAL_LETSENCRYPT_ENABLED"
+    oneapp_slurm_clusters_list: "$ONEAPP_SLURM_CLUSTERS_LIST"
+    report_ready: 'YES'
+    set_hostname: "$NAME"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    token: 'YES'
+  cpu: '2'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONEAPP_PORTAL_HOST_NAME,ONEAPP_PORTAL_LETSENCRYPT_ENABLED,ONEAPP_PORTAL_CERTIFICATE_ENABLED,ONEAPP_PORTAL_CERTIFICATE_CHAIN,ONEAPP_PORTAL_CERTIFICATE_KEY,ONEAPP_LDAP_SERVER_URL,ONEAPP_LDAP_SERVER_DOMAIN,ONEAPP_LDAP_BIND_USER,ONEAPP_LDAP_BIND_PASSWORD,ONEAPP_HOME_NFS_EXPORT,ONEAPP_SLURM_CLUSTERS_LIST
+  memory: '4096'
+  os:
+    arch: x86_64
+  user_inputs:
+    # ─── PORTAL ───
+    ONEAPP_PORTAL_HOST_NAME: "O|text|Public DNS name of the portal. Leave it empty to use the IP address of the VM.| |"
+    ONEAPP_PORTAL_LETSENCRYPT_ENABLED: "O|boolean|Get a free certificate from Let's Encrypt. It needs a public DNS name and port 80 open to the internet.| |NO"
+    ONEAPP_PORTAL_CERTIFICATE_ENABLED: "O|boolean|Use your own certificate.| |NO"
+    ONEAPP_PORTAL_CERTIFICATE_CHAIN: "O|text64|Certificate and intermediate chain, in PEM format.| |"
+    ONEAPP_PORTAL_CERTIFICATE_KEY: "O|text64|Private key of the certificate, in PEM format.| |"
+    # ─── LDAP ───
+    ONEAPP_LDAP_SERVER_URL: "M|text|URL of the directory, for example ldap://10.0.0.5. For ldaps://, the directory needs a certificate from a public certificate authority.| |"
+    ONEAPP_LDAP_SERVER_DOMAIN: "M|text|Domain or base DN of the directory. The same value as ONEAPP_LDAP_DOMAIN in OneSlurm.| |slurm.local"
+    ONEAPP_LDAP_BIND_USER: "O|text|User for directory searches. Leave it empty for anonymous searches.| |"
+    ONEAPP_LDAP_BIND_PASSWORD: "O|password|Password of the bind user.| |"
+    # ─── HOME ───
+    ONEAPP_HOME_NFS_EXPORT: "O|text|NFS export of the home directories, as host:/export. The same value as ONEAPP_SLURM_NFS_HOME in OneSlurm.| |"
+    # ─── SLURM ───
+    ONEAPP_SLURM_CLUSTERS_LIST: "O|text|Clusters as name:IP pairs separated by spaces, with the IP of each controller. For example cpu:10.0.0.20 gpu:10.0.0.30.| |"
+  user_inputs_metadata:
+  - NAME: PORTAL
+    TITLE: Portal
+    TYPE: APP
+    DESCRIPTION: "Name and certificate of the portal. Without a certificate, the portal uses a self-signed one."
+  - NAME: HOST
+    TITLE: Host name
+    TYPE: GROUP
+    DESCRIPTION: "The address that users open in the browser."
+  - NAME: LETSENCRYPT
+    TITLE: Let's Encrypt
+    TYPE: GROUP
+    DESCRIPTION: "The portal gets the certificate at boot and renews it automatically."
+  - NAME: CERTIFICATE
+    TITLE: Own certificate
+    TYPE: GROUP
+    DESCRIPTION: "A certificate you already have for the DNS name of the portal."
+  - NAME: LDAP
+    TITLE: LDAP
+    TYPE: APP
+    DESCRIPTION: "The LDAP directory of the Slurm clusters. Users log in with their directory account."
+  - NAME: SERVER
+    TITLE: Directory
+    TYPE: GROUP
+    DESCRIPTION: "Use the same directory as the clusters. For the LDAP of a OneSlurm controller, the URL is ldap://<controller IP>."
+  - NAME: BIND
+    TITLE: Bind user
+    TYPE: GROUP
+    DESCRIPTION: "Only for a directory that does not allow anonymous searches."
+  - NAME: HOME
+    TITLE: Home
+    TYPE: APP
+    DESCRIPTION: "Home directories of the users, shared with the Slurm clusters over NFS."
+  - NAME: NFS
+    TITLE: NFS
+    TYPE: GROUP
+    DESCRIPTION: "Required to run jobs. The clusters must mount the same export as their home."
+  - NAME: SLURM
+    TITLE: Slurm
+    TYPE: APP
+    DESCRIPTION: "The Slurm clusters available in the portal."
+  - NAME: CLUSTERS
+    TITLE: Clusters
+    TYPE: GROUP
+    DESCRIPTION: "Each cluster must use the same LDAP directory and NFS home as the portal."
+logo: open-ondemand.png
+images:
+- name: service_OpenOnDemand
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_OpenOnDemand-7.4.0-0-20260929.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 10737418240
+  checksum:
+    md5: 5c70ba337e6f761ee95f3137b5b97f9e
+    sha256: 27c8e613d283e0064b9995d42e6da7471aa4c5419ebb6557380c9f59ac3f18b1
