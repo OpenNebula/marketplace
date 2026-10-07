@@ -4,16 +4,9 @@ name: Open OnDemand
 version: 7.4.0-0-20261005
 publisher: OpenNebula Systems
 description: |-
-  [Open OnDemand](https://openondemand.org/) web portal for OneSlurm clusters. Users
-  sign in with their LDAP account and use a web browser to manage files, submit
-  and watch jobs and open a terminal on the clusters.
-
-  The portal runs no Slurm of its own. It sends the Slurm commands of each user to
-  the controller of the cluster over SSH. The clusters and the portal share the
-  same LDAP directory and the same NFS export for /home. Attach the VM to the
-  network of the clusters.
-
-  See the [documentation](https://github.com/OpenNebula/one-apps/wiki/ood_intro).
+  [Open OnDemand](https://openondemand.org/) web portal for OneSlurm clusters.
+  Users sign in with their LDAP account to manage files, submit jobs and open a
+  terminal on the clusters.
 short_description: Appliance with the Open OnDemand portal for OneSlurm clusters
 tags:
 - open-ondemand
