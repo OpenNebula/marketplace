@@ -15,7 +15,7 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1791364282
+creation_time: 1791369912
 os-id: Ubuntu
 os-release: 26.04 LTS
 os-arch: x86_64
@@ -44,17 +44,17 @@ opennebula_template:
     arch: x86_64
   user_inputs:
     # ─── LDAP ───
-    ONEAPP_LDAP_SERVER_URL: "M|text|LDAP URL (ldap://host)| |"
+    ONEAPP_LDAP_SERVER_URL: "O|text|LDAP URL (ldap://host)| |"
     ONEAPP_LDAP_SERVER_DOMAIN: "M|text|LDAP domain or base DN| |slurm.local"
     # ─── HOME ───
-    ONEAPP_HOME_NFS_EXPORT: "M|text|NFS export for /home (host:/export)| |"
+    ONEAPP_HOME_NFS_EXPORT: "O|text|NFS export for /home (host:/export)| |"
     # ─── SLURM ───
-    ONEAPP_SLURM_CLUSTERS_LIST: "M|text|Slurm clusters, one per line (name:controller IP)| |"
+    ONEAPP_SLURM_CLUSTERS_LIST: "O|text|Slurm clusters, one per line (name:controller IP)| |"
   user_inputs_metadata:
   - NAME: LDAP
     TITLE: LDAP
     TYPE: APP
-    DESCRIPTION: "Users sign in with their LDAP account."
+    DESCRIPTION: "Users sign in with their LDAP account. Leave LDAP, Home and Slurm empty for a portal without users."
   - NAME: SERVER
     TITLE: Server
     TYPE: GROUP
@@ -85,5 +85,5 @@ images:
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 161e267ccd54b253256279c1bf973495
-    sha256: 782e59e11b5fb6352d70c1ce9109bc2c98710883707b1b2c14933053f824e784
+    md5: 48e30a29dfda5bb9fbb8f6e1f27bd20c
+    sha256: 7eff769752d39919ed50e0fcbea6e008322e32429ba2602be326d3719621cea4
