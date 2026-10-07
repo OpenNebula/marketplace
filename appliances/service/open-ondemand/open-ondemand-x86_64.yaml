@@ -1,7 +1,7 @@
 ---
 id: 'd3c8ea14-f6f0-455c-8a41-6129affa9a0e'
 name: Open OnDemand
-version: 7.4.0-0-20261005
+version: 7.4.0-0-20261007
 publisher: OpenNebula Systems
 description: |-
   [Open OnDemand](https://openondemand.org/) web portal for OneSlurm clusters.
@@ -15,7 +15,7 @@ tags:
 - service
 - ubuntu
 format: qcow2
-creation_time: 1791288942
+creation_time: 1791364282
 os-id: Ubuntu
 os-release: 26.04 LTS
 os-arch: x86_64
@@ -79,11 +79,11 @@ logo: open-ondemand.png
 images:
 - name: service_OpenOnDemand
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_OpenOnDemand-7.4.0-0-20261005.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_OpenOnDemand-7.4.0-0-20261007.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: db285a0f8ecb7d652c2a0f61653dda06
-    sha256: ba790f71d46bb8e33f88517397addf1ef9ec982c8809d83b7267c5513437cc32
+    md5: 161e267ccd54b253256279c1bf973495
+    sha256: 782e59e11b5fb6352d70c1ce9109bc2c98710883707b1b2c14933053f824e784
