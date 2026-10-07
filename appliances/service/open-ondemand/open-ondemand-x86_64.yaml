@@ -44,17 +44,17 @@ opennebula_template:
     arch: x86_64
   user_inputs:
     # ─── LDAP ───
-    ONEAPP_LDAP_SERVER_URL: "O|text|LDAP URL (ldap://host)| |"
+    ONEAPP_LDAP_SERVER_URL: "M|text|LDAP URL (ldap://host)| |"
     ONEAPP_LDAP_SERVER_DOMAIN: "M|text|LDAP domain or base DN| |slurm.local"
     # ─── HOME ───
-    ONEAPP_HOME_NFS_EXPORT: "O|text|NFS export for /home (host:/export)| |"
+    ONEAPP_HOME_NFS_EXPORT: "M|text|NFS export for /home (host:/export)| |"
     # ─── SLURM ───
-    ONEAPP_SLURM_CLUSTERS_LIST: "O|text|Slurm clusters, one per line (name:controller IP)| |"
+    ONEAPP_SLURM_CLUSTERS_LIST: "M|text|Slurm clusters, one per line (name:controller IP)| |"
   user_inputs_metadata:
   - NAME: LDAP
     TITLE: LDAP
     TYPE: APP
-    DESCRIPTION: "Users sign in with their LDAP account. Leave LDAP, Home and Slurm empty for a portal without users."
+    DESCRIPTION: "Users sign in with their LDAP account."
   - NAME: SERVER
     TITLE: Server
     TYPE: GROUP
