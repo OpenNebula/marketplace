@@ -1,0 +1,89 @@
+---
+id: 'd3c8ea14-f6f0-455c-8a41-6129affa9a0e'
+name: Open OnDemand
+version: 7.4.0-0-20261007
+publisher: OpenNebula Systems
+description: |-
+  [Open OnDemand](https://openondemand.org/) web portal for OneSlurm clusters.
+  Users sign in with their LDAP account to manage files, submit jobs and open a
+  terminal on the clusters.
+short_description: Appliance with the Open OnDemand portal for OneSlurm clusters
+tags:
+- open-ondemand
+- slurm
+- hpc
+- service
+- ubuntu
+format: qcow2
+creation_time: 1791369912
+os-id: Ubuntu
+os-release: 26.04 LTS
+os-arch: x86_64
+hypervisor: KVM
+opennebula_version: '7.4'
+opennebula_template:
+  context:
+    network: 'YES'
+    oneapp_home_nfs_export: "$ONEAPP_HOME_NFS_EXPORT"
+    oneapp_ldap_server_domain: "$ONEAPP_LDAP_SERVER_DOMAIN"
+    oneapp_ldap_server_url: "$ONEAPP_LDAP_SERVER_URL"
+    oneapp_slurm_clusters_list: "$ONEAPP_SLURM_CLUSTERS_LIST"
+    report_ready: 'YES'
+    set_hostname: "$NAME"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    token: 'YES'
+  cpu: '2'
+  vcpu: '2'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  inputs_order: >-
+    ONEAPP_LDAP_SERVER_URL,ONEAPP_LDAP_SERVER_DOMAIN,ONEAPP_HOME_NFS_EXPORT,ONEAPP_SLURM_CLUSTERS_LIST
+  memory: '4096'
+  os:
+    arch: x86_64
+  user_inputs:
+    # ─── LDAP ───
+    ONEAPP_LDAP_SERVER_URL: "M|text|LDAP URL (ldap://host)| |"
+    ONEAPP_LDAP_SERVER_DOMAIN: "M|text|LDAP domain or base DN| |slurm.local"
+    # ─── HOME ───
+    ONEAPP_HOME_NFS_EXPORT: "M|text|NFS export for /home (host:/export)| |"
+    # ─── SLURM ───
+    ONEAPP_SLURM_CLUSTERS_LIST: "M|text|Slurm clusters, one per line (name:controller IP)| |"
+  user_inputs_metadata:
+  - NAME: LDAP
+    TITLE: LDAP
+    TYPE: APP
+    DESCRIPTION: "Users sign in with their LDAP account."
+  - NAME: SERVER
+    TITLE: Server
+    TYPE: GROUP
+    DESCRIPTION: "Use the LDAP server of the Slurm clusters."
+  - NAME: HOME
+    TITLE: Home
+    TYPE: APP
+    DESCRIPTION: "Home directories shared with the Slurm clusters."
+  - NAME: NFS
+    TITLE: NFS
+    TYPE: GROUP
+    DESCRIPTION: "Use the same export as the clusters. Each user needs a home there."
+  - NAME: SLURM
+    TITLE: Slurm
+    TYPE: APP
+    DESCRIPTION: "Slurm clusters where users run jobs. Note: you have to add the network of the clusters in Advanced options > Network."
+  - NAME: CLUSTERS
+    TITLE: Clusters
+    TYPE: GROUP
+    DESCRIPTION: "For example cpu:10.0.0.20. Each cluster uses the same LDAP and /home."
+logo: open-ondemand.png
+images:
+- name: service_OpenOnDemand
+  url: >-
+    https://d24fmfybwxpuhu.cloudfront.net/service_OpenOnDemand-7.4.0-0-20261007.qcow2
+  type: OS
+  dev_prefix: vd
+  driver: qcow2
+  size: 10737418240
+  checksum:
+    md5: 48e30a29dfda5bb9fbb8f6e1f27bd20c
+    sha256: 7eff769752d39919ed50e0fcbea6e008322e32429ba2602be326d3719621cea4
