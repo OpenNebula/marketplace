@@ -1,7 +1,7 @@
 ---
 id: '4166c5ec-9f71-42ba-aa41-e2c351545ff8'
 name: OneKS (aarch64)
-version: 7.2.1-0-20260605
+version: 7.4.0-0-20261022
 publisher: OpenNebula Systems
 description: |-
   Appliance for creating Cluster API Kubernetes clusters in Rancher,
@@ -14,7 +14,7 @@ tags:
 - service
 - alpine
 format: qcow2
-creation_time: 1780644872
+creation_time: 1792680923
 os-id: Alpine
 os-release: '3.21'
 os-arch: aarch64
@@ -47,11 +47,11 @@ logo: kubernetes.png
 images:
 - name: service_OneKS
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_OneKS-7.2.1-0-20260605.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_OneKS-7.4.0-0-20261022.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 55942238d768f7590f2b0389704620aa
-    sha256: 5c01e484fc636f5b7c63a1ece8c66ff0317c9ddb082392190d95bee081234e94
+    md5: c01ed1a21211d111d736208a662351b9
+    sha256: 830750ae63c57a2d36adb24c1e4ce7db0d4d8351a6473e6df251351006a1855e
