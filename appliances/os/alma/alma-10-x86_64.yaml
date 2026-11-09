@@ -1,7 +1,7 @@
 ---
 id: 'a9c75148-bfca-11f0-a37e-02000a000203'
 name: AlmaLinux 10
-version: 7.4.0-0-20260714
+version: 7.4.2-0-20261108
 publisher: OpenNebula Systems
 description: |-
   AlmaLinux 10 image ready for your OpenNebula deployment.
@@ -15,7 +15,7 @@ short_description: AlmaLinux 10 image for KVM, LXD and vCenter.
 tags:
 - almalinux
 format: qcow2
-creation_time: 1784023786
+creation_time: 1794125352
 os-id: AlmaLinux
 os-release: '10.2'
 os-arch: x86_64
@@ -38,11 +38,11 @@ opennebula_template:
 logo: alma.png
 images:
 - name: alma10
-  url: https://d24fmfybwxpuhu.cloudfront.net/alma10-7.4.0-0-20260714.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alma10-7.4.2-0-20261108.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 60df152ac0bd2376e28c45f2e7af15a9
-    sha256: 2c0852f6d35761502a0d67044418c72ac20169f0e366fd26885a198433b8b9f9
+    md5: 321b28474781aace01a1cea608bd2b2d
+    sha256: d83d5f3ac6ab0c23a4f7257e02ab051e8e893287305e6c0716a1db3e012b4b88

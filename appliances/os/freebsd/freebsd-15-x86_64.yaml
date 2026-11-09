@@ -1,7 +1,7 @@
 ---
 id: '1e1db51b-1ba0-4bec-9d31-dae7afeee1a3'
 name: FreeBSD 15
-version: 7.4.0-0-20260714
+version: 7.4.2-0-20261108
 publisher: OpenNebula Systems
 description: |-
   FreeBSD 15 image ready for your OpenNebula deployment.
@@ -15,7 +15,7 @@ short_description: FreeBSD 15 image for KVM and vCenter hosts
 tags:
 - freebsd
 format: qcow2
-creation_time: 1784025638
+creation_time: 1794127512
 os-id: FreeBSD
 os-release: '15.1'
 os-arch: x86_64
@@ -35,11 +35,11 @@ opennebula_template:
 logo: freebsd.png
 images:
 - name: freebsd15
-  url: https://d24fmfybwxpuhu.cloudfront.net/freebsd15-7.4.0-0-20260714.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/freebsd15-7.4.2-0-20261108.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 9b1628d6657b467bf2d4cf0c9e5cf14e
-    sha256: c83efa734ff5b24675c87fbbbd45787a34224d1d638cbe357e7eb9641988b882
+    md5: 193a4e12279f9b3f5e0baef26d749ab0
+    sha256: 6fdb3212e21ab3c9918761c74639513ba8d6dd52cb6f6d07190fd7d0526fca61

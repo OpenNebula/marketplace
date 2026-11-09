@@ -1,7 +1,7 @@
 ---
 id: '13263848-bfcb-11f0-af98-02000a000203'
 name: Rocky Linux 10 (aarch64)
-version: 7.4.0-0-20260715
+version: 7.4.2-0-20261109
 publisher: OpenNebula Systems
 description: |-
   Rocky Linux 10 image ready for your OpenNebula deployment.
@@ -15,7 +15,7 @@ short_description: Rocky Linux 10 image for KVM, LXD and vCenter.
 tags:
 - rockylinux
 format: qcow2
-creation_time: 1784125446
+creation_time: 1794241872
 os-id: Rocky Linux
 os-release: '10.2'
 os-arch: aarch64
@@ -37,11 +37,11 @@ logo: rocky.png
 images:
 - name: rocky10
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/rocky10-7.4.0-0-20260715.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/rocky10-7.4.2-0-20261109.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 10737418240
   checksum:
-    md5: 92f0704f714cbbd083f46354fbe1a410
-    sha256: 32ee3156086ff07758a55845800664836c658190ecea32de68d304a42e11c05b
+    md5: 2508e836b510d8ad6b0a9a6ee6b5d88a
+    sha256: a605f40c87dff8b13e25863c007e460c7eba50f283a86fb1d907202d0b3999cd

@@ -1,7 +1,7 @@
 ---
 id: '97383e01-6150-4a1f-8830-fc5d745056e0'
 name: Alpine Linux 3.23
-version: 7.4.0-0-20260714
+version: 7.4.2-0-20261108
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.23 image ready for your OpenNebula deployment.
@@ -15,9 +15,9 @@ short_description: Alpine Linux 3.23 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1784023624
+creation_time: 1794125323
 os-id: Alpine Linux
-os-release: '3.23.5'
+os-release: '3.23.8'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
@@ -39,11 +39,11 @@ opennebula_template:
 logo: alpine.png
 images:
 - name: alpine323
-  url: https://d24fmfybwxpuhu.cloudfront.net/alpine323-7.4.0-0-20260714.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alpine323-7.4.2-0-20261108.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 536870912
   checksum:
-    md5: ab6494638536d749bc1165a987fa8c97
-    sha256: 6ef89841c6080ecc77d14e391e6d6636ebd0717a0d4a629905522407804b67ae
+    md5: a2afa12f06e93ea22d487efa7756858c
+    sha256: 15d347bb6d863fef94e9db07902e6812b3f76294b5ccd0f58f06e93a155011f0

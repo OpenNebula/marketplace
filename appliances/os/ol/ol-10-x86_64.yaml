@@ -1,7 +1,7 @@
 ---
 id: '23ab8cd7-cd1a-4d81-95d4-f2c6986b5a3f'
 name: Oracle Linux 10
-version: 7.4.0-0-20260714
+version: 7.4.2-0-20261108
 publisher: OpenNebula Systems
 description: |-
   Oracle Linux 10 image ready for your OpenNebula deployment.
@@ -16,9 +16,9 @@ tags:
 - oracle
 - oraclelinux
 format: qcow2
-creation_time: 1784025096
+creation_time: 1794126893
 os-id: Oracle Linux Server
-os-release: '10.1'
+os-release: '10.2'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
@@ -39,11 +39,11 @@ opennebula_template:
 logo: ol.png
 images:
 - name: ol10
-  url: https://d24fmfybwxpuhu.cloudfront.net/ol10-7.4.0-0-20260714.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/ol10-7.4.2-0-20261108.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 39728447488
   checksum:
-    md5: 92115d80cf10ba5ed7a4c8f42aabc8ae
-    sha256: 333c268679bce2e395d28ba1dfa86c32a71afcabfe235efd2c1224e40641c823
+    md5: 1d591195c68adfaf60e8fa32e813fc06
+    sha256: cea35864ac8817e143136685ec55c1bb6da2d7a136e9555adb8a7106d7864a8d

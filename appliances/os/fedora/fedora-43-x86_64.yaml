@@ -1,7 +1,7 @@
 ---
 id: 'a14860e3-42ef-45e6-b998-9767ea85f3ae'
 name: Fedora 43
-version: 7.4.0-0-20260714
+version: 7.4.2-0-20261108
 publisher: OpenNebula Systems
 description: |-
   Fedora 43 image ready for your OpenNebula deployment.
@@ -15,7 +15,7 @@ short_description: Fedora 43 image for KVM, LXD, and vCenter
 tags:
 - fedora
 format: qcow2
-creation_time: 1784027367
+creation_time: 1794126259
 os-id: Fedora Linux
 os-release: '43'
 os-arch: x86_64
@@ -37,11 +37,11 @@ opennebula_template:
 logo: fedora.png
 images:
 - name: fedora43
-  url: https://d24fmfybwxpuhu.cloudfront.net/fedora43-7.4.0-0-20260714.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/fedora43-7.4.2-0-20261108.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 5368709120
   checksum:
-    md5: 93ad94e4da01690f22d38e37c683f6ff
-    sha256: f8826b87b709fc0bd92999d9565ab7f3c8ea203c740a7f5720c222f0fe379e30
+    md5: 83186616ff4d08730ddc4faca106309c
+    sha256: f869f65134677d280373a0a7987894a0799e6752f9550a8f64d9c27a19f0081a
