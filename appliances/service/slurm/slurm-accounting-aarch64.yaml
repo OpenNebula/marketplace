@@ -1,0 +1,63 @@
+---
+id: '73b5b6fd-c81a-4238-ab1f-1e941dfb3d96'
+name: Service Slurm Accounting (aarch64)
+version: unreleased
+publisher: OpenNebula Systems
+description: |-
+  Appliance providing mandatory SlurmDBD accounting backed by MariaDB,
+  the shared MUNGE key and optional local LDAP identity services.
+  Accounting initializes independently before Controller and Worker deployment.
+  [documentation](https://github.com/OpenNebula/one-apps/wiki/slurm_intro).
+short_description: >-
+  Slurm accounting, MUNGE key authority and optional LDAP identity service.
+tags:
+- slurm
+- accounting
+- service
+- ubuntu
+format: qcow2
+creation_time: 1791369604
+os-id: Ubuntu
+os-release: 26.04 LTS
+os-arch: aarch64
+hypervisor: ALL
+opennebula_version: '6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4'
+opennebula_template:
+  context:
+    oneapp_ldap_admin_password: "$ONEAPP_LDAP_ADMIN_PASSWORD"
+    oneapp_ldap_admin_user: "$ONEAPP_LDAP_ADMIN_USER"
+    oneapp_ldap_bind_password: "$ONEAPP_LDAP_BIND_PASSWORD"
+    oneapp_ldap_bind_user: "$ONEAPP_LDAP_BIND_USER"
+    oneapp_ldap_domain: "$ONEAPP_LDAP_DOMAIN"
+    oneapp_ldap_enable: "$ONEAPP_LDAP_ENABLE"
+    oneapp_ldap_url: "$ONEAPP_LDAP_URL"
+    oneapp_slurm_accounting_db_name: "$ONEAPP_SLURM_ACCOUNTING_DB_NAME"
+    oneapp_slurm_accounting_db_password: "$ONEAPP_SLURM_ACCOUNTING_DB_PASSWORD"
+    oneapp_slurm_accounting_db_user: "$ONEAPP_SLURM_ACCOUNTING_DB_USER"
+    network: 'YES'
+    report_ready: 'YES'
+    set_hostname: "$NAME"
+    ssh_public_key: "$USER[SSH_PUBLIC_KEY]"
+    token: 'YES'
+  cpu: '2'
+  graphics:
+    listen: 0.0.0.0
+    type: vnc
+  memory: '2048'
+  os:
+    arch: aarch64
+  inputs_order: ""
+  user_inputs:
+    ONEAPP_LDAP_ENABLE: "O|boolean|Enable Accounting local LDAP server||NO"
+    ONEAPP_LDAP_DOMAIN: "O|text|LDAP domain (base DN derived from it)||slurm.local"
+    ONEAPP_LDAP_ADMIN_USER: "O|text|LDAP admin user||"
+    ONEAPP_LDAP_ADMIN_PASSWORD: "O|password|LDAP admin password||"
+    ONEAPP_LDAP_URL: "O|text|External LDAP URL (used only when local LDAP is disabled)||"
+    ONEAPP_LDAP_BIND_USER: "O|text|LDAP bind user (optional)||"
+    ONEAPP_LDAP_BIND_PASSWORD: "O|password|LDAP bind password (optional)||"
+    ONEAPP_SLURM_ACCOUNTING_DB_NAME: "O|text|Slurm accounting database name||slurm_acct_db"
+    ONEAPP_SLURM_ACCOUNTING_DB_USER: "O|text|Slurm accounting database user||slurm"
+    ONEAPP_SLURM_ACCOUNTING_DB_PASSWORD: "O|password|Slurm accounting database password (reused from slurmdbd.conf or generated when empty)||"
+logo: slurm.png
+# Image metadata is pending a real Accounting build; this entry is not publishable yet.
+images: []

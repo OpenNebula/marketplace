@@ -5,7 +5,8 @@ version: 7.4.0-1-20260807
 publisher: OpenNebula Systems
 description: |-
   Appliance providing the Slurm Worker service to execute
-  jobs assigned by the Slurm Controller within a Slurm cluster
+  jobs assigned by the Slurm Controller within a Slurm cluster.
+  It consumes the shared MUNGE key and effective LDAP metadata from Accounting.
   [documentation](https://github.com/OpenNebula/one-apps/wiki/slurm_intro).
 short_description: >-
   Appliance providing the Slurm Worker service to execute jobs within a

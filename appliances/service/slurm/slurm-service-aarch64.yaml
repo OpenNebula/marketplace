@@ -13,9 +13,13 @@ description: |-
   [OneGate](https://docs.opennebula.io/7.4/product/virtual_machines_operation/multi-vm_workflows/onegate_usage/)
   OpenNebula components.
 
+  Accounting provides mandatory MariaDB and SlurmDBD job accounting,
+  the shared MUNGE key, and optional local LDAP identity services.
+
   See the dedicated [documentation](https://github.com/OpenNebula/one-apps/wiki/slurm_intro).
 
   Based on VM templates
+  - [Service Slurm Accounting (aarch64)](/appliance/73b5b6fd-c81a-4238-ab1f-1e941dfb3d96)
   - [Service Slurm Controller (aarch64)](/appliance/da342d53-578f-4511-a7b8-d328506ebb52)
   - [Service Slurm Worker (aarch64)](/appliance/d5b7e391-b545-4668-9146-3ce1d959b6f2)
 short_description: Slurm cluster for KVM hosts, orchestrated by OneFlow
@@ -33,6 +37,7 @@ type: SERVICE_TEMPLATE
 opennebula_version: >-
   7.0, 7.2, 7.4
 roles:
+  accounting: Service Slurm Accounting (aarch64)
   controller: Service Slurm Controller (aarch64)
   worker: Service Slurm Worker (aarch64)
 opennebula_template:
@@ -40,13 +45,17 @@ opennebula_template:
   deployment: straight
   description: ''
   roles:
-  - name: controller
+  - name: accounting
     cardinality: 1
     min_vms: 1
+    max_vms: 1
     vm_template_contents: |
       NIC = [
         NAME = "NIC0",
         NETWORK_ID = "$Service" ]
+      ONEAPP_SLURM_ACCOUNTING_DB_NAME = "$ONEAPP_SLURM_ACCOUNTING_DB_NAME"
+      ONEAPP_SLURM_ACCOUNTING_DB_USER = "$ONEAPP_SLURM_ACCOUNTING_DB_USER"
+      ONEAPP_SLURM_ACCOUNTING_DB_PASSWORD = "$ONEAPP_SLURM_ACCOUNTING_DB_PASSWORD"
       ONEAPP_LDAP_ENABLE = "$ONEAPP_LDAP_ENABLE"
       ONEAPP_LDAP_DOMAIN = "$ONEAPP_LDAP_DOMAIN"
       ONEAPP_LDAP_ADMIN_USER = "$ONEAPP_LDAP_ADMIN_USER"
@@ -54,12 +63,44 @@ opennebula_template:
       ONEAPP_LDAP_URL = "$ONEAPP_LDAP_URL"
       ONEAPP_LDAP_BIND_USER = "$ONEAPP_LDAP_BIND_USER"
       ONEAPP_LDAP_BIND_PASSWORD = "$ONEAPP_LDAP_BIND_PASSWORD"
+    elasticity_policies: []
+    scheduled_policies: []
+  - name: controller
+    parents: [accounting]
+    user_inputs_values:
+      ONEAPP_SLURM_ACCOUNTING_DB_NAME: ""
+      ONEAPP_SLURM_ACCOUNTING_DB_USER: ""
+      ONEAPP_SLURM_ACCOUNTING_DB_PASSWORD: ""
+      ONEAPP_LDAP_ENABLE: ""
+      ONEAPP_LDAP_DOMAIN: ""
+      ONEAPP_LDAP_ADMIN_USER: ""
+      ONEAPP_LDAP_ADMIN_PASSWORD: ""
+      ONEAPP_LDAP_URL: ""
+      ONEAPP_LDAP_BIND_USER: ""
+      ONEAPP_LDAP_BIND_PASSWORD: ""
+    cardinality: 1
+    min_vms: 1
+    vm_template_contents: |
+      NIC = [
+        NAME = "NIC0",
+        NETWORK_ID = "$Service" ]
       ONEAPP_SLURM_INFINIBAND_ENABLE = "$ONEAPP_SLURM_INFINIBAND_ENABLE"
       ONEAPP_SLURM_NFS_HOME = "$ONEAPP_SLURM_NFS_HOME"
       ONEAPP_SLURM_NFS_SCRATCH = "$ONEAPP_SLURM_NFS_SCRATCH"
     elasticity_policies: []
     scheduled_policies: []
   - name: worker
+    user_inputs_values:
+      ONEAPP_SLURM_ACCOUNTING_DB_NAME: ""
+      ONEAPP_SLURM_ACCOUNTING_DB_USER: ""
+      ONEAPP_SLURM_ACCOUNTING_DB_PASSWORD: ""
+      ONEAPP_LDAP_ENABLE: ""
+      ONEAPP_LDAP_DOMAIN: ""
+      ONEAPP_LDAP_ADMIN_USER: ""
+      ONEAPP_LDAP_ADMIN_PASSWORD: ""
+      ONEAPP_LDAP_URL: ""
+      ONEAPP_LDAP_BIND_USER: ""
+      ONEAPP_LDAP_BIND_PASSWORD: ""
     parents: [controller]
     cardinality: 1
     cooldown: 30
@@ -76,13 +117,16 @@ opennebula_template:
   networks:
     Service: "M|network|Service||id:"
   user_inputs:
-    ONEAPP_LDAP_ENABLE: "O|boolean|Enable controller local LDAP server||NO"
+    ONEAPP_LDAP_ENABLE: "O|boolean|Enable Accounting local LDAP server||NO"
     ONEAPP_LDAP_DOMAIN: "O|text|LDAP domain (base DN derived from it)||slurm.local"
     ONEAPP_LDAP_ADMIN_USER: "O|text|LDAP admin user||"
     ONEAPP_LDAP_ADMIN_PASSWORD: "O|password|LDAP admin password||"
     ONEAPP_LDAP_URL: "O|text|External LDAP URL (used only when local LDAP is disabled)||"
     ONEAPP_LDAP_BIND_USER: "O|text|LDAP bind user (optional)||"
     ONEAPP_LDAP_BIND_PASSWORD: "O|password|LDAP bind password (optional)||"
+    ONEAPP_SLURM_ACCOUNTING_DB_NAME: "O|text|Slurm accounting database name||slurm_acct_db"
+    ONEAPP_SLURM_ACCOUNTING_DB_USER: "O|text|Slurm accounting database user||slurm"
+    ONEAPP_SLURM_ACCOUNTING_DB_PASSWORD: "O|password|Slurm accounting database password (reused from slurmdbd.conf or generated when empty)||"
     ONEAPP_SLURM_INFINIBAND_ENABLE: "O|boolean|Enable InfiniBand on workers||NO"
     ONEAPP_SLURM_IPOIB_SUBNET: "O|text|IPoIB subnet (required when InfiniBand is enabled, e.g. 10.20.0.0/24)||"
     ONEAPP_SLURM_NFS_HOME: "O|text|NFS export for /home (host:/export)||"
@@ -91,7 +135,11 @@ opennebula_template:
   - NAME: LDAP
     TITLE: LDAP / Identity
     TYPE: APP
-    DESCRIPTION: Controller LDAP server or external LDAP used by Slurm nodes for shared user identity.
+    DESCRIPTION: Accounting-owned local LDAP server or effective external LDAP identity configuration.
+  - NAME: ACCOUNTING
+    TITLE: Slurm Accounting
+    TYPE: APP
+    DESCRIPTION: Accounting-owned MariaDB and SlurmDBD for job history and usage reports.
   - NAME: INFINIBAND
     TITLE: InfiniBand
     TYPE: APP
