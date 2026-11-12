@@ -1,7 +1,7 @@
 ---
 id: 'd74a5f80-20bd-013d-0e49-7875a4a4f528'
 name: Alpine Linux 3.20
-version: 7.4.0-0-20260714
+version: 7.4.2-0-20261112
 publisher: OpenNebula Systems
 description: |-
   Alpine Linux 3.20 image ready for your OpenNebula deployment.
@@ -15,7 +15,7 @@ short_description: Alpine Linux 3.20 image for KVM, LXD and vCenter
 tags:
 - alpine
 format: qcow2
-creation_time: 1784023555
+creation_time: 1794479293
 os-id: Alpine Linux
 os-release: '3.20.10'
 os-arch: x86_64
@@ -39,11 +39,11 @@ opennebula_template:
 logo: alpine.png
 images:
 - name: alpine320
-  url: https://d24fmfybwxpuhu.cloudfront.net/alpine320-7.4.0-0-20260714.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/alpine320-7.4.2-0-20261112.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 536870912
   checksum:
-    md5: 07751da61ad7f0d6a3a3faeed06a4994
-    sha256: 8ba49f708d0aad557e13d0c64606fda90fc918475bf2343575e570a81cba7366
+    md5: a4b172eee86ebe59448a2bb65192e676
+    sha256: 5df3246c061dacacc08808c6b331f4ededbc7e49e98a936d27e02119347c876b
