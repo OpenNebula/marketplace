@@ -1,7 +1,7 @@
 ---
 id: '40cc3cb6-581e-11f1-b67a-02000a000203'
 name: Ubuntu Minimal 24.04 (aarch64)
-version: 7.4.0-0-20260715
+version: 7.4.2-0-20261109
 publisher: OpenNebula Systems
 description: |-
   Ubuntu Minimal 24.04 image ready for your OpenNebula deployment.
@@ -17,7 +17,7 @@ short_description: Ubuntu Minimal 24.04 image for KVM and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1784125728
+creation_time: 1794242247
 os-id: Ubuntu
 os-release: '24.04'
 os-arch: aarch64
@@ -42,11 +42,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2404min
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2404min-7.4.0-0-20260715.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2404min-7.4.2-0-20261109.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 3758096384
   checksum:
-    md5: 4d141ee674f2b319b0afad07d4d86fa6
-    sha256: b2eaa913ec2319add962b3c4f56b0492287655085af86e4e8a021f69e3d505be
+    md5: 3b02f16e5854f436f04b32d8aed2051b
+    sha256: c7834501020fcd1249762301fd212d84b30b47c782eaac2667d88b4d44399f34

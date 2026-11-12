@@ -1,7 +1,7 @@
 ---
 id: '6b8faece-2ce5-11f1-99bc-f875a4a4f528'
 name: openSUSE 16 (aarch64)
-version: 7.4.0-0-20260715
+version: 7.4.2-0-20261109
 publisher: OpenNebula Systems
 description: |-
   openSUSE 16 image ready for your OpenNebula deployment.
@@ -15,9 +15,9 @@ short_description: openSUSE 16 image for KVM, LXD and vCenter
 tags:
 - opensuse
 format: qcow2
-creation_time: 1784125352
+creation_time: 1794240196
 os-id: openSUSE Leap
-os-release: '16.0'
+os-release: '16.1'
 os-arch: aarch64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
@@ -38,11 +38,11 @@ logo: opensuse.png
 images:
 - name: opensuse16
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/opensuse16-7.4.0-0-20260715.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/opensuse16-7.4.2-0-20261109.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 64a5cb4b49b16d5e3f390cc4bbc39822
-    sha256: 3345e5bc7f4c625c7b41481c72b5a97672285b710d15f3723ce78f3d02796520
+    md5: 245b7c5b08c5ce810a4f25a88ed1181e
+    sha256: a45ac55a7389f1f8c9b31282fd14de348743e0dbb2f82da8185567a3eaffe01b

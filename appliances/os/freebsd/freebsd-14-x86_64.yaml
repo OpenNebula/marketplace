@@ -1,7 +1,7 @@
 ---
 id: '6d73ab40-f42d-013c-b667-7875a4a4f528'
 name: FreeBSD 14
-version: 7.4.0-0-20260714
+version: 7.4.2-0-20261108
 publisher: OpenNebula Systems
 description: |-
   FreeBSD 14 image ready for your OpenNebula deployment.
@@ -15,9 +15,9 @@ short_description: FreeBSD 14 image for KVM and vCenter hosts
 tags:
 - freebsd
 format: qcow2
-creation_time: 1784025708
+creation_time: 1794127148
 os-id: FreeBSD
-os-release: '14.4'
+os-release: '14.5'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
@@ -35,11 +35,11 @@ opennebula_template:
 logo: freebsd.png
 images:
 - name: freebsd14
-  url: https://d24fmfybwxpuhu.cloudfront.net/freebsd14-7.4.0-0-20260714.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/freebsd14-7.4.2-0-20261108.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: db5739372d204174553c9433a7e2abab
-    sha256: 2725b6d0ef3be4cfe25c1a588d2add73d80c87a9b1e4438438974eab72bf5738
+    md5: 8cf92f7d836d34b352d6bc3aa4ba01bb
+    sha256: 3cbf1f6f7ee71762bbe4e46632346aa651b09a4dd4330159e697e44552bfca21

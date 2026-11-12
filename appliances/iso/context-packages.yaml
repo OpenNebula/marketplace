@@ -1,7 +1,7 @@
 ---
 id: '6f7a1735-5b88-4667-a319-07ffe5e684ee'
 name: Contextualization Packages
-version: 7.4.0-0-20260714
+version: 7.4.2-0-20261108
 publisher: OpenNebula Systems
 description: CD-ROM image with contextualization packages for Linux and Windows.
 short_description: CD-ROM with contextualization packages
@@ -9,16 +9,16 @@ tags:
 - cdrom
 - context
 format: raw
-creation_time: 1784023482
+creation_time: 1794125117
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
 images:
 - name: one-context
-  url: https://d24fmfybwxpuhu.cloudfront.net/one-context-7.4.0-0-20260714.iso
+  url: https://d24fmfybwxpuhu.cloudfront.net/one-context-7.4.2-0-20261108.iso
   type: CDROM
   dev_prefix: hd
   driver: raw
-  size: 1384448
+  size: 1402880
   checksum:
-    md5: fbcfc1c6fa2edfafd5e5e5b88735cbc8
-    sha256: f2b92e9a4225809994e226243622ae62e9a531955de8d84a388e7913a49fa1d7
+    md5: 259299128d1f416f5f77fe40f1302091
+    sha256: d9383b3deff83824069b40a99edf2934a2f09226e129ae7af6229f1a90f088ee

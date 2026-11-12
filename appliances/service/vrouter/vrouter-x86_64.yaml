@@ -1,7 +1,7 @@
 ---
 id: 'cc96d537-f6c7-499f-83f1-15ac4058750e'
 name: Service Virtual Router
-version: 7.4.0-0-20260714
+version: 7.4.2-0-20261108
 publisher: OpenNebula Systems
 description: |-
   Appliance providing several Virtual Network Functions (routing, NAT, DNS,
@@ -14,9 +14,9 @@ tags:
 - service
 - alpine
 format: qcow2
-creation_time: 1784026231
+creation_time: 1794128091
 os-id: Alpine Linux
-os-release: '3.21.7'
+os-release: '3.21.10'
 os-arch: x86_64
 hypervisor: ALL
 opennebula_version: 6.0, 6.2, 6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4
@@ -82,11 +82,11 @@ logo: router.png
 images:
 - name: service_vnf
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-7.4.0-0-20260714.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/service_VRouter-7.4.2-0-20261108.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 2147483648
   checksum:
-    md5: df8457708742d772bd633a73c89464b2
-    sha256: dc104b1a2e2d5b89dc64fc7ca674cedfddc47f5eb5da722ef0af5f194e134a42
+    md5: 1eba2003faab4624c7c39f9f78b54762
+    sha256: 9ea9290623b0cedbf2510b02203370df089a0885b0e71f8b6fcdb5fa9e8d99dc

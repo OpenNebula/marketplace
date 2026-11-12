@@ -1,7 +1,7 @@
 ---
 id: 'd1085922-581e-11f1-b429-02000a000203'
 name: Ubuntu Minimal 26.04 (aarch64)
-version: 7.4.0-0-20260715
+version: 7.4.2-0-20261109
 publisher: OpenNebula Systems
 description: |-
   Ubuntu Minimal 26.04 image ready for your OpenNebula deployment.
@@ -17,7 +17,7 @@ short_description: Ubuntu Minimal 26.04 image for KVM and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1784125954
+creation_time: 1794242919
 os-id: Ubuntu
 os-release: '26.04'
 os-arch: aarch64
@@ -42,11 +42,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2604min
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2604min-7.4.0-0-20260715.aarch64.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2604min-7.4.2-0-20261109.aarch64.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 3758096384
   checksum:
-    md5: d4ba88dde8c92cc0a29274a1c8f59981
-    sha256: 1a122f34ddcd5facf43a15af2ba6f70c50440ece7e0198b6aeca4c761315b995
+    md5: 531d2009791e263c149906a2ab2de8b5
+    sha256: 723e0e66f55dc9db45b05e5b7b21a0f6f94d6a9c947d43017ed7ba084b4867e4

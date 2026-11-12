@@ -1,7 +1,7 @@
 ---
 id: 'ec31b324-580a-11f1-9435-f875a4a4f528'
 name: Devuan 6
-version: 7.4.0-0-20260714
+version: 7.4.2-0-20261108
 publisher: OpenNebula Systems
 description: |-
   Devuan 6 image ready for your OpenNebula deployment.
@@ -15,7 +15,7 @@ short_description: Devuan 6 image for KVM, LXD and vCenter
 tags:
 - devuan
 format: qcow2
-creation_time: 1784024313
+creation_time: 1794125887
 os-id: Devuan GNU/Linux
 os-release: '6'
 os-arch: x86_64
@@ -37,11 +37,11 @@ opennebula_template:
 logo: devuan.png
 images:
 - name: devuan6
-  url: https://d24fmfybwxpuhu.cloudfront.net/devuan6-7.4.0-0-20260714.qcow2
+  url: https://d24fmfybwxpuhu.cloudfront.net/devuan6-7.4.2-0-20261108.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: da7502db0e7d7529f0d7ca50a90d761f
-    sha256: '5f7a64fb97a826d5126a6bd454a71a92abc1ca2e754cdccb640802695cdba21e'
+    md5: 99ac144ed1f811f40752ad0650e46914
+    sha256: 'dc7489500d60e7cd1ac686ac8d86e9a68446ad5079fc7f63d0a6231b8e42f7b6'

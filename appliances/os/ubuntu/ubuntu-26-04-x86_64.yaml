@@ -1,7 +1,7 @@
 ---
 id: 'c5033402-5810-11f1-8a74-02000a000203'
 name: Ubuntu 26.04
-version: 7.4.0-0-20260714
+version: 7.4.2-0-20261108
 publisher: OpenNebula Systems
 description: |-
   Ubuntu 26.04 image ready for your OpenNebula deployment.
@@ -15,7 +15,7 @@ short_description: Ubuntu 26.04 image for KVM, LXD and vCenter
 tags:
 - ubuntu
 format: qcow2
-creation_time: 1784026653
+creation_time: 1794128555
 os-id: Ubuntu
 os-release: '26.04'
 os-arch: x86_64
@@ -38,11 +38,11 @@ logo: ubuntu.png
 images:
 - name: ubuntu2604
   url: >-
-    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2604-7.4.0-0-20260714.qcow2
+    https://d24fmfybwxpuhu.cloudfront.net/ubuntu2604-7.4.2-0-20261108.qcow2
   type: OS
   dev_prefix: vd
   driver: qcow2
   size: 4294967296
   checksum:
-    md5: 1703f8b4f68ffd1cf75782d527372573
-    sha256: 33ea0b87e92d937350c3ce1f3bc0ed3d18330e127c8163442bca9715f1a09c3b
+    md5: 0b1cb93ca185525a85f236649b1a1e74
+    sha256: 7ae7603acc9e4ac21ad0dc2ee1f7a86c1194c3ab30d2cef3171ad16f554b5ee7
