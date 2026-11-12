@@ -7,6 +7,7 @@ description: |-
   Appliance providing the Slurm Controller service to manage
   and schedule workloads. It acts as the central orchestrator,
   handling resources and job queues.
+  It consumes SlurmDBD, MUNGE key and effective LDAP metadata from Accounting.
   [documentation](https://github.com/OpenNebula/one-apps/wiki/slurm_intro).
 short_description: >-
   Appliance providing the Slurm Controller service to manage and schedule
@@ -25,13 +26,6 @@ hypervisor: ALL
 opennebula_version: '6.4, 6.6, 6.8, 6.10, 7.0, 7.2, 7.4'
 opennebula_template:
   context:
-    oneapp_ldap_admin_password: "$ONEAPP_LDAP_ADMIN_PASSWORD"
-    oneapp_ldap_admin_user: "$ONEAPP_LDAP_ADMIN_USER"
-    oneapp_ldap_bind_password: "$ONEAPP_LDAP_BIND_PASSWORD"
-    oneapp_ldap_bind_user: "$ONEAPP_LDAP_BIND_USER"
-    oneapp_ldap_domain: "$ONEAPP_LDAP_DOMAIN"
-    oneapp_ldap_enable: "$ONEAPP_LDAP_ENABLE"
-    oneapp_ldap_url: "$ONEAPP_LDAP_URL"
     oneapp_slurm_infiniband_enable: "$ONEAPP_SLURM_INFINIBAND_ENABLE"
     oneapp_slurm_nfs_home: "$ONEAPP_SLURM_NFS_HOME"
     oneapp_slurm_nfs_scratch: "$ONEAPP_SLURM_NFS_SCRATCH"
